@@ -3,24 +3,27 @@ extends layout
 
 block append vars
   - bodyclass = 'article-detail'
+  - schematype = 'http://schema.org/Article'
 
 block prepend title
-  | #{ page.title + ' - '}
+  | #{page.title + ' - '}
 
 block header
   include author
-  h1= page.title
-  p.author
-    | #{ 'Written in ' }
-    time= moment.utc(page.metadata.date).format('MMMM DD, YYYY')
-    | #{ ' by ' }
+  h1(itemprop='headline')= page.title
+  p.details
+    //- meta(itemprop='description', content=page.metadata.description)
     mixin author(page.metadata.author)
-
+    time(itemprop='datePublished', datetime=moment.utc(page.metadata.date).format('YYYY-MM-DD'))= moment.utc(page.metadata.date).format('MMMM DD, YYYY')
+    //- meta(itemprop='dateModified', content=moment.utc(page.metadata.modified).format('YYYY-MM-DD')
+    //-
+      span.topics
+        | #{'Published in '}
+        a(href='/topic/' + topic.name, itemprop='about')= topic.name
 
 block content
-  article.article
-    section.content!= typogr(page.html).typogrify()
+  section.content(itemprop='articleBody')!= typogr(page.html).typogrify()
 
 block prepend footer
   div.nav
-    a(href=contents.index.url) &laquo; Back to home
+    a(href=contents.index.url) &laquo; Go back

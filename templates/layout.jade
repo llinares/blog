@@ -1,7 +1,8 @@
 doctype html
 block vars
   - var bodyclass = null;
-html(lang='en')
+  - var schematype = null
+html
   head
     block head
       meta(charset='utf-8')
@@ -9,22 +10,21 @@ html(lang='en')
       meta(name='viewport', content='width=device-width')
       title
         block title
-          = locals.name
+          = locals.owner
       link(rel='alternate', href=locals.url+'/feed.xml', type='application/rss+xml', title=locals.description)
       link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300')
       link(rel='stylesheet', href=contents.css['main.css'].url)
-  body(class=bodyclass)
-    header.header
+  body(class=bodyclass, itemscope, itemtype=schematype)
+    header.header(role='banner')
       div.content-wrap
         block header
           div.logo
-            h1 Lean Linares
+            h1= locals.owner
             p.description= locals.description
-    div#content
+    main#content
       div.content-wrap
         block content
-          h2 Welcome to zombocom!
-    footer
+    footer(role='contentinfo')
       div.content-wrap
         block footer
           section.about
