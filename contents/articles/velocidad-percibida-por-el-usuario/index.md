@@ -3,7 +3,7 @@ title: Velocidad percibida por el usuario
 author: lean
 date: 2015-05-11
 template: article.jade
-tags: ux, code
+topics: ux, code
 ---
 
 # The experience of waiting

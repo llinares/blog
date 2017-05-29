@@ -3,7 +3,7 @@ title: Background offset en CSS
 author: lean
 date: 2014-01-13
 template: article.jade
-tags: code, css
+topics: code, css
 ---
 
 Hoy en día, en el AutoComplete de [Chico UI](http://chico.mercadolibre.com/) (v1.0.0) tenemos un loading spinner agregado como background de CSS, alineado *"right center"*.

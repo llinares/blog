@@ -3,7 +3,7 @@ title: Facebook - Calidad vs. velocidad en el desarrollo
 author: lean
 date: 2014-11-21
 template: article.jade
-tags: code, javascript
+topics: code, javascript
 ---
 
 Les dejo el video *"Rethinking Web App Development at Facebook"*:

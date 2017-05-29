@@ -3,7 +3,7 @@ title: Imágenes retina en tablets con HiDPI
 author: lean
 date: 2015-06-11
 template: article.jade
-tags: code, css
+topics: code, css
 ---
 
 Revisando una landing page con un compañero nos dimos cuenta que, así como estamos prestándole atención a pantallas retina en nuestra version *mobile* del sitio, deberíamos hacerlo en nuestra versión *desktop*.

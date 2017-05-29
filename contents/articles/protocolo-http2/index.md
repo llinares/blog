@@ -3,7 +3,7 @@ title: Protocolo HTTP/2
 author: lean
 date: 2015-03-03
 template: article.jade
-tags: code
+topics: code
 ---
 
 El protocolo de intercambio de datos que usa la web hoy en día es lento y bastante antiguo (HTTP 1.1, es de 1999).

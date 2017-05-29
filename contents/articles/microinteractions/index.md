@@ -3,7 +3,7 @@ title: Microinteractions
 author: lean
 date: 2015-05-19
 template: article.jade
-tags: ux
+topics: ux
 ---
 
 En resumidas cuentas, las microinteracciones se tratan acerca de **prestar mucha atención a los detalles**.

@@ -3,7 +3,7 @@ title: Card pattern
 author: lean
 date: 2015-05-19
 template: article.jade
-tags: ux
+topics: ux
 ---
 
 Creo que muy pocas veces se usa correctamente el término Card (o tarjeta). Se suele usar el término para referirse simplemente a una caja blanca con bordes y sombra.

@@ -3,7 +3,7 @@ title: Single Page Apps y cómo mejorar la UX (parte 2)
 author: lean
 date: 2015-04-20
 template: article.jade
-tags: ux
+topics: ux
 ---
 
 Para recapitular sobre el tema, denle una leída a la [Parte 1](#) del artículo.

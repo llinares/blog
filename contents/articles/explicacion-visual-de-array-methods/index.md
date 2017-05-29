@@ -3,7 +3,7 @@ title: Explicación visual de Array methods
 author: lean
 date: 2016-06-28
 template: article.jade
-tags: code, javascript
+topics: code, javascript
 ---
 
 Les comparto algunos ejemplos visuales de algunos métodos de Array.
