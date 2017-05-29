@@ -15,21 +15,22 @@ html
       link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300')
       link(rel='stylesheet', href=contents.css['main.css'].url)
   body(class=bodyclass, itemscope, itemtype=schematype)
-    header.header(role='banner')
-      div.content-wrap
-        block header
-          div.logo
-            h1= locals.owner
-            p.description= locals.description
-    main#content
-      div.content-wrap
-        block content
-    footer(role='contentinfo')
-      div.content-wrap
-        block footer
-          section.about
-            !=contents['about.md'].html
-          section.copy
-            p &copy; #{ new Date().getFullYear() } #{ locals.owner } &mdash; powered by&nbsp;
-              a(href='https://github.com/jnordberg/wintersmith') Wintersmith
-              //- please leave the "powered by" if you use the design
+    block body
+      header.header(role='banner')
+        div.content-wrap
+          block header
+            div.logo
+              h1= locals.owner
+              p.description= locals.description
+      main#content
+        div.content-wrap
+          block content
+      footer(role='contentinfo')
+        div.content-wrap
+          block footer
+            section.about
+              !=contents['about.md'].html
+            section.copy
+              p &copy; #{ new Date().getFullYear() } #{ locals.owner } &mdash; powered by&nbsp;
+                a(href='https://github.com/jnordberg/wintersmith') Wintersmith
+                //- please leave the "powered by" if you use the design

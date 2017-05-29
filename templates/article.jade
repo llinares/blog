@@ -23,7 +23,18 @@ block header
 
 block content
   section.content(itemprop='articleBody')!= typogr(page.html).typogrify()
+  section#disqus_thread                        
 
 block prepend footer
   div.nav
     a(href=contents.index.url) &laquo; Go back
+
+block append body
+  script.
+    var disqus_config = function () { this.page.url = 'http://lean8086.com/' };
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://lean8086.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
