@@ -69,9 +69,15 @@ li {
 }
 
 blockquote {
-  margin: 1.2em 3em;
-  padding-left: 1em;
+  padding: 1em;
   font-style: italic;
+  background-color: #eee;
+  color: #777;
+  margin-bottom: 1.2em;
+}
+
+blockquote p {
+  margin-bottom: 0;
 }
 
 hr {
@@ -96,10 +102,10 @@ hr {
 
 .header a, .header a:hover {
   text-decoration: none;
-  color: #171717;
+  /*color: #171717;*/
 }
 
-.header .author {
+.header .details {
   font-family: 'Merriweather', serif;
   font-variant: small-caps;
   text-transform: lowercase;
@@ -107,6 +113,10 @@ hr {
   text-align: center;
   font-weight: 400;
   letter-spacing: 1px;
+}
+
+.header .details time::before {
+  content: ' · ';
 }
 
 .header .description {
@@ -117,10 +127,11 @@ hr {
 }
 
 body.article-detail > header h1 {
-  font-size: 2.5em;
+  font-size: 3.5em;
   font-style: italic;
   font-weight: 400;
-  margin-bottom: -0.2em;
+  margin-bottom: 0.2em;
+  line-height: 1.2em;
 }
 
 body.article-detail > header {
