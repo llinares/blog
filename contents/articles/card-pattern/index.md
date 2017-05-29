@@ -6,7 +6,7 @@ template: article.jade
 topics: ux
 ---
 
-Creo que muy pocas veces se usa correctamente el término Card (o tarjeta). Se suele usar el término para referirse simplemente a una caja blanca con bordes y sombra.
+Si bien la definición de qué es una Card es subjetiva, se suele usar para referirse a una caja blanca con bordes y sombra.
 
 Pero más allá del diseño, las Cards se enfocan en cómo interactúa el usuario con ese elemento.
 
