@@ -1,6 +1,6 @@
 ---
 title: Node dependencies vs. devDependencies
-author: Lean Linares
+author: lean
 date: 2016-08-12
 template: article.jade
 tags: code, javascript

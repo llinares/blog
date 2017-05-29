@@ -1,6 +1,6 @@
 ---
 title: Velocidad percibida por el usuario
-author: Lean Linares
+author: lean
 date: 2015-05-11
 template: article.jade
 tags: ux, code

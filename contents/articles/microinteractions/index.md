@@ -1,6 +1,6 @@
 ---
 title: Microinteractions
-author: Lean Linares
+author: lean
 date: 2015-05-19
 template: article.jade
 tags: ux

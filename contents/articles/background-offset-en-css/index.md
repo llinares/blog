@@ -1,6 +1,6 @@
 ---
 title: Background offset en CSS
-author: Lean Linares
+author: lean
 date: 2014-01-13
 template: article.jade
 tags: code, css

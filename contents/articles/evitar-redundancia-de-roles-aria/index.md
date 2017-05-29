@@ -1,6 +1,6 @@
 ---
 title: Evitar redundancia de roles ARIA
-author: Lean Linares
+author: lean
 date: 2014-02-24
 template: article.jade
 tags: code, html

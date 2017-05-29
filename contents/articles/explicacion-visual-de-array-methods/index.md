@@ -1,6 +1,6 @@
 ---
 title: Explicación visual de Array methods
-author: Lean Linares
+author: lean
 date: 2016-06-28
 template: article.jade
 tags: code, javascript

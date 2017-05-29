@@ -1,6 +1,6 @@
 ---
 title: Dudas comunes de microdata
-author: Lean Linares
+author: lean
 date: 2016-04-19
 template: article.jade
 tags: code, html

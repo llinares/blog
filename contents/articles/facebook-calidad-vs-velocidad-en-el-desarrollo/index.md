@@ -1,6 +1,6 @@
 ---
 title: Facebook - Calidad vs. velocidad en el desarrollo
-author: Lean Linares
+author: lean
 date: 2014-11-21
 template: article.jade
 tags: code, javascript

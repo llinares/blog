@@ -1,6 +1,6 @@
 ---
 title: Single Page Apps y cómo mejorar la UX (parte 1)
-author: Lean Linares
+author: lean
 date: 2015-02-03
 template: article.jade
 tags: ux

@@ -1,6 +1,6 @@
 ---
 title: Imágenes retina en tablets con HiDPI
-author: Lean Linares
+author: lean
 date: 2015-06-11
 template: article.jade
 tags: code, css

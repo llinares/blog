@@ -1,6 +1,6 @@
 ---
 title: Protocolo HTTP/2
-author: Lean Linares
+author: lean
 date: 2015-03-03
 template: article.jade
 tags: code

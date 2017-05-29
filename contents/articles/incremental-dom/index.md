@@ -1,6 +1,6 @@
 ---
 title: Incremental DOM
-author: Lean Linares
+author: lean
 date: 2015-07-27
 template: article.jade
 tags: code, javascript

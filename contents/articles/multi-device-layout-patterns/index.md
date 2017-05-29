@@ -1,6 +1,6 @@
 ---
 title: Multi-Device Layout Patterns
-author: Lean Linares
+author: lean
 date: 2014-05-12
 template: article.jade
 tags: design
