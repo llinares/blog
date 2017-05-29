@@ -3,6 +3,7 @@ title: Incremental DOM
 author: Lean Linares
 date: 2015-07-27
 template: article.jade
+tags: code, javascript
 ---
 
 Google estuvo mejorando uno de los mejores features de React: el virtual DOM.

@@ -3,6 +3,7 @@ title: Evitar redundancia de roles ARIA
 author: Lean Linares
 date: 2014-02-24
 template: article.jade
+tags: code, html
 ---
 
 Encontré en 2 implementaciones distintas estos casos que me llamaron la atención:

@@ -3,6 +3,7 @@ title: Dudas comunes de microdata
 author: Lean Linares
 date: 2016-04-19
 template: article.jade
+tags: code, html
 ---
 
 Me gustaría aclarar algunas dudas acerca de cómo usar Microdata.

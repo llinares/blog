@@ -3,6 +3,7 @@ title: Node dependencies vs. devDependencies
 author: Lean Linares
 date: 2016-08-12
 template: article.jade
+tags: code, javascript
 ---
 
 Vengo viendo algunos `package.json` donde las dependencias no están ubicadas en el lugar correcto.

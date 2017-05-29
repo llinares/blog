@@ -3,6 +3,7 @@ title: Multi-Device Layout Patterns
 author: Lean Linares
 date: 2014-05-12
 template: article.jade
+tags: design
 ---
 
 A medida que los layouts responsive fueron evolucionando, surgieron varios patrones que ya tienen nombre y apellido.

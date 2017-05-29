@@ -3,6 +3,7 @@ title: Facebook - Calidad vs. velocidad en el desarrollo
 author: Lean Linares
 date: 2014-11-21
 template: article.jade
+tags: code, javascript
 ---
 
 Les dejo el video *"Rethinking Web App Development at Facebook"*:
