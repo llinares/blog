@@ -9,12 +9,15 @@ block prepend title
   | #{page.title + ' - '}
 
 block header
-  include author
+  include published
+  include estimatedReadingTime
   h1(itemprop='headline')= page.title
   p.details
     //- meta(itemprop='description', content=page.metadata.description)
-    mixin author(page.metadata.author)
-    time(itemprop='datePublished', datetime=moment.utc(page.metadata.date).format('YYYY-MM-DD'))= moment.utc(page.metadata.date).format('MMMM DD, YYYY')
+    mixin published(page.metadata.date)
+    | #{' · '}
+    mixin estimatedReadingTime(page.markdown)
+    | #{' min read'}
     //- meta(itemprop='dateModified', content=moment.utc(page.metadata.modified).format('YYYY-MM-DD')
     //-
       span.topics
@@ -22,19 +25,8 @@ block header
         a(href='/topic/' + topic.name, itemprop='about')= topic.name
 
 block content
-  section.content(itemprop='articleBody')!= typogr(page.html).typogrify()
-  section#disqus_thread                        
+  section.content(itemprop='articleBody')!= typogr(page.html).typogrify()                  
 
 block prepend footer
   div.nav
-    a(href=contents.index.url) &laquo; Go back
-
-block append body
-  script.
-    var disqus_config = function () { this.page.url = 'http://lean8086.com/' };
-    (function() {
-      var d = document, s = d.createElement('script');
-      s.src = 'https://lean8086.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
+    a(href=contents.index.url) Go back
