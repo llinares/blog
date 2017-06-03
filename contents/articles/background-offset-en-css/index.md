@@ -6,28 +6,28 @@ template: article.jade
 topics: code, css
 ---
 
-Hoy en día, en el AutoComplete de [Chico UI](http://chico.mercadolibre.com/) (v1.0.0) tenemos un loading spinner agregado como background de CSS, alineado *"right center"*.
+Hoy en día, en el AutoComplete de [Chico UI](http://chico.mercadolibre.com/) (v1.0.0) tenemos un loading spinner agregado como background de CSS, alineado a la derecha como `right center`.
 
-Eso genera que el spinner quede directamente **pegado al borde derecho**:
+Eso hace que el spinner quede literalmente **pegado al borde derecho**:
 
 ![Before](before.png)
 
-Buscando un poco, encontré que *background-position puede recibir un offset!*:
+Buscando un poco, encontré que `background-position` **puede recibir un offset!**:
 
 ```
-background-position: right 3em bottom 10px;
 /* 10px es el offset */
+background-position: right 3em bottom 10px;
 ```
 
-Se incluyó en la especificación de CSS3 y lo soportan todos los browsers, excepto IE8 y anteriores.
-
-Más específicamente es soportado en *Opera 11+, IE9+, FF 13+, Chrome y Safari*.
+Se incluyó en la especificación de CSS3 y lo soportan todos los browsers, excepto IE8 y anteriores. Más específicamente es soportado en Opera 11+, IE9+, FF 13+, Chrome y Safari.
 
 Aplicando `right 10px center` al AutoComplete, podemos separar el spinner del borde derecho unos 10px:
 
 ![After](after.png)
 
-Antes:
+---
+
+### Antes:
 
 ```
 .ch-autocomplete-loading {
@@ -35,7 +35,7 @@ Antes:
 }
 ```
 
-Después:
+### Después:
 
 ```
 .ch-autocomplete-loading {

@@ -1,22 +1,18 @@
 ---
-title: Node dependencies vs. devDependencies
+title: Node 101 - dependencies vs. devDependencies
 author: lean
 date: 2016-08-12
 template: article.jade
 topics: code, javascript
 ---
 
-Vengo viendo algunos `package.json` donde las dependencias no están ubicadas en el lugar correcto.
+Es un tema bastante básico pero que veo que se repite en varias implementaciones. Me encontré con varios package.json en los que las dependencias no están ubicadas en el lugar correcto. Suelen estar todas en `"dependencies"` o todas en `"devDependencies"`. A veces también las veo bastante mezcladas.
 
-Suelen estar todas en `"dependencies"`, o todas en `"devDependencies"`, o bastante mezcladas.
+En realidad hay diferencia.
 
-En realidad hay diferencia!
+## Dependencies
 
-# Dependencies
-
-Son recursos que van a formar parte de los files descargables.
-
-Es decir que, cuando alguien instale el módulo, va a descargar también todas esas dependencias.
+Son recursos que van a formar parte de los files descargables. Es decir que, cuando alguien instale el módulo, va a descargar también todas esas dependencias.
 
 Un ejemplo correcto sería:
 
@@ -29,7 +25,7 @@ Un ejemplo correcto sería:
 }
 ```
 
-# Dev dependencies
+## Dev dependencies
 
 Son recursos que se van a usar **solo para desarrollar el módulo**.
 

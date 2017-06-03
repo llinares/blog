@@ -6,11 +6,11 @@ template: article.jade
 topics: code, css
 ---
 
-Revisando una landing page con un compañero nos dimos cuenta que, así como estamos prestándole atención a pantallas retina en nuestra version *mobile* del sitio, deberíamos hacerlo en nuestra versión *desktop*.
+Revisando una landing page en el trabajo nos dimos cuenta que, así como estamos prestándole atención a pantallas retina en nuestra version *mobile* del sitio, deberíamos hacerlo en nuestra versión *desktop*.
 
 El problema surge a partir de que servimos la version *mobile* sólo para teléfonos celulares. Y ya que la resolución de pantalla de las tablets son similares a la de un monitor de escritorio, ambos comparten la version *desktop* del sitio.
 
-La gran mayoría de tablets que probamos tienen pantalla con alta densidad de pixels (HiDPI). Entonces cualquier imagen que veamos en las tablets más usadas, hoy en día está aumentada y pixelada.
+La gran mayoría de tablets que probamos tienen pantalla con alta densidad de pixels (HiDPI). Entonces cualquier imagen que vemos en las tablets más usadas, hoy en día está aumentada y pixelada.
 
 Deberíamos asegurarnos de cubrir los siguientes casos:
 
@@ -27,14 +27,8 @@ Para implementarlas, yo vengo usando las imágenes como background y re-defino l
 
 Sólo lo venía haciendo para *mobile*. Tendríamos que hacer exactamente lo mismo en *desktop*.
 
-También, cuando las circunstancias nos lo permita, la opción más viable puede ser usar SVG (imágenes vectoriales).
+También, cuando las circunstancias nos lo permita, la opción más viable puede ser usar SVG (imágenes vectoriales). Son más simples de exportar y de implementar, y se escalan al tamaño que se necesite sin pérdida de calidad. Los browsers más viejos (ie8, android 2.x) no soportan SVG, pero el fallback es simple de implementar con una imagen.
 
-Son más simples de exportar y de implementar, y se escalan al tamaño que se necesite sin pérdida de calidad.
-
-Los browsers más viejos (ie8, android 2.x) no soportan SVG, pero el fallback es simple de implementar con una imagen.
-
-Sé que también se está trabajando en un estandar de implementación para imágenes multi-size:
-
-http://html5hub.com/html5-picture-element/
+Sé que también se está trabajando en un estandar de implementación para imágenes multi-size: http://html5hub.com/html5-picture-element/
 
 No me acuerdo en que estado está, pero es bastante reciente.

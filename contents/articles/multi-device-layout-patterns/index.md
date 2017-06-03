@@ -8,7 +8,7 @@ topics: design
 
 A medida que los layouts responsive fueron evolucionando, surgieron varios patrones que ya tienen nombre y apellido.
 
-# Los más populares
+## Los más populares
 
 Según [Luke Wroblewski](https://twitter.com/lukew) (groso), los patrones más populares son:
 
@@ -20,19 +20,11 @@ Según [Luke Wroblewski](https://twitter.com/lukew) (groso), los patrones más p
 
 En su [post](http://www.lukew.com/ff/entry.asp?1514) explica y grafica cada uno.
 
-# Off Canvas
+## Off Canvas
 
-Un web designer tomó el patrón Off Canvas (uno de los que mejor se adaptan) y profundizó un el concepto:
+Un web designer tomó el patrón Off Canvas (uno de los que mejor se adaptan) y profundizó un el concepto: http://jasonweaver.name/lab/offcanvas/
 
-http://jasonweaver.name/lab/offcanvas/
-
-Básicamente se trata de un layout de 3 columnas que se acomoda segun el tamaño de pantalla.
-
-Dentro de las columnas, **el contenido principal se ubica en la columna central**.
-
-Los elementos secundarios o de navegación se ubican en las columnas de los costados.
-
-# Ejemplos
+Básicamente se trata de un layout de 3 columnas que se acomoda segun el tamaño de pantalla. Dentro de las columnas, **el contenido principal se ubica en la columna central**. Los elementos secundarios o de navegación se ubican en las columnas de los costados.
 
 Centrado por default:
 
@@ -42,11 +34,11 @@ Acceso a sección izquierda:
 
 ![Sección izquierda](small-left.png)
 
-Cuanto mayor es el espacio en la pantalla, más columnas se muestran dentro del area visible.
+Cuanto mayor es el espacio en la pantalla, más columnas se muestran dentro del area visible:
 
 ![Todas las columnas visibles](large.png)
 
-# Más patrones
+## Más patrones
 
 [Brad Frost](https://twitter.com/brad_frost) (otro groso) escribió hace un par de años algunos posts sobre patrones de navegación responsive. Explica en detalle pros y contras de varios:
 

@@ -6,14 +6,12 @@ template: article.jade
 topics: code, javascript
 ---
 
-Les comparto algunos ejemplos visuales de algunos métodos de Array.
+Les comparto algunos ejemplos visuales de algunos métodos de Array. Están disponibles desde ES5 y no ES6, así que los soporta IE9+!
 
-Aparecieron en ES5, no ES6 así que los soporta IE9+!
-
-# every() y some()
+## every() y some()
 
 ![every y some](every-some.png)
 
-# map(), filter() y reduce()
+## map(), filter() y reduce()
 
 ![map, filter y reduce](map-filter-reduce.png)
