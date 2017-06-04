@@ -1,7 +1,0 @@
-mixin published(date)
-  - var utc = moment.utc(date);
-  time(itemprop='datePublished', datetime=utc.format('YYYY-MM-DD'))
-    if utc.year() !== (new Date()).getFullYear()
-      span= utc.format('MMMM DD, YYYY')
-    else
-      span= utc.format('MMMM DD')

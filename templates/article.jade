@@ -1,31 +1,25 @@
-
 extends layout
 
 block append vars
-  - bodyclass = 'article-detail'
+  - bodyclass = 'article'
   - schematype = 'http://schema.org/Article'
 
 block prepend title
   | #{page.title + ' - '}
 
 block header
-  include published
-  include estimatedReadingTime
-  h1(itemprop='headline')= page.title
-  p.details
-    //- meta(itemprop='description', content=page.metadata.description)
+  include mixins/published
+  include mixins/estimatedReadingTime
+  h1.article-headline(itemprop='headline')= page.title
+  p.article-details
     mixin published(page.metadata.date)
     | #{' · '}
     mixin estimatedReadingTime(page.markdown)
     | #{' min read'}
-    //- meta(itemprop='dateModified', content=moment.utc(page.metadata.modified).format('YYYY-MM-DD')
-    //-
-      span.topics
-        | #{'Published in '}
-        a(href='/topic/' + topic.name, itemprop='about')= topic.name
 
 block content
-  section.content(itemprop='articleBody')!= typogr(page.html).typogrify()                  
+  section.article-body(itemprop='articleBody')
+    div.content-wrap!= typogr(page.html).typogrify()
 
 block prepend footer
   div.nav
