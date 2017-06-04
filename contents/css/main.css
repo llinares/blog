@@ -1,5 +1,5 @@
 /**
- * Strcture
+ * Structure
  */
 
 * {
@@ -12,6 +12,7 @@ body {
   line-height: 1.7;
   background-color: #fff;
   text-rendering: optimizeLegibility;
+  margin: 0;
 }
 
 .content-wrap {
@@ -29,76 +30,44 @@ a:hover {
   color: #000;
 }
 
-p {
-  margin-bottom: 1.7em;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lato';
 }
 
 h2 {
-  font-family: 'Lato';
   font-size: 28px;
   letter-spacing: -.01em;
 }
 
 h3 {
-  font-family: 'Lato';
   font-size: 24px;
   margin-bottom: -16px;
 }
 
-ol, ul {
-  margin: 0 0 1.7em -1.05em;
+/**
+ * Article
+ */
+
+.article .header {
+  margin: 3em 0;
 }
 
-li {
-  margin-bottom: .5em;
-}
-
-blockquote {
-  font-weight: 700;
-  border-left: 3px solid rgba(0, 0, 0, .8);
-  padding-left: 20px;
-  margin-left: -23px;
-  margin-bottom: 20px;
-}
-
-hr {
-  display: block;
-  border: 0;
-  text-align: center;
-  margin: 48px;
-}
-
-hr::before {
-  content: '...';
-  font-family: 'Lato';
-  color: rgba(0, 0, 0, .6);
-  font-size: 18px;
-  letter-spacing: 1em;
-}
-
-/* page header */
-
-.header {
-  margin: 3em 0 5em;
-}
-
-header .content-wrap {
+.article .header .content-wrap {
   max-width: 860px;
 }
 
-/*.header h1 {
-  font-size: 2.6em;
+.article-headline {
+  font-size: 2em;
+  font-weight: 400;
+  margin-bottom: .2em;
+  line-height: 1.2em;
   text-align: center;
   font-weight: 700;
-  margin: 0;
-}*/
-
-.header a, .header a:hover {
-  text-decoration: none;
-  /*color: #171717;*/
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
-.header .details {
+.article-details {
   font-family: 'Lato';
   text-align: center;
   letter-spacing: .01em;
@@ -106,18 +75,46 @@ header .content-wrap {
   color: rgba(0, 0, 0, .4);
 }
 
-[itemprop='headline'] {
-  font-family: 'Lato';
-  font-size: 2em;
-  font-weight: 400;
-  margin-bottom: .2em;
-  line-height: 1.2em;
-  text-align: center;
-  font-weight: 700;
+.article-body p {
+  margin-bottom: 1.7em;
 }
 
-body.article-detail > header {
-  margin-bottom: 3em;
+.article-body a {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.article-body ol,
+.article-body ul {
+  margin: 0 0 1.7em -1.05em;
+}
+
+.article-body li {
+  margin-bottom: .5em;
+}
+
+.article-body blockquote {
+  font-weight: 700;
+  border-left: 3px solid rgba(0, 0, 0, .8);
+  padding-left: 20px;
+  margin-left: 3px;
+  margin-bottom: 20px;
+  margin-right: 0;
+}
+
+.article-body hr {
+  display: block;
+  border: 0;
+  text-align: center;
+  margin: 48px;
+}
+
+.article-body hr::before {
+  content: '...';
+  font-family: 'Lato';
+  color: rgba(0, 0, 0, .6);
+  font-size: 18px;
+  letter-spacing: 1em;
 }
 
 /* page footer */
@@ -149,70 +146,30 @@ p img {
   max-width: 100%;
 }
 
-/* archive */
+/**
+ * Home
+ */
 
-.archive {
-  width: 32em;
-  margin: 5em auto 6em;
-  padding-left: 2em;
+.articles-list, .articles-list ol {
+  list-style-type: none;
+  padding-left: 0;
 }
 
-.archive h2 {
-  font-size: 2em;
-  margin: 0;
-  margin-left: 6.1em;
-  margin-bottom: .5em;
-  font-style: italic;
+@media (max-width: 768px) {
+  .articles-list__year,
+  .articles-list__month,
+  .articles-list__article {
+    line-height: 1.7!important;
+  }
+
+  .articles-list__article {
+    height: auto!important;
+  }
 }
 
-.archive a, .archive span{
-  display: block;
-  float: left;
-  margin-bottom: -1px;
-  text-decoration: none;
-}
-.archive li:not(:last-child) {
-	border-bottom: 1px solid #d2d2d2;
-	margin-bottom: -1px;
-}
-
-.archive a.last, .archive span.last {
-  border: 0;
-  margin-bottom: 0;
-}
-
-.archive a {
-  width: 21em;
-  text-indent: 1em;
-  white-space: nowrap;
-}
-
-.archive .year-label,
-.archive .month-label{
-  width: 4em;
-  font-family: 'Merriweather', serif;
-  font-variant: small-caps;
-  text-transform: lowercase;
-  font-weight: 400;
-  text-rendering: auto;
-  letter-spacing: 1px;
-  text-align: center;
-}
-
-.archive .month-label {
-  width: 7em;
-}
-
-.archive ul {
-  list-style: none;
-  margin: 0;
-}
-
-.archive ul li {
-  margin: 0;
-}
-
-/* code styling */
+/**
+ * Code styling
+ */
 
 pre {
   overflow: auto;
@@ -242,7 +199,7 @@ p code {
 /* media queries */
 
 @media (min-width: 768px) {
-  [itemprop='headline'] {
+  .article-headline {
     font-size: 3em;
   }
 
@@ -254,54 +211,65 @@ p code {
     margin: 0 1.7em 1.7em .9em;
   }
 
+  blockquote {
+    margin-left: -23px;
+  }
+
   footer .nav {
     font-size: 1.3em;
     margin: 3.5em 0;
   }
 
-  /*.content-wrap {
-    width: auto;
-    padding: 0 1em;
+  /**
+   * Home
+   */
+  .articles-list,
+  .articles-list__year-content,
+  .articles-list__month-content {
+    margin: 0;
   }
-  .header {
-    margin: 1em 0;
+
+  .articles-list__blocks {
+    clear: left;
   }
-  .header h1 {
-    font-size: 1.4em;
-    margin-bottom: .6em;
+
+  .articles-list li:not(:last-child) {
+  	border-bottom: 1px solid rgba(0, 0, 0, .2);
   }
-  .header .description {
+
+  .articles-list__year, .articles-list__month, .articles-list a {
+    display: block;
+    float: left;
+    margin: 0 0 -1px;
+  }
+
+  .articles-list__year, .articles-list__month {
+    font-weight: 400;
+    text-align: center;
+    background-color: #fff;
+    color: rgba(0, 0, 0, .6);
+  }
+
+  .articles-list__year {
+    width: 5em;
     font-size: 1em;
-  }*/
-  .article {
-    margin: 1em 0 2.5em;
   }
-  .archive {
-    width: 80%;
-    margin: 0 auto;
+
+  .articles-list__month {
+    width: 6em;
+    font-variant: small-caps;
+    text-transform: lowercase;
   }
-  .archive * {
-    float: none !important;
-    line-height: 1.6 !important;
-    width: auto !important;
-    height: auto !important;
-    text-align: left !important;
-    border: 0 !important;
-    margin: 0 !important;
-  }/*
-  footer .nav {
-    margin: 1em 0;
+
+  .articles-list__article {
+    height: 3em;
+    line-height: 3em;
   }
-  footer .about {
-    padding: 0;
-    font-size: .9em;
-    padding-top: 1.6em;
-    -webkit-column-count: 1;
-    -moz-column-count: 1;
-    -ms-column-count: 1;
-    column-count: 1;
+
+  .articles-list__article a {
+    width: 21em;
+    text-indent: 1em;
+    white-space: nowrap;
+    text-decoration: none;
   }
-  footer .about p {
-    margin-bottom: 1em;
-  }*/
 }
