@@ -211,7 +211,7 @@ p code {
     margin: 0 1.7em 1.7em .9em;
   }
 
-  blockquote {
+  .article-body blockquote {
     margin-left: -23px;
   }
 
