@@ -3,8 +3,6 @@ mixin estimatedReadingTime(content)
   - words = content.replace(/(\n|\r|\t|\s{2,})/gi, ' ');
   - words = content.split(' ').filter(function (word) { return word !== ''; });
   - var wordsPerMinute = 200;
-  - var minutes = words.length / wordsPerMinute;
-  - var time = minutes * 60 * 1000;
-  - var displayed = Math.ceil(minutes.toFixed(2));
+  - var minutes = Math.ceil((words.length / wordsPerMinute).toFixed(2));
   
-  span= displayed
+  span= minutes
