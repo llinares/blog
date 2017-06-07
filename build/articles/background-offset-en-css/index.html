@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Article">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <meta name="theme-color" content="#000">
+    <title>Background offset en CSS - Lean Linares
+    </title>
+    <link rel="canonical" href="http://lean8086.com">
+    <link rel="shortcut icon" href="https://en.gravatar.com/userimage/15818721/d41d282470a99d63c961e8e40d70f360.jpg?size=32">
+    <link rel="alternate" href="http://lean8086.com/feed.xml" type="application/rss+xml" title="Front-End Tech Lead &amp; JavaScript Developer">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Lora:400,700">
+    <link rel="stylesheet" href="/css/main.css">
+        <script>
+          if (window.location.host !== 'localhost') {
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', 'UA-100475674-1', 'auto');
+            ga('send', 'pageview');
+          }
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js"></script>
+  </head>
+  <body class="article">
+    <header class="header">
+      <div class="content-wrap">
+        <h1 itemprop="headline" class="article-headline">Background offset en CSS</h1>
+        <p class="article-details">
+                  <time itemprop="datePublished" datetime="2014-01-13"><span>Jan 13, 2014</span>
+                  </time> · <span>1</span> min read
+        </p>
+      </div>
+    </header>
+    <section itemprop="articleBody" class="article-body">
+      <div class="content-wrap"><p>Hoy en día, en el AutoComplete de <a href="http://chico.mercadolibre.com/">Chico <span class="caps">UI</span></a> (v1.0.0) tenemos un loading spinner agregado como background de <span class="caps">CSS</span>, alineado a la derecha como <code>right center</code>.</p>
+<p>Eso hace que el spinner quede literalmente <strong>pegado al borde derecho</strong>:</p>
+<p><img src="/articles/background-offset-en-css/before.png" alt="Before"></p>
+<p>Buscando un poco, encontré que <code>background-position</code> <strong>puede recibir un offset!</strong>:</p>
+<pre><code>/* 10px es el offset */
+background-position: right 3em bottom 10px;
+</code></pre><p>Se incluyó en la especificación de <span class="caps">CSS3</span> y lo soportan todos los browsers, excepto IE8 y anteriores. Más específicamente es soportado en Opera 11+, IE9+, FF 13+, Chrome y&nbsp;Safari.</p>
+<p>Aplicando <code>right 10px center</code> al AutoComplete, podemos separar el spinner del borde derecho unos&nbsp;10px:</p>
+<p><img src="/articles/background-offset-en-css/after.png" alt="After"></p>
+<hr>
+<h3 id="antes-">Antes:</h3>
+<pre><code>.ch-autocomplete-loading {
+    background: url(&#39;../assets/loading-small.gif&#39;) no-repeat right center;
+}
+</code></pre><h3 id="despu-s-">Después:</h3>
+<pre><code>.ch-autocomplete-loading {
+    background: url(&#39;../assets/loading-small.gif&#39;) no-repeat right 10px center;
+}
+</code></pre></div>
+    </section>
+    <footer role="contentinfo">
+      <div class="content-wrap">
+        <div class="nav"><a href="/">Go back</a></div>
+        <p class="copy">&copy; 2017 Lean Linares</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Article">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <meta name="theme-color" content="#000">
+    <title>Single Page Apps y cómo mejorar la UX (parte 1) - Lean Linares
+    </title>
+    <link rel="canonical" href="http://lean8086.com">
+    <link rel="shortcut icon" href="https://en.gravatar.com/userimage/15818721/d41d282470a99d63c961e8e40d70f360.jpg?size=32">
+    <link rel="alternate" href="http://lean8086.com/feed.xml" type="application/rss+xml" title="Front-End Tech Lead &amp; JavaScript Developer">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Lora:400,700">
+    <link rel="stylesheet" href="/css/main.css">
+        <script>
+          if (window.location.host !== 'localhost') {
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', 'UA-100475674-1', 'auto');
+            ga('send', 'pageview');
+          }
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js"></script>
+  </head>
+  <body class="article">
+    <header class="header">
+      <div class="content-wrap">
+        <h1 itemprop="headline" class="article-headline">Single Page Apps y cómo mejorar la UX (parte 1)</h1>
+        <p class="article-details">
+                  <time itemprop="datePublished" datetime="2015-02-03"><span>Feb 03, 2015</span>
+                  </time> · <span>2</span> min read
+        </p>
+      </div>
+    </header>
+    <section itemprop="articleBody" class="article-body">
+      <div class="content-wrap"><p>Desde hace unos meses estoy implementando en algunos proyectos lo que se conoce como Single Page App. Para quienes no conocen el término, Wikipedia tiene una <a href="http://en.wikipedia.org/wiki/Single-page_application">definición muy completa</a>.</p>
+<p>Según la definición, el objetivo principal de una <span class="caps">SPA</span> es <strong>proveer una <span class="caps">UX</span> más fluida</strong>. Esto significa que existen algunas ventajas extra a nivel <span class="caps">UI</span>, y que se necesitan hacer algunos cambios a nivel interacción con el&nbsp;usuario.</p>
+<p>Hay 2 características importantes que redefinen la <span class="caps">UX</span> y que considero las más&nbsp;importantes:</p>
+<h2 id="1-cero-tiempo-de-carga">1. Cero tiempo de&nbsp;carga</h2>
+<p>En una <span class="caps">SPA</span> el usuario <strong>no percibe un tiempo de espera entre una página y la otra</strong>. <strong>Todo es instantáneo,&nbsp;literalmente.</strong></p>
+<p>Lo que sí tiene tiempo de carga es la información, pero no la <span class="caps">UI</span>. Entonces empiezan a aparecer patrones de diseño como <em>Skeleton layout</em> o <em>“non-blocking interfaces”</em>, que ya lo habrán visto usando&nbsp;Facebook:</p>
+<p><img src="/articles/single-page-apps-y-como-mejorar-la-ux-parte-1/facebook.png" alt="Facebook skeleton layout"></p>
+<p>Primero se carga el esqueleto de la página, porque es lo que nunca cambia y puede volver a imprimirse instantaneamente entre pantallas. Después se carga la&nbsp;data.</p>
+<p>Les dejo un artículo de Luke en el que explica cómo usando Skeleton pudieron evitar usar la ruedita de loading. <a href="http://www.lukew.com/ff/entry.asp?1797">Mobile Design Details: Avoid The Spinner</a>.</p>
+<p>También les dejo un video muy útil de Guille Rauch sobre cómo mejorar la interacción del usuario mejorando la percepción de velocidad. Muestra muchos ejemplos andando. Si tienen unos minutos, no se lo pierdan: <a href="https://www.youtube.com/watch?v=Ar9R-CX217o">The need for speed</a>.</p>
+<h2 id="2-flujos-que-dejan-de-ser-lineales">2. Flujos que dejan de ser&nbsp;lineales</h2>
+<p>La página no se recarga nunca cuando el usuario navega. Esto nos permite hacer tareas en el fondo. Un ejemplo claro podría ser en el flujo de venta de MercadoLibre. Cuando el usuario carga una foto, no es necesario dejarle el foco sobre el progreso de las fotos subiendo. Se puede hacer que siga modificando otros datos mientras esa tarea se hace de&nbsp;fondo.</p>
+<p><strong>Los flujos dejan de ser lineales, y hay formas de darle feedback al usuario sobre&nbsp;esto.</strong></p>
+<p>Prueben adjuntar archivos a un mail en Gmail y apretar Enviar antes de que se terminen de&nbsp;adjuntar.</p>
+<h2 id="3-para-m-s-adelante-">3. Para más&nbsp;adelante…</h2>
+<p>Hay muchas más características que pueden redefinir la interacción del usuario en las&nbsp;<span class="caps">SPA</span>.</p>
+<p>Lo importante es poder ver que hoy en día ya tenemos la posibilidad de mejorarle notablemente la experiencia al&nbsp;usuario.</p>
+<p><a href="/articles/single-page-apps-y-como-mejorar-la-ux-parte-2/">Ir a la parte&nbsp;2.</a></p>
+</div>
+    </section>
+    <footer role="contentinfo">
+      <div class="content-wrap">
+        <div class="nav"><a href="/">Go back</a></div>
+        <p class="copy">&copy; 2017 Lean Linares</p>
+      </div>
+    </footer>
+  </body>
+</html>

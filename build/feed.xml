@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>lean8086</title>
+    <atom:link href="http://lean8086.com/feed.xml" rel="self" type="application/rss+xml"></atom:link>
+    <link>http://lean8086.com</link>
+    <description>Front-End Tech Lead &amp; JavaScript Developer</description>
+    <pubDate>Thu, 11  Aug 2016 21:00:00 -0300</pubDate>
+    <language>en</language>
+    <item>
+      <title>Node 101 - dependencies vs. devDependencies</title>
+      <link>http://lean8086.com/articles/node-101-dependencies-vs-devdependencies/</link>
+      <pubDate>Thu, 11  Aug 2016 21:00:00 -0300</pubDate>
+      <guid isPermaLink="true">http://lean8086.com/articles/node-101-dependencies-vs-devdependencies/</guid>
+      <author></author>
+      <description>&lt;p&gt;Es un tema bastante básico pero que veo que se repite en varias implementaciones. Me encontré con varios package.json en los que las dependencias no están ubicadas en el lugar correcto. Suelen estar todas en &lt;code&gt;&amp;quot;dependencies&amp;quot;&lt;/code&gt; o todas en &lt;code&gt;&amp;quot;devDependencies&amp;quot;&lt;/code&gt;. A veces también las veo bastante mezcladas.&lt;/p&gt;
+&lt;p&gt;En realidad hay diferencia.&lt;/p&gt;
+&lt;h2 id=&quot;dependencies&quot;&gt;Dependencies&lt;/h2&gt;
+&lt;p&gt;Son recursos que van a formar parte de los files descargables. Es decir que, cuando alguien instale el módulo, va a descargar también todas esas dependencias.&lt;/p&gt;
+&lt;p&gt;Un ejemplo correcto sería:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;quot;dependencies&amp;quot;: {
+  &amp;quot;jquery&amp;quot;: &amp;quot;2.2.1&amp;quot;,
+  &amp;quot;backbone&amp;quot;: &amp;quot;1.2.3&amp;quot;,
+  &amp;quot;backbone.marionette&amp;quot;: &amp;quot;2.4.4&amp;quot;,
+  &amp;quot;underscore&amp;quot;: &amp;quot;1.8.3&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;dev-dependencies&quot;&gt;Dev dependencies&lt;/h2&gt;
+&lt;p&gt;Son recursos que se van a usar &lt;strong&gt;solo para desarrollar el módulo&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Es decir que, cuando alguien lo instale, no va a necesitar descargar todas estas dependencias.&lt;/p&gt;
+&lt;p&gt;Éstas pueden ser herramientas de tests, de documentación, task runners, etc.&lt;/p&gt;
+&lt;p&gt;Un ejemplo correcto sería:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;quot;devDependencies&amp;quot;: {
+  &amp;quot;mocha&amp;quot;: &amp;quot;2.3.4&amp;quot;,
+  &amp;quot;gulp&amp;quot;: &amp;quot;3.9.1&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Para más info, les dejo la &lt;a href=&quot;https://docs.npmjs.com/files/package.json#dependencies&quot;&gt;doc oficial de npm&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Explicación visual de Array methods</title>
+      <link>http://lean8086.com/articles/explicacion-visual-de-array-methods/</link>
+      <pubDate>Mon, 27 Jun 2016 21:00:00 -0300</pubDate>
+      <guid isPermaLink="true">http://lean8086.com/articles/explicacion-visual-de-array-methods/</guid>
+      <author></author>
+      <description>&lt;p&gt;Les comparto algunos ejemplos visuales de algunos métodos de Array. Están disponibles desde ES5 y no ES6, así que los soporta IE9+!&lt;/p&gt;
+&lt;h2 id=&quot;every-y-some-&quot;&gt;every() y some()&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/explicacion-visual-de-array-methods/every-some.png&quot; alt=&quot;every y some&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;map-filter-y-reduce-&quot;&gt;map(), filter() y reduce()&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/explicacion-visual-de-array-methods/map-filter-reduce.png&quot; alt=&quot;map, filter y reduce&quot;&gt;&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Dudas comunes de microdata</title>
+      <link>http://lean8086.com/articles/dudas-comunes-de-microdata/</link>
+      <pubDate>Mon, 18 Apr 2016 21:00:00 -0300</pubDate>
+      <guid isPermaLink="true">http://lean8086.com/articles/dudas-comunes-de-microdata/</guid>
+      <author></author>
+      <description>&lt;p&gt;Me gustaría aclarar algunas dudas acerca de cómo usar Microdata, ya que recibí varias consultas sobre los mismos temas.&lt;/p&gt;
+&lt;h2 id=&quot;faq-1&quot;&gt;FAQ 1&lt;/h2&gt;
+&lt;p&gt;A veces hay data en forma de meta tags:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;meta itemprop=&amp;quot;price&amp;quot; content=&amp;quot;123.45&amp;quot;/&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Otras veces, hay data en elementos comunes:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;span itemprop=&amp;quot;priceCurrency&amp;quot; content=&amp;quot;ARS&amp;quot;&amp;gt;$&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;-cu-l-es-la-correcta-&quot;&gt;¿Cuál es la correcta?&lt;/h3&gt;
+&lt;p&gt;Según la doc de &lt;a href=&quot;http://schema.org/&quot;&gt;schema.org&lt;/a&gt; &lt;strong&gt;la data se agrega a los elementos comunes&lt;/strong&gt;. Y los meta tags son solamente para aquellos casos en los que:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;…a web page has information that would be valuable to mark up, but the information can’t be marked up because of the way it appears on the page.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;faq-2&quot;&gt;FAQ 2&lt;/h2&gt;
+&lt;p&gt;¿Qué pasa si tengo, por ejemplo, muchos &lt;code&gt;itemprop=&amp;quot;price&amp;quot;&lt;/code&gt; en una misma página?&lt;/p&gt;
+&lt;p&gt;Esta ok, pero todo depende del scope que se le defina a su contenedor.&lt;/p&gt;
+&lt;p&gt;Los scopes pueden anidarse y se recomienda que su “tipo” esté definido:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;div itemscope itemtype=&amp;quot;http://schema.org/Product&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Les recomiendo echarle un vistazo al &lt;a href=&quot;http://schema.org/docs/gs.html&quot;&gt;Getting started de Schema.org&lt;/a&gt;. Muy completo y no lleva más de 5 minutos de lectura.&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Incremental DOM</title>
+      <link>http://lean8086.com/articles/incremental-dom/</link>
+      <pubDate>Sun, 26 Jul 2015 21:00:00 -0300</pubDate>
+      <guid isPermaLink="true">http://lean8086.com/articles/incremental-dom/</guid>
+      <author></author>
+      <description>&lt;p&gt;Google estuvo mejorando uno de los mejores features de React: el virtual DOM.&lt;/p&gt;
+&lt;p&gt;Cuando una Single Page App re-renderiza una vista completa, se redibujan elementos que quizás no cambiaron.&lt;/p&gt;
+&lt;h2 id=&quot;virtual-dom&quot;&gt;Virtual DOM&lt;/h2&gt;
+&lt;p&gt;Es básicamente un DOM paralelo, en el que se aplica el redibujo de la vista completa. Entonces se analizan cuales son las diferencias y se aplica al DOM real solo lo que cambió. Esto significa un aumento considerable en la velocidad de render.&lt;/p&gt;
+&lt;p&gt;La desventaja es que cuando el DOM tree es grande, la performance sufre por tener que replicar todo el DOM.&lt;/p&gt;
+&lt;h2 id=&quot;incremental-dom&quot;&gt;Incremental DOM&lt;/h2&gt;
+&lt;p&gt;Google redujo el uso de memoria de esta forma:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;While creating the new (virtual) DOM tree walk along the existing tree and figure out changes as you go. Allocate no memory if there is no change; if there is, mutate the existing tree (only allocating memory if absolutely necessary) and apply the diff to the physical DOM.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Les dejo el link del artículo: &lt;a href=&quot;https://github.com/google/incremental-dom&quot;&gt;https://github.com/google/incremental-dom&lt;/a&gt;﻿&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Imágenes retina en tablets con HiDPI</title>
+      <link>http://lean8086.com/articles/imagenes-retina-en-tablets-con-hidpi/</link>
+      <pubDate>Wed, 10 Jun 2015 21:00:00 -0300</pubDate>
+      <guid isPermaLink="true">http://lean8086.com/articles/imagenes-retina-en-tablets-con-hidpi/</guid>
+      <author></author>
+      <description>&lt;p&gt;Revisando una landing page en el trabajo nos dimos cuenta que, así como estamos prestándole atención a pantallas retina en nuestra version &lt;em&gt;mobile&lt;/em&gt; del sitio, deberíamos hacerlo en nuestra versión &lt;em&gt;desktop&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;El problema surge a partir de que servimos la version &lt;em&gt;mobile&lt;/em&gt; sólo para teléfonos celulares. Y ya que la resolución de pantalla de las tablets son similares a la de un monitor de escritorio, ambos comparten la version &lt;em&gt;desktop&lt;/em&gt; del sitio.&lt;/p&gt;
+&lt;p&gt;La gran mayoría de tablets que probamos tienen pantalla con alta densidad de pixels (HiDPI). Entonces cualquier imagen que vemos en las tablets más usadas, hoy en día está aumentada y pixelada.&lt;/p&gt;
+&lt;p&gt;Deberíamos asegurarnos de cubrir los siguientes casos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Imagen común para &lt;strong&gt;mobile&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Imagen retina para &lt;strong&gt;mobile@2x&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Imagen común para &lt;strong&gt;desktop&lt;/strong&gt;: &lt;em&gt;En algunos casos se puede aprovechar la mobile@2x.&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Imagen retina para &lt;strong&gt;desktop@2x&lt;/strong&gt;: &lt;em&gt;En algunos casos podría ser la original a 4x.&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Para implementarlas, yo vengo usando las imágenes como background y re-defino los valores dentro de esta media query:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;@media(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Sólo lo venía haciendo para &lt;em&gt;mobile&lt;/em&gt;. Tendríamos que hacer exactamente lo mismo en &lt;em&gt;desktop&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;También, cuando las circunstancias nos lo permita, la opción más viable puede ser usar SVG (imágenes vectoriales). Son más simples de exportar y de implementar, y se escalan al tamaño que se necesite sin pérdida de calidad. Los browsers más viejos (ie8, android 2.x) no soportan SVG, pero el fallback es simple de implementar con una imagen.&lt;/p&gt;
+&lt;p&gt;Sé que también se está trabajando en un estandar de implementación para imágenes multi-size: &lt;a href=&quot;http://html5hub.com/html5-picture-element/&quot;&gt;http://html5hub.com/html5-picture-element/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;No me acuerdo en que estado está, pero es bastante reciente.&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Card pattern</title>
+      <link>http://lean8086.com/articles/card-pattern/</link>
+      <pubDate>Mon, 18 May 2015 21:00:00 -0300</pubDate>
+      <guid isPermaLink="true">http://lean8086.com/articles/card-pattern/</guid>
+      <author></author>
+      <description>&lt;p&gt;Si bien la definición de qué es una Card es subjetiva, suelo escuchar el término usado para referirse a una caja blanca con bordes y sombra. Pero más allá del diseño, el Card pattern se enfoca en cómo interactúa el usuario con ese elemento.&lt;/p&gt;
+&lt;p&gt;En un artículo encontré esto que me parece bastante textual:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Designers can call the things on the screen “cards” simply because those rectangular regions look like the small physical cards that have fit into our pockets for centuries. However, beyond how they look, the cards I’m talking about have interactive qualities.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;interacci-n-con-el-usuario&quot;&gt;Interacción con el usuario&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Las Cards se centran en interacciones.&lt;/strong&gt; Por ejemplo:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Dar vuelta una card para ver más datos.&lt;/li&gt;
+&lt;li&gt;Correr la card un poco al costado para descubrir acciones.&lt;/li&gt;
+&lt;li&gt;Hacer “pinch” en la imagen para agrandarla temporalmente.&lt;/li&gt;
+&lt;li&gt;Compartirla tal cual está en una red social.&lt;/li&gt;
+&lt;li&gt;Moverla para generar distintas acciones.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Un acercamiento a Cards que está implementado en MercadoLibre, son los artículos en la homepage:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/card-pattern/item.gif&quot; alt=&quot;Artículo de la homepage&quot;&gt;&lt;/p&gt;
+&lt;p&gt;En un estado inicial se ve la foto y el precio del artículo. Al pasar por encima con el cursor se ve además: título, cuotas, envío y la acción de agregar a favoritos.&lt;/p&gt;
+&lt;p&gt;Más allá de que está pensado únicamente para usuarios que tienen un mouse/cursor, creo que se acerca muchísimo al concepto de Cards.&lt;/p&gt;
+&lt;h2 id=&quot;portabilidad&quot;&gt;Portabilidad&lt;/h2&gt;
+&lt;p&gt;Otra característica que me parece importante de las Cards es la portabilidad. Entonces, &lt;strong&gt;una Card de una página de búsqueda podría usarse también en la homepage, en una página de producto y en un listado de Mi cuenta&lt;/strong&gt;. No solo la interacción, sino también la implementación (HTML, CSS, JS).&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Más info sobre este patrón:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://pando.com/2013/05/16/scroll-down-the-future-of-online-media-is-in-the-cards/&quot;&gt;Scroll down: The future of online media is in the cards&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://echouser.com/blog/cards-the-next-paradigm/&quot;&gt;Cards: The Next Paradigm?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://insideintercom.io/why-cards-are-the-future-of-the-web/&quot;&gt;Why cards are the future of the web&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    <item>
+      <title>Microinteractions</title>
+      <link>http://lean8086.com/articles/microinteractions/</link>
+      <pubDate>Mon, 18 May 2015 21:00:00 -0300</pubDate>
+      <guid isPermaLink="true">http://lean8086.com/articles/microinteractions/</guid>
+      <author></author>
+      <description>&lt;p&gt;En resumidas cuentas, las microinteracciones se tratan acerca de &lt;strong&gt;prestar mucha atención a los detalles&lt;/strong&gt;. Es agregar valor a las pequeñas interacciones de la interfaz del usuario.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Microinteraction design is about how you approach problems; and work thru the process of simplifying obsessively until you have come up with the most intuitive and simple to understand design for your users.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;En MercadoLibre, cuando se agrega un artículo a Favoritos, se pinta de amarillo el icono de corazón para darle feedback al usuario de que la acción se ejecutó con éxito. Pero, por ejemplo en Tumblr, sumaron un detalle extra cuando se agrega y cuando se elimina de Favoritos:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/microinteractions/fav.gif&quot; alt=&quot;Favoritos en Tumblr&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Al final de cuentas, los detalles son los que hacen la diferencia.&lt;/p&gt;
+&lt;p&gt;Hay casos de éxito como el de &lt;a href=&quot;http://tweetphoto.com&quot;&gt;TweetPhoto&lt;/a&gt; en el que, sumando estos detalles, &lt;a href=&quot;http://www.dtelepathy.com/blog/business/how-microinteractions-grew-our-traffic-to-over-42-million-monthly-visitors-in-under-18-months&quot;&gt;aumentaron drásticamente la cantidad de tráfico&lt;/a&gt; en menos de un año y medio. En este &lt;a href=&quot;http://www.dtelepathy.com/blog/business/how-microinteractions-grew-our-traffic-to-over-42-million-monthly-visitors-in-under-18-months&quot;&gt;artículo&lt;/a&gt; detallan a fondo cómo fue el proceso y cuales fueron los resultados.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Dan Saffer (groso) publicó algunos libros muy interesantes sobre interacciones: &lt;a href=&quot;http://www.odannyboy.com/&quot;&gt;http://www.odannyboy.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Más artículos importantes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.lukew.com/ff/entry.asp?1726&quot;&gt;UX Lisbon: Microinteractions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.creativebloq.com/web-design/improve-your-site-microinteractions-10134906&quot;&gt;Improve your websites with microinteractions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.dtelepathy.com/blog/design/dan-saffer-on-the-importance-of-microinteractions&quot;&gt;Dan Saffer on the Importance of Microinteractions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://smartdesignworldwide.com/thinking/digital-experiences/microinteractions-chap4-feedback/&quot;&gt;Time to think
+like a designer&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    <item>
+      <title>Velocidad percibida por el usuario</title>
+      <link>http://lean8086.com/articles/velocidad-percibida-por-el-usuario/</link>
+      <pubDate>Sun, 10 May 2015 21:00:00 -0300</pubDate>
+      <guid isPermaLink="true">http://lean8086.com/articles/velocidad-percibida-por-el-usuario/</guid>
+      <author></author>
+      <description>&lt;h2 id=&quot;the-experience-of-waiting&quot;&gt;The experience of waiting&lt;/h2&gt;
+&lt;p&gt;Hace un tiempo leí un artículo sobre el aeropuerto de Houston. Ellos recibían muchísimas quejas sobre el tiempo de espera para retirar el equipaje.&lt;/p&gt;
+&lt;p&gt;Aumentaron la cantidad de personal que transportaba el equipaje y mejoraron bastante la &lt;strong&gt;velocidad de entrega&lt;/strong&gt;. Igualmente seguía siendo muy lento (unos 8 minutos) y seguían recibiendo quejas.&lt;/p&gt;
+&lt;p&gt;Se dieron cuenta que a los pasajeros les tomaba solamente 1 minuto en ir desde el avión hasta donde se retira el equipaje, y 7 minutos en recibir las valijas. &lt;strong&gt;Pasaban el 88% de su tiempo esperando.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Entonces, alejando la zona de equipaje de las puertas de abordaje, &lt;strong&gt;eliminaron (virtualmente) la molestia y stress del tiempo de espera&lt;/strong&gt;. &lt;strong&gt;La gente pasó mucho menos tiempo esperando, y así redujeron las quejas casi a cero.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;El artículo: &lt;a href=&quot;http://www.nytimes.com/2012/08/19/opinion/sunday/why-waiting-in-line-is-torture.html&quot;&gt;Why Waiting Is Torture&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;percepci-n-de-velocidad-en-pantallas-cr-ticas&quot;&gt;Percepción de velocidad en pantallas críticas&lt;/h2&gt;
+&lt;p&gt;Un usuario común de MercadoLibre suele moverse, por ejemplo, desde la homepage o resultados de busqueda hacia la página de un producto.&lt;/p&gt;
+&lt;p&gt;Si tenemos en cuenta algunas buenas técnicas, podemos aprovechar al máximo esa relación.&lt;/p&gt;
+&lt;h2 id=&quot;prefetching&quot;&gt;Prefetching&lt;/h2&gt;
+&lt;p&gt;Si generáramos un mapa de calor con Crazy Egg (&lt;a href=&quot;http://crazyegg.com&quot;&gt;http://crazyegg.com&lt;/a&gt;) podríamos predecir en la homepage y en el Search, cual es la ubicación de los artículos que son altamente probables que sean visitados.&lt;/p&gt;
+&lt;p&gt;Sabiendo esto, &lt;strong&gt;en la carga inicial de esas páginas podemos pre-cargar (de fondo) las páginas de producto que son altamente probables que el usuario visite&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Para eso, en la homepage y Search deberíamos especificar qué artículos podrían ser los próximos en ser visitados:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;link rel=&amp;quot;prefetch&amp;quot; href=&amp;quot;http://articulo.ml.com.ar/MLA-123-foo-_JM&amp;quot; /&amp;gt;
+&amp;lt;link rel=&amp;quot;prefetch&amp;quot; href=&amp;quot;http://articulo.ml.com.ar/MLA-456-bar-_JM&amp;quot; /&amp;gt;
+&amp;lt;link rel=&amp;quot;prefetch&amp;quot; href=&amp;quot;http://articulo.ml.com.ar/MLA-789-baz-_JM&amp;quot; /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;De esta forma, cuando se hace clic en un artículo, la carga de la página de producto es instantánea.&lt;/p&gt;
+&lt;p&gt;Esto mismo pueden verlo al buscar en Google. Ellos pre-cargan siempre el primer resultado (denle unos segundos, a veces tarda en pre-cargarse).&lt;/p&gt;
+&lt;p&gt;Este post de Mozilla contesta las dudas más comunes sobre el tema: &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTTP/Link_prefetching_FAQ&quot;&gt;Link prefetching FAQ&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;critical-path&quot;&gt;Critical path&lt;/h2&gt;
+&lt;p&gt;Para mejorar significativamente la performance, se recomienda pegar el CSS del contenido visible &lt;strong&gt;directamente en el HTML&lt;/strong&gt;. Esto le permite al browser tener lista, mucho antes, la experiencia “above-the-fold”. Para esto tenemos que determinar qué estilos representan al contenido que se muestra en el primer pantallazo para la mayoría de los usuarios.&lt;/p&gt;
+&lt;p&gt;La idea es incluir esos estilos en un &lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt; dentro del &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt;. El resto de los estilos deberían cargarse antes del cierre del &lt;code&gt;&amp;lt;/body&amp;gt;&lt;/code&gt; o asíncronamente con JS.&lt;/p&gt;
+&lt;p&gt;Les dejo algunas recomendaciones de PageSpeed Insights (by Google): &lt;a href=&quot;https://developers.google.com/speed/docs/insights/PrioritizeVisibleContent&quot;&gt;Reduce the size of the above-the-fold content&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;progressive-enhancement&quot;&gt;Progressive Enhancement&lt;/h2&gt;
+&lt;h3 id=&quot;la-m-nima-expresi-n-de-un-producto&quot;&gt;La mínima expresión de un producto&lt;/h3&gt;
+&lt;p&gt;De la mano con Critical Path, una página de producto podría tratarse solo de un &lt;strong&gt;título, precio, foto (una), y el botón Comprar&lt;/strong&gt;. Todo eso con sus estilos impresos directamente en el &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;El resto del contenido puede traerse con JS después del onload (carga de la página). Entonces, &lt;strong&gt;en el primer request de la página, ya tendríamos impresa la mínima expresión de un producto&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;no-perder-el-contenido-indexable&quot;&gt;No perder el contenido indexable&lt;/h3&gt;
+&lt;p&gt;Para no perder la descripción y demás contenido indexable, podemos especificar lo que necesitemos a través de microdata, e incluirla dentro del primer request.&lt;/p&gt;
+&lt;p&gt;También podríamos parsear las descripciones de producto que están compuestas enteramente de imágenes, extraer el texto, y usarlo para indexar con ese contenido.&lt;/p&gt;
+&lt;p&gt;Les dejo un link con toda la información sobre microdata: &lt;a href=&quot;http://schema.org/&quot;&gt;http://schema.org/&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;no-perder-el-acceso-a-las-secciones-adicionales&quot;&gt;No perder el acceso a las secciones adicionales&lt;/h3&gt;
+&lt;p&gt;Para cubrir el caso mínimo de HTML, se pueden incluir links dentro de &lt;code&gt;&amp;lt;noscript&amp;gt;&lt;/code&gt;, y cargar la sección correspondiente si hay JS:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;noscript&amp;gt;
+    &amp;lt;a href=&amp;quot;/description&amp;quot;&amp;gt;Descripción del producto&amp;lt;/a&amp;gt;
+&amp;lt;/noscript&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>Single Page Apps y cómo mejorar la UX (parte 2)</title>
+      <link>http://lean8086.com/articles/single-page-apps-y-como-mejorar-la-ux-parte-2/</link>
+      <pubDate>Sun, 19 Apr 2015 21:00:00 -0300</pubDate>
+      <guid isPermaLink="true">http://lean8086.com/articles/single-page-apps-y-como-mejorar-la-ux-parte-2/</guid>
+      <author></author>
+      <description>&lt;p&gt;Para recapitular sobre el tema, denle una leída a la &lt;a href=&quot;http://lean8086.com/articles/single-page-apps-y-como-mejorar-la-ux-parte-1/&quot;&gt;Parte 1&lt;/a&gt; del artículo. Igualmente, agrego un poco de info sobre el punto 1 y 2, y sumo un tercer punto:&lt;/p&gt;
+&lt;h2 id=&quot;1-cero-tiempo-de-carga&quot;&gt;1. Cero tiempo de carga&lt;/h2&gt;
+&lt;p&gt;En una Single Page App el usuario &lt;strong&gt;no percibe un tiempo de espera entre una página y la otra&lt;/strong&gt;. &lt;strong&gt;Todo es instantáneo, literalmente.&lt;/strong&gt; Lo que sí tiene tiempo de carga es la información, pero no la UI.&lt;/p&gt;
+&lt;p&gt;Con algunos compañeros de trabajo empezamos a notar que cada vez más productos de primera linea aprovechan este feature. Buscando más info llegamos a la conclusión de que no tiene un nombre definido.&lt;/p&gt;
+&lt;p&gt;Encontramos estos 2 artículos super detallados sobre la percepción de velocidad del usuario y como mejorar la UX evitando bloquear la UI:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.callumhart.com/blog/non-blocking-uis-with-interface-previews&quot;&gt;Non-blocking UI’s with interface previews&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.mobify.com/blog/beginners-guide-to-perceived-performance/&quot;&gt;A Beginner’s Guide to Perceived Performance: 4 Ways to Make Your Mobile Site Feel Like a Native App&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;2-flujos-que-dejan-de-ser-lineales&quot;&gt;2. Flujos que dejan de ser lineales&lt;/h2&gt;
+&lt;p&gt;La página no se recarga nunca cuando el usuario navega. Esto nos permite hacer tareas en el fondo.&lt;/p&gt;
+&lt;p&gt;La primera vez que escuché sobre aprovechar las tareas de background, fue de la mano de Instagram. Ellos comparten algunos trucos para darle a los usuarios una sensación de constante respuesta.&lt;/p&gt;
+&lt;p&gt;Según &lt;a href=&quot;http://www.fastcodesign.com/1669788/the-3-white-lies-behind-instagrams-lightning-speed&quot;&gt;este artículo&lt;/a&gt; que lei hace un tiempo, las 3 “mentiras blancas” de Instagram son:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;La UI siempre finge que está trabajando.&lt;/li&gt;
+&lt;li&gt;Se carga contenido basado en la importancia, no en el orden.&lt;/li&gt;
+&lt;li&gt;Se anticipan a cada movimiento del usuario. Por ejemplo, ¿por qué esperar a que cliquee “Enviar” para empezar a enviar información sin que se de cuenta?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;3-la-conexi-n-a-internet-como-una-capa-de-mejora&quot;&gt;3. La conexión a internet como una capa de mejora&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We live in a disconnected &amp;amp; battery powered world, but our technology and best practices are a leftover from the always connected &amp;amp; steadily powered past.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Este feature es conocido como &lt;strong&gt;offline-first&lt;/strong&gt; y es un paso más a mobile-first. Esto implica también re-pensar la forma en que el usuario interactúa con la UI.&lt;/p&gt;
+&lt;p&gt;Por ejemplo, un usuario podría responder preguntas en MercadoLibre sin conexión a internet, enviándolas cuando tenga red. O podría cargar fotos y datos en el flujo de venta y que, sin tener conexión, recupere los datos si cerró la ventana.&lt;/p&gt;
+&lt;p&gt;Esta técnica también puede ser util para evitar la carga inicial de una SPA. De esta forma el usuario tiene &lt;strong&gt;cero segundos de carga inicial y cero segundos de carga entre pantallas&lt;/strong&gt;. Esto va de la mano con la idea de que &lt;strong&gt;la web empieza a parecerse a las Apps nativas&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Les dejo este artículo de A list apart sobre &lt;a href=&quot;http://alistapart.com/article/offline-first&quot;&gt;Designing Offline-First Web Apps&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;conclusi-n&quot;&gt;Conclusión&lt;/h2&gt;
+&lt;p&gt;Las SPA se enfocan en la velocidad y percepción de velocidad de la UI/UX.&lt;/p&gt;
+&lt;p&gt;Cada vez vamos a ver más front-ends con éstos features y necesitamos aprovecharlos al máximo.&lt;/p&gt;
+&lt;p&gt;Todo esto cambia bastante la forma de diseñar las interacciones, y necesitamos empezar a pensar distinto de como lo venimos haciendo.&lt;/p&gt;
+&lt;p&gt;La web dejó de ser estática hace tiempo y nos obliga a adaptarnos a estos nuevos tipos de interacciones.&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Protocolo HTTP/2</title>
+      <link>http://lean8086.com/articles/protocolo-http2/</link>
+      <pubDate>Mon, 02 Mar 2015 21:00:00 -0300</pubDate>
+      <guid isPermaLink="true">http://lean8086.com/articles/protocolo-http2/</guid>
+      <author></author>
+      <description>&lt;p&gt;El protocolo de intercambio de datos que usa la web hoy en día es lento y bastante antiguo (HTTP 1.1, es de 1999).&lt;/p&gt;
+&lt;p&gt;Para pedir cada archivo (html, css, js, imágenes, etc.) al servidor, se ejecuta un proceso bastante costoso en el que cliente y servidor se comunican y tratan de entenderse.&lt;/p&gt;
+&lt;p&gt;Con el tiempo esto nos fue empujando a usar técnicas como:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Juntar varias imágenes en una sola (sprites).&lt;/li&gt;
+&lt;li&gt;Juntar varios archivos JS o CSS en uno solo (bundles).&lt;/li&gt;
+&lt;li&gt;Tener distintos sub-dominios para servir archivos estáticos.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Dentro de poco HTTP/2 va a dejar de ser borrador. Está basado en el conocido SPDY (de Google) que &lt;strong&gt;ya está en todos los browsers&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;HTTP/2, en resumidas cuentas, mejora muchísimo el tiempo de carga de una página.&lt;/p&gt;
+&lt;p&gt;Algunos puntos importantes sobre esta versión:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Deja la conexión con el server abierta, y así nos evitamos todos los siguientes handshakes.&lt;/li&gt;
+&lt;li&gt;Comprime el tamaño del request, lo que lo hace mucho más rápido.&lt;/li&gt;
+&lt;li&gt;Puede enviar y recibir muchas cosas al mismo tiempo a través de una única conexión.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Lo bueno es que esta tecnología &lt;strong&gt;es totalmente compatible con sitios que no la aprovechen&lt;/strong&gt;.&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Single Page Apps y cómo mejorar la UX (parte 1)</title>
+      <link>http://lean8086.com/articles/single-page-apps-y-como-mejorar-la-ux-parte-1/</link>
+      <pubDate>Mon, 02 Feb 2015 21:00:00 -0300</pubDate>
+      <guid isPermaLink="true">http://lean8086.com/articles/single-page-apps-y-como-mejorar-la-ux-parte-1/</guid>
+      <author></author>
+      <description>&lt;p&gt;Desde hace unos meses estoy implementando en algunos proyectos lo que se conoce como Single Page App. Para quienes no conocen el término, Wikipedia tiene una &lt;a href=&quot;http://en.wikipedia.org/wiki/Single-page_application&quot;&gt;definición muy completa&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Según la definición, el objetivo principal de una SPA es &lt;strong&gt;proveer una UX más fluida&lt;/strong&gt;. Esto significa que existen algunas ventajas extra a nivel UI, y que se necesitan hacer algunos cambios a nivel interacción con el usuario.&lt;/p&gt;
+&lt;p&gt;Hay 2 características importantes que redefinen la UX y que considero las más importantes:&lt;/p&gt;
+&lt;h2 id=&quot;1-cero-tiempo-de-carga&quot;&gt;1. Cero tiempo de carga&lt;/h2&gt;
+&lt;p&gt;En una SPA el usuario &lt;strong&gt;no percibe un tiempo de espera entre una página y la otra&lt;/strong&gt;. &lt;strong&gt;Todo es instantáneo, literalmente.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Lo que sí tiene tiempo de carga es la información, pero no la UI. Entonces empiezan a aparecer patrones de diseño como &lt;em&gt;Skeleton layout&lt;/em&gt; o &lt;em&gt;“non-blocking interfaces”&lt;/em&gt;, que ya lo habrán visto usando Facebook:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/single-page-apps-y-como-mejorar-la-ux-parte-1/facebook.png&quot; alt=&quot;Facebook skeleton layout&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Primero se carga el esqueleto de la página, porque es lo que nunca cambia y puede volver a imprimirse instantaneamente entre pantallas. Después se carga la data.&lt;/p&gt;
+&lt;p&gt;Les dejo un artículo de Luke en el que explica cómo usando Skeleton pudieron evitar usar la ruedita de loading. &lt;a href=&quot;http://www.lukew.com/ff/entry.asp?1797&quot;&gt;Mobile Design Details: Avoid The Spinner&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;También les dejo un video muy útil de Guille Rauch sobre cómo mejorar la interacción del usuario mejorando la percepción de velocidad. Muestra muchos ejemplos andando. Si tienen unos minutos, no se lo pierdan: &lt;a href=&quot;https://www.youtube.com/watch?v=Ar9R-CX217o&quot;&gt;The need for speed&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;2-flujos-que-dejan-de-ser-lineales&quot;&gt;2. Flujos que dejan de ser lineales&lt;/h2&gt;
+&lt;p&gt;La página no se recarga nunca cuando el usuario navega. Esto nos permite hacer tareas en el fondo. Un ejemplo claro podría ser en el flujo de venta de MercadoLibre. Cuando el usuario carga una foto, no es necesario dejarle el foco sobre el progreso de las fotos subiendo. Se puede hacer que siga modificando otros datos mientras esa tarea se hace de fondo.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Los flujos dejan de ser lineales, y hay formas de darle feedback al usuario sobre esto.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Prueben adjuntar archivos a un mail en Gmail y apretar Enviar antes de que se terminen de adjuntar.&lt;/p&gt;
+&lt;h2 id=&quot;3-para-m-s-adelante-&quot;&gt;3. Para más adelante…&lt;/h2&gt;
+&lt;p&gt;Hay muchas más características que pueden redefinir la interacción del usuario en las SPA.&lt;/p&gt;
+&lt;p&gt;Lo importante es poder ver que hoy en día ya tenemos la posibilidad de mejorarle notablemente la experiencia al usuario.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://lean8086.com/articles/single-page-apps-y-como-mejorar-la-ux-parte-2/&quot;&gt;Ir a la parte 2.&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Calidad vs. velocidad en el desarrollo</title>
+      <link>http://lean8086.com/articles/calidad-vs-velocidad-en-el-desarrollo/</link>
+      <pubDate>Thu, 20 Nov 2014 21:00:00 -0300</pubDate>
+      <guid isPermaLink="true">http://lean8086.com/articles/calidad-vs-velocidad-en-el-desarrollo/</guid>
+      <author></author>
+      <description>&lt;p&gt;Les dejo el video &lt;a href=&quot;http://youtu.be/nYkdrAPrdcw&quot;&gt;Rethinking Web App Development at Facebook&lt;/a&gt;. Está bueno para ver las preguntas que se hacen, y las respuestas que encuentran.&lt;/p&gt;
+&lt;h2 id=&quot;mis-notas&quot;&gt;Mis notas&lt;/h2&gt;
+&lt;p&gt;Un objetivo que Facebook persigue es &lt;strong&gt;generar software de calidad&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Según ellos, se entiende por calidad a:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;un código seguro.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;un código performante.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;una UI “disfrutable”.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;una interfaz facil de usar (UX).&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;La calidad lleva tiempo. Cuanta más calidad se busca, más tiempo lleva desarrollarlo.&lt;/p&gt;
+&lt;p&gt;Lo que más se valora en Facebook es la habilidad de moverse rápido. Necesitan salir a producción cuanto antes para recolectar métricas, feedback, etc. Así, pueden iterar lo mas rápido posible y tener el mejor producto.&lt;/p&gt;
+&lt;p&gt;En el video comentan que calidad y velocidad no conviven.&lt;/p&gt;
+&lt;h2 id=&quot;c-mo-lograr-mejor-calidad-en-menos-tiempo&quot;&gt;Cómo lograr mejor calidad en menos tiempo&lt;/h2&gt;
+&lt;p&gt;Intentaron varias cosas. A nivel equipo:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Recortar features: &lt;em&gt;“pero si estás queriendo agregar valor a tu producto, eliminar funcionalidades para tener lo mínimo indispensable no está bueno.”&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Agregar gente: &lt;em&gt;“pero no podés agregar developers a un problema esperando que lo resuelvan mas rápido y con buena calidad.”&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Pedirle a la gente que trabaje mas duro: &lt;em&gt;“pero no es sustentable pedir que trabajen 15 horas por día.”&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A nivel stack tecnológico intentaron aplicar MVC, pero no escala porque se empieza a complicar muy rápido. &lt;strong&gt;Cada vez que agregan nuevos features, el sistema entero cambia.&lt;/strong&gt; Esto genera que el código sea impredecible. Es decir que, entra gente nueva a ver el código y les toma tiempo para entender si lo que se va a modificar impacta en el resto de la aplicación.&lt;/p&gt;
+&lt;p&gt;Para aumentar la calidad y reducir el tiempo, probaron hacer que el código sea predecible. Aplicaron Flux Pattern: &lt;strong&gt;una arquitectura que genera un flujo de datos unidireccional (a diferencia del MVC)&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;mvc-pattern&quot;&gt;MVC pattern&lt;/h2&gt;
+&lt;p&gt;Buenísimo para aplicaciones chicas pero difícil de entender qué vista se relaciona con qué modelo:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/calidad-vs-velocidad-en-el-desarrollo/mvc.png&quot; alt=&quot;MVC&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;flux-pattern&quot;&gt;Flux pattern&lt;/h2&gt;
+&lt;p&gt;Flujo de datos de una sola dirección. Las “flechas” van en un solo sentido:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/calidad-vs-velocidad-en-el-desarrollo/flux.png&quot; alt=&quot;Flux&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Ponen como ejemplo el chat de Facebook, que necesita comunicarse con la barra de notificaciones.&lt;/p&gt;
+&lt;p&gt;A medida que fueron agregando features, el código se les hizo largo. Y en lugar de darle el control a un agente externo (handler), se le da el control a cada integrante:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/calidad-vs-velocidad-en-el-desarrollo/external-control.png&quot; alt=&quot;External control&quot;&gt;
+&lt;img src=&quot;/articles/calidad-vs-velocidad-en-el-desarrollo/internal-control.png&quot; alt=&quot;Internal control&quot;&gt;&lt;/p&gt;
+&lt;p&gt;A partir de acá, el video trata de React. Es un framework de Facebook que implementa Flux.&lt;/p&gt;
+&lt;h2 id=&quot;react&quot;&gt;React&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Recarga todo el componente entero cuando cambia una parte.&lt;/li&gt;
+&lt;li&gt;Para que no sea pesado usa un DOM virtual. Hacen cambios individuales ahí y después pisan todo el componente una sola vez en el DOM real.&lt;/li&gt;
+&lt;li&gt;Todo Instagram esta hecho con React.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    <item>
+      <title>Multi-Device Layout Patterns</title>
+      <link>http://lean8086.com/articles/multi-device-layout-patterns/</link>
+      <pubDate>Sun, 11 May 2014 21:00:00 -0300</pubDate>
+      <guid isPermaLink="true">http://lean8086.com/articles/multi-device-layout-patterns/</guid>
+      <author></author>
+      <description>&lt;p&gt;A medida que los layouts responsive fueron evolucionando, surgieron varios patrones que ya tienen nombre y apellido.&lt;/p&gt;
+&lt;h2 id=&quot;los-m-s-populares&quot;&gt;Los más populares&lt;/h2&gt;
+&lt;p&gt;Según &lt;a href=&quot;https://twitter.com/lukew&quot;&gt;Luke Wroblewski&lt;/a&gt; (groso), los patrones más populares son:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Mostly Fluid&lt;/li&gt;
+&lt;li&gt;Column Drop&lt;/li&gt;
+&lt;li&gt;Layout Shifter&lt;/li&gt;
+&lt;li&gt;Tiny Tweaks&lt;/li&gt;
+&lt;li&gt;Off Canvas&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;En su &lt;a href=&quot;http://www.lukew.com/ff/entry.asp?1514&quot;&gt;post&lt;/a&gt; explica y grafica cada uno.&lt;/p&gt;
+&lt;h2 id=&quot;off-canvas&quot;&gt;Off Canvas&lt;/h2&gt;
+&lt;p&gt;Un web designer tomó el patrón Off Canvas (uno de los que mejor se adaptan) y profundizó un el concepto: &lt;a href=&quot;http://jasonweaver.name/lab/offcanvas/&quot;&gt;http://jasonweaver.name/lab/offcanvas/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Básicamente se trata de un layout de 3 columnas que se acomoda segun el tamaño de pantalla. Dentro de las columnas, &lt;strong&gt;el contenido principal se ubica en la columna central&lt;/strong&gt;. Los elementos secundarios o de navegación se ubican en las columnas de los costados.&lt;/p&gt;
+&lt;p&gt;Centrado por default:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/multi-device-layout-patterns/small-centered.png&quot; alt=&quot;Centrado por default&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Acceso a sección izquierda:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/multi-device-layout-patterns/small-left.png&quot; alt=&quot;Sección izquierda&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Cuanto mayor es el espacio en la pantalla, más columnas se muestran dentro del area visible:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/multi-device-layout-patterns/large.png&quot; alt=&quot;Todas las columnas visibles&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;m-s-patrones&quot;&gt;Más patrones&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://twitter.com/brad_frost&quot;&gt;Brad Frost&lt;/a&gt; (otro groso) escribió hace un par de años algunos posts sobre patrones de navegación responsive. Explica en detalle pros y contras de varios:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Top Nav or “Do Nothing” Approach&lt;/li&gt;
+&lt;li&gt;Footer Anchor&lt;/li&gt;
+&lt;li&gt;Select Menu&lt;/li&gt;
+&lt;li&gt;The Toggle&lt;/li&gt;
+&lt;li&gt;Left Nav Flyout&lt;/li&gt;
+&lt;li&gt;Footer-Only&lt;/li&gt;
+&lt;li&gt;“Hide N’ Cry”&lt;/li&gt;
+&lt;li&gt;Multi-Toggle&lt;/li&gt;
+&lt;li&gt;Ol’ Right-to-Left&lt;/li&gt;
+&lt;li&gt;“Skip the Sub-Nav”&lt;/li&gt;
+&lt;li&gt;The Carousel+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Más info sobre estos patrones en:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://bradfrostweb.com/blog/web/responsive-nav-patterns/&quot;&gt;Responsive Navigation Patterns&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://bradfrostweb.com/blog/web/complex-navigation-patterns-for-responsive-design/&quot;&gt;Complex Navigation Patterns for Responsive Design&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    <item>
+      <title>Evitar redundancia de roles ARIA</title>
+      <link>http://lean8086.com/articles/evitar-redundancia-de-roles-aria/</link>
+      <pubDate>Sun, 23 Feb 2014 21:00:00 -0300</pubDate>
+      <guid isPermaLink="true">http://lean8086.com/articles/evitar-redundancia-de-roles-aria/</guid>
+      <author></author>
+      <description>&lt;p&gt;Encontré en 2 implementaciones distintas estos casos que me llamaron la atención:&lt;/p&gt;
+&lt;p&gt;Checkout:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&amp;quot;main&amp;quot; role=&amp;quot;main&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Homepage:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;main id=&amp;quot;main&amp;quot; role=&amp;quot;main&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;En principio ninguna de las dos está mal. Pero hay algunas definiciones que pueden ser de utilidad en estos casos:&lt;/p&gt;
+&lt;h2 id=&quot;1-aria-role-accesibilidad-&quot;&gt;1. ARIA role (accesibilidad)&lt;/h2&gt;
+&lt;p&gt;La mayoría de los elementos HTML tienen un &lt;code&gt;role&lt;/code&gt; por defecto.&lt;/p&gt;
+&lt;p&gt;Por ejemplo, el role de un &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt; es &lt;code&gt;link&lt;/code&gt;, pudiendo hacer:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;a href=&amp;quot;foo.html&amp;quot; role=&amp;quot;link&amp;quot;&amp;gt;foo&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Los browsers que soportan accesibilidad ya definen este rol internamente, por lo que el ejemplo anterior es lo mismo que el siguiente:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;a href=&amp;quot;foo.html&amp;quot;&amp;gt;foo&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Entonces, para qué sirve el atributo role?: Para &lt;strong&gt;marcar la funcionalidad de un contenido&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Los ejemplos más claros pueden ser:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;header role=&amp;quot;banner&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Va a contener el encabezado principal de la página. Donde va el logo, título, navegación principal, etc.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;form role=&amp;quot;search&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Va a ser el formulario usado para hacer búsquedas en el sitio.&lt;/p&gt;
+&lt;p&gt;Basados en eso, el primer caso está ok!:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;div role=&amp;quot;main&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Y el segundo no está mal, pero es redundante:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;main role=&amp;quot;main&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;2-div-vs-main&quot;&gt;2. Div vs. Main&lt;/h2&gt;
+&lt;p&gt;Los divs no le aportan ningún significado a los contenidos que envuelven (igual que los &lt;code&gt;&amp;lt;span&amp;gt;&lt;/code&gt;). Deberían usarse en casos donde hay una división visual. Donde no se esté haciendo una división semántica del contenido.&lt;/p&gt;
+&lt;p&gt;El tag &lt;code&gt;&amp;lt;main&amp;gt;&lt;/code&gt; representa el contenido principal de la página.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;No puede haber más de un main dentro de un body ni puede estar dentro de un article, aside, footer, header o nav.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Entonces, ya que debería haber un solo &lt;code&gt;&amp;lt;main&amp;gt;&lt;/code&gt; o &lt;code&gt;role=&amp;quot;main&amp;quot;&lt;/code&gt; el primer caso no necesita una &lt;code&gt;class&lt;/code&gt; definida para CSS:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;div role=&amp;quot;main&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Se pueden aplicar estilos por atributo: &lt;code&gt;[role=&amp;quot;main&amp;quot;] { ... }&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;El segundo caso no necesita un &lt;code&gt;id&lt;/code&gt; definido para CSS:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;main role=&amp;quot;main&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Se pueden aplicar estilos usando un selector por etiqueta: &lt;code&gt;main { ... }&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Es un ejemplo muy chiquito y muy específico, pero lo que quiero que se vea es la importancia de entender para qué sirve cada cosa y poder elegir lo que resuelva mejor el problema.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Yo para estos 2 casos elegiría un simple &lt;code&gt;&amp;lt;main&amp;gt;&lt;/code&gt; a secas. Sin clases, roles o ids.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Algunas referencias:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.w3.org/TR/wai-aria/roles&quot;&gt;The Roles Model&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://knowledge.onsubject.com/html-role-attributes/&quot;&gt;HTML role attributes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.w3.org/wiki/Generic_containers_-_the_div_and_span_elements&quot;&gt;Generic containers - the div and span elements&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main&quot;&gt;Main - MDN&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    <item>
+      <title>Background offset en CSS</title>
+      <link>http://lean8086.com/articles/background-offset-en-css/</link>
+      <pubDate>Sun, 12 Jan 2014 21:00:00 -0300</pubDate>
+      <guid isPermaLink="true">http://lean8086.com/articles/background-offset-en-css/</guid>
+      <author></author>
+      <description>&lt;p&gt;Hoy en día, en el AutoComplete de &lt;a href=&quot;http://chico.mercadolibre.com/&quot;&gt;Chico UI&lt;/a&gt; (v1.0.0) tenemos un loading spinner agregado como background de CSS, alineado a la derecha como &lt;code&gt;right center&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Eso hace que el spinner quede literalmente &lt;strong&gt;pegado al borde derecho&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/background-offset-en-css/before.png&quot; alt=&quot;Before&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Buscando un poco, encontré que &lt;code&gt;background-position&lt;/code&gt; &lt;strong&gt;puede recibir un offset!&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/* 10px es el offset */
+background-position: right 3em bottom 10px;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Se incluyó en la especificación de CSS3 y lo soportan todos los browsers, excepto IE8 y anteriores. Más específicamente es soportado en Opera 11+, IE9+, FF 13+, Chrome y Safari.&lt;/p&gt;
+&lt;p&gt;Aplicando &lt;code&gt;right 10px center&lt;/code&gt; al AutoComplete, podemos separar el spinner del borde derecho unos 10px:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/background-offset-en-css/after.png&quot; alt=&quot;After&quot;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;antes-&quot;&gt;Antes:&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;.ch-autocomplete-loading {
+    background: url(&amp;#39;../assets/loading-small.gif&amp;#39;) no-repeat right center;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;despu-s-&quot;&gt;Después:&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;.ch-autocomplete-loading {
+    background: url(&amp;#39;../assets/loading-small.gif&amp;#39;) no-repeat right 10px center;
+}
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+  </channel>
+</rss>

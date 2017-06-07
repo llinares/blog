@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Article">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <meta name="theme-color" content="#000">
+    <title>Dudas comunes de microdata - Lean Linares
+    </title>
+    <link rel="canonical" href="http://lean8086.com">
+    <link rel="shortcut icon" href="https://en.gravatar.com/userimage/15818721/d41d282470a99d63c961e8e40d70f360.jpg?size=32">
+    <link rel="alternate" href="http://lean8086.com/feed.xml" type="application/rss+xml" title="Front-End Tech Lead &amp; JavaScript Developer">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Lora:400,700">
+    <link rel="stylesheet" href="/css/main.css">
+        <script>
+          if (window.location.host !== 'localhost') {
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', 'UA-100475674-1', 'auto');
+            ga('send', 'pageview');
+          }
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js"></script>
+  </head>
+  <body class="article">
+    <header class="header">
+      <div class="content-wrap">
+        <h1 itemprop="headline" class="article-headline">Dudas comunes de microdata</h1>
+        <p class="article-details">
+                  <time itemprop="datePublished" datetime="2016-04-19"><span>Apr 19, 2016</span>
+                  </time> · <span>1</span> min read
+        </p>
+      </div>
+    </header>
+    <section itemprop="articleBody" class="article-body">
+      <div class="content-wrap"><p>Me gustaría aclarar algunas dudas acerca de cómo usar Microdata, ya que recibí varias consultas sobre los mismos&nbsp;temas.</p>
+<h2 id="faq-1"><span class="caps">FAQ</span>&nbsp;1</h2>
+<p>A veces hay data en forma de meta&nbsp;tags:</p>
+<pre><code>&lt;meta itemprop=&quot;price&quot; content=&quot;123.45&quot;/&gt;
+</code></pre><p>Otras veces, hay data en elementos&nbsp;comunes:</p>
+<pre><code>&lt;span itemprop=&quot;priceCurrency&quot; content=&quot;ARS&quot;&gt;$&lt;/span&gt;
+</code></pre><h3 id="-cu-l-es-la-correcta-">¿Cuál es la&nbsp;correcta?</h3>
+<p>Según la doc de <a href="http://schema.org/">schema.org</a> <strong>la data se agrega a los elementos comunes</strong>. Y los meta tags son solamente para aquellos casos en los&nbsp;que:</p>
+<blockquote>
+<p>…a web page has information that would be valuable to mark up, but the information can’t be marked up because of the way it appears on the&nbsp;page.</p>
+</blockquote>
+<h2 id="faq-2"><span class="caps">FAQ</span>&nbsp;2</h2>
+<p>¿Qué pasa si tengo, por ejemplo, muchos <code>itemprop=&quot;price&quot;</code> en una misma&nbsp;página?</p>
+<p>Esta ok, pero todo depende del scope que se le defina a su&nbsp;contenedor.</p>
+<p>Los scopes pueden anidarse y se recomienda que su “tipo” esté&nbsp;definido:</p>
+<pre><code>&lt;div itemscope itemtype=&quot;http://schema.org/Product&quot;&gt;
+</code></pre><p>Les recomiendo echarle un vistazo al <a href="http://schema.org/docs/gs.html">Getting started de Schema.org</a>. Muy completo y no lleva más de 5 minutos de&nbsp;lectura.</p>
+</div>
+    </section>
+    <footer role="contentinfo">
+      <div class="content-wrap">
+        <div class="nav"><a href="/">Go back</a></div>
+        <p class="copy">&copy; 2017 Lean Linares</p>
+      </div>
+    </footer>
+  </body>
+</html>

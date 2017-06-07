@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Article">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <meta name="theme-color" content="#000">
+    <title>Velocidad percibida por el usuario - Lean Linares
+    </title>
+    <link rel="canonical" href="http://lean8086.com">
+    <link rel="shortcut icon" href="https://en.gravatar.com/userimage/15818721/d41d282470a99d63c961e8e40d70f360.jpg?size=32">
+    <link rel="alternate" href="http://lean8086.com/feed.xml" type="application/rss+xml" title="Front-End Tech Lead &amp; JavaScript Developer">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Lora:400,700">
+    <link rel="stylesheet" href="/css/main.css">
+        <script>
+          if (window.location.host !== 'localhost') {
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', 'UA-100475674-1', 'auto');
+            ga('send', 'pageview');
+          }
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js"></script>
+  </head>
+  <body class="article">
+    <header class="header">
+      <div class="content-wrap">
+        <h1 itemprop="headline" class="article-headline">Velocidad percibida por el usuario</h1>
+        <p class="article-details">
+                  <time itemprop="datePublished" datetime="2015-05-11"><span>May 11, 2015</span>
+                  </time> · <span>3</span> min read
+        </p>
+      </div>
+    </header>
+    <section itemprop="articleBody" class="article-body">
+      <div class="content-wrap"><h2 id="the-experience-of-waiting">The experience of&nbsp;waiting</h2>
+<p>Hace un tiempo leí un artículo sobre el aeropuerto de Houston. Ellos recibían muchísimas quejas sobre el tiempo de espera para retirar el&nbsp;equipaje.</p>
+<p>Aumentaron la cantidad de personal que transportaba el equipaje y mejoraron bastante la <strong>velocidad de entrega</strong>. Igualmente seguía siendo muy lento (unos 8 minutos) y seguían recibiendo&nbsp;quejas.</p>
+<p>Se dieron cuenta que a los pasajeros les tomaba solamente 1 minuto en ir desde el avión hasta donde se retira el equipaje, y 7 minutos en recibir las valijas. <strong>Pasaban el 88% de su tiempo&nbsp;esperando.</strong></p>
+<p>Entonces, alejando la zona de equipaje de las puertas de abordaje, <strong>eliminaron (virtualmente) la molestia y stress del tiempo de espera</strong>. <strong>La gente pasó mucho menos tiempo esperando, y así redujeron las quejas casi a&nbsp;cero.</strong></p>
+<p>El artículo: <a href="http://www.nytimes.com/2012/08/19/opinion/sunday/why-waiting-in-line-is-torture.html">Why Waiting Is Torture</a>.</p>
+<hr>
+<h2 id="percepci-n-de-velocidad-en-pantallas-cr-ticas">Percepción de velocidad en pantallas&nbsp;críticas</h2>
+<p>Un usuario común de MercadoLibre suele moverse, por ejemplo, desde la homepage o resultados de busqueda hacia la página de un&nbsp;producto.</p>
+<p>Si tenemos en cuenta algunas buenas técnicas, podemos aprovechar al máximo esa&nbsp;relación.</p>
+<h2 id="prefetching">Prefetching</h2>
+<p>Si generáramos un mapa de calor con Crazy Egg (<a href="http://crazyegg.com">http://crazyegg.com</a>) podríamos predecir en la homepage y en el Search, cual es la ubicación de los artículos que son altamente probables que sean&nbsp;visitados.</p>
+<p>Sabiendo esto, <strong>en la carga inicial de esas páginas podemos pre-cargar (de fondo) las páginas de producto que son altamente probables que el usuario visite</strong>.</p>
+<p>Para eso, en la homepage y Search deberíamos especificar qué artículos podrían ser los próximos en ser&nbsp;visitados:</p>
+<pre><code>&lt;link rel=&quot;prefetch&quot; href=&quot;http://articulo.ml.com.ar/MLA-123-foo-_JM&quot; /&gt;
+&lt;link rel=&quot;prefetch&quot; href=&quot;http://articulo.ml.com.ar/MLA-456-bar-_JM&quot; /&gt;
+&lt;link rel=&quot;prefetch&quot; href=&quot;http://articulo.ml.com.ar/MLA-789-baz-_JM&quot; /&gt;
+</code></pre><p>De esta forma, cuando se hace clic en un artículo, la carga de la página de producto es&nbsp;instantánea.</p>
+<p>Esto mismo pueden verlo al buscar en Google. Ellos pre-cargan siempre el primer resultado (denle unos segundos, a veces tarda en&nbsp;pre-cargarse).</p>
+<p>Este post de Mozilla contesta las dudas más comunes sobre el tema: <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Link_prefetching_FAQ">Link prefetching <span class="caps">FAQ</span></a>.</p>
+<h2 id="critical-path">Critical&nbsp;path</h2>
+<p>Para mejorar significativamente la performance, se recomienda pegar el <span class="caps">CSS</span> del contenido visible <strong>directamente en el <span class="caps">HTML</span></strong>. Esto le permite al browser tener lista, mucho antes, la experiencia “above-the-fold”. Para esto tenemos que determinar qué estilos representan al contenido que se muestra en el primer pantallazo para la mayoría de los&nbsp;usuarios.</p>
+<p>La idea es incluir esos estilos en un <code>&lt;style&gt;</code> dentro del <code>&lt;head&gt;</code>. El resto de los estilos deberían cargarse antes del cierre del <code>&lt;/body&gt;</code> o asíncronamente con&nbsp;<span class="caps">JS</span>.</p>
+<p>Les dejo algunas recomendaciones de PageSpeed Insights (by Google): <a href="https://developers.google.com/speed/docs/insights/PrioritizeVisibleContent">Reduce the size of the above-the-fold content</a>.</p>
+<h2 id="progressive-enhancement">Progressive&nbsp;Enhancement</h2>
+<h3 id="la-m-nima-expresi-n-de-un-producto">La mínima expresión de un&nbsp;producto</h3>
+<p>De la mano con Critical Path, una página de producto podría tratarse solo de un <strong>título, precio, foto (una), y el botón Comprar</strong>. Todo eso con sus estilos impresos directamente en el <code>&lt;head&gt;</code>.</p>
+<p>El resto del contenido puede traerse con <span class="caps">JS</span> después del onload (carga de la página). Entonces, <strong>en el primer request de la página, ya tendríamos impresa la mínima expresión de un producto</strong>.</p>
+<h3 id="no-perder-el-contenido-indexable">No perder el contenido&nbsp;indexable</h3>
+<p>Para no perder la descripción y demás contenido indexable, podemos especificar lo que necesitemos a través de microdata, e incluirla dentro del primer&nbsp;request.</p>
+<p>También podríamos parsear las descripciones de producto que están compuestas enteramente de imágenes, extraer el texto, y usarlo para indexar con ese&nbsp;contenido.</p>
+<p>Les dejo un link con toda la información sobre microdata: <a href="http://schema.org/">http://schema.org/</a></p>
+<h3 id="no-perder-el-acceso-a-las-secciones-adicionales">No perder el acceso a las secciones&nbsp;adicionales</h3>
+<p>Para cubrir el caso mínimo de <span class="caps">HTML</span>, se pueden incluir links dentro de <code>&lt;noscript&gt;</code>, y cargar la sección correspondiente si hay&nbsp;<span class="caps">JS</span>:</p>
+<pre><code>&lt;noscript&gt;
+    &lt;a href=&quot;/description&quot;&gt;Descripción del producto&lt;/a&gt;
+&lt;/noscript&gt;
+</code></pre></div>
+    </section>
+    <footer role="contentinfo">
+      <div class="content-wrap">
+        <div class="nav"><a href="/">Go back</a></div>
+        <p class="copy">&copy; 2017 Lean Linares</p>
+      </div>
+    </footer>
+  </body>
+</html>

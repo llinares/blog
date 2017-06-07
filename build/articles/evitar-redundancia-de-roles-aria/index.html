@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Article">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <meta name="theme-color" content="#000">
+    <title>Evitar redundancia de roles ARIA - Lean Linares
+    </title>
+    <link rel="canonical" href="http://lean8086.com">
+    <link rel="shortcut icon" href="https://en.gravatar.com/userimage/15818721/d41d282470a99d63c961e8e40d70f360.jpg?size=32">
+    <link rel="alternate" href="http://lean8086.com/feed.xml" type="application/rss+xml" title="Front-End Tech Lead &amp; JavaScript Developer">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Lora:400,700">
+    <link rel="stylesheet" href="/css/main.css">
+        <script>
+          if (window.location.host !== 'localhost') {
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', 'UA-100475674-1', 'auto');
+            ga('send', 'pageview');
+          }
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js"></script>
+  </head>
+  <body class="article">
+    <header class="header">
+      <div class="content-wrap">
+        <h1 itemprop="headline" class="article-headline">Evitar redundancia de roles ARIA</h1>
+        <p class="article-details">
+                  <time itemprop="datePublished" datetime="2014-02-24"><span>Feb 24, 2014</span>
+                  </time> · <span>2</span> min read
+        </p>
+      </div>
+    </header>
+    <section itemprop="articleBody" class="article-body">
+      <div class="content-wrap"><p>Encontré en 2 implementaciones distintas estos casos que me llamaron la&nbsp;atención:</p>
+<p>Checkout:</p>
+<pre><code>&lt;div class=&quot;main&quot; role=&quot;main&quot;&gt;
+</code></pre><p>Homepage:</p>
+<pre><code>&lt;main id=&quot;main&quot; role=&quot;main&quot;&gt;
+</code></pre><p>En principio ninguna de las dos está mal. Pero hay algunas definiciones que pueden ser de utilidad en estos&nbsp;casos:</p>
+<h2 id="1-aria-role-accesibilidad-">1. <span class="caps">ARIA</span> role&nbsp;(accesibilidad)</h2>
+<p>La mayoría de los elementos <span class="caps">HTML</span> tienen un <code>role</code> por&nbsp;defecto.</p>
+<p>Por ejemplo, el role de un <code>&lt;a&gt;</code> es <code>link</code>, pudiendo&nbsp;hacer:</p>
+<pre><code>&lt;a href=&quot;foo.html&quot; role=&quot;link&quot;&gt;foo&lt;/a&gt;
+</code></pre><p>Los browsers que soportan accesibilidad ya definen este rol internamente, por lo que el ejemplo anterior es lo mismo que el&nbsp;siguiente:</p>
+<pre><code>&lt;a href=&quot;foo.html&quot;&gt;foo&lt;/a&gt;
+</code></pre><p>Entonces, para qué sirve el atributo role?: Para <strong>marcar la funcionalidad de un contenido</strong>.</p>
+<p>Los ejemplos más claros pueden&nbsp;ser:</p>
+<pre><code>&lt;header role=&quot;banner&quot;&gt;
+</code></pre><p>Va a contener el encabezado principal de la página. Donde va el logo, título, navegación principal,&nbsp;etc.</p>
+<pre><code>&lt;form role=&quot;search&quot;&gt;
+</code></pre><p>Va a ser el formulario usado para hacer búsquedas en el&nbsp;sitio.</p>
+<p>Basados en eso, el primer caso está&nbsp;ok!:</p>
+<pre><code>&lt;div role=&quot;main&quot;&gt;
+</code></pre><p>Y el segundo no está mal, pero es&nbsp;redundante:</p>
+<pre><code>&lt;main role=&quot;main&quot;&gt;
+</code></pre><h2 id="2-div-vs-main">2. Div vs.&nbsp;Main</h2>
+<p>Los divs no le aportan ningún significado a los contenidos que envuelven (igual que los <code>&lt;span&gt;</code>). Deberían usarse en casos donde hay una división visual. Donde no se esté haciendo una división semántica del&nbsp;contenido.</p>
+<p>El tag <code>&lt;main&gt;</code> representa el contenido principal de la&nbsp;página.</p>
+<blockquote>
+<p>No puede haber más de un main dentro de un body ni puede estar dentro de un article, aside, footer, header o&nbsp;nav.</p>
+</blockquote>
+<p>Entonces, ya que debería haber un solo <code>&lt;main&gt;</code> o <code>role=&quot;main&quot;</code> el primer caso no necesita una <code>class</code> definida para&nbsp;<span class="caps">CSS</span>:</p>
+<pre><code>&lt;div role=&quot;main&quot;&gt;
+</code></pre><p>Se pueden aplicar estilos por atributo: <code>[role=&quot;main&quot;] { ... }</code></p>
+<p>El segundo caso no necesita un <code>id</code> definido para&nbsp;<span class="caps">CSS</span>:</p>
+<pre><code>&lt;main role=&quot;main&quot;&gt;
+</code></pre><p>Se pueden aplicar estilos usando un selector por etiqueta: <code>main { ... }</code></p>
+<hr>
+<p>Es un ejemplo muy chiquito y muy específico, pero lo que quiero que se vea es la importancia de entender para qué sirve cada cosa y poder elegir lo que resuelva mejor el&nbsp;problema.</p>
+<p><strong>Yo para estos 2 casos elegiría un simple <code>&lt;main&gt;</code> a secas. Sin clases, roles o&nbsp;ids.</strong></p>
+<p>Algunas&nbsp;referencias:</p>
+<ul>
+<li><a href="http://www.w3.org/TR/wai-aria/roles">The Roles&nbsp;Model</a></li>
+<li><a href="http://knowledge.onsubject.com/html-role-attributes/"><span class="caps">HTML</span> role&nbsp;attributes</a></li>
+<li><a href="http://www.w3.org/wiki/Generic_containers_-_the_div_and_span_elements">Generic containers - the div and span&nbsp;elements</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main">Main -&nbsp;<span class="caps">MDN</span></a></li>
+</ul>
+</div>
+    </section>
+    <footer role="contentinfo">
+      <div class="content-wrap">
+        <div class="nav"><a href="/">Go back</a></div>
+        <p class="copy">&copy; 2017 Lean Linares</p>
+      </div>
+    </footer>
+  </body>
+</html>

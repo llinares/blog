@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Article">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <meta name="theme-color" content="#000">
+    <title>Protocolo HTTP/2 - Lean Linares
+    </title>
+    <link rel="canonical" href="http://lean8086.com">
+    <link rel="shortcut icon" href="https://en.gravatar.com/userimage/15818721/d41d282470a99d63c961e8e40d70f360.jpg?size=32">
+    <link rel="alternate" href="http://lean8086.com/feed.xml" type="application/rss+xml" title="Front-End Tech Lead &amp; JavaScript Developer">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Lora:400,700">
+    <link rel="stylesheet" href="/css/main.css">
+        <script>
+          if (window.location.host !== 'localhost') {
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', 'UA-100475674-1', 'auto');
+            ga('send', 'pageview');
+          }
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js"></script>
+  </head>
+  <body class="article">
+    <header class="header">
+      <div class="content-wrap">
+        <h1 itemprop="headline" class="article-headline">Protocolo HTTP/2</h1>
+        <p class="article-details">
+                  <time itemprop="datePublished" datetime="2015-03-03"><span>Mar 03, 2015</span>
+                  </time> · <span>1</span> min read
+        </p>
+      </div>
+    </header>
+    <section itemprop="articleBody" class="article-body">
+      <div class="content-wrap"><p>El protocolo de intercambio de datos que usa la web hoy en día es lento y bastante antiguo (<span class="caps">HTTP</span> 1.1, es de&nbsp;1999).</p>
+<p>Para pedir cada archivo (html, css, js, imágenes, etc.) al servidor, se ejecuta un proceso bastante costoso en el que cliente y servidor se comunican y tratan de&nbsp;entenderse.</p>
+<p>Con el tiempo esto nos fue empujando a usar técnicas&nbsp;como:</p>
+<ul>
+<li>Juntar varias imágenes en una sola&nbsp;(sprites).</li>
+<li>Juntar varios archivos <span class="caps">JS</span> o CSS en uno solo&nbsp;(bundles).</li>
+<li>Tener distintos sub-dominios para servir archivos&nbsp;estáticos.</li>
+</ul>
+<p>Dentro de poco <span class="caps">HTTP</span>/2 va a dejar de ser borrador. Está basado en el conocido SPDY (de Google) que <strong>ya está en todos los browsers</strong>.</p>
+<p><span class="caps">HTTP</span>/2, en resumidas cuentas, mejora muchísimo el tiempo de carga de una&nbsp;página.</p>
+<p>Algunos puntos importantes sobre esta&nbsp;versión:</p>
+<ul>
+<li>Deja la conexión con el server abierta, y así nos evitamos todos los siguientes&nbsp;handshakes.</li>
+<li>Comprime el tamaño del request, lo que lo hace mucho más&nbsp;rápido.</li>
+<li>Puede enviar y recibir muchas cosas al mismo tiempo a través de una única&nbsp;conexión.</li>
+</ul>
+<p>Lo bueno es que esta tecnología <strong>es totalmente compatible con sitios que no la aprovechen</strong>.</p>
+</div>
+    </section>
+    <footer role="contentinfo">
+      <div class="content-wrap">
+        <div class="nav"><a href="/">Go back</a></div>
+        <p class="copy">&copy; 2017 Lean Linares</p>
+      </div>
+    </footer>
+  </body>
+</html>
