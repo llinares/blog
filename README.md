@@ -1,4 +1,4 @@
 
 # Blog
 
-http://lean8086.com/
+https://www.lean8086.com/
