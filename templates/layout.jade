@@ -21,15 +21,13 @@ html(itemscope, itemtype=schematype)
       mixin analytics()
   body(class=bodyclass)
     block body
-      header.header
+      header.header(role='banner')
+        h1.logo
+          a(href='/')
+            | #{'8086'}
+      main.content
         div.content-wrap
-          block header
-            div.logo
-              h1= locals.owner
-              p.description= locals.description
-      block content
-        section.content
-          div.content-wrap
+          block content
       footer(role='contentinfo')
         div.content-wrap
           block footer

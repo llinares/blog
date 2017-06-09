@@ -7,19 +7,17 @@ block append vars
 block prepend title
   | #{page.title + ' - '}
 
-block header
-  include mixins/published
-  include mixins/estimatedReadingTime
-  h1.article-headline(itemprop='headline')= page.title
-  p.article-details
-    mixin published(page.metadata.date)
-    | #{' · '}
-    mixin estimatedReadingTime(page.markdown)
-    | #{' min read'}
-
 block content
-  section.article-body(itemprop='articleBody')
-    div.content-wrap!= typogr(page.html).typogrify()
+  header.article-header
+    include mixins/published
+    include mixins/estimatedReadingTime
+    h1.article-headline(itemprop='headline')= page.title
+    p.article-details
+      mixin published(page.metadata.date)
+      | #{' · '}
+      mixin estimatedReadingTime(page.markdown)
+      | #{' min read.'}
+  div.article-body(itemprop='articleBody')!= typogr(page.html).typogrify()
 
 block prepend footer
   div.nav
