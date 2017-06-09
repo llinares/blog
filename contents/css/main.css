@@ -153,6 +153,25 @@ p img {
  * Home
  */
 
+.home-section {
+  margin-bottom: 5em;
+}
+
+.avatar {
+  float: left;
+  margin-right: 30px;
+  border-radius: 3px;
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, .8);
+}
+
+.bio {
+  overflow: hidden;
+}
+
+.bio p {
+  margin-top: 0;
+}
+
 .articles-list, .articles-list ol {
   list-style-type: none;
   padding-left: 0;
