@@ -12,24 +12,22 @@ block content
   -   archives[archive] = _.groupBy(archives[archive], function(item) { return item.date.getMonth(); });
   - }
   - var month_names = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
-  section.home-content
-    div.content-wrap
-      article#articles
-        h2 Articles
-        ol.articles-list
-          - var yearsK = _.chain(archives).keys().reverse().value();
-          each yearK in yearsK
-            - var months = archives[yearK];
-            - var yearHeight = (lineHeight * _.reduce(months, function(memo,month) { return memo + month.length; }, 0)).toFixed(1);
-            li.articles-list__blocks
-              h3.articles-list__year(style='line-height:' + yearHeight + 'em')= yearK
-              ol.articles-list__year-content
-                - var monthsK = _.chain(months).keys().reverse().value();
-                each monthK in monthsK
-                  - var monthHeight = (lineHeight * months[monthK].length).toFixed(1);
-                  li
-                    h4.articles-list__month(style='line-height:' + monthHeight + 'em')= month_names[monthK]
-                    ol.articles-list__month-content
-                      each item in months[monthK]
-                        li.articles-list__article
-                          a(href=item.url)= item.title
+  section.home-section#articles
+    h2 Articles
+    ol.articles-list
+      - var yearsK = _.chain(archives).keys().reverse().value();
+      each yearK in yearsK
+        - var months = archives[yearK];
+        - var yearHeight = (lineHeight * _.reduce(months, function(memo,month) { return memo + month.length; }, 0)).toFixed(1);
+        li.articles-list__blocks
+          h3.articles-list__year(style='line-height:' + yearHeight + 'em')= yearK
+          ol.articles-list__year-content
+            - var monthsK = _.chain(months).keys().reverse().value();
+            each monthK in monthsK
+              - var monthHeight = (lineHeight * months[monthK].length).toFixed(1);
+              li
+                h4.articles-list__month(style='line-height:' + monthHeight + 'em')= month_names[monthK]
+                ol.articles-list__month-content
+                  each item in months[monthK]
+                    li.articles-list__article
+                      a(href=item.url)= item.title
