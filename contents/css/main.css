@@ -157,7 +157,8 @@ p img {
   margin-bottom: 5em;
 }
 
-.avatar {
+.avatar,
+.article-body img {
   border-radius: 3px;
   box-shadow: 0 8px 6px -6px rgba(0, 0, 0, .8);
 }
