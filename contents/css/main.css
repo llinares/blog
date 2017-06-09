@@ -158,8 +158,6 @@ p img {
 }
 
 .avatar {
-  float: left;
-  margin-right: 30px;
   border-radius: 3px;
   box-shadow: 0 8px 6px -6px rgba(0, 0, 0, .8);
 }
@@ -242,6 +240,11 @@ p code {
 /* media queries */
 
 @media (min-width: 768px) {
+  .avatar {
+    float: left;
+    margin-right: 30px;
+  }
+
   .article-headline {
     font-size: 3em;
   }
