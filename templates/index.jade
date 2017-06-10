@@ -6,7 +6,7 @@ block append vars
 
 block content
   section.home-section#intro
-    h2 #{'Hi there, I\'m '}
+    h1 #{'Hey there, I\'m '}
       span(itemtype='name')
         = locals.owner
     img.avatar(src=contents.assets['avatar.png'].url, srcset=contents.assets['avatar.png'].url + ' 1x, ' + contents.assets['avatar@2x.png'].url + ' 2x, ' + contents.assets['avatar@3x.png'].url + ' 3x' width='120', height='120', itemtype='image')
