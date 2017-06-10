@@ -2,9 +2,10 @@ extends layout
 
 block append vars
   - bodyclass = 'home'
+  - schematype = 'http://schema.org/Person'
 
 block content
-  section(itemscope, itemtype='http://schema.org/Person').home-section
+  section.home-section#intro
     h2 #{'Hi there, I\'m '}
       span(itemtype='name')
         = locals.owner
