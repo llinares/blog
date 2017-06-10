@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "html-minifier": "^3.5.2",
     "moment": "2.3.x",
     "underscore": "1.4.x",
     "typogr": "0.5.x",
@@ -8,5 +9,7 @@
   "scripts": {
     "build": "wintersmith build"
   },
-  "private": "true"
+  "private": "true",
+  "devDependencies": {
+  }
 }

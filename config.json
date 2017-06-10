@@ -11,7 +11,8 @@
   "require": {
     "moment": "moment",
     "_": "underscore",
-    "typogr": "typogr"
+    "typogr": "typogr",
+    "htmlMinifier": "html-minifier"
   },
   "jade": {
     "pretty": false

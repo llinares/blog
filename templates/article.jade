@@ -17,7 +17,7 @@ block content
       | #{' · '}
       mixin estimatedReadingTime(page.markdown)
       | #{' min read.'}
-  section.article-body(itemprop='articleBody')!= typogr(page.html).typogrify()
+  section.article-body(itemprop='articleBody')!= htmlMinifier.minify(typogr(page.html).typogrify(), { collapseBooleanAttributes: true, collapseWhitespace: true, decodeEntities: true, removeComments: true, removeEmptyAttributes: true, removeEmptyElements: true, removeRedundantAttributes: true, removeScriptTypeAttributes: true, removeStyleLinkTypeAttributes: true, sortAttributes: true, sortClassName: true })
   hr
   section#disqus_thread
 
