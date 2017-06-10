@@ -6,12 +6,11 @@ rss(version='2.0',
     xmlns:atom='http://www.w3.org/2005/Atom')
   channel
     - var articles = env.helpers.getArticles(contents);
-    title= locals.name
+    title= locals.owner
     atom:link(href=locals.url + '/feed.xml', rel='self', type='application/rss+xml')
     link= locals.url
     description= locals.description
     pubDate= articles[0].rfc822date
-    language en
     each article in articles
       - var permalink = locals.url + article.url;
       item
@@ -19,6 +18,6 @@ rss(version='2.0',
         link= permalink
         pubDate= article.rfc822date
         guid(isPermaLink='true')= permalink
-        author= article.author
+        author= locals.owner
         //- passing locals.url resolves all relative urls to absolute
         description= article.getHtml(locals.url)

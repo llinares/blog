@@ -6,10 +6,12 @@ block append vars
 block content
   section(itemscope, itemtype='http://schema.org/Person').home-section
     h2 #{'Hi there, I\'m '}
-      span(itemtype='name') Lean Linares
+      span(itemtype='name')
+        = locals.owner
     img.avatar(src=contents.assets['avatar.png'].url, srcset=contents.assets['avatar.png'].url + ' 1x, ' + contents.assets['avatar@2x.png'].url + ' 2x, ' + contents.assets['avatar@3x.png'].url + ' 3x' width='120', height='120', itemtype='image')
     div.bio
-      p(itemtype='description') Front-End Technical Leader & JavaScript developer from Buenos Aires, Argentina.
+      p(itemtype='description')
+        = locals.description
       p
         a(href='#about') Read more about me.
 
