@@ -14,7 +14,13 @@ html(itemscope, itemtype=schematype)
         block title
           = locals.owner
       link(rel='canonical', href=locals.url)
-      link(rel='shortcut icon', href='https://en.gravatar.com/userimage/15818721/d41d282470a99d63c961e8e40d70f360.jpg?size=32')
+      
+      link(rel='shortcut icon', href=contents.assets['favicon.png'].url)
+      link(rel='apple-touch-icon', href=contents.assets['60x60.png'].url)
+      link(rel='apple-touch-icon' sizes='76x76', href=contents.assets['76x76.png'].url)
+      link(rel='apple-touch-icon' sizes='120x120', href=contents.assets['120x120.png'].url)
+      link(rel='apple-touch-icon' sizes='152x152', href=contents.assets['152x152.png'].url)
+      
       link(rel='alternate', href=locals.url+'/feed.xml', type='application/rss+xml', title=locals.description)
       link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Lato:400,700|Lora:400,700')
       link(rel='stylesheet', href=contents.css['main.css'].url)
