@@ -61,7 +61,8 @@ h3 {
   font-family: 'Lato';
 }
 
-.article-headline {
+.article-headline,
+#intro h1 {
   font-size: 2em;
   font-weight: 400;
   margin-bottom: .2em;
@@ -152,6 +153,10 @@ p img {
 /**
  * Home
  */
+
+#intro h1 {
+  margin-bottom: .5em;
+}
 
 .home-section {
   margin-bottom: 5em;
@@ -245,7 +250,8 @@ p code {
     margin-right: 30px;
   }
 
-  .article-headline {
+  .article-headline,
+  #intro h1 {
     font-size: 3em;
   }
 
