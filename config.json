@@ -14,7 +14,7 @@
     "typogr": "typogr"
   },
   "jade": {
-    "pretty": true
+    "pretty": false
   },
   "markdown": {
     "smartLists": true,

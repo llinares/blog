@@ -1,8 +1,4 @@
 mixin analytics()
   script.
-    if (window.location.host !== 'localhost') {
-      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-      ga('create', 'UA-100475674-1', 'auto');
-      ga('send', 'pageview');
-    }
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create', 'UA-100475674-1', 'auto');ga('send', 'pageview');
   script(async, src='https://www.google-analytics.com/analytics.js')
