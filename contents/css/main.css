@@ -105,14 +105,14 @@ h3 {
   margin-right: 0;
 }
 
-.article-body hr {
+hr {
   display: block;
   border: 0;
   text-align: center;
   margin: 48px;
 }
 
-.article-body hr::before {
+hr::before {
   content: '...';
   font-family: 'Lato';
   color: rgba(0, 0, 0, .6);

@@ -17,8 +17,14 @@ block content
       | #{' · '}
       mixin estimatedReadingTime(page.markdown)
       | #{' min read.'}
-  div.article-body(itemprop='articleBody')!= typogr(page.html).typogrify()
+  section.article-body(itemprop='articleBody')!= typogr(page.html).typogrify()
+  hr
+  section#disqus_thread
 
 block prepend footer
   div.nav
     a(href='/') Go back
+
+block append body
+  script.
+    var disqus_config=function(){this.page.url='https://www.lean8086.com/'};(function(){var d=document,s=d.createElement('script');s.src='https://lean8086.disqus.com/embed.js';s.setAttribute('data-timestamp',+new Date());(d.head||d.body).appendChild(s);})();
