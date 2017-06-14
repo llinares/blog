@@ -1,7 +1,11 @@
-mixin published(date)
-  - var utc = moment.utc(date);
-  time(itemprop='datePublished', datetime=utc.format('YYYY-MM-DD'))
-    if utc.year() !== (new Date()).getFullYear()
-      span= utc.format('MMM DD, YYYY')
+mixin published(dateCreated, dateModified)
+  if dateModified
+    - var modifiedUtc = moment.utc(dateModified);
+    meta(itemprop='dateModified', content=modifiedUtc.format('YYYY-MM-DD'))
+  
+  - var createdUtc = moment.utc(dateCreated);
+  time(itemprop='datePublished', datetime=createdUtc.format('YYYY-MM-DD'))
+    if createdUtc.year() !== (new Date()).getFullYear()
+      = createdUtc.format('MMM DD, YYYY')
     else
-      span= utc.format('MMM DD')
+      = createdUtc.format('MMM DD')
