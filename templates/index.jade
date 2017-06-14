@@ -42,7 +42,12 @@ block content
                 ol.articles-list__month-content
                   each item in months[monthK]
                     li.articles-list__article
-                      a(href=item.url)= item.title
+                      - var limit = new Date();
+                      - limit.setDate(limit.getDate() - 14);
+                      - var isNew = new Date(item.metadata.date) > limit;
+                      - var className = (isNew ? 'new' : '');
+                      - console.log(limit, new Date(item.metadata.date));
+                      a(href=item.url, class=className)= item.title
 
   section.home-section#about
     h2 About me

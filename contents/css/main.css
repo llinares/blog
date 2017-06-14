@@ -78,9 +78,30 @@ h3 {
   color: rgba(0, 0, 0, .6);
 }
 
+.new::before {
+  font-family: 'Lato';
+  font-size: 14px;
+  content: 'New!';
+  margin-right: 6px;
+  padding: 2px 5px;
+  color: #fff;
+  background-color: #e74c3c;
+}
+
 .article-body p {
   margin-bottom: 1.7em;
 }
+
+/*.article-body > p:first-of-type::first-letter {
+  font-weight: 700;
+  color: #fff;
+  background-color: #e74c3c;
+  padding: 0 15px;
+  margin-right: 8px;
+  font-size: 33px;
+  display: block;
+  float: left;
+}*/
 
 .article-body a {
   overflow-wrap: break-word;
