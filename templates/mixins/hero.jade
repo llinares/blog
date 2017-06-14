@@ -1,14 +1,14 @@
 mixin hero(src, description, width, height, src2x)
   figure.article-hero(itemprop='image', itemscope, itemtype='http://schema.org/ImageObject')
-  	meta(itemprop='representativeOfPage', content='true')
-  	meta(itemprop='url', content=src)
+    meta(itemprop='representativeOfPage', content='true')
+    meta(itemprop='url', content=src)
     if width
       meta(itemprop='width', content=width)
     if height
       meta(itemprop='height', content=height)
-    
+
     picture
       source(srcset=src + ' 1x, ' + src2x + ' 2x' media='(min-width: 768px)')
-  		img(src=src alt=description itemprop='contentUrl')
+      img(src=src alt=description itemprop='contentUrl')
       if description
         figcaption(itemprop='description')= description
