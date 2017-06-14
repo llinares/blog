@@ -4,12 +4,12 @@ mixin published(dateCreated, dateModified)
     meta(itemprop='dateModified', content=modifiedUtc.format('YYYY-MM-DD'))
   
   - var createdUtc = moment.utc(dateCreated);
-  - var now = new Date();
-  - var limit = new Date(now.getDate() - 14);
+  - var limit = new Date();
+  - limit.setDate(limit.getDate() - 14);
   - var isNew = new Date(dateCreated) > limit;
-  - var className = 'article-date' + (isNew ? ' new' : '')
+  - var className = (isNew ? 'new' : null);
   time(class=className, itemprop='datePublished', datetime=createdUtc.format('YYYY-MM-DD'))
-    if createdUtc.year() !== now.getFullYear()
+    if createdUtc.year() !== (new Date()).getFullYear()
       = createdUtc.format('MMM DD, YYYY')
     else
       = createdUtc.format('MMM DD')
