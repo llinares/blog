@@ -29,9 +29,8 @@ html(lang=lang, itemscope, itemtype=schematype)
   body(class=bodyclass)
     block body
       header.header(role='banner')
-        h1.logo(itemprop='publisher', itemscope, itemtype='http://schema.org/Organization')
-          meta(itemprop='name', content=locals.name)
-          a(href='/', itemprop='url', title=locals.name + ' home page') #{'8086'}
+        h1.logo
+          a(href='/') #{'8086'}
             
       main.content
         div.content-wrap
