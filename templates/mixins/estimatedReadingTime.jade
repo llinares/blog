@@ -5,4 +5,5 @@ mixin estimatedReadingTime(content)
   - var wordsPerMinute = 200;
   - var minutes = Math.ceil((words.length / wordsPerMinute).toFixed(2));
   
-  span= minutes
+  meta(itemprop='wordCount', content=words.length)
+  = minutes

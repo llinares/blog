@@ -1,9 +1,10 @@
 ---
 title: Background offset en CSS
-author: lean
+description: Cómo reposicionar cualquier background CSS
 date: 2014-01-13
 template: article.jade
-topics: code, css
+topic: code
+lang: es
 ---
 
 Hoy en día, en el AutoComplete de [Chico UI](http://chico.mercadolibre.com/) (v1.0.0) tenemos un loading spinner agregado como background de CSS, alineado a la derecha como `right center`.
