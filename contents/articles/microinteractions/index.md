@@ -1,9 +1,10 @@
 ---
 title: Microinteractions
-author: lean
+description: Definición básica del pattern microinteractions
 date: 2015-05-19
 template: article.jade
 topics: ux
+lang: es
 ---
 
 En resumidas cuentas, las microinteracciones se tratan acerca de **prestar mucha atención a los detalles**. Es agregar valor a las pequeñas interacciones de la interfaz del usuario.

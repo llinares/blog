@@ -1,9 +1,10 @@
 ---
 title: Imágenes retina en tablets con HiDPI
-author: lean
+description: Qué tamaños de imágenes tener en cuenta para distintas resoluciones y cómo implementarlas.
 date: 2015-06-11
 template: article.jade
-topics: code, css
+topics: code
+lang: es
 ---
 
 Revisando una landing page en el trabajo nos dimos cuenta que, así como estamos prestándole atención a pantallas retina en nuestra version *mobile* del sitio, deberíamos hacerlo en nuestra versión *desktop*.

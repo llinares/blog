@@ -1,8 +1,9 @@
 doctype html
 block vars
+  - var lang = 'en';
   - var bodyclass = null;
-  - var schematype = null
-html(itemscope, itemtype=schematype)
+  - var schematype = null;
+html(lang=lang, itemscope, itemtype=schematype)
   head
     block head
       include mixins/analytics
@@ -28,13 +29,17 @@ html(itemscope, itemtype=schematype)
   body(class=bodyclass)
     block body
       header.header(role='banner')
-        h1.logo
-          a(href='/')
-            | #{'8086'}
+        h1.logo(itemprop='publisher', itemscope, itemtype='http://schema.org/Organization')
+          meta(itemprop='name', content=locals.name)
+          a(href='/', itemprop='url', title=locals.name + ' home page') #{'8086'}
+            
       main.content
         div.content-wrap
           block content
       footer(role='contentinfo')
         div.content-wrap
           block footer
-            p.copy &copy; #{ new Date().getFullYear() } #{ locals.owner }
+            p.copy &copy;
+              span(itemprop='copyrightYear') #{new Date().getFullYear()}
+              | #{' '}
+              span(itemprop='copyrightHolder') #{locals.owner}

@@ -1,9 +1,10 @@
 ---
 title: Card pattern
-author: lean
+description: Opinión acerca de la definición de una Card.
 date: 2015-05-19
 template: article.jade
 topics: ux
+lang: es
 ---
 
 Si bien la definición de qué es una Card es subjetiva, suelo escuchar el término usado para referirse a una caja blanca con bordes y sombra. Pero más allá del diseño, el Card pattern se enfoca en cómo interactúa el usuario con ese elemento.

@@ -1,8 +1,9 @@
 extends layout
 
 block append vars
-  - bodyclass = 'article'
-  - schematype = 'http://schema.org/Article'
+  - lang = page.metadata.lang;
+  - bodyclass = 'article';
+  - schematype = 'http://schema.org/Article';
 
 block prepend title
   | #{page.title + ' - '}
@@ -13,7 +14,11 @@ block content
     include mixins/estimatedReadingTime
     h1.article-headline(itemprop='headline')= page.title
     p.article-details
-      mixin published(page.metadata.date)
+      meta(itemprop='description', content=page.metadata.description)
+      meta(itemprop='author', content=locals.owner)
+      meta(itemprop='articleSection', content=page.metadata.topics)
+      meta(itemprop='about', content=page.metadata.topics)
+      mixin published(page.metadata.date, page.metadata.modified)
       | #{' · '}
       mixin estimatedReadingTime(page.markdown)
       | #{' min read.'}

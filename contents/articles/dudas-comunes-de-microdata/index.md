@@ -1,9 +1,10 @@
 ---
 title: Dudas comunes de microdata
-author: lean
+description: Consultas recurrentes sobre microdata, respondidas.
 date: 2016-04-19
 template: article.jade
-topics: code, html
+topics: code
+lang: es
 ---
 
 Me gustaría aclarar algunas dudas acerca de cómo usar Microdata, ya que recibí varias consultas sobre los mismos temas.

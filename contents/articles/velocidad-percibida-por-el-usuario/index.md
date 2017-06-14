@@ -1,9 +1,10 @@
 ---
 title: Velocidad percibida por el usuario
-author: lean
+description: Cómo mejorar al máximo la experiencia de espera de la interfaz de una aplicación Web.
 date: 2015-05-11
 template: article.jade
-topics: ux, code
+topics: ux
+lang: es
 ---
 
 ## The experience of waiting

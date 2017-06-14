@@ -1,9 +1,10 @@
 ---
 title: Protocolo HTTP/2
-author: lean
+description: De qué se trata el nuevo protocolo de intercambio de datos de la Web.
 date: 2015-03-03
 template: article.jade
 topics: code
+lang: es
 ---
 
 El protocolo de intercambio de datos que usa la web hoy en día es lento y bastante antiguo (HTTP 1.1, es de 1999).

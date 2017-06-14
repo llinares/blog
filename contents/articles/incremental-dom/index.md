@@ -1,9 +1,10 @@
 ---
 title: Incremental DOM
-author: lean
+description: Diferencias entre Virtual DOM de Facebook e Incremental DOM de Google.
 date: 2015-07-27
 template: article.jade
-topics: code, javascript
+topics: code
+lang: es
 ---
 
 Google estuvo mejorando uno de los mejores features de React: el virtual DOM.

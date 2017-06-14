@@ -1,9 +1,10 @@
 ---
 title: Evitar redundancia de roles ARIA
-author: lean
+description: Análisis sobre dos casos similares de roles.
 date: 2014-02-24
 template: article.jade
-topics: code, html
+topics: code
+lang: es
 ---
 
 Encontré en 2 implementaciones distintas estos casos que me llamaron la atención:

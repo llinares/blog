@@ -1,9 +1,10 @@
 ---
 title: Single Page Apps y cómo mejorar la UX (parte 1)
-author: lean
+description: Cambios que proponen las SPA y cómo podemos aprovechar los beneficios.
 date: 2015-02-03
 template: article.jade
 topics: ux
+lang: es
 ---
 
 Desde hace unos meses estoy implementando en algunos proyectos lo que se conoce como Single Page App. Para quienes no conocen el término, Wikipedia tiene una [definición muy completa](http://en.wikipedia.org/wiki/Single-page_application).

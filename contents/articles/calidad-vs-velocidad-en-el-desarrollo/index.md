@@ -1,9 +1,10 @@
 ---
 title: Calidad vs. velocidad en el desarrollo
-author: lean
+description: Notas acerca del video de Facebook donde introducen el concepto de Flux.
 date: 2014-11-21
 template: article.jade
-topics: code, javascript
+topics: code
+lang: es
 ---
 
 Les dejo el video [Rethinking Web App Development at Facebook](http://youtu.be/nYkdrAPrdcw). Está bueno para ver las preguntas que se hacen, y las respuestas que encuentran.

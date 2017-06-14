@@ -1,9 +1,10 @@
 ---
 title: Multi-Device Layout Patterns
-author: lean
+description: Introducción a los distintos patrones de layouts más conocidos.
 date: 2014-05-12
 template: article.jade
 topics: design
+lang: es
 ---
 
 A medida que los layouts responsive fueron evolucionando, surgieron varios patrones que ya tienen nombre y apellido.

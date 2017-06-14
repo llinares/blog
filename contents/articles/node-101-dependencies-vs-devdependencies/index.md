@@ -1,9 +1,10 @@
 ---
 title: Node 101 - dependencies vs. devDependencies
-author: lean
+description: Definición básica e infaltable sobre las dependencias de Node JS.
 date: 2016-08-12
 template: article.jade
-topics: code, javascript
+topics: code
+lang: es
 ---
 
 Es un tema bastante básico pero que veo que se repite en varias implementaciones. Me encontré con varios package.json en los que las dependencias no están ubicadas en el lugar correcto. Suelen estar todas en `"dependencies"` o todas en `"devDependencies"`. A veces también las veo bastante mezcladas.
