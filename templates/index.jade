@@ -46,7 +46,6 @@ block content
                       - limit.setDate(limit.getDate() - 14);
                       - var isNew = new Date(item.metadata.date) > limit;
                       - var className = (isNew ? 'new' : null);
-                      - console.log(limit, new Date(item.metadata.date));
                       a(href=item.url, class=className)= item.title
 
   section.home-section#about
