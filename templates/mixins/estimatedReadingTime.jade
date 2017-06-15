@@ -5,7 +5,7 @@ mixin estimatedReadingTime(content)
   - var wordsPerMinute = 200;
   - var minutes = Math.ceil((words.length / wordsPerMinute).toFixed(2));
   - var minutesPerInlineImages = 0.2;
-  - var inlineImages = content.match(/\!\[/gi).length;
+  - var inlineImages = /\!\[/gi.test(content) ? content.match(/\!\[/gi).length : 0;
   - var time = Math.round(minutes + (inlineImages * minutesPerInlineImages));
   
   meta(itemprop='wordCount', content=words.length)
