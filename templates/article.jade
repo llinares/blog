@@ -8,6 +8,23 @@ block append vars
 block prepend title
   | #{page.title + ' - '}
 
+block append head
+  meta(name='twitter:card', content='summary_large_image')
+  meta(name='twitter:site', content='@lean8086')
+  meta(name='twitter:url', content=locals.url + page.url)
+  meta(name='twitter:title', content=locals.description)
+  meta(name='twitter:description', content=locals.owner)
+  meta(name='twitter:creator', content='@lean8086')
+  meta(name='twitter:image', content=page.metadata.image)
+  meta(name='twitter:image:alt', content=page.metadata.image)
+  
+  meta(property='og:title', content=locals.description)
+  meta(property='og:type', content='article')
+  meta(property='og:url', content=locals.url + page.url)
+  meta(property='og:image', content=page.metadata.image)
+  meta(property='og:description', content=locals.owner)
+  meta(property='og:site_name', content=locals.owner)
+
 block content
   header.article-header
     include mixins/published
