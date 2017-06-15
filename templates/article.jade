@@ -11,7 +11,6 @@ block prepend title
 block append head
   meta(name='title', content=locals.owner)
   meta(name='description', content=locals.description)
-  meta(itemprop='mainEntityOfPage', content=locals.url + page.url)
 
   meta(name='twitter:card', content='summary_large_image')
   meta(name='twitter:site', content='@lean8086')
@@ -39,6 +38,7 @@ block content
       meta(itemprop='author', content=locals.owner)
       meta(itemprop='articleSection', content=page.metadata.topics)
       meta(itemprop='about', content=page.metadata.topics)
+      meta(itemprop='mainEntityOfPage', content=locals.url + page.url)
       mixin published(page.metadata.date, page.metadata.modified)
       | #{' · '}
       mixin estimatedReadingTime(page.markdown)
