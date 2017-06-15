@@ -31,7 +31,13 @@ html(lang=lang, itemscope, itemtype=schematype)
       header.header(role='banner')
         h1.logo
           a(href='/') #{'8086'}
-            
+        //- nav.global-nav(itemscope, itemtype='http://schema.org/SiteNavigationElement')
+        //-   a(href='/', itemprop='url')
+        //-     span(itemprop='name') Home
+        //-   a(href='/#articles', itemprop='url')
+        //-     span(itemprop='name') Articles
+        //-   a(href='/#about', itemprop='url')
+        //-     span(itemprop='name') About
       main.content
         div.content-wrap
           block content

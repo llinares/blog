@@ -248,6 +248,7 @@ p code {
 
 .logo {
   margin: 0;
+  display: inline-block;
 }
 
 .logo a, .logo a:visited, .logo a:link {
@@ -262,6 +263,21 @@ p code {
   background-color: #f45949;
 }
 
+/**
+ * Nav
+ */
+.global-nav {
+  float: right;
+}
+
+.global-nav a {
+  display: inline-block;
+  border-bottom: none;
+  font-variant: small-caps;
+  text-transform: lowercase;
+  font-family: 'Lato';
+  margin-right: 50px;
+}
 
 /* media queries */
 
