@@ -1,21 +1,23 @@
-doctype html
 block vars
   - var lang = 'en';
   - var bodyclass = null;
   - var schematype = null;
+
+doctype html
 html(lang=lang, itemscope, itemtype=schematype)
   head
     block head
       include mixins/analytics
       meta(charset='utf-8')
-      meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
-      meta(name='viewport', content='width=device-width')
-      meta(name='theme-color', content='#e74c3c')
       title
         block title
           = locals.owner
-      link(rel='canonical', href=locals.url)
+      meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+      meta(name='viewport', content='width=device-width')
+      meta(name='theme-color', content='#e74c3c')
+      meta(name='description', content=locals.description)
       
+      link(rel='canonical', href=locals.url)
       link(rel='shortcut icon', href=contents.assets['favicon.png'].url)
       link(rel='icon', sizes='192x192', href=contents.assets['192x192.png'].url)
       link(rel='apple-touch-icon', href=contents.assets['60x60.png'].url)
@@ -41,9 +43,9 @@ html(lang=lang, itemscope, itemtype=schematype)
         //-     span(itemprop='name') Articles
         //-   a(href='/#about', itemprop='url')
         //-     span(itemprop='name') About
+        block header
       main
-        div.content-wrap
-          block content
+        block content
       footer(role='contentinfo')
         div.content-wrap
           block footer

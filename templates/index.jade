@@ -4,19 +4,20 @@ block append vars
   - bodyclass = 'home'
   - schematype = 'http://schema.org/Person'
 
+block append header
+  h1.hi.content-wrap #{'Hey there, I\'m '}
+    span(itemtype='name')
+      = locals.owner
+
 block content
-  section.home-section#intro
-    h1 #{'Hey there, I\'m '}
-      span(itemtype='name')
-        = locals.owner
+  section.content-wrap#intro
     img.avatar(src=contents.assets['avatar.png'].url, srcset=contents.assets['avatar.png'].url + ' 1x, ' + contents.assets['avatar@2x.png'].url + ' 2x, ' + contents.assets['avatar@3x.png'].url + ' 3x' width='120', height='120', itemtype='image')
     div.bio
-      p(itemtype='description')
-        = locals.description
+      p(itemtype='description')= locals.description
       p
         a(href='#about') Read more about me.
 
-  section.home-section#articles
+  section.home-section.content-wrap#articles
     h2 Articles
     ol.articles-list
       - var lineHeight = 3;
@@ -30,13 +31,13 @@ block content
       - var yearsK = _.chain(archives).keys().reverse().value();
       each yearK in yearsK
         - var months = archives[yearK];
-        - var yearHeight = (lineHeight * _.reduce(months, function(memo,month) { return memo + month.length; }, 0)).toFixed(1);
+        - var yearHeight = Math.round(lineHeight * _.reduce(months, function(memo,month) { return memo + month.length; }, 0));
         li.articles-list__blocks
           h3.articles-list__year(style='line-height:' + yearHeight + 'em')= yearK
           ol.articles-list__year-content
             - var monthsK = _.chain(months).keys().reverse().value();
             each monthK in monthsK
-              - var monthHeight = (lineHeight * months[monthK].length).toFixed(1);
+              - var monthHeight = Math.round(lineHeight * months[monthK].length);
               li
                 h4.articles-list__month(style='line-height:' + monthHeight + 'em')= month_names[monthK]
                 ol.articles-list__month-content
@@ -48,7 +49,7 @@ block content
                       - var className = (isNew ? 'new' : null);
                       a(href=item.url, class=className)= item.title
 
-  section.home-section#about
+  section.home-section.content-wrap#about
     h2 About me
     p Experienced Front-End Web Developer with a demonstrated history of working in the e-commerce industry. Currently working at MercadoLibre.com: the largest online commerce and payments platform in Latin America.
     
@@ -62,3 +63,6 @@ block content
 
     h3 Future
     p My career goal is to keep helping people with creative problem-solving. I'm always searching ways to use what I learn to make easier the job of the developers I work with, so they can focus on real issues.
+
+    p
+      a(href='https://www.linkedin.com/in/lean8086/', target='_blank') Read more on LinkedIn
