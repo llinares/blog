@@ -10,7 +10,7 @@ block prepend title
 
 block append head
   - var url = locals.url + page.url;
-  - var image = url + (page.metadata.image || 'image.jpg');
+  - var image = url + page.metadata.image;
 
   meta(itemprop='author', content=locals.owner)
   meta(itemprop='articleSection', content=page.metadata.topics)
@@ -49,7 +49,7 @@ block content
       = page.metadata.description
   if page.metadata.image
     figure.article-image
-      img(src=(page.metadata.image || 'image.jpg'), itemprop='image')
+      img(src=page.metadata.image, itemprop='image')
       if page.metadata.image_caption
         figcaption= page.metadata.image_caption
   section.article-body.content-wrap(itemprop='articleBody')!= htmlMinifier.minify(typogr(page.html).typogrify(), { collapseBooleanAttributes: true, collapseWhitespace: true, decodeEntities: true, removeComments: true, removeEmptyAttributes: true, removeEmptyElements: true, removeRedundantAttributes: true, removeScriptTypeAttributes: true, removeStyleLinkTypeAttributes: true, sortAttributes: true, sortClassName: true })
