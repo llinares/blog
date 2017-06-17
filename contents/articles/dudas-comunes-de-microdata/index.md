@@ -1,6 +1,6 @@
 ---
 title: Dudas comunes de microdata
-description: Consultas recurrentes sobre microdata, respondidas.
+description: Las consultas sobre microdata que recibo más a menudo.
 date: 2016-04-19
 template: article.jade
 topics: code

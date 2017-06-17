@@ -1,6 +1,6 @@
 ---
 title: Multi-Device Layout Patterns
-description: Introducción a los distintos patrones de layouts más conocidos.
+description: Introducción a los tipos de layouts más conocidos.
 date: 2014-05-12
 template: article.jade
 topics: design

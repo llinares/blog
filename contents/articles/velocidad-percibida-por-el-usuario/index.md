@@ -1,6 +1,6 @@
 ---
 title: Velocidad percibida por el usuario
-description: Cómo mejorar al máximo la experiencia de espera de la interfaz de una aplicación Web.
+description: Cómo mejorar la experiencia de espera de los usuarios de una interfaz.
 date: 2015-05-11
 template: article.jade
 topics: ux

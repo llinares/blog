@@ -1,6 +1,6 @@
 ---
 title: Node 101 - dependencies vs. devDependencies
-description: Definición básica e infaltable sobre las dependencias de Node JS.
+description: Definición totalmente básica sobre las dependencias de Node JS.
 date: 2016-08-12
 template: article.jade
 topics: code

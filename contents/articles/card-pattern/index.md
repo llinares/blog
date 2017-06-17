@@ -1,6 +1,6 @@
 ---
 title: Card pattern
-description: Opinión acerca de la definición de una Card.
+description: Características de este patrón de diseño, más alla de su aspecto visual.
 date: 2015-05-19
 template: article.jade
 topics: ux
