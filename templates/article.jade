@@ -47,12 +47,11 @@ block content
       = page.metadata.description
   figure.article-image
     img(src=(page.metadata.image || 'image.jpg'), itemprop='image')
-    if page.metadata.imageBy
-      figcaption
-        | #{'Photo by ' + page.metadata.imageBy}
+    if page.metadata.image_caption
+      figcaption= page.metadata.image_caption
   section.article-body.content-wrap(itemprop='articleBody')!= htmlMinifier.minify(typogr(page.html).typogrify(), { collapseBooleanAttributes: true, collapseWhitespace: true, decodeEntities: true, removeComments: true, removeEmptyAttributes: true, removeEmptyElements: true, removeRedundantAttributes: true, removeScriptTypeAttributes: true, removeStyleLinkTypeAttributes: true, sortAttributes: true, sortClassName: true })
   hr
-  section#disqus_thread
+  section.content-wrap#disqus_thread
 
 block prepend footer
   div.nav
