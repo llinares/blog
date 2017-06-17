@@ -72,7 +72,7 @@ h3 {
 }
 
 .article-description {
-  font-size: 28px;
+  font-size: 20px;
   color: rgba(0, 0, 0, .4);
   line-height: 1.2;
 }
@@ -321,6 +321,10 @@ p code {
 /* media queries */
 
 @media (min-width: 640px) {
+  .article-description {
+    font-size: 28px;
+  }
+
   .avatar {
     float: left;
     margin-right: 20px;
