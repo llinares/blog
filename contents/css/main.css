@@ -259,26 +259,21 @@ footer .copy {
 pre {
   overflow: auto;
   margin-bottom: 1.8em;
-  padding: 1em;
-}
-
-pre, p code {
-  border: 1px solid rgba(0, 0, 0, .4);
-  border-radius: 3px;
 }
 
 code {
+  border: 1px solid rgba(0, 0, 0, .4);
+  border-radius: 3px;
   font-family: 'Menlo', monospace;
   color: rgba(0, 0, 0, .6);
+  padding: .1em .3em .2em;
 }
 
 pre code {
-  display: block;
+  display: inline-block;
+  min-width: 100%;
   line-height: 1.7;
-}
-
-p code {
-  padding: .1em .3em .2em;
+  padding: 1em;
 }
 
 /**
