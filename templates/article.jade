@@ -52,7 +52,7 @@ block content
       img(src=page.metadata.image, itemprop='image')
       if page.metadata.image_caption
         figcaption= page.metadata.image_caption
-  section.article-body.content-wrap(itemprop='articleBody')!= htmlMinifier.minify(typogr(page.html).typogrify(), { collapseBooleanAttributes: true, collapseWhitespace: true, decodeEntities: true, removeComments: true, removeEmptyAttributes: true, removeEmptyElements: true, removeRedundantAttributes: true, removeScriptTypeAttributes: true, removeStyleLinkTypeAttributes: true, sortAttributes: true, sortClassName: true })
+  section.article-body.content-wrap(itemprop='articleBody')!= htmlMinifier.minify(typogr(page.html).smartypants(), { collapseBooleanAttributes: true, collapseWhitespace: true, decodeEntities: true, removeComments: true, removeEmptyAttributes: true, removeEmptyElements: true, removeRedundantAttributes: true, removeScriptTypeAttributes: true, removeStyleLinkTypeAttributes: true, sortAttributes: true, sortClassName: true })
   hr
   section.content-wrap#disqus_thread
 
