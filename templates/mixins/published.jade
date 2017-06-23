@@ -1,8 +1,4 @@
-mixin published(dateCreated, dateModified)
-  if dateModified
-    - var modifiedUtc = moment.utc(dateModified);
-    meta(itemprop='dateModified', content=modifiedUtc.format('YYYY-MM-DD'))
-  
+mixin published(dateCreated)
   - var createdUtc = moment.utc(dateCreated);
   - var limit = new Date();
   - limit.setDate(limit.getDate() - 14);
