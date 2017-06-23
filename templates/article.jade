@@ -9,31 +9,8 @@ block prepend title
   | #{page.title + ' - '}
 
 block append head
-  - var url = locals.url + page.url;
-  - var image = url + page.metadata.image;
-
-  meta(itemprop='author', content=locals.owner)
-  meta(itemprop='articleSection', content=page.metadata.topics)
-  meta(itemprop='about', content=page.metadata.topics)
-  meta(itemprop='mainEntityOfPage', content=url)
-  meta(itemprop='inLanguage', content=page.metadata.lang)
-
-  meta(name='twitter:card', content='summary_large_image')
-  meta(name='twitter:site', content='@lean8086')
-  meta(name='twitter:url', content=url)
-  meta(name='twitter:title', content=locals.description)
-  meta(name='twitter:description', content=locals.owner)
-  meta(name='twitter:creator', content='@lean8086')
-  if page.metadata.image
-    meta(name='twitter:image', content=image)
-  
-  meta(property='og:title', content=locals.description)
-  meta(property='og:type', content='article')
-  meta(property='og:url', content=url)
-  meta(property='og:description', content=locals.owner)
-  meta(property='og:site_name', content=locals.owner)
-  if page.metadata.image
-    meta(property='og:image', content=image)
+  include mixins/meta
+  mixin meta(page)
 
 block content
   header.article-header.content-wrap
@@ -41,15 +18,13 @@ block content
     include mixins/estimatedReadingTime
     h1.article-headline(itemprop='headline')= page.title
     p.article-details
-      mixin published(page.metadata.date, page.metadata.modified)
+      mixin published(page.metadata.date)
       | #{' · '}
       mixin estimatedReadingTime(page.markdown)
       | #{' min read.'}
-    p.article-description(itemprop='description')
-      = page.metadata.description
+    p.article-description(itemprop='description')= page.metadata.description
   if page.metadata.image
-    figure.article-image
-      img(src=page.metadata.image, itemprop='image')
+    figure.article-image(style='background-image:url(' + (page.url + page.metadata.image) + ')')
       if page.metadata.image_caption
         figcaption= page.metadata.image_caption
   section.article-body.content-wrap(itemprop='articleBody')!= htmlMinifier.minify(typogr(page.html).smartypants(), { collapseBooleanAttributes: true, collapseWhitespace: true, decodeEntities: true, removeComments: true, removeEmptyAttributes: true, removeEmptyElements: true, removeRedundantAttributes: true, removeScriptTypeAttributes: true, removeStyleLinkTypeAttributes: true, sortAttributes: true, sortClassName: true })
