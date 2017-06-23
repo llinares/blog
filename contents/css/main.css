@@ -94,20 +94,24 @@ h3 {
 }
 
 .article-image {
-  margin: 0 0 57px;
+  margin: 0 0 90px;
   font-size: 0;
-}
-
-.article-image img {
-  max-width: 100%;
   background-color: rgba(0, 0, 0, .1);
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: calc(100vw / 2);
+  position: relative;
+  color: rgba(0, 0, 0, .6);
 }
 
 .article-image figcaption {
-  font-size: 14px;
-  color: rgba(0, 0, 0, .6);
+  font-size: 12px;
   text-align: center;
-  margin-top: 10px;
+  position: absolute;
+  bottom: -35px;
+  left: 0;
+  right: 0;
 }
 
 .article-body p {
@@ -269,6 +273,8 @@ code {
   font-family: 'Menlo', monospace;
   color: rgba(0, 0, 0, .6);
   padding: .1em .3em .2em;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 pre code {
@@ -320,6 +326,15 @@ pre code {
 @media (min-width: 640px) {
   #intro {
     text-align: left;
+  }
+
+  .article-image {
+    height: calc(100vw / 3);
+    margin-bottom: 114px;
+  }
+
+  .article-image figcaption {
+    font-size: 14px;
   }
 
   .article-description {
