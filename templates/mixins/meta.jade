@@ -1,0 +1,29 @@
+mixin meta(page)
+  - var url = locals.url + page.url;
+  - var image = url + page.metadata.image;
+
+  meta(itemprop='author', content=locals.owner)
+  meta(itemprop='articleSection', content=page.metadata.topics)
+  meta(itemprop='about', content=page.metadata.topics)
+  meta(itemprop='mainEntityOfPage', content=url)
+  meta(itemprop='inLanguage', content=page.metadata.lang)
+  if dateModified
+    - var modifiedUtc = moment.utc(dateModified);
+    meta(itemprop='dateModified', content=modifiedUtc.format('YYYY-MM-DD'))
+
+  meta(name='twitter:card', content='summary_large_image')
+  meta(name='twitter:site', content='@lean8086')
+  meta(name='twitter:url', content=url)
+  meta(name='twitter:title', content=locals.description)
+  meta(name='twitter:description', content=locals.owner)
+  meta(name='twitter:creator', content='@lean8086')
+  if page.metadata.image
+    meta(name='twitter:image', content=image)
+
+  meta(property='og:title', content=locals.description)
+  meta(property='og:type', content='article')
+  meta(property='og:url', content=url)
+  meta(property='og:description', content=locals.owner)
+  meta(property='og:site_name', content=locals.owner)
+  if page.metadata.image
+    meta(property='og:image', content=image)
