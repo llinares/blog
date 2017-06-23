@@ -5,9 +5,8 @@ block append vars
   - schematype = 'http://schema.org/Person'
 
 block append header
-  h1.hi.content-wrap #{'Hey there, I\'m '}
-    span(itemtype='name')
-      = locals.owner
+  h1.hi.content-wrap #{'Hi there, I\'m '}
+    span(itemtype='name')= locals.owner
 
 block content
   section.content-wrap#intro
@@ -15,9 +14,9 @@ block content
     div.bio
       p(itemtype='description')= locals.description
       p
-        a(href='#about') Read more about me.
+        a(href='/about') Read more about me.
 
-  section.home-section.content-wrap#articles
+  section.content-wrap#articles
     h2 Articles
     ol.articles-list
       - var lineHeight = 3;
@@ -50,21 +49,3 @@ block content
                       - var isNew = new Date(item.metadata.date) > limit;
                       - var className = (isNew ? 'new' : null);
                       a(href=item.url, class=className)= item.title
-
-  section.home-section.content-wrap#about
-    h2 About me
-    p Experienced Front-End Web Developer with a demonstrated history of working in the e-commerce industry. Currently working at MercadoLibre.com: the largest online commerce and payments platform in Latin America.
-    
-    h3 Present
-    p Currently part of the small team that's moving the (web) front-end tech stack of the company forward. The efforts includes not only to move towards latest front-end technologies, but also coach the people behind every new implementation. The main challenge is also to find the appropiate solution for every specific project, always in a high availability and reliability context.
-    p Working with: Node, React, Flux/Redux, Sass, Webpack, and vanilla JS (because never goes out of style 👍).
-
-    h3 Past
-    p Back in 2015 was focused on apply the concept of Single Page App on certain sections of the website. Worked with Backbone + Marionette, Handlebars, Less and Gulp.
-    p From 2009 to 2013 was part of the team that unified the entire UI of the company. Then Chico UI borned: a jQuery-based library of components.
-
-    h3 Future
-    p My career goal is to keep helping people with creative problem-solving. I'm always searching ways to use what I learn to make easier the job of the developers I work with, so they can focus on real issues.
-
-    p
-      a(href='https://www.linkedin.com/in/lean8086/', target='_blank') Read more on LinkedIn
