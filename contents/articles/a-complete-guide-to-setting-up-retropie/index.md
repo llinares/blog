@@ -1,6 +1,6 @@
 ---
 title: A complete guide to setting up RetroPie
-description: Step-by-step tutorial on how to setup your Raspberry Pi from scratch.
+description: Step-by-step tutorial on how to setup your Raspberry Pi, including the missing parts and recommendations.
 date: 2017-06-13
 template: article.jade
 image: hero.jpg
@@ -10,11 +10,11 @@ lang: en
 draft: true
 ---
 
-I spent the last year building a real-size arcade cabinet. I found myself installing and reinstalling RetroPie on Raspberry Pi several times. So, everytime I screwed up and reinstalled, I had to reconfigure the entire system by following the exact same steps to get where I was. The erasing and reinstalling processes were caused for a notable lack of information about many setup choices you have to do. I didn't found many recommendations about that.
+I spent the last year building a real-size arcade cabinet. I found myself installing and reinstalling RetroPie on Raspberry Pi several times. So, everytime I screwed up and reinstalled, I had to reconfigure the entire system by following the exact same steps to get where I was. The erasing and reinstalling processes were caused for a notable lack of information about many setup choices you have to do. I didn't found many recommendations.
 
 ## What is RetroPie
 
-If you came here by not knowing what RetroPie is, take a look at this awesome project: https://retropie.org.uk/
+If you came here with not knowing what RetroPie is, take a look at this awesome project: https://retropie.org.uk/
 
 > RetroPie allows you to turn your Raspberry Pi, ODroid C1/C2, or PC into a retro-gaming machine.
 
@@ -28,20 +28,20 @@ It's important to read carefully every step, to avoid any trouble during the set
 
 ## Installing RetroPie
 
-The first thing to do is to install the Operating System for the Raspberry Pi. It's gonna be a little different depending on the version of your Raspberry Pi.
+The first thing to do is to install the RetroPie in the Raspberry Pi. It's gonna be a little different depending on the model of your Raspberry Pi.
 
 - **Step 1.** Identify which model of the Raspberry Pi you have, following [this guide](https://www.element14.com/community/community/raspberry-pi/blog/2016/11/21/how-to-identify-which-model-of-the-raspberry-pi-you-have). You only need to know if you own a **Raspberry Pi 1, 2, 3 or Zero**.
 
 - **Step 2.** Download the [RetroPie SD image](https://retropie.org.uk/download/) corresponding to your Raspberry Pi model. I recommend to keep the file of the RetroPie pre-made image (don't delete it after use it), so is easier to start over.
 
-- **Step 3.** Connect the SD card to a computer. It's not necessary to have an SD card with a lot of space, because you'll **only** install the Operating System in there. I recommend to keep the ROMs and saved game progress external as you can see [below](#setting-usb-storage).
+- **Step 3.** Connect the SD card to a computer. It's not necessary to have an SD card with a lot of space, because you need to install only RetroPie in there. I recommend to keep the ROMs and saved games progress external as you can see [below](#setting-usb-storage).
 
 - **Step 4.** Burn the RetroPie image into the SD card, using:
   - [Win32DiskImager](http://sourceforge.net/projects/win32diskimager/) on Windows.
   - [Apple Pi Baker](http://www.tweaking4all.com/hardware/raspberry-pi/macosx-apple-pi-baker/) on Mac OS X.
   - [Etcher](https://etcher.io/) on Linux.
 
-- **Step 5.** Do not plug the SD into the Raspberry Pi yet. Keep the SD card plugged into computer. You'll notice the SD card is now called `boot`.
+- **Step 5.** Do not plug the SD into the Raspberry Pi yet. Keep the SD card plugged into your computer. You'll notice the SD card is now called `boot`.
 
 ## Configure before turn it on
 
@@ -49,7 +49,7 @@ Most of the missing information is about how to setup the hardware to work as yo
 
 ### Setting up the USB Storage
 
-I recommend to keep the game ROMs and the saved game progress in an external source. This way make easier to experiment with RetroPie in the SD card, and keep the important data safe in a plug-n-play source.
+I recommend to keep the game ROMs and the saved games progress in an external source. This way makes easier to experiment with RetroPie in the SD card, and keep the important data safe in a plug-n-play source.
 
 - **Step 6.** Format a USB drive as `FAT`. Use any disk utility available on your OS.
 - **Step 7.** Create a folder named `retropie-mount` on the root of the USB drive. This is going to be used by RetroPie every time you boot the system.
@@ -58,9 +58,9 @@ Find more info about this in the official RetroPie documentation: [Running ROMs 
 
 ### Overclocking the Raspberry Pi
 
-If you have a Raspberry Pi Model 1, I recommend to overclock your board. That way you can run more complex games as in a Raspberry Pi Model 2. For example a Raspberry Pi Model 1 doesn't have the power enough to run most of the Neo Geo or MS-DOS games, but Raspberry Pi 2 does.
+If you have a Raspberry Pi Model 1, I recommend to overclock your board. That way you can run more complex games as in a Raspberry Pi Model 2. For example a Raspberry Pi Model 1 doesn't have the power enough to run most of the Neo Geo or MS-DOS games, but an overclocked one actually does.
 
-There are 2 ways to overclock a Raspberry Pi: the wrong one and the right one. The wrong way lets you expand the core and memory boundaries as you want, but it's dangerous to your board and also [voids the warranty](https://www.raspberrypi.org/documentation/configuration/config-txt/overclocking.md). The right way is provided by Raspberry Pi itself so take a look at its post: [Introducing Turbo Mode: up to 50% more performance for free](https://www.raspberrypi.org/blog/introducing-turbo-mode-up-to-50-more-performance-for-free/).
+There are 2 ways to overclock a Raspberry Pi: the wrong one and the right one. The wrong way lets you expand the core and memory boundaries as you want, but it's dangerous to your board and also [voids the warranty](https://www.raspberrypi.org/documentation/configuration/config-txt/overclocking.md). The right way is provided by Raspberry Pi itself so take a look at this post: [Introducing Turbo Mode: up to 50% more performance for free](https://www.raspberrypi.org/blog/introducing-turbo-mode-up-to-50-more-performance-for-free/).
 
 Let's do this in the right way:
 
@@ -71,24 +71,24 @@ Let's do this in the right way:
 
 ### Setting arcade controllers
 
-This was the hardest thing I had to find. The documentation is in [plain sight](https://github.com/RetroPie/RetroPie-Setup/wiki/Xin-Mo-Controller), but you need to know the name of you're looking for to find it. So, I spent a lot of time looking how to configure this kind of controllers:
+This was the hardest thing to find. The docs are in [plain sight](https://github.com/RetroPie/RetroPie-Setup/wiki/Xin-Mo-Controller), but you need to know the name of you're looking for to find it. So, I spent a lot of time looking how to configure THIS kind of controllers:
 
 ![Xin Mo controllers](./xin-mo.jpg)
 
-The magic words are **Xin Mo**. It's that simple. Now configure RetroPie to recognize this kind of controllers.
+The magic words are **Xin Mo**. It's that simple. Now, to configure RetroPie to recognize this kind of controllers...
 
 - **Step 9.** Edit `/cmdline.txt` and write at the end of the file:
   ```
   usbhid.quirks=0x16c0:0x05e1:0x040
   ```
 
-There are a few more steps to configure the controllers, but wait until [turning on the system](#now-turn-it-on).
+There are a few more steps to configure the controllers, but wait till [turning on the system](#now-turn-it-on).
 
 Find more information about the Xin Mo Controllers in the [official RetroPie documentation](https://github.com/retropie/retropie-setup/wiki/Xin-Mo-Controller).
 
 ### Forcing HDMI sound
 
-If you're using a computer monitor, it probably doesn't have built-in speakers. And in most of cases, this kind of monitor has a 3.5mm jack to output sound to external speakers. In that case, you may have to make that the HDMI controls the sound:
+If you're using a computer monitor, it probably doesn't have built-in speakers. And in most of cases, this kind of monitor has a 3.5mm jack to output sound to external speakers. In that case, you may have to make that the HDMI takes control over the sound:
 
 - **Step 10.** Force the HDMI by adding the following line to `/config.txt`:
   ```
@@ -118,7 +118,7 @@ You've to configure each button of the controllers. I recommend to use the same 
 
 ![Sega Genesis controller](./genesis-controller.png)
 
-- **Step 12.** My choice of configuration for Xin Mo controllers is:
+- **Step 12.** My choice of configuration for [Xin Mo controllers](#setting-arcade-controllers) is:
   - For arrows, only set "up", "down", "left" and "right" on "D-PAD".
   - For buttons, use the same distribution that the Sega Genesis controller. You can change this later and even [configure controllers for individual systems and individual games](https://github.com/RetroPie/RetroPie-Setup/wiki/retroarch-configuration).
   - For anything else, keep pressing any key some seconds to set "-NOT DEFINED-".
@@ -199,7 +199,7 @@ For more info visit this complete video tutorial: [Simple DOSBox Setup RetroPie 
 
 #### MS-DOS controllers
 
-Every game uploaded to the MS-DOS list, will be played via keyboard. That make sense, but I wanted to play games via Xin Mo controllers. So to do that you need to make some setups:
+Every game uploaded to the MS-DOS list, will be played via keyboard. That make sense, but I wanted to play games via [Xin Mo controllers](#setting-arcade-controllers). So to do that you need to make some setups:
 
 0. Go to terminal. ?????
 1. Enter to DosBox: `+start DOSBOX`.
