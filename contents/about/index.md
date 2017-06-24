@@ -21,6 +21,7 @@ From 2009 to 2013 I've been part of the team that unified the common UI componen
 
 - [Meet me on LinkedIn](https://www.linkedin.com/in/lean8086/)
 - [Follow me on Instagram](https://www.instagram.com/lean8086/)
+- [Add me to Tumblr](https://lean8086.tumblr.com/)
 - [Read me on Twitter](https://www.twitter.com/lean8086/)
 - [Fork me on GitHub](https://www.github.com/lean8086/)
 - [Contact me by e-mail](mailto:lean8086@gmail.com)
