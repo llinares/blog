@@ -17,10 +17,8 @@ block content
     p.article-details
       | #{'Created on '}
       mixin published(page.metadata.date)
-    p.article-description(itemprop='description')= page.metadata.description
+    p.article-description(itemprop='description')= page.metadata.description + ' ' + (page.metadata.notes || '')
   section
-    if page.metadata.notes
-      p.content-wrap= page.metadata.notes
     p.codepen(
       data-height='582',
       data-theme-id='light',
