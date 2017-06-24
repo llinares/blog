@@ -213,6 +213,10 @@ footer .copy {
   color: #fff;
 }
 
+.home .global-nav a svg, .home .global-nav a:hover svg, .global-nav a:active svg, .global-nav a:focus svg {
+  fill: #fff;
+}
+
 .hi {
   margin: 2em auto .5em;
   color: #fff;
@@ -333,6 +337,16 @@ pre code {
   color: rgba(0, 0, 0, .8);
   border-bottom: 2px solid #e74c3c;
   margin-bottom: -2px;
+}
+
+.global-nav svg {
+  fill: rgba(0, 0, 0, .6);
+  width: 13px;
+  margin-left: 6px;
+}
+
+.global-nav a:hover svg, .global-nav a:active svg, .global-nav a:focus svg {
+  fill: rgba(0, 0, 0, .8);
 }
 
 /* media queries */
