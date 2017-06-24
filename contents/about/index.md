@@ -5,7 +5,7 @@ date: 2017-06-24
 template: simple.jade
 ---
 
-Hello there, my name is Leandro Linares and I'm a front-end developer and a maker from Buenos Aires, Argentina. I'm currently working at [MercadoLibre.com](https://www.mercadolibre.com/), part of the Nasdaq 100 index and one of the largest online commerce and payments platform in Latin America.
+Hello there, my name is Leandro Linares and I'm a front-end developer and a maker from Buenos Aires, Argentina. I'm currently working at [MercadoLibre.com](https://www.mercadolibre.com/), part of the Nasdaq 100 index and one of the largest online commerce and fintech platform in Latin America.
 
 ![Me](../assets/avatar@2x.png)
 
