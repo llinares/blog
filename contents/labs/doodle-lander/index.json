@@ -1,7 +1,7 @@
 {
   "title": "Doodle Lander",
   "description": "Playing with gravity on Canvas.",
-  "notes": "Use W for Gas, A for turning left and D for turning right.",
+  "notes": "Use W for propulsion, A for going left and D for going right.",
   "date": "2012-10-08",
   "template": "labs.jade",
   "codepen": "vZeOaP"
