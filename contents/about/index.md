@@ -1,7 +1,7 @@
 ---
 title: About me
 description: Front-End Web Developer from Buenos Aires, Argentina.
-date: 2017-06-22
+date: 2017-06-24
 template: simple.jade
 ---
 
@@ -24,3 +24,4 @@ From 2009 to 2013 I've been part of the team that unified the common UI componen
 - [Read me on Twitter](https://www.twitter.com/lean8086/)
 - [Fork me on GitHub](https://www.github.com/lean8086/)
 - [Contact me by e-mail](mailto:lean8086@gmail.com)
+- [Subscribe to my RSS feed](https://www.lean8086.com/feed.xml)

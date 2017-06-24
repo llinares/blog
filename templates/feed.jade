@@ -5,12 +5,17 @@ rss(version='2.0',
     xmlns:dc='http://purl.org/dc/elements/1.1/'
     xmlns:atom='http://www.w3.org/2005/Atom')
   channel
-    - var articles = env.helpers.getArticles(contents);
+    - var articles = env.helpers.getArticles(contents).filter(function (article) { return !article.metadata.draft });
     title= locals.owner
     atom:link(href=locals.url + '/feed.xml', rel='self', type='application/rss+xml')
     link= locals.url
     description= locals.description
     pubDate= articles[0].rfc822date
+    language en
+    image
+      url= locals.url + contents.assets['192x192.png'].url
+      title= locals.owner
+      link= locals.url
     each article in articles
       - var permalink = locals.url + article.url;
       item
@@ -20,4 +25,5 @@ rss(version='2.0',
         guid(isPermaLink='true')= permalink
         author= locals.owner
         //- passing locals.url resolves all relative urls to absolute
-        description= article.getHtml(locals.url)
+        description= article.metadata.description
+        comments= permalink + '#disqus_thread'
