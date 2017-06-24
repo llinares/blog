@@ -57,7 +57,7 @@ h3 {
  */
 
 .article-header {
-  margin-bottom: 57px;
+  margin: 57px auto;
   font-family: 'Lato';
 }
 
@@ -209,8 +209,12 @@ footer .copy {
   background-size: cover;
 }
 
+.home .global-nav a, .home .global-nav a:hover, .global-nav a:active, .global-nav a:focus {
+  color: #fff;
+}
+
 .hi {
-  margin-top: 1em;
+  margin: 2em auto .5em;
   color: #fff;
   line-height: 1.3;
   text-align: center;
@@ -290,7 +294,7 @@ pre code {
 
 .logo {
   margin: 0;
-  display: inline-block;
+  float: left;
 }
 
 .logo a, .logo a:visited, .logo a:link {
@@ -309,16 +313,26 @@ pre code {
  * Nav
  */
 .global-nav {
-  float: right;
+  margin: 13px 0;
+  display: inline-block;
 }
 
 .global-nav a {
-  display: inline-block;
+  float: left;
   border-bottom: none;
   font-variant: small-caps;
   text-transform: lowercase;
   font-family: 'Lato';
-  margin-right: 50px;
+  font-size: 24px;
+  color: rgba(0, 0, 0, .6);
+  margin-left: 2em;
+}
+
+.global-nav a:hover, .global-nav a:active, .global-nav a:focus {
+  background-color: transparent;
+  color: rgba(0, 0, 0, .8);
+  border-bottom: 2px solid #e74c3c;
+  margin-bottom: -2px;
 }
 
 /* media queries */
