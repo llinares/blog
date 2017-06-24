@@ -13,7 +13,7 @@ My main focus is to help people with creative problem-solving. I'm always search
 
 I'm currently part of the small team that's moving forward the tech stack of the front-end of Mercado Libre. The efforts also includes to coach the people behind every new implementation. I'm working with: Node, React, Redux, Sass, Webpack, and plain JS (because never goes out of style 👍).
 
-Back in 2015 I’ve applied the concept of Single Page App on certain sections of Mercado Libre. That have made possible to position a team of formerly Web designers as JavaScript developers. I’ve worked with Backbone, Marionette, Handlebars, Less and Gulp.
+Back in 2015 I’ve applied the concept of Single Page App on certain sections of Mercado Libre. I’ve worked with Backbone, Marionette, Handlebars, Less and Gulp.
 
 From 2009 to 2013 I've been part of the team that unified the common UI components of Mercado Libre in a library called [Chico UI](http://chico.mercadolibre.com/). A jQuery-based collection of customizable components.
 
