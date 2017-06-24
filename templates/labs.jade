@@ -1,0 +1,48 @@
+extends layout
+
+block append vars
+  - bodyclass = 'labs';
+
+block prepend title
+  | #{page.title + ' - '}
+
+block append head
+  include mixins/meta
+  mixin meta(page)
+
+block content
+  header.article-header.content-wrap
+    include mixins/published
+    h1.article-headline(itemprop='headline')= page.title
+    p.article-details
+      | #{'Created on '}
+      mixin published(page.metadata.date)
+    p.article-description(itemprop='description')= page.metadata.description
+  section
+    if page.metadata.notes
+      p.content-wrap= page.metadata.notes
+    p.codepen(
+      data-height='582',
+      data-theme-id='light',
+      data-slug-hash=page.metadata.codepen,
+      data-default-tab='result',
+      data-user='lean8086',
+      data-embed-version='2',
+      data-pen-title=page.title,
+      data-border='none',
+      data-tab-bar-color='#fff'
+    )
+      | #{'See the Pen '}
+      a(href='https://codepen.io/lean8086/pen/' + page.metadata.codepen)= page.title
+      | #{'.'}
+  hr
+  section.content-wrap#disqus_thread
+
+block prepend footer
+  div.nav
+    a(href='/') Go back
+
+block append body
+  script(defer, src='https://production-assets.codepen.io/assets/embed/ei.js')
+  script.
+    var disqus_config=function(){this.page.url='https://www.lean8086.com/'};(function(){var d=document,s=d.createElement('script');s.src='https://lean8086.disqus.com/embed.js';s.setAttribute('data-timestamp',+new Date());(d.head||d.body).appendChild(s);})();

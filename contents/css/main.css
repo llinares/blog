@@ -349,6 +349,16 @@ pre code {
   fill: rgba(0, 0, 0, .8);
 }
 
+/**
+ * Labs
+ */
+.codepen, .cp_embed_iframe {
+  max-width: 1031px;
+  margin: 57px auto 0;
+  display: block;
+}
+
+
 /* media queries */
 
 @media (min-width: 640px) {
