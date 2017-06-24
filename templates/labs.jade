@@ -32,9 +32,10 @@ block content
       data-border='none',
       data-tab-bar-color='#fff'
     )
-      | #{'See the Pen '}
-      a(href='https://codepen.io/lean8086/pen/' + page.metadata.codepen)= page.title
-      | #{'.'}
+      noscript
+        | #{'See the Pen '}
+        a(href='https://codepen.io/lean8086/pen/' + page.metadata.codepen)= page.title
+        | #{'.'}
   hr
   section.content-wrap#disqus_thread
 
