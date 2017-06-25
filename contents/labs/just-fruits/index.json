@@ -1,0 +1,8 @@
+{
+  "title": "Just fruits",
+  "description": "My first experiment with JavaScript.",
+  "notes": "Use A, S, D, W to walk. Collect as many fruits as possible in 60 seconds.",
+  "date": "2009-08-13",
+  "template": "labs.jade",
+  "codepen": "YQryQP"
+}
