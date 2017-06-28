@@ -1,7 +1,7 @@
 mixin published(dateCreated)
   - var createdUtc = moment.utc(dateCreated);
   - var limit = new Date();
-  - limit.setDate(limit.getDate() - 14);
+  - limit.setDate(limit.getDate() - 30);
   - var isNew = new Date(dateCreated) > limit;
   - var className = (isNew ? 'new' : null);
   time(class=className, itemprop='datePublished', datetime=createdUtc.format('YYYY-MM-DD'))
