@@ -100,7 +100,7 @@ h3 {
   background-size: cover;
   background-position: center;
   width: 100vw;
-  height: calc(100vw / 2);
+  height: 50vw;
   position: relative;
   color: rgba(0, 0, 0, .6);
 }
@@ -367,7 +367,7 @@ pre code {
   }
 
   .article-image {
-    height: calc(100vw / 3);
+    height: 33vw;
     margin-bottom: 114px;
   }
 
