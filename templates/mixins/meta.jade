@@ -16,19 +16,20 @@ mixin meta(page)
 
   meta(name='twitter:site', content='@lean8086')
   meta(name='twitter:url', content=url)
-  meta(name='twitter:title', content=locals.description)
-  meta(name='twitter:description', content=locals.owner)
+  meta(name='twitter:title', content=page.title)
+  meta(name='twitter:description', content=page.metadata.description)
   meta(name='twitter:creator', content='@lean8086')
   if page.metadata.image
     meta(name='twitter:card', content='summary_large_image')
     meta(name='twitter:image', content=image)
   else
     meta(name='twitter:card', content='summary')
+    meta(name='twitter:image', content=contents.assets['avatar@3x.png'].url)
 
-  meta(property='og:title', content=locals.description)
+  meta(property='og:title', content=page.title)
   meta(property='og:type', content='article')
   meta(property='og:url', content=url)
-  meta(property='og:description', content=locals.owner)
+  meta(property='og:description', content=page.metadata.description)
   meta(property='og:site_name', content=locals.owner)
   if page.metadata.image
     meta(property='og:image', content=image)
