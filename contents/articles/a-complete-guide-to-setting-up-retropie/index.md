@@ -3,7 +3,7 @@ title: A complete guide to setting up RetroPie
 description: Step-by-step tutorial on how to setup your Raspberry Pi, including the missing parts and some recommendations.
 date: 2017-06-27
 template: article.jade
-image: hero.jpg
+image: image.jpg
 image_caption: The Raspberry Pi Model 1 which I used to build my arcade cabinet.
 topic: diy
 lang: en
