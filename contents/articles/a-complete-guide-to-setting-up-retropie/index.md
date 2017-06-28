@@ -1,11 +1,11 @@
 ---
 title: A complete guide to setting up RetroPie
-description: Step-by-step tutorial on how to setup your Raspberry Pi, including the missing parts and recommendations.
-date: 2017-06-13
+description: Step-by-step tutorial on how to setup your Raspberry Pi, including the missing parts and some recommendations.
+date: 2017-06-27
 template: article.jade
 image: hero.jpg
-image_caption: Super Mario Bros. 3, running on a Raspberry Pi Model 1.
-topic: code
+image_caption: The Raspberry Pi Model 1 which I used to build my arcade cabinet.
+topic: diy
 lang: en
 draft: true
 ---
@@ -69,22 +69,22 @@ Let's do this in the right way:
   force_turbo=1
   ```
 
-### Setting arcade controllers
+### Setting arcade controller
 
-This was the hardest thing to find. The docs are in [plain sight](https://github.com/RetroPie/RetroPie-Setup/wiki/Xin-Mo-Controller), but you need to know the name of you're looking for to find it. So, I spent a lot of time looking how to configure THIS kind of controllers:
+This was the hardest thing to find. The docs are in [plain sight](https://github.com/RetroPie/RetroPie-Setup/wiki/Xin-Mo-Controller), but you need to know the name of you're looking for to find it. So, I spent a lot of time looking how to configure THIS kind of controller:
 
-![Xin Mo controllers](./xin-mo.jpg)
+![Xin Mo controller](./xin-mo.jpg)
 
-The magic words are **Xin Mo**. It's that simple. Now, to configure RetroPie to recognize this kind of controllers...
+The magic words are **Xin Mo**. It's that simple. Now, to configure RetroPie to recognize this kind of controller...
 
 - **Step 9.** Edit `/cmdline.txt` and write at the end of the file:
   ```
   usbhid.quirks=0x16c0:0x05e1:0x040
   ```
 
-There are a few more steps to configure the controllers, but wait till [turning on the system](#now-turn-it-on).
+There are a few more steps to configure the controller, but wait till [turning on the system](#now-turn-it-on).
 
-Find more information about the Xin Mo Controllers in the [official RetroPie documentation](https://github.com/retropie/retropie-setup/wiki/Xin-Mo-Controller).
+Find more information about the Xin Mo Controller in the [official RetroPie documentation](https://github.com/retropie/retropie-setup/wiki/Xin-Mo-Controller).
 
 ### Forcing HDMI sound
 
@@ -108,19 +108,19 @@ Using that configuration, the sound coming from the headphone jack is a lot clea
 
 You're set. Plug the SD card and the USB drive into the Raspberry Pi and turn on. As is the first time to run RetroPie, it's gonna take a little more time to process everything.
 
-The first screen to appear is like "Welcome, I found some controllers plugged in":
+The first screen to appear is like "Welcome, I found some controller plugged in":
 
 ![First screen](./welcome-screen.png)
 
-### Setting up controllers
+### Setting up controller
 
-You've to configure each button of the controllers. I recommend to use the same distribution that the Sega Genesis controllers:
+You've to configure each button of the controller. I recommend to use the same distribution that the Sega Genesis controller:
 
 ![Sega Genesis controller](./genesis-controller.png)
 
-- **Step 12.** My choice of configuration for [Xin Mo controllers](#setting-arcade-controllers) is:
+- **Step 12.** My choice of configuration for [Xin Mo controller](#setting-arcade-controller) is:
   - For arrows, only set "up", "down", "left" and "right" on "D-PAD".
-  - For buttons, use the same distribution that the Sega Genesis controller. You can change this later and even [configure controllers for individual systems and individual games](https://github.com/RetroPie/RetroPie-Setup/wiki/retroarch-configuration).
+  - For buttons, use the same distribution that the Sega Genesis controller. You can change this later and even [configure controller for individual systems and individual games](https://github.com/RetroPie/RetroPie-Setup/wiki/retroarch-configuration).
   - For anything else, keep pressing any key some seconds to set "-NOT DEFINED-".
 
   **From now on, the "A" button is *ACCEPT* and "B" button is *CANCEL*.**
@@ -169,7 +169,7 @@ To do so:
 
 This emulator works a little different from other ones. Before copying ROMs, you need to:
 
-1. Get the [Neo Geo BIOS](https://www.emuparadise.me/M.A.M.E._-_Multiple_Arcade_Machine_Emulator_ROMs/Neo-Geo/15030).
+1. Get the Neo Geo BIOS. You'll need a `neogeo.zip` file.
 2. Copy the zip file (compressed) to `/retropie-mount/BIOS` and `/retropie-mount/roms/neogeo`.
 3. Move ROMs as zip (compressed) to `/retropie-mount/roms/neogeo`.
 4. Restart EmulationStation.
@@ -197,18 +197,6 @@ Now MS-DOS is a console in the list of consoles. Also a new folder `/retropie-mo
 
 For more info visit this complete video tutorial: [Simple DOSBox Setup RetroPie MS-DOS Raspberry Pi](https://www.youtube.com/watch?v=-dcubuDfdxY).
 
-#### MS-DOS controllers
-
-Every game uploaded to the MS-DOS list, will be played via keyboard. That make sense, but I wanted to play games via [Xin Mo controllers](#setting-arcade-controllers). So to do that you need to make some setups:
-
-0. Go to terminal. ?????
-1. Enter to DosBox: `+start DOSBOX`.
-3. When in console, make `ctrl+F1`.
-4. nop
-5. menu> quit emulation station
-6. Execute the key mapper: `./opt/retropie/emulators/dosbox/bin/dosbox -startmapper`.
-8. Go out: `exit`.
-
 ### MAME
 
 I had the worst experience trying to understand this platform. I recommend to play arcade games on Neo Geo or find a version of the games for a more common console. In case you choose to use arcade games anyway, follow these steps.
@@ -231,4 +219,4 @@ The first time a game is running, it will ask for an emulator to run:
 
 ---
 
-That's all far I could go. I'll update this guide as I find more and better solutions.
+That's all far I could go. I'll update this guide as I find more and better solutions. Now I’m working on make that MS-DOS games run with the [Xin Mo controller](#setting-arcade-controller) 👌.
