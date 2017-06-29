@@ -1,13 +1,11 @@
 ---
 title: A complete guide to setting up RetroPie
-description: Step-by-step tutorial on how to setup your Raspberry Pi.
-date: 2017-06-27
+description: Step-by-step tutorial on how to setup your Raspberry Pi to make the most of it as retro games console.
+date: 2017-06-28
 template: article.jade
 image: image.jpg
 image_caption: The Raspberry Pi Model 1 which I used to build my arcade cabinet.
 topic: diy
-lang: en
-draft: true
 ---
 
 I spent the last year building a real-size arcade cabinet. I found myself installing and reinstalling RetroPie on Raspberry Pi several times. So, everytime I screwed up and reinstalled, I had to reconfigure the entire system by following the exact same steps to get where I was. The erasing and reinstalling processes were caused for a notable lack of information about many setup choices you have to do. I didn't found many recommendations.
