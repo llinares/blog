@@ -44,4 +44,4 @@ block prepend footer
 block append body
   script(defer, src='https://production-assets.codepen.io/assets/embed/ei.js')
   script.
-    var disqus_config=function(){this.page.url='https://www.lean8086.com/'};(function(){var d=document,s=d.createElement('script');s.src='https://lean8086.disqus.com/embed.js';s.setAttribute('data-timestamp',+new Date());(d.head||d.body).appendChild(s);})();
+    var disqus_config=function(){this.page.url=location.href};(function(){var d=document,s=d.createElement('script');s.src='https://lean8086.disqus.com/embed.js';s.setAttribute('data-timestamp',+new Date());(d.head||d.body).appendChild(s);})();
