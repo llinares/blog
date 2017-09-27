@@ -4,7 +4,7 @@ block append vars
   - bodyclass = 'labs';
 
 block prepend title
-  | #{page.title + ' - '}
+  |#{page.title + ' - '}
 
 block append head
   include mixins/meta
@@ -14,10 +14,9 @@ block content
   header.article-header.content-wrap
     include mixins/published
     h1.article-headline(itemprop='headline')= page.title
-    p.article-details
-      | #{'Created on '}
-      mixin published(page.metadata.date)
     p.article-description(itemprop='description')= page.metadata.description + ' ' + (page.metadata.notes || '')
+    p.article-details
+      mixin published(page.metadata.date)
   section
     p.codepen(
       data-height='582',
@@ -31,9 +30,9 @@ block content
       data-tab-bar-color='#fff'
     )
       noscript
-        | #{'See the Pen '}
+        |#{'See the Pen '}
         a(href='https://codepen.io/lean8086/pen/' + page.metadata.codepen)= page.title
-        | #{'.'}
+        |#{'.'}
   hr
   section.content-wrap#disqus_thread
 

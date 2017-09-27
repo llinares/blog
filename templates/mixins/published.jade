@@ -6,6 +6,6 @@ mixin published(dateCreated)
   - var className = (isNew ? 'new' : null);
   time(class=className, itemprop='datePublished', datetime=createdUtc.format('YYYY-MM-DD'))
     if createdUtc.year() !== (new Date()).getFullYear()
-      = createdUtc.format('MMM DD, YYYY')
+      = createdUtc.format('MMM DD.YYYY')
     else
       = createdUtc.format('MMM DD')

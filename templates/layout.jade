@@ -11,7 +11,7 @@ html(lang=lang, itemscope, itemtype=schematype)
       meta(charset='utf-8')
       title
         block title
-          = locals.owner
+          |#{locals.owner + ' - ' + locals.description}
       meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
       meta(name='viewport', content='width=device-width')
       meta(name='theme-color', content='#e74c3c')
@@ -26,13 +26,14 @@ html(lang=lang, itemscope, itemtype=schematype)
       link(rel='apple-touch-icon' sizes='152x152', href=contents.assets['152x152.png'].url)
       
       link(rel='alternate', href=locals.url+'/feed.xml', type='application/rss+xml', title=locals.description)
-      link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Lato:400,700|Lora:400,700')
-      link(rel='stylesheet', href=contents.css['main.css'].url)
+      link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Lato:300,400,700')
+      link(rel='stylesheet', href=contents.css['small.css'].url)
+      link(rel='stylesheet', media='(min-width:640px)', href=contents.css['large.css'].url)
       mixin analytics()
   body(class=bodyclass)
     block body
       header.header(role='banner')
-        h1.logo(itemprop='publisher', itemscope, itemtype='http://schema.org/Organization')
+        div.logo(itemprop='publisher', itemscope, itemtype='http://schema.org/Organization')
           meta(itemprop='name', content=locals.name)
           meta(itemprop='logo', content=locals.url + contents.assets['avatar.png'].url)
           a(href='/', itemprop='url') 8086
@@ -42,7 +43,13 @@ html(lang=lang, itemscope, itemtype=schematype)
           a(href='/#labs', itemprop='url')
             span(itemprop='name') Labs
           a(href='/about', itemprop='url')
-            span(itemprop='name') About me
+            span(itemprop='name') About
+          a(href=locals.url+'/feed.xml', itemprop='url')
+            span(itemprop='name')
+              |#{'Feed'}
+              svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 32 32')
+                path(d='M29 0H3C1.35 0 0 1.35 0 3v26c0 1.65 1.35 3 3 3h26c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zM8.72 25.975C7.22 25.975 6 24.77 6 23.27c0-1.49 1.22-2.713 2.72-2.713 1.505 0 2.718 1.225 2.718 2.712 0 1.5-1.22 2.705-2.72 2.705zm6.824.025c0-2.556-.994-4.962-2.794-6.762-1.806-1.806-4.2-2.8-6.75-2.8v-3.912c7.425 0 13.475 6.044 13.475 13.475h-3.93zm6.944 0c0-9.094-7.394-16.5-16.48-16.5V5.588c11.25 0 20.405 9.162 20.405 20.413h-3.925z')
+
         block header
       main
         block content
@@ -51,5 +58,5 @@ html(lang=lang, itemscope, itemtype=schematype)
           block footer
             p.copy ©
               span(itemprop='copyrightYear')= new Date().getFullYear()
-              | #{' '}
+              |#{' '}
               span(itemprop='copyrightHolder')= locals.owner

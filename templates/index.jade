@@ -5,16 +5,19 @@ block append vars
   - schematype = 'http://schema.org/Person'
 
 block append header
-  h1.hi.content-wrap #{'Hi there 👋 I\'m '}
-    span(itemtype='name')= locals.owner
+  div#intro
+    h1.hi
+      |#{'Hi there '}
+      span.emoji 👋
+      |#{' I\'m '}
+      span(itemtype='name') #{locals.owner + '.'}
+    p(itemtype='description')= locals.description
+    p
+      a.more(href='/about') Read more about me
 
 block content
   section.content-wrap#intro
-    img.avatar(src=contents.assets['avatar.png'].url, srcset=contents.assets['avatar.png'].url + ' 1x, ' + contents.assets['avatar@2x.png'].url + ' 2x, ' + contents.assets['avatar@3x.png'].url + ' 3x' width='120', height='120', itemtype='image')
-    div.bio
-      p(itemtype='description')= locals.description
-      p
-        a(href='/about') Read more about me.
+    
 
   section.content-wrap#articles
     h2 Articles

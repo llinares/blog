@@ -6,27 +6,27 @@ block append vars
   - schematype = 'http://schema.org/Article';
 
 block prepend title
-  | #{page.title + ' - '}
+  |#{page.title + ' - '}
 
 block append head
   include mixins/meta
   mixin meta(page)
 
 block content
+  //- if page.metadata.image
+  //-   figure.article-image(style='background-image:url(' + (page.url + page.metadata.image) + ')')
+      //- if page.metadata.image_caption
+      //-   figcaption= page.metadata.image_caption
   header.article-header.content-wrap
     include mixins/published
     include mixins/estimatedReadingTime
     h1.article-headline(itemprop='headline')= page.title
+    p.article-description(itemprop='description')= page.metadata.description
     p.article-details
       mixin published(page.metadata.date)
-      | #{' · '}
+      |#{' · '}
       mixin estimatedReadingTime(page.markdown)
-      | #{' min read.'}
-    p.article-description(itemprop='description')= page.metadata.description
-  if page.metadata.image
-    figure.article-image(style='background-image:url(' + (page.url + page.metadata.image) + ')')
-      if page.metadata.image_caption
-        figcaption= page.metadata.image_caption
+      |#{' min read'}
   section.article-body.content-wrap(itemprop='articleBody')!= htmlMinifier.minify(typogr(page.html).smartypants(), { collapseBooleanAttributes: true, collapseWhitespace: true, decodeEntities: true, removeComments: true, removeEmptyAttributes: true, removeEmptyElements: true, removeRedundantAttributes: true, removeScriptTypeAttributes: true, removeStyleLinkTypeAttributes: true, sortAttributes: true, sortClassName: true })
   hr
   section.content-wrap#disqus_thread
