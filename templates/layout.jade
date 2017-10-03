@@ -36,7 +36,7 @@ html(lang=lang, itemscope, itemtype=schematype)
         div.logo(itemprop='publisher', itemscope, itemtype='http://schema.org/Organization')
           meta(itemprop='name', content=locals.name)
           meta(itemprop='logo', content=locals.url + contents.assets['avatar.png'].url)
-          a(href='/', itemprop='url') 8086
+          a(href=locals.url, itemprop='url') 8086
         nav.global-nav(itemscope, itemtype='http://schema.org/SiteNavigationElement')
           a(href='/#articles', itemprop='url')
             span(itemprop='name') Articles
