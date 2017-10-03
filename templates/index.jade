@@ -10,7 +10,8 @@ block append header
       |#{'Hi there '}
       span.emoji 👋
       |#{' I\'m '}
-      span(itemtype='name') #{locals.owner + '.'}
+      span(itemtype='name')= locals.owner
+      |#{'.'}
     p(itemtype='description')= locals.description
     p
       a.more(href='/about') Read more about me
