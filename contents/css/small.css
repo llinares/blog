@@ -75,6 +75,13 @@ h2 {
   margin: 1.7em 0 0 -.04em;
 }
 
+img {
+  border-radius: 18px;
+  -webkit-filter: saturate(65%);
+  filter: saturate(65%);
+  background-color: #efefef;
+}
+
 /**
  * Article
  */
