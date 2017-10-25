@@ -436,3 +436,10 @@ pre code {
   margin: 60px auto 0;
   display: block;
 }
+
+/**
+ * Pickings
+ */
+.pickings .twitter-tweet {
+  margin-bottom: 50px!important;
+}
