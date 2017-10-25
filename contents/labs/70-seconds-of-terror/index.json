@@ -1,0 +1,8 @@
+{
+  "title": "70 seconds of terror",
+  "description": "Landing a spacecraft on the surface of Mars. Code built for the js13kgames competition.",
+  "notes": "The name of the game comes from the original NASA mission called \"Curiosity's Seven Minutes of Terror\".",
+  "date": "2012-09-13",
+  "template": "labs.jade",
+  "codepen": "JrQmZp"
+}
