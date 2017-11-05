@@ -16,7 +16,7 @@ block content
     h1.article-headline(itemprop='headline')= page.title
     p.article-description(itemprop='description')= page.metadata.description + ' ' + (page.metadata.notes || '')
     p.article-details
-      mixin published(page.metadata.date)
+      mixin published(page.metadata.date, true)
   section
     p.codepen(
       data-height='582',
