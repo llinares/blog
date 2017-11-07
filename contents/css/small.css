@@ -272,6 +272,10 @@ footer .copy {
   transform: scale(1.01);
 }
 
+.hi {
+  margin-top: 60px;
+}
+
 .hi,
 .home .article-description {
   color: #fff;
