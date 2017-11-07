@@ -3,9 +3,9 @@
   line-height: inherit;
 }
 
-.home .header {
+/*.home .header {
   height: 540px;
-}
+}*/
 
 .article-headline {
   font-size: 80px;
@@ -19,8 +19,14 @@ h2 {
   font-size: 44px;
 }
 
+.emoji {
+  display: inline;
+}
 
 
+.home .header::before {
+  background-position: center top;
+}
 
 
 

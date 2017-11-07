@@ -4,22 +4,19 @@ block append vars
   - bodyclass = 'home'
   - schematype = 'http://schema.org/Person'
 
-block append header
-  div#intro
-    h1.hi
-      |#{'Hi there '}
+block header
+  header.article-header.content-wrap
+    h1.article-headline.hi
+      |#{'Hello there! '}
       span.emoji 👋
+    p.article-description(itemtype='description')
       |#{' I\'m '}
       span(itemtype='name')= locals.owner
-      |#{'.'}
-    p(itemtype='description')= locals.description
-    p
-      a.more(href='/about') Read more about me
+      |#{', '}
+      = locals.description
+    a.article-details.more(href='/about') Read more
 
-block content
-  section.content-wrap#intro
-    
-
+block content      
   section.content-wrap#articles
     h2 Articles
     ol.articles-list
@@ -53,6 +50,7 @@ block content
                       - var isNew = new Date(item.metadata.date) > limit;
                       - var className = (isNew ? 'new' : null);
                       a(href=item.url, class=className)= item.title
+  hr
   
   section.content-wrap#labs
     h2 Labs

@@ -238,11 +238,11 @@ footer .copy {
   fill: #fff;
 }
 
-#intro {
+/*#intro {
   color: #fff;
   margin: 55px auto;
   text-align: center;
-}
+}*/
 
 #articles h2,
 #labs h2,
@@ -251,7 +251,7 @@ footer .copy {
 }
 
 .home .header {
-  height: 675px;
+  /*height: 675px;*/
   overflow: hidden;
   position: relative;
 }
@@ -264,7 +264,7 @@ footer .copy {
   right: 0;
   bottom: 0;
   background-image: url('/assets/hero-1500x500.jpeg');
-  background-position: center top;
+  background-position: 33% top;
   background-repeat: no-repeat;
   background-size: cover;
   filter: blur(5px);
@@ -272,32 +272,27 @@ footer .copy {
   transform: scale(1.01);
 }
 
-.hi {
+.hi,
+.home .article-description {
   color: #fff;
-  padding-left: 0;
-  margin: 0;
-  font-size: 45px;
-  line-height: 1.5;
 }
 
-.hi .emoji {
+.article-headline.hi::after {
+  content: '';
+}
+
+.emoji {
   color: transparent;
   text-shadow: 0 0 0 #fff;
   font-size: .93em;
+  display: block;
 }
 
 .home .more {
-  margin-top: 25px;
-  line-height: 1.53;
-  font-weight: 300;
   color: #fff;
-  letter-spacing: -.02em;
-  display: inline-block;
-  padding: 3px 15px;
-  white-space: nowrap;
-  font-size: 20px;
   border: 1px solid #fff;
-  border-radius: 4px;
+  font-size: 20px;
+  padding: 7px 14px;
 }
 
 .home .more:hover {
