@@ -1,5 +1,5 @@
 ---
-title: Yes, I made a huge arcade cabinet from scratch
+title: How to build an arcade cabinet from scratch
 description: It took me over a year, but teach me a lot on the road. Here every detail behind building an entire arcade machine from the very scratch.
 date: 2017-10-03
 template: article.jade
@@ -37,8 +37,20 @@ Finnaly got something good use for that polvojuntadorea plaqueta.
 so busque por todos lados gabinetes hechos mierda para restaurar, pero eran extremadamente caros y literalmente hechos mierda, irrecuperables y dificiles de transportar y de un tamaño no apto para un depto.
 
 [!arcade feo]()
+[!arcade feo]()
+[!arcade feo]()
 
-## Open Source all the things!
+Entonces las caracteristicas tendrian que ser:
+
+- Relatively easy to build.
+- Affordable.
+- Sized for an apartment.
+- Old-school forma nostalgia.
+
+nada d e lo que encontre era del tamaño de un departamento. lo que no solo lo hacia inaceptable de tener dentro de la casa, sino que tambien los costos de traslado de semejante armatoste iba a ser costoso.
+
+
+## Open Source plans
 
 despues de buscar imagenes de lo que seria un arcade ideal, encontre qeu mucha gente construia sus propios arcades.
 
@@ -56,21 +68,51 @@ De paso también compartió el [sideart](http://zonaarcade.forumcommunity.net/?t
 
 no todo es color de rosas. los planos me resultaron algo complicados de seguir, por lo que preferi armar mis propios [planos detallados]().
 
+Them
+[!Planos feos]()
+
+Mine for you
+[!Planos lindos]()
+
+Download here
 [!Detailed plans based on pr]()
 
 ---
 
-## Wood
+## Pre-modeling
 
-mdf or melamina. busque tutoriales en video y escritos sobre como trabajar ambos materiales.
+Una vez que estaba decidido hice un modelo a escala en carton.. para estar seguro que lo que estaba por construir tenia sentido y armonia, y si algo necesitaba ser ajustado.... 15cm (8inches)
+
+[!Mini arcade]()
+
+Tambien me ayudo a decidir los tamaños de los tapa parlantes y la disposicion y separacion entre ellos.
+
+---
+
+## Wood type
+
+Before to spend some money there was a veery important decision to make. mdf or melamina. busque tutoriales en video y escritos sobre como trabajar ambos materiales.
 
 algunas caracteristicas que encontre de trabajar con ambos materiales:
 
 ### MDF
 
--
+pros
+
+- facil de cortar, lijar y dar forma.
+
+cons
+
+- polvillo muy fino cuando se corta y se lija
+- varias manos de pintura
 
 ### Melamine
+
+pros
+
+- ya laminado, no hay necesidad de pintar
+
+cons
 
 -
 
@@ -83,6 +125,14 @@ la verdad es que si hubiese sabido lo fino que es el aserrin del mdf y lo difici
 i found que las maquinas originales eran de 18mm (x inches) de grosor. pero cualquier tipo de madera de ese grosor seria pesadisima. asi que despues de mucho buscar, decidi que el grosor ideal era 15mm (x inches) por la relacion peso/tamaño.
 
 [!mdf 15mm]()
+
+Entonces fui a un amderera y pedi los siguientes cortes
+
+[!Cortes en la plancha]()
+
+[link para descargar planos]()
+
+---
 
 ### The method
 
@@ -109,8 +159,6 @@ i tried myself to despegar una pieza de madera de la cual me arrepenti poner, pa
 compre bocha de listones de pino de 4x2 un poco mas chicos que las piezas que unirian:
 
 foto listones
-
-### ranura t
 
 ---
 
@@ -164,9 +212,7 @@ tiene 6 entradas, 2 de las cuales estan filtradas, asi que las use para el monit
 
 ---
 
-## Materials
-
-### Wood
+## Drawing
 
 compre la madera segun el plano
 
@@ -177,23 +223,6 @@ foto con las maderas contra la pared
 la marque toda, incluso usando un compas viejo del colegio para las curvas
 
 foto de curvas dibujadas
-
-### Screws
-
-dsa
-
-### Press
-
-
-### Tape
-
-### wheels
-
----
-
-## maqueta
-
-foto coso de carton
 
 ---
 
@@ -218,10 +247,6 @@ foto contra la pared del primer corte
 tambien incli un corte para mas adelante poder colocar ruedas, que solo se apoyen cuando el gabinete es apoyado hacia atras.
 foto corte ruedas
 
-### listones
-
-foto listones
-
 ### cosas que aprendi
 
 - **mdf larga polvillo muy fino:** por mas que usara proteccion, lo respire, me quedaba en el pelo y en la ropa por dias. Era imposible de barrer e incluso me arruino una aspiradora de mano.
@@ -238,42 +263,55 @@ foto en la pared lijados
 
 ---
 
-## juntando todo
-
-### listones
+## Listones
 
 despues de cortarlos use esta tecnica para atornillarlos milimetricamente sin ayuda:
 
+Puse toodos los listones donde estaban marcadas las lineas.
 
 ---
 
-## controllers place
+## Todo junto
+
+primera madera adelante y ya presente el mueble, aunque sin agujeros... me parecio que ocupaba muchisimo, pero eso depende mucho del color final.
 
 ---
 
-mecha
+## controllers
+
+busque sobre controles y encontre info re completa de las disposiciones mas usadas.. en la misma pagina hace mencion a que el pibe hizo un promedio de todas e hizo la suya.. use esa.
+
+prueba con carton aspiradora
+
+mecha fue un quilombo conseguir, porque los botones tenian que entrar.. necesitaba una de 28mm consegui de 30mm
 
 aguheros maderas
 
-acrilico
+### acrilico
+
+primero se rompio todo, se derretia, traccionaba la mecha
+
+el secreto es cortar con agua.. lleva unos 10 minutos por agujero, pero queda como corte de bistri:
+
 
 ---
 
-## detalles
+## Parlantes
 
 parlantes agujersos
 
-ptapa parlantes detalle y por que
+tapa parlantes detalle y por que
 
 mencionar que probe todo en la maqueta
 
+foto publicacion aliexpress
+
+explicacion de agujero para volumen
+
 
 ---
 
-## acrilicos
+## Detalles
 
----
-
-## configuracion
-
-post
+ruedas
+acrilico pantalla
