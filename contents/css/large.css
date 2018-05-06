@@ -24,10 +24,10 @@ h2 {
 }
 
 
+.home .header,
 .home .header::before {
   background-position: center top;
 }
-
 
 
 
