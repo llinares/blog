@@ -56,3 +56,7 @@ html(lang=lang, itemscope, itemtype=schematype)
               span(itemprop='copyrightYear')= new Date().getFullYear()
               |#{' '}
               span(itemprop='copyrightHolder')= locals.owner
+    script.
+      [].slice.call(document.querySelectorAll('[data-src]')).forEach(function (el) {
+        el.src = el.getAttribute('data-src');
+      });

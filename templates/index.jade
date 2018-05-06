@@ -14,7 +14,13 @@ block header
       span(itemtype='name')= locals.owner
       |#{', '}
       = locals.description
-    a.article-details.more(href='/about') Read more
+    a.article-details.more(href='/about') About me
+
+block append body
+  script.
+    window.addEventListener('load', function () {
+      document.head.insertAdjacentHTML('beforeend', '<style>.home .header {background-image: url("/assets/hero-hd.jpg")}');
+    });
 
 block content      
   section.content-wrap#articles
