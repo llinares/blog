@@ -7,13 +7,14 @@ block append vars
 block header
   header.article-header.content-wrap
     h1.article-headline.hi
-      |#{'Hello there! '}
       span.emoji 👋
+      |#{' Hello there.'}
     p.article-description(itemtype='description')
-      |#{' I\'m '}
+      |#{'I am '}
       span(itemtype='name')= locals.owner
       |#{', '}
       = locals.description
+      |#{'.'}
     a.article-details.more(href='/about') About me
 
 block append body
