@@ -19,5 +19,5 @@ Read more about my career on [LinkedIn](https://www.linkedin.com/in/lean8086/).
 
 - [Find me on Twitter](https://www.twitter.com/lean8086/)
 - [Fork me on GitHub](https://www.github.com/lean8086/)
-- [Contact me by e-mail](mailto:lean8086@gmail.com)
+- [Contact me by e-mail](mailto:lean8086+com@gmail.com)
 - [Subscribe to my RSS feed](https://www.lean8086.com/feed.xml)
