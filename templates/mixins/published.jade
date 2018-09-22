@@ -1,13 +1,7 @@
 mixin published(dateCreated, excludeDay)
   - var createdUtc = moment.utc(dateCreated);
   time(itemprop='datePublished', datetime=createdUtc.format('YYYY-MM-DD'))
-    if createdUtc.year() !== (new Date()).getFullYear()
-      if excludeDay
-        = createdUtc.format('MMM YYYY')
-      else
-        = createdUtc.format('MMM DD.YYYY')
+    if excludeDay
+      = createdUtc.format('MMM YYYY')
     else
-      if excludeDay
-        = createdUtc.format('MMM')
-      else
-        = createdUtc.format('MMM DD')
+      = createdUtc.format('MMM DD.YYYY')
