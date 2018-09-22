@@ -1,0 +1,8 @@
+{
+  "title": "Circle progress bar",
+  "description": "Handling an SVG path to get a wheel indicator.",
+  "notes": "",
+  "date": "2012-10-29",
+  "template": "labs.jade",
+  "codepen": "gKaZXj"
+}
