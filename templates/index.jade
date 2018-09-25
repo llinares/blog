@@ -52,11 +52,7 @@ block content
                 ol.articles-list__month-content
                   each item in months[monthK]
                     li.articles-list__article
-                      - var limit = new Date();
-                      - limit.setDate(limit.getDate() - 14);
-                      - var isNew = new Date(item.metadata.date) > limit;
-                      - var className = (isNew ? 'new' : null);
-                      a(href=item.url, class=className)= item.title
+                      a(href=item.url)= item.title
   hr
   
   section.content-wrap#labs
@@ -87,8 +83,7 @@ block content
                 ol.articles-list__month-content
                   each item in months[monthK]
                     li.articles-list__article
-                      - var limit = new Date();
-                      - limit.setDate(limit.getDate() - 14);
-                      - var isNew = new Date(item.metadata.date) > limit;
-                      - var className = (isNew ? 'new' : null);
-                      a(href=item.url, class=className)= item.title
+                      if item.metadata.external
+                        a(href=item.url, target="_blank")= item.title + ' ↗'
+                      else
+                        a(href=item.url)= item.title
