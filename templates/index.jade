@@ -84,6 +84,6 @@ block content
                   each item in months[monthK]
                     li.articles-list__article
                       if item.metadata.external
-                        a(href=item.url, target="_blank")= item.title + ' ↗'
+                        a(href=item.metadata.src, target="_blank")= item.title + ' ↗'
                       else
                         a(href=item.url)= item.title
