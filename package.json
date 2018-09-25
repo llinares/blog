@@ -1,15 +1,15 @@
 {
-  "dependencies": {
-    "html-minifier": "^3.5.2",
-    "moment": "2.3.x",
-    "underscore": "1.4.x",
-    "typogr": "0.5.x",
-    "wintersmith": "2.3.6"
-  },
+  "dependencies": {},
   "scripts": {
-    "preview": "wintersmith preview",
+    "start": "wintersmith preview",
     "build": "wintersmith build"
   },
   "private": "true",
-  "devDependencies": {}
+  "devDependencies": {
+    "html-minifier": "3.5.20",
+    "moment": "2.22.2",
+    "underscore": "1.9.1",
+    "typogr": "0.6.8",
+    "wintersmith": "2.4.1"
+  }
 }
