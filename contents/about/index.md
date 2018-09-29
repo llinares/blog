@@ -5,7 +5,7 @@ date: 2017-06-24
 template: simple.jade
 ---
 
-![Me](../assets/avatar@2x.png)
+![Me](../assets/avatar@3x.png)
 
 I am **Leandro Linares**, Front-End and JavaScript developer. I have worked for the last 10 years in the internet industry. I am currently working at [MercadoLibre.com](https://www.mercadolibre.com.ar/) (nasdaq:MELI): the largest e-commerce and fintech in Latin America.
 
