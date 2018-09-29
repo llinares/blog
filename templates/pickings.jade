@@ -16,9 +16,5 @@ block content
         p(lang='en', dir='ltr')!= pick.text
         a(href='https://twitter.com/' + locals.name + '/status/' + pick.id + '?ref_src=twsrc%5Etfw')= pick.date
 
-block prepend footer
-  div.nav
-    a(href='/') Go back
-
 block append body
   script(defer, src='https://platform.twitter.com/widgets.js')
