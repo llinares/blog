@@ -4,40 +4,28 @@ block prepend title
   |#{'Labs - '}
 
 block content
+  - const labs = env.helpers.getLabs(contents);
   header.article-header.content-wrap
     h1.article-headline Labs
-  section.content-wrap
-    ol.articles-list
-      - var lineHeight = 3;
-      - var archives = _.chain(env.helpers.getLabs(contents)).filter(function(post) {
-      -   return !post.metadata.draft;
-      - }).groupBy(function(item) {
-      -   return item.date.getFullYear();
-      - }).value();
-      - for (var archive in archives) {
-      -   archives[archive] = _.groupBy(archives[archive], function(item) { return item.date.getMonth(); });
-      - }
-      - var month_names = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
-      - var yearsK = _.chain(archives).keys().reverse().value();
-      each yearK in yearsK
-        - var months = archives[yearK];
-        - var yearHeight = Math.round(lineHeight * _.reduce(months, function(memo,month) { return memo + month.length; }, 0));
-        li.articles-list__blocks
-          h3.articles-list__year(style='line-height:' + yearHeight + 'em')= yearK
-          ol.articles-list__year-content
-            - var monthsK = _.chain(months).keys().reverse().value();
-            each monthK in monthsK
-              - var monthHeight = Math.round(lineHeight * months[monthK].length);
-              li
-                h4.articles-list__month(style='line-height:' + monthHeight + 'em')= month_names[monthK]
-                ol.articles-list__month-content
-                  each item in months[monthK]
-                    li.articles-list__article
-                      if item.metadata.external
-                        a(href=item.metadata.src, target="_blank")= item.title + ' ↗'
-                      else
-                        a(href=item.url)= item.title
 
-block prepend footer
-  div.nav
-    a(href='/') Go back
+  section.content-wrap
+    h2 Projects
+    - const projects = labs.filter(lab => lab.metadata.external);
+    each project in projects
+      article.project
+        a(href=project.metadata.src, target="_blank")
+          img(src='')
+        h3
+          a(href=project.metadata.src, target="_blank")= project.title
+        p= project.metadata.description
+
+  section.content-wrap
+    h2 Codepens
+    - const pens = labs.filter(lab => !lab.metadata.external);
+    each pen in pens
+      article.pen
+        a(href=pen.url)
+          img(src='https://codepen.io/lean8086/pen/' + pen.metadata.codepen + '/image/small.png')
+        h3
+          a(href=pen.url)= pen.title
+        p= pen.metadata.description
