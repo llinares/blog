@@ -76,8 +76,7 @@ h2 {
 }
 
 img {
-  border-radius: 18px;
-  -webkit-filter: saturate(65%);
+  border-radius: 5px;
   filter: saturate(65%);
   background-color: #efefef;
 }
@@ -309,13 +308,6 @@ footer .copy {
 
 .home-section {
   margin-bottom: 5em;
-}
-
-.avatar {
-  box-sizing: content-box;
-  border-radius: 26px;
-  margin-right: 80px;
-  float: left;
 }
 
 .articles-list, .articles-list ol {
