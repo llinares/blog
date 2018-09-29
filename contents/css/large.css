@@ -4,7 +4,7 @@
 .cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   max-width: 840px;
 }
 
@@ -22,7 +22,7 @@
 }
 
 .card__image {
-  max-width: 240px;
+  max-width: 360px;
 }
 
 

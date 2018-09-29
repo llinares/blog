@@ -3,7 +3,7 @@
     "url": "https://www.lean8086.com",
     "name": "lean8086",
     "owner": "Leandro Linares",
-    "description": "JavaScript and Front-End Developer from Buenos Aires, Argentina"
+    "description": "Front-End Developer from Buenos Aires, Argentina"
   },
   "plugins": [
     "./plugins/paginator.coffee"

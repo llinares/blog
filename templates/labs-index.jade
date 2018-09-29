@@ -13,7 +13,7 @@ block content
     h2 Projects
     - const projects = labs.filter(lab => lab.metadata.external);
     each project in projects
-      mixin card(project.url, project.title, project.date)
+      mixin card(project.url, project.title, project.date, true)
 
   section.cards.content-wrap
     h2 Codepens
