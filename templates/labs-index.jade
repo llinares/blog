@@ -4,28 +4,19 @@ block prepend title
   |#{'Labs - '}
 
 block content
+  include mixins/card
   - const labs = env.helpers.getLabs(contents);
   header.article-header.content-wrap
     h1.article-headline Labs
 
-  section.content-wrap
+  section.cards.content-wrap
     h2 Projects
     - const projects = labs.filter(lab => lab.metadata.external);
     each project in projects
-      article.project
-        a(href=project.metadata.src, target="_blank")
-          img(src='')
-        h3
-          a(href=project.metadata.src, target="_blank")= project.title
-        p= project.metadata.description
+      mixin card(project.url, project.title, project.date)
 
-  section.content-wrap
+  section.cards.content-wrap
     h2 Codepens
     - const pens = labs.filter(lab => !lab.metadata.external);
     each pen in pens
-      article.pen
-        a(href=pen.url)
-          img(src='https://codepen.io/lean8086/pen/' + pen.metadata.codepen + '/image/small.png')
-        h3
-          a(href=pen.url)= pen.title
-        p= pen.metadata.description
+      mixin card(pen.url, pen.title, pen.date)

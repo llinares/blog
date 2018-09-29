@@ -1,0 +1,15 @@
+extends layout
+
+block prepend title
+  |#{'Pixel art - '}
+
+block content
+  header.article-header.content-wrap
+    h1.article-headline Pixel art
+    p.article-description Made a lot of pixelart a decade ago. Will try to get back 💪✏️🖍
+
+  section.cards.content-wrap
+    include mixins/card
+    - const draws = env.helpers.getDraws(contents);
+    each draw in draws
+      mixin card(draw.url, draw.title, draw.date)

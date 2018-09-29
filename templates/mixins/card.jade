@@ -1,0 +1,4 @@
+mixin card(url, title, date)
+  article.card(itemscope, itemtype='http://schema.org/Article')
+    a.card__link(href=url, itemprop='url')
+      img.card__image(src=`${url}image.png`, itemprop='image', title=`${title} (${moment.utc(date).format('MMM DD.YYYY')})`)

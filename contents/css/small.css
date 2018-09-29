@@ -1,3 +1,14 @@
+/**
+ * Card
+ */
+.card__image {
+  max-width: 100%;
+}
+
+
+
+
+
 h3 {
   font-size: 24px;
   margin-bottom: -16px;
@@ -76,9 +87,9 @@ h2 {
 }
 
 img {
-  border-radius: 5px;
-  filter: saturate(65%);
   background-color: #efefef;
+  border: 1px solid #eee;
+  max-width: 100%;
 }
 
 /**
@@ -101,10 +112,6 @@ img {
 .article-header.content-wrap {
   max-width: 980px;
   text-align: center;
-}
-
-.article-headline::after {
-  content: '.';
 }
 
 .article-description {

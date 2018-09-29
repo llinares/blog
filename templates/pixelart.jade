@@ -1,0 +1,25 @@
+extends layout
+
+block prepend title
+  |#{page.title + ' - '}
+
+block append head
+  include mixins/meta
+  mixin meta(page)
+
+block content
+  header.article-header.content-wrap
+    include mixins/published
+    h1.article-headline(itemprop='headline')= page.title
+    p.article-description(itemprop='description')= page.metadata.description + ' ' + (page.metadata.notes || '')
+    p.article-details
+      mixin published(page.metadata.date)
+  section.content-wrap
+    img(src=page.url + 'image.png')
+  hr
+  section.content-wrap#disqus_thread
+
+block append body
+  script(defer, src='https://production-assets.codepen.io/assets/embed/ei.js')
+  script.
+    var disqus_config=function(){this.page.url=location.href};(function(){var d=document,s=d.createElement('script');s.src='https://lean8086.disqus.com/embed.js';s.setAttribute('data-timestamp',+new Date());(d.head||d.body).appendChild(s);})();

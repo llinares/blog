@@ -1,3 +1,31 @@
+/**
+ * Card
+ */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 840px;
+}
+
+.cards h2 {
+  flex-basis: 100%;
+  margin-bottom: .5em;
+}
+
+.card {
+  margin: 10px;
+}
+
+.card:hover .card__image {
+  border-color: #111;
+}
+
+.card__image {
+  max-width: 240px;
+}
+
+
 .hi {
   font-size: 60px;
   line-height: inherit;

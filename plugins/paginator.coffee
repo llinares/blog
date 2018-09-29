@@ -35,6 +35,16 @@ module.exports = (env, callback) ->
     labs.sort (a, b) -> b.date - a.date
     return labs
 
+  getDraws = (contents) ->
+    # helper that returns a list of articles found in *contents*
+    # note that each article is assumed to have its own directory in the articles directory
+    art = contents.pixelart._.directories.map (item) -> item.index
+    # skip articles that does not have a template associated
+    art = art.filter (item) -> item.template isnt 'none'
+    # sort article by date
+    art.sort (a, b) -> b.date - a.date
+    return art
+
   class PaginatorPage extends env.plugins.Page
     ### A page has a number and a list of articles ###
 
@@ -97,6 +107,7 @@ module.exports = (env, callback) ->
   # add the article helper to the environment so we can use it later
   env.helpers.getArticles = getArticles
   env.helpers.getLabs = getLabs
+  env.helpers.getDraws = getDraws
 
   # tell the plugin manager we are done
   callback()
