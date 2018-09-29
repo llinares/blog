@@ -1,8 +1,5 @@
 extends layout
 
-block append vars
-  - bodyclass = 'simple';
-
 block prepend title
   |#{page.title + ' - '}
 
@@ -12,7 +9,3 @@ block content
     if page.metadata.description
       p.article-description= page.metadata.description
   section.article-body.content-wrap!= htmlMinifier.minify(typogr(page.html).smartypants(), { collapseBooleanAttributes: true, collapseWhitespace: true, decodeEntities: true, removeComments: true, removeEmptyAttributes: true, removeEmptyElements: true, removeRedundantAttributes: true, removeScriptTypeAttributes: true, removeStyleLinkTypeAttributes: true, sortAttributes: true, sortClassName: true })
-
-block prepend footer
-  div.nav
-    a(href='/') Go back
