@@ -1,29 +1,13 @@
 /**
- * Card
+ * Labs home
  */
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  max-width: 840px;
-}
+ .home__section h2 {
+   font-size: 60px;
+ }
 
-.cards h2 {
-  flex-basis: 100%;
-  margin-bottom: .5em;
-}
-
-.card {
-  margin: 10px;
-}
-
-.card:hover .card__image {
-  border-color: #111;
-}
-
-.card__image {
+/* .card__image {
   max-width: 360px;
-}
+} */
 
 
 .hi {

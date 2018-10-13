@@ -15,75 +15,60 @@ block header
       |#{', '}
       = locals.description
       |#{'.'}
-    a.article-details.more(href='/about') About me
+    include mixins/social
+    mixin social()
+
+block content
+  include mixins/card
+  section#labs.home__section.content-wrap
+    - const labs = env.helpers.getLabs(contents);
+    h2 Labs
+    p Collection of quick experiments.
+    div.labs-cards
+      each lab in labs
+        mixin card(lab)
+  
+  section#pixelart.home__section.content-wrap
+    - const draws = env.helpers.getDraws(contents);
+    h2 Pixel art
+    p I made a lot of pixelart a decade ago. I'll try to get back.
+    div.labs-cards
+      each draw in draws
+        mixin card(draw)
+  
+  section#articles.home__section.content-wrap
+    - const articles = env.helpers.getArticles(contents).filter(article => !article.metadata.draft);
+    h2 Articles
+    each article in articles
+      article(itemscope, itemtype='http://schema.org/Article')
+        h3(itemprop='headline')
+          a(href=article.url, itemprop='url')= article.title
+        p(itemprop='description')= article.metadata.description
+  
+  section#about.home__section.content-wrap
+    h2 About me
+    p
+      |#{'I am '}
+      strong= locals.owner
+      |#{', '}
+      = locals.description
+      |#{'.'}
+    p
+      |#{' I have worked for the last 10 years in the internet industry. I am currently working at '}
+      a(href='https://www.mercadolibre.com.ar/', target='_blank') MercadoLibre.com
+      |#{' (nasdaq:MELI): the largest e-commerce and fintech in Latin America.'}
+    p I started designing user-centered interfaces, focused in UX research and experimentation. I gradually turned to front-end programming and involved myself more with the ins and outs of the Web.
+    p
+      |#{'Read more about me on '}
+      a(href='https://www.linkedin.com/in/lean8086/', target='_blank') LinkedIn
+      |#{', follow me on '}
+      a(href='https://www.twitter.com/lean8086/', target='_blank') Twitter
+      |#{' and fork me on '}
+      a(href='https://www.github.com/lean8086/', target='_blank') GitHub
+      |#{'.'}
 
 block append body
   script.
     window.addEventListener('load', function () {
       document.head.insertAdjacentHTML('beforeend', '<style>.home .header {background-image: url("/assets/hero-hd.jpg")}');
     });
-
-block content      
-  section.content-wrap#articles
-    h2 Articles
-    ol.articles-list
-      - var lineHeight = 3;
-      - var archives = _.chain(env.helpers.getArticles(contents)).filter(function(post) {
-      -   return !post.metadata.draft;
-      - }).groupBy(function(item) {
-      -   return item.date.getFullYear();
-      - }).value();
-      - for (var archive in archives) {
-      -   archives[archive] = _.groupBy(archives[archive], function(item) { return item.date.getMonth(); });
-      - }
-      - var month_names = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
-      - var yearsK = _.chain(archives).keys().reverse().value();
-      each yearK in yearsK
-        - var months = archives[yearK];
-        - var yearHeight = Math.round(lineHeight * _.reduce(months, function(memo,month) { return memo + month.length; }, 0));
-        li.articles-list__blocks
-          h3.articles-list__year(style='line-height:' + yearHeight + 'em')= yearK
-          ol.articles-list__year-content
-            - var monthsK = _.chain(months).keys().reverse().value();
-            each monthK in monthsK
-              - var monthHeight = Math.round(lineHeight * months[monthK].length);
-              li
-                h4.articles-list__month(style='line-height:' + monthHeight + 'em')= month_names[monthK]
-                ol.articles-list__month-content
-                  each item in months[monthK]
-                    li.articles-list__article
-                      a(href=item.url)= item.title
-  hr
-  
-  section.content-wrap#labs
-    h2 Labs
-    ol.articles-list
-      - var lineHeight = 3;
-      - var archives = _.chain(env.helpers.getLabs(contents)).filter(function(post) {
-      -   return !post.metadata.draft;
-      - }).groupBy(function(item) {
-      -   return item.date.getFullYear();
-      - }).value();
-      - for (var archive in archives) {
-      -   archives[archive] = _.groupBy(archives[archive], function(item) { return item.date.getMonth(); });
-      - }
-      - var month_names = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
-      - var yearsK = _.chain(archives).keys().reverse().value();
-      each yearK in yearsK
-        - var months = archives[yearK];
-        - var yearHeight = Math.round(lineHeight * _.reduce(months, function(memo,month) { return memo + month.length; }, 0));
-        li.articles-list__blocks
-          h3.articles-list__year(style='line-height:' + yearHeight + 'em')= yearK
-          ol.articles-list__year-content
-            - var monthsK = _.chain(months).keys().reverse().value();
-            each monthK in monthsK
-              - var monthHeight = Math.round(lineHeight * months[monthK].length);
-              li
-                h4.articles-list__month(style='line-height:' + monthHeight + 'em')= month_names[monthK]
-                ol.articles-list__month-content
-                  each item in months[monthK]
-                    li.articles-list__article
-                      if item.metadata.external
-                        a(href=item.metadata.src, target="_blank")= item.title + ' ↗'
-                      else
-                        a(href=item.url)= item.title

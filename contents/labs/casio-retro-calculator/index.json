@@ -3,6 +3,6 @@
   "description": "Built visually and functionally as close as possible to the CASIO SL-300SV model, to practice making a simple application with React.",
   "date": "2018-09-09",
   "template": "redirect.jade",
-  "src": "https://lean8086.github.io/casio-calculator/",
+  "href": "https://lean8086.github.io/casio-calculator/",
   "external": true
 }

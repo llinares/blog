@@ -38,13 +38,13 @@ html(lang=lang, itemscope, itemtype=schematype)
           meta(itemprop='logo', content=locals.url + contents.assets['avatar.png'].url)
           a(href=locals.url, itemprop='url') 8086
         nav.global-nav(itemscope, itemtype='http://schema.org/SiteNavigationElement')
-          a(href='/#articles', itemprop='url')
-            span(itemprop='name') Articles
           a(href='/#labs', itemprop='url')
             span(itemprop='name') Labs
-          a(href='/pixelart', itemprop='url')
+          a(href='/#pixelart', itemprop='url')
             span(itemprop='name') Pixel art
-          a(href='/about', itemprop='url')
+          a(href='/#articles', itemprop='url')
+            span(itemprop='name') Articles
+          a(href='/#about', itemprop='url')
             span(itemprop='name') About me
         block header
       main

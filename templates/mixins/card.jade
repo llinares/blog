@@ -1,4 +1,5 @@
-mixin card(url, title, date, isExternal)
+mixin card(data)
   article.card(itemscope, itemtype='http://schema.org/Article')
-    a.card__link(href=url, itemprop='url', target=isExternal ? '_blank' : null)
-      img.card__image(src=`${url}image.png`, itemprop='image', title=`${title} (${moment.utc(date).format('MMM DD.YYYY')})`)
+    a.card__link(href=data.metadata.href || data.url, itemprop='url', target=data.metadata.href ? '_blank' : null)
+      img.card__image(src=`${data.url}image.png`, title=moment.utc(data.date).format('MMM DD.YYYY'), itemprop='image')
+      h3.card__title(itemprop='title')= data.title

@@ -5,7 +5,59 @@
   max-width: 100%;
 }
 
+.home .content-wrap {
+  max-width: 960px;
+}
 
+.labs-cards {
+  display: flex;
+  overflow-x: scroll;
+  align-items: center;
+}
+
+.labs-cards .card {
+  max-width: 320px;
+  min-width: 320px;
+  max-height: 320px;
+}
+
+/**
+ * Card
+ */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 840px;
+}
+
+.cards h2 {
+  flex-basis: 100%;
+  margin-bottom: .5em;
+}
+
+.card {
+  margin-right: 40px;
+}
+
+.card a {
+  position: relative;
+  display: block;
+  font-size: 0;
+}
+
+.card__title {
+  position: absolute;
+  padding: 0 12px;
+  background-color: #e74c3c;
+  color: #fff;
+  line-height: 1.75;
+  font-weight: 300;
+  letter-spacing: .017em;
+  bottom: 25px;
+  left: 10px;
+  margin-right: 10px;
+}
 
 
 
@@ -34,6 +86,8 @@ body {
   font-family: 'Lato', Arial;
   background-color: #fff;
   text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   margin: 0;
   font-size: 22px;
   line-height: 1.75;
@@ -88,7 +142,6 @@ h2 {
 
 img {
   background-color: #efefef;
-  border: 1px solid #ddd;
   max-width: 100%;
 }
 
@@ -235,6 +288,7 @@ footer .copy {
 .global-nav a:active,
 .global-nav a:focus {
   color: #fff;
+  text-shadow: 0 0 .5em #111;
 }
 
 .home .global-nav a svg,
@@ -244,16 +298,55 @@ footer .copy {
   fill: #fff;
 }
 
+.hero__social {
+  margin-top: 2em;
+}
+
+.hero__social a {
+  margin-right: 24px;
+}
+
+.hero__social-icon {
+  fill: #fff;
+  height: 32px;
+}
+
+.hero__social-avatar {
+  border: none;
+  border-radius: 100%;
+  filter: grayscale(100%);
+}
+
 /*#intro {
   color: #fff;
   margin: 55px auto;
   text-align: center;
 }*/
 
-#articles h2,
-#labs h2,
-#also {
+.home__section h2 {
   margin-bottom: 1em;
+  font-size: 50px;
+}
+
+.home__section#labs h2,
+.home__section#pixelart h2 {
+  margin-bottom: 0;
+}
+
+.home__section#labs p::after,
+.home__section#pixelart p::after {
+  content: ' →';
+}
+
+.home__section#about h2::after {
+  content: '';
+  background-image: url(/assets/avatar.png);
+  display: inline-block;
+  width: .75em;
+  height: .75em;
+  background-size: 100%;
+  margin-left: .25em;
+  border-radius: 100%;
 }
 
 .home .header {
@@ -288,6 +381,7 @@ footer .copy {
 .hi,
 .home .article-description {
   color: #fff;
+  text-shadow: 0 0 1em #111;
 }
 
 .article-headline.hi::after {

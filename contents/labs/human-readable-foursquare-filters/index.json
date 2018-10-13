@@ -3,6 +3,6 @@
   "description": "",
   "date": "2018-06-29",
   "template": "redirect.jade",
-  "src": "https://lean8086.github.io/human-readable-foursquare-filters/",
+  "href": "https://lean8086.github.io/human-readable-foursquare-filters/",
   "external": true
 }
