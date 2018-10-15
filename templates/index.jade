@@ -69,6 +69,4 @@ block content
 
 block append body
   script.
-    window.addEventListener('load', function () {
-      document.head.insertAdjacentHTML('beforeend', '<style>.home .header {background-image: url("/assets/hero-hd.jpg")}');
-    });
+    window.addEventListener('load',function(){document.head.insertAdjacentHTML('beforeend','<style>.home .header{background-image:url(/assets/hero-hd.jpg)}</style>');});
