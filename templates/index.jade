@@ -5,11 +5,11 @@ block append vars
   - schematype = 'http://schema.org/Person'
 
 block header
-  header.article-header.content-wrap
-    h1.article-headline.hi
-      span.emoji 👋
+  div.hero.heading.content-wrap
+    h1.heading__headline.hero__hi
+      span.hero__emoji 👋
       |#{' Hello there.'}
-    p.article-description(itemtype='description')
+    p.heading__description.hero__description(itemtype='description')
       |#{'I am '}
       span(itemtype='name')= locals.owner
       |#{', '}
@@ -20,33 +20,33 @@ block header
 
 block content
   include mixins/card
-  section#labs.home__section.content-wrap
+  section#labs.home-section.content-wrap
     - const labs = env.helpers.getLabs(contents);
-    h2 Labs
+    h2.home-section__heading Labs
     p Collection of quick experiments.
-    div.labs-cards
+    div.home-section__cards
       each lab in labs
         mixin card(lab)
   
-  section#pixelart.home__section.content-wrap
+  section#pixelart.home-section.content-wrap
     - const draws = env.helpers.getDraws(contents);
-    h2 Pixel art
+    h2.home-section__heading Pixel art
     p I made a lot of pixelart a decade ago. I'll try to get back.
-    div.labs-cards
+    div.home-section__cards
       each draw in draws
         mixin card(draw)
   
-  section#articles.home__section.content-wrap
+  section#articles.home-section.content-wrap
     - const articles = env.helpers.getArticles(contents).filter(article => !article.metadata.draft);
-    h2 Articles
+    h2.home-section__heading Articles
     each article in articles
       article(itemscope, itemtype='http://schema.org/Article')
         h3(itemprop='headline')
           a(href=article.url, itemprop='url')= article.title
         p(itemprop='description')= article.metadata.description
   
-  section#about.home__section.content-wrap
-    h2 About me
+  section#about.home-section.content-wrap
+    h2.home-section__heading About me
     p
       |#{'I am '}
       strong= locals.owner

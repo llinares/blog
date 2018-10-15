@@ -4,8 +4,8 @@ block prepend title
   |#{'Articles - '}
 
 block content
-  header.article-header.content-wrap
-    h1.article-headline Articles
+  header.heading.content-wrap
+    h1.heading__headline Articles
 
   section.content-wrap
     - const articles = env.helpers.getArticles(contents).filter(article => !article.metadata.draft);
