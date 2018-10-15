@@ -3,7 +3,7 @@
   "description": "A 2.5D (or pseudo-3D) technique used to cause images or scenes to simulate the appearance of being three-dimensional (3D) when in fact they are not.",
   "notes": "DOM and CSS animation based experiment. Click where you want to move, and character will find the shorter road.",
   "date": "2011-07-15",
-  "template": "labs.jade",
+  "template": "redirect.jade",
   "codepen": "WZqYGo",
   "href": "https://codepen.io/lean8086/pen/WZqYGo"
 }

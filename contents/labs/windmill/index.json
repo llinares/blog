@@ -3,7 +3,7 @@
   "description": "An experiment for another experiment.",
   "notes": "CSS only.",
   "date": "2018-06-02",
-  "template": "labs.jade",
+  "template": "redirect.jade",
   "codepen": "ERVRWQ",
   "href": "https://codepen.io/lean8086/pen/ERVRWQ"
 }

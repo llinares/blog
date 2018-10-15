@@ -3,7 +3,7 @@
   "description": "Handling an SVG path to get a wheel indicator.",
   "notes": "",
   "date": "2012-10-29",
-  "template": "labs.jade",
+  "template": "redirect.jade",
   "codepen": "gKaZXj",
   "href": "https://codepen.io/lean8086/pen/gKaZXj"
 }

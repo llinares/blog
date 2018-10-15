@@ -3,7 +3,7 @@
   "description": "Ski down an endless slope and avoid the obstacles, moving the mouse pointer to control the direction.",
   "notes": "DOM experiment based on the game created by Chris Pirih.",
   "date": "2011-02-06",
-  "template": "labs.jade",
+  "template": "redirect.jade",
   "codepen": "vZeOMw",
   "href": "https://codepen.io/lean8086/pen/vZeOMw"
 }
