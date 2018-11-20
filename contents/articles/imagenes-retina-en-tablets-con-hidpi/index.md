@@ -2,7 +2,7 @@
 title: Imágenes retina en tablets con HiDPI
 description: Qué tamaños de imágenes tener en cuenta para distintas resoluciones y cómo implementarlas.
 date: 2015-06-11
-template: article.jade
+template: article.pug
 topics: code
 lang: es
 ---

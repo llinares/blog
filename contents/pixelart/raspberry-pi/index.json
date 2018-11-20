@@ -2,5 +2,5 @@
   "title": "Raspberry Pi",
   "description": "First pixelart draw after more than a decade. Feels so good to try again.",
   "date": "2018-01-20",
-  "template": "pixelart.jade"
+  "template": "pixelart.pug"
 }

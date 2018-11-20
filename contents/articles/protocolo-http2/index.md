@@ -2,7 +2,7 @@
 title: Protocolo HTTP/2
 description: De qué se trata el nuevo protocolo de intercambio de datos.
 date: 2015-03-03
-template: article.jade
+template: article.pug
 topics: code
 lang: es
 ---

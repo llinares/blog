@@ -2,7 +2,7 @@
 title: How I built my arcade machine from scratch
 description: I gave a new life to some components and bought the less materials as possible to make a retro cabinet that fits in a small space.
 date: 2017-10-03
-template: article.jade
+template: article.pug
 topics: diy
 lang: en
 draft: true

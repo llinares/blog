@@ -2,7 +2,7 @@
 title: Multi-Device Layout Patterns
 description: Introducción a los tipos de layouts más conocidos.
 date: 2014-05-12
-template: article.jade
+template: article.pug
 topics: design
 lang: es
 ---

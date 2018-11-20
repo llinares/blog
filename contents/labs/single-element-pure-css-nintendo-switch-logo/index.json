@@ -3,7 +3,7 @@
   "description": "One single HTML element mixed with pure CSS to draw the Nintendo Switch Logo.",
   "notes": "",
   "date": "2018-09-22",
-  "template": "redirect.jade",
+  "template": "redirect.pug",
   "codepen": "WgWxaK",
   "href": "https://codepen.io/lean8086/pen/WgWxaK"
 }

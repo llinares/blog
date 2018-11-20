@@ -2,7 +2,7 @@
 title: Background offset en CSS
 description: Cómo mejorar el posicionamiento de un background, usando el feature de offset.
 date: 2014-01-13
-template: article.jade
+template: article.pug
 topic: code
 lang: es
 ---

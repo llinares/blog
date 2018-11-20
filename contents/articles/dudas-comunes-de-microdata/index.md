@@ -2,7 +2,7 @@
 title: Dudas comunes de microdata
 description: Las consultas sobre microdata que recibo más a menudo.
 date: 2016-04-19
-template: article.jade
+template: article.pug
 topics: code
 lang: es
 ---

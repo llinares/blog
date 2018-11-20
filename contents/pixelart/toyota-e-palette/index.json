@@ -2,5 +2,5 @@
   "title": "Toyota e-Palette",
   "description": "If Amazon Go meets Toyota's e-Palette... The e-Palette concept vehicle was shown at CES 2018 in Las Vegas for the first time. It's a fully-automated, electric, flexible vehicle that can be tailored to various needs and lifestyles, including parcel delivery, ride sharing and on-the-road e-commerce. The car was announced alongside a partnership with Amazon, Mazda, PizzaHut and Uber. Toyota wants to launch the e-Palette in time for the 2020 Olympic Games, so expect these things on the streets in a near future",
   "date": "2018-01-31",
-  "template": "pixelart.jade"
+  "template": "pixelart.pug"
 }

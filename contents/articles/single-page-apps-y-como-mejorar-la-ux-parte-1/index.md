@@ -2,7 +2,7 @@
 title: Single Page Apps y cómo mejorar la UX (parte 1)
 description: Cambios que proponen las SPA y cómo podemos aprovechar los beneficios.
 date: 2015-02-03
-template: article.jade
+template: article.pug
 topics: ux
 lang: es
 ---

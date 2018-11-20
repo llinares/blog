@@ -2,7 +2,7 @@
 title: Calidad vs. velocidad en el desarrollo
 description: Notas acerca del video de Facebook donde introducen el concepto de Flux.
 date: 2014-11-21
-template: article.jade
+template: article.pug
 topics: code
 lang: es
 ---

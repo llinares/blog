@@ -3,7 +3,7 @@
   "description": "An experiment for another experiment.",
   "notes": "CSS only. The leaf is an emoji so results may vary between browsers and devices.",
   "date": "2018-06-02",
-  "template": "redirect.jade",
+  "template": "redirect.pug",
   "codepen": "qKOYQV",
   "href": "https://codepen.io/lean8086/pen/qKOYQV"
 }

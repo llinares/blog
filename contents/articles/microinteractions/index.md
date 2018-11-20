@@ -2,7 +2,7 @@
 title: Microinteractions
 description: Introducción y punto de partida para saber más sobre este patrón de diseño.
 date: 2015-05-19
-template: article.jade
+template: article.pug
 topics: ux
 lang: es
 ---

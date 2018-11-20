@@ -2,7 +2,7 @@
 title: Single Page Apps y cómo mejorar la UX (parte 2)
 description: Cómo podemos aprovechar los beneficios que nos dan las SPA.
 date: 2015-04-20
-template: article.jade
+template: article.pug
 topics: ux
 lang: es
 ---

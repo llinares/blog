@@ -2,7 +2,7 @@
 title: Incremental DOM
 description: Diferencias entre Virtual DOM de Facebook e Incremental DOM de Google.
 date: 2015-07-27
-template: article.jade
+template: article.pug
 topics: code
 lang: es
 ---

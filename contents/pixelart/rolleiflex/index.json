@@ -2,5 +2,5 @@
   "title": "Rolleiflex",
   "description": "This time I have chosen to draw a Rolleiflex: a beautiful german twin-lens reflex. I've preferred to make a frontal draw instead of the usual isometric, to keep it simple! This is my entry for the #black challenge of #spriteweekly",
   "date": "2018-02-03",
-  "template": "pixelart.jade"
+  "template": "pixelart.pug"
 }

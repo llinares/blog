@@ -2,7 +2,7 @@
 title: Evitar redundancia de roles ARIA
 description: Análisis sobre dos casos similares de roles.
 date: 2014-02-24
-template: article.jade
+template: article.pug
 topics: code
 lang: es
 ---
