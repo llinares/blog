@@ -8,8 +8,8 @@
   "devDependencies": {
     "html-minifier": "3.5.20",
     "moment": "2.22.2",
-    "underscore": "1.9.1",
     "typogr": "0.6.8",
-    "wintersmith": "2.4.1"
+    "underscore": "1.9.1",
+    "wintersmith": "^2.5.0"
   }
 }
