@@ -1,6 +1,6 @@
 ---
-title: How to build an arcade cabinet from scratch
-description: It took me over a year, but teach me a lot on the road. Here every detail behind building an entire arcade machine from the very scratch.
+title: How I built my arcade machine from scratch
+description: I gave a new life to some components and bought the less materials as possible to make a retro cabinet that fits in a small space.
 date: 2017-10-03
 template: article.jade
 topics: diy
@@ -8,284 +8,230 @@ lang: en
 draft: true
 ---
 
-Everithing started back in 2013, when i suddenly won a raspberry pi (a model 1 btw) on an unspected concourse. I never win annyting and actually I never suscribed to this concourse. All I know is one day an email comes up saying i just wno a raspberry pi:
+Some time ago, I won a starter kit from [Make Magazine](https://makezine.com/) with a Raspberry Pi Model 1.
 
-[!The Raspberry Pi that I won]()
+![Raspberry Pi kit](#)
 
-That must be the very best for a maker and that, but I really didnt know what to build.
+Since then, I started looking for something interesting to build and I found the [RetroPie Project](https://retropie.org.uk/).
 
-Everytime I looked for something I found so many shit.
 
 ## RetroPie
 
-gdsgd
+RetroPie allows you to turn your Raspberry Pi into a retro-gaming machine. So I made a quick test with some ROMs to check how it worked. It was really easy to have a working retro console with nearly zero configuration.
 
-So I installed, and uploaded some roms to test.
+![Super Mario Bros. 3 running on RetroPie](#)
 
-suddenly I was playing Super Mario Bros. 3 on my tv 😱
+It took me many [attempts to setup](https://lean8086.com/articles/a-complete-guide-to-setting-up-retropie/) and make the most of it, but everything was worth it in the end.
 
-[!Super Mario Bros. 3 running on RetroPie]()
 
-I [tried and tried and trid](#) until it workds.
+## The must haves
 
----
+I started looking everywhere for an old arcade cabinet to make a restoration and adaptation, but I only found extremely expensive wooden cabinets in very bad conditions.
 
-## The idea
+Most of them were:
 
-Finnaly got something good use for that polvojuntadorea plaqueta.
+- Expensive.
+- Not worthwhile for restore.
+- Hard to move.
+- Too big for an apartment.
 
-so busque por todos lados gabinetes hechos mierda para restaurar, pero eran extremadamente caros y literalmente hechos mierda, irrecuperables y dificiles de transportar y de un tamaño no apto para un depto.
+![Ugly arcade cabinet, number 1](#)
+![Ugly arcade cabinet, number 2](#)
+![Ugly arcade cabinet, number 3](#)
 
-[!arcade feo]()
-[!arcade feo]()
-[!arcade feo]()
+By making that research I realized that the only way to get the results I wanted would be by building my own arcade cabinet from scratch.
 
-Entonces las caracteristicas tendrian que ser:
+In that terms, I was looking for something that was:
 
 - Relatively easy to build.
 - Affordable.
 - Sized for an apartment.
-- Old-school forma nostalgia.
+- Old-school/nostalgic.
+- Able to use some old hardware that I already had.
 
-nada d e lo que encontre era del tamaño de un departamento. lo que no solo lo hacia inaceptable de tener dentro de la casa, sino que tambien los costos de traslado de semejante armatoste iba a ser costoso.
 
+## The plans
 
-## Open Source plans
+Right after found some caracteristics of what would be my ideal arcade machine, I also found the [Project MAME](http://koenigs.dk/mame/eng/index.htm).
 
-despues de buscar imagenes de lo que seria un arcade ideal, encontre qeu mucha gente construia sus propios arcades.
+It's a project that provides open source plans to build an arcade cabinet from scratch, detailed [step-by-step](http://koenigs.dk/mame/eng/stepprojectmame.htm).
 
-y no solo eso, sino que habia disponibles planos open source para construir un arcade.
+![Original cabinet from Project MAME](#)
 
-asi fue como llegue a [project mame](http://www.koenigs.dk/mame/eng/draw.htm) de koenigs.
+Although It was made to handle an X-arcade controller, it also was a good adaptation from old-school cabinets that was made to perfectly fit a flat screen inside.
 
-aunque estaba hecha para soportar un joystick comprado y un teclado, era una adaptacion que estaba preparada para recibir un monitor flat. un viejo conocido transformado a los tiempos modernos.
+One of the builds that emerged from Project MAME and caught my attention was this [Paper Mario themed arcade](http://zonaarcade.forumcommunity.net/?t=48865036).
 
-por suerte encontre [alguien](http://zonaarcade.forumcommunity.net/?t=48865036) que no solo mejoro levemente el modelo, sino que [mejoro los planos](http://img543.imageshack.us/img543/5624/repordiviciacosplanos.gif) y armo un [modelo 3d]() en [Google SketchUp](https://www.sketchup.com/):
+![Paper Mario arcade cabinet](#)
 
-[!Paper Mario Arcade Cabinet]()
+This spanish maker not only [improved the original plans](http://img543.imageshack.us/img543/5624/repordiviciacosplanos.gif), but also he made available the [side art](https://zonaarcade.forumcommunity.net/?t=45015457) and a 3D model in [SketchUp](https://www.sketchup.com/).
 
-De paso también compartió el [sideart](http://zonaarcade.forumcommunity.net/?t=45015457), aunque preferi no usarlo.
+![3D model of arcade cabinet](#)
 
-no todo es color de rosas. los planos me resultaron algo complicados de seguir, por lo que preferi armar mis propios [planos detallados]().
+I *only* had to modify the width of the plans by 2cm so the cabinet could fit a Samsung 26" LCD screen that I've already had. The rest was followed as specified.
 
-Them
-[!Planos feos]()
 
-Mine for you
-[!Planos lindos]()
+## Model in cardboard
 
-Download here
-[!Detailed plans based on pr]()
+The first approach to test the dimensions and distribution of the elements was making a 1:10 model in cardboard as Project MAME suggests in the [step-by-step guide](http://koenigs.dk/mame/eng/stepprojectmame.htm).
 
----
+That way I was sure that all made sense and I was able to check if something needed to be adjusted or redefined. Especially after the width modification that I had to do to fit my monitor.
 
-## Pre-modeling
+![Model in cardboard](#)
 
-Una vez que estaba decidido hice un modelo a escala en carton.. para estar seguro que lo que estaba por construir tenia sentido y armonia, y si algo necesitaba ser ajustado.... 15cm (8inches)
+The model is 17cm height and it helped me to define the size and distribution of the speakers too.
 
-[!Mini arcade]()
 
-Tambien me ayudo a decidir los tamaños de los tapa parlantes y la disposicion y separacion entre ellos.
+## The materials
 
----
+Before to spend some money on materials, there was a very important decision to make about what kind of wood I would use: *MDF/HDF, plywood or particleboard*.
 
-## Wood type
+I *wrongly* chose MDF/HDF. If I would know at that time how hard is to clean up the extremely thin powder after sand, I wouldn't chose that one. But in the other hand it was a very versatile wood: easy to cut, drill and give shape by sanding.
 
-Before to spend some money there was a veery important decision to make. mdf or melamina. busque tutoriales en video y escritos sobre como trabajar ambos materiales.
+![MDF pieces](#)
 
-algunas caracteristicas que encontre de trabajar con ambos materiales:
+MDF/HDF boards [todo]:
 
-### MDF
+- *(2) 176cm x 60cm*: Both sides
+- *cm x 62cm*: Front panel
+- *cm x 62cm*: Back panel
+- *cm x 62cm x 5mm thin*: Back door
+- *22cm x 62cm*: Controllers top panel
+- *15cm x 62cm*: Controllers front panel
+- *cm x 62cm*: Speakers panel
+- *cm x 62cm*: Marquee top panel
+- *cm x 62cm*: Marquee bottom panel
+- *cm x 62cm*: Monitor support
 
-pros
+Acrylic boards [todo]:
 
-- facil de cortar, lijar y dar forma.
+- *cm x 62cm*: Monitor cover
+- *25cm x 62cm*: Controllers art cover
+- *(2) 13cm x 62cm*: Marquee back and front
 
-cons
+Other items that I bought [todo]:
 
-- polvillo muy fino cuando se corta y se lija
-- varias manos de pintura
+- [4cm x 2cm pine battens](#battens)
+- [Caladora de mano Black+Decker](#cuts)
+- [3cm mechas](#)
+- [10 lijas de X (gruesa) y de Y (fina)](#lijing)
+- [tornillos para madera, tornillos para battengs](#)
+- [Sanwa? controllers 12 buttons + 2 white buttons](#controllers)
+- [Crystal-clear acrylic boards](#acrylics)
+- [Speaker grills](#acrylics)
+- [Wheels](#acrylics)
+- [4xmatte black + 2x white spray paint + base paint](#painting)
 
-### Melamine
 
-pros
+## Cutting [todo]
 
-- ya laminado, no hay necesidad de pintar
+After getting all the materials, I started drawing on the lateral boards all the shapes using the measurements from the plans. I also used a compass to draw the curves.
 
-cons
+![Drawings on the board](#)
 
--
+I sticked both boards togheter with tape to make only one cut. Using a caladora started from bottom to top. I always recommend to move forward very slowly to stick to the line as much as possible.
 
-la verdad es que si hubiese sabido lo fino que es el aserrin del mdf y lo dificil de pintar, hubiese elegido la melamina. pero como para ser inteligente hay que cometer muchos errores, use mdf.
+![Cutted boards](#)
 
-[!MDF assrrine]()
+By making my first cut, I learnt some things:
 
-### The thickness
+- **MDF/HDF detaches an extremely thin powder:** It doesn't matter how much protection you can wear (gloves, barbijo, gafas), I had powder in my mouth, hair and clothes for days. It was nearly impossible to clean up after cut or sand. Even I broke a hand aspirator.
+- **The hot sierra burns the wood:** Don't try to make a cut in a single run. It's better to let the sierra rest from time to time.
+- **While making the cut, the saw is probably going to curve:** It would have been better to cut both boards separatelly, because the thicker is what we are cutting the more the sierra curves. That way both boards were uneven and I had to correct by sanding.
 
-i found que las maquinas originales eran de 18mm (x inches) de grosor. pero cualquier tipo de madera de ese grosor seria pesadisima. asi que despues de mucho buscar, decidi que el grosor ideal era 15mm (x inches) por la relacion peso/tamaño.
+## Sanding [todo]
 
-[!mdf 15mm]()
+I used XXXXX white (why white):
 
-Entonces fui a un amderera y pedi los siguientes cortes
+![White sandpaper](#)
 
-[!Cortes en la plancha]()
+After sanding all the bordes I got a good shape. Tambien aproveche para emparejar errores del corte.
 
-[link para descargar planos]()
+![Both boards sanded](#)
 
----
+![One of the boards sanded](#)
 
-### The method
 
-de tantos tutoriales llegue a  2 tecnicas con las que se pueden unir perpendicularmente 2 maderas.
+## Battens
 
-#### Direct
+I decided to join the pieces with battens, glued and fixed with screws. **That way I had millimetric precision and I didn't needed assistance.**
 
-la primera forma que se nos viene a todos a la cabeza: hacer un agujero mientras alguien nos ayuda a sostener la madera en su lugar, y encontes apretar los tornillos mientras esa otra eprsona sigue manteniendo en su lugar la madera.
+I bought a lot of 4cm x 2cm (1.6in x 0.8in) pine battens and cutted in pieces smaller than the pieces they join.
 
-[!chabon sosteniendo madera]()
+![Four by two battens](#)
 
-#### Slats
+It's not necessary to use glue when you're already using screws, but I decided to use it anyway to hold tight the entire structure.
 
-listones que se atornillan primero, apoyados contra la madera. la segunda madera se atornilla sobre el liston tambien.
+![Glued and screwed battens](#)
 
-de esta forma el liston es quien une ambas maderas con una **precision milimetrica y sin necesitar ayuda alguna**.
+I've also ensanché los agujeros para darle un mejor acabado a los tornillos y que no sobresalgan.
 
-[!the top corner of the arcade cabinet, holded by slats]()
+![Holes in battens](#)
 
-the use of cola vinilica no es necesaria. yo elegi usarla, pero fue totalmente innecesaria ya que los tornillos ajustan la madera perfectamente. si planeas desarmar las maderas, entonces **no las pegues** pues sera totalmente imposible despegar mdf una vez curado.
+I attached *all* the battens to the lateral boards.
 
-i tried myself to despegar una pieza de madera de la cual me arrepenti poner, para cambiarla una mas chica. termine casi destrozando ña madera entera.
+![Attached battens](#)
 
-compre bocha de listones de pino de 4x2 un poco mas chicos que las piezas que unirian:
 
-foto listones
+## First armado [todo]
 
----
+...to see the final form and size. My first impression was to see a huge fridge inside my apartment. But with the time and adding some color is not that bad.
 
-## Hardware
+![First armado](#)
 
-ademas de la obviamente basica raspberry pi que tenia muchas ganas de usar, necesite algunas otras partes. Trate de usar las piezas que ya tenia disponibles en casa, para evitar comprar la mayor cantidad de hardware posible.
+I also attached wheels and make some diagonal cuts...
 
-### Screen
+![Both wheels installed](#)
 
-tenia un monitor LCD bastante viejo, un sambusn t260n de 26" asi que decidi usarlo. es gigante para los oled que estamos acostumbrados, pesado, without contrast cuando lo miras de costado y too big para mostrar juegos de 100x100px cuando emulas una NES. Pero es esa antiguedad mezclado con modernidad lo que hizo que no me imprtaran esas imperfecciones. Ademas me estaba ahorrando unos cuantos dolares.
 
-[!the monitor used in the arcade cabinet]()
+### Monitor
 
-there was a constrain, este monitor fue concebido para ser bello en su parte trasera, por lo que no posee tornillos para amurarlo y solo puede ser usado con su base.
+I decided to use some old hardware that I already had at home.
 
-[!the back part of monitor]()
+I had a good old LCD monitor (Samsung T260n, 26") that was perfect for this cabinet. I think an ideal size would be about 23", but I wouldn't spend money in a new monitor when I had that one.
 
-Busque y por suerte encontre un soporte (no oficial ni estandar) para ese monitor. es un reemplazo del pie, que genera el agarre de un soporte comun y corriente:
+There was one constraint: this monitor was originally made to be beautiful from behind, so it has no holes in the back to fix to a support with screws.
 
-[!the support mounted]()
+![The back part of the monitor](#)
 
-### Subwoofer
+Busque y por suerte encontre un soporte (no oficial ni estandar) para ese monitor. es un reemplazo del pie, que genera el agarre de un soporte comun y corriente que monte sobre una T.
 
-i remember when i first get a job. lo primero que hice fue comprar tecnologia, y una de las primeras cosas que siepre quise era un subwoofer para escuchar musica.
+![The mounted support](#)
 
-el mejor subwoofer que encontre en relacion precio/calidad en 2007 fue el genius 23131241. beautiful and clean sound as the price of a Genius periferic. me acompaño toda la vida: quien iba a pensar que 9 años despues lo convertiria en algo aun mas interesante.
+I made the calculations...
 
-[!genius 432423]()
+![Paper monitor](#)
+![Real monitor](#)
+![Mounted support fixed inside structure](#)
 
-### Xin-mo controller
 
-todo el mundo en internet recomendaba sanwa... cuando busque, son realmente caros... es lo mejor de lo mejor, pero no amerita para construir un arcade casero.
-
-[!xin-mo controller]()
-
-tambien compre la placa para concectarlo via usb pero hace poco me hicieron dar cuenta que no es necesaria si se sueldan los cables directamente al input ede la raspberry pi.
-
-[!controller soldado a raspberry pi ]()
-
-### LED light tube
-
-iba a poner una tira de led, pero el tuvo phillips de 58cm (x inches) de largo tiene todo resuelto, incluso el enchufe universal
-
-### An stabilizator
-
-otra de las primeras cosas que me compre, para cuidar todos mis electrodomesticos fue el estabilizador atomlux dsadsad, que hasta hoy nunca me fallo.
-
-[!atomlux dsad]()
-
-tiene 6 entradas, 2 de las cuales estan filtradas, asi que las use para el monitor y los parlantes, que son ambos los responsables de la mayor cantidad de interferencia generada.
-
----
-
-## Drawing
-
-compre la madera segun el plano
-
-detalle de pedazos con medidas
-
-foto con las maderas contra la pared
-
-la marque toda, incluso usando un compas viejo del colegio para las curvas
-
-foto de curvas dibujadas
-
----
-
-## Cutting
-
-### Needed
-
-caladora de un amigo carpintero link al coso de seba
-
-barbijo
-
-anteojos
-
-### cortes
-
-pegue las 2 maderas grandes
-
-foto maderas antes
-
-foto contra la pared del primer corte
-
-tambien incli un corte para mas adelante poder colocar ruedas, que solo se apoyen cuando el gabinete es apoyado hacia atras.
-foto corte ruedas
-
-### cosas que aprendi
-
-- **mdf larga polvillo muy fino:** por mas que usara proteccion, lo respire, me quedaba en el pelo y en la ropa por dias. Era imposible de barrer e incluso me arruino una aspiradora de mano.
-  foto del aserrin
-- **la sierra caliente quema la madera:** es mejor dejar descansar la sierra cada 2-3 minutes. Sino la madera se quema de tanta temperatura que tienela sierra.
-  foto de partes quemadas de la madera
-- **la sierra se curva:** cuanto mas lejos de la caladora estas cortando, mas se curva la cierra, y genera un corte diagonal que no queremos. asi que es mejor cortar 2 piezas iguales por separado que sumar el alto de las 2 piezas, ya que la segunda va a hacer que la cierra se curve.
-
-## Lijing
-
-nunca la pase tan mal como lijando madera. actually la pase peor lijando pintura, pero ya vamos a llegar a esos errores que cometi.
-
-foto en la pared lijados
-
----
-
-## Listones
-
-despues de cortarlos use esta tecnica para atornillarlos milimetricamente sin ayuda:
-
-Puse toodos los listones donde estaban marcadas las lineas.
-
----
-
-## Todo junto
-
-primera madera adelante y ya presente el mueble, aunque sin agujeros... me parecio que ocupaba muchisimo, pero eso depende mucho del color final.
-
----
-
-## controllers
+## Controllers
 
 busque sobre controles y encontre info re completa de las disposiciones mas usadas.. en la misma pagina hace mencion a que el pibe hizo un promedio de todas e hizo la suya.. use esa.
 
-prueba con carton aspiradora
+I bought XXXXX
+
+![Red ball joystick](#)
+
+prueba disposicion con carton aspiradora
+
+![Cardboard holes for controllers](#)
+![Controllers mounted in cardboard](#)
+
+make some tries in the actual cabinet:
+
+![Paper buttons](#)
+![Actual buttons](#)
+
+then i drew in the wood
+
+![Buttons draw in wood](#)
 
 mecha fue un quilombo conseguir, porque los botones tenian que entrar.. necesitaba una de 28mm consegui de 30mm
 
 aguheros maderas
+
+
 
 ### acrilico
 
