@@ -5,7 +5,7 @@ block prepend title
 
 block append head
   include mixins/meta
-  mixin meta(page)
+  +meta(page)
 
 block content
   header.heading.content-wrap
@@ -13,7 +13,7 @@ block content
     h1.heading__headline(itemprop='headline')= page.title
     p.heading__description(itemprop='description')= page.metadata.description + ' ' + (page.metadata.notes || '')
     p.heading__details
-      mixin published(page.metadata.date)
+      +published(page.metadata.date)
   section.content-wrap
     img(src=page.url + 'image.png')
   hr
