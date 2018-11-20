@@ -19,7 +19,7 @@ html(lang=lang, itemscope, itemtype=schematype)
       link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Lato:300,400,700')
       link(rel='stylesheet', href=contents.css['styles.css'].url)
       include mixins/analytics
-      mixin analytics()
+      +analytics()
   body(class=bodyclass)
     block body
       header.header(role='banner')

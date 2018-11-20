@@ -16,7 +16,7 @@ block header
       = locals.description
       |#{'.'}
     include mixins/social
-    mixin social()
+    +social()
 
 block content
   include mixins/card
@@ -26,7 +26,7 @@ block content
     p Collection of quick experiments.
     div.home-section__cards
       each lab in labs
-        mixin card(lab)
+        +card(lab)
   
   section#pixelart.home-section.content-wrap
     - const draws = env.helpers.getDraws(contents);
@@ -34,7 +34,7 @@ block content
     p I made a lot of pixelart a decade ago. I'll try to get back.
     div.home-section__cards
       each draw in draws
-        mixin card(draw)
+        +card(draw)
   
   section#articles.home-section.content-wrap
     - const articles = env.helpers.getArticles(contents).filter(article => !article.metadata.draft);
