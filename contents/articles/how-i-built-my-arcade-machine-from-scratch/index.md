@@ -206,7 +206,7 @@ I found an unofficial wall mount for this monitor. It works as a replacement of 
 
 ![Mount](./25-mount.JPG)
 
-I installed the mount over a "T" board.
+I installed the mount over a "T" board that I improvised to support all the weight it could handle.
 
 ![T support](./26-T-support.JPG)
 
@@ -221,30 +221,28 @@ To make all the calculations to place the monitor aligned, I made a fake paper m
 
 ## Controllers
 
-busque sobre controles y encontre info re completa de las disposiciones mas usadas.. en la misma pagina hace mencion a que el pibe hizo un promedio de todas e hizo la suya.. use esa.
+It's plenty of controllers available for DIY projects out there. I bought a MAME kit which includes:
 
-I bought XXXXX
+- 2 High quality Sanwa-like joysticks.
+- 14 HAPP push buttons: 6 in red, 6 in blue and 2 in white to [play pinball](#).
+- 1P/2P buttons.
+- USB board with cables for each button and joystick.
 
-![Red ball joystick](./.jpg)
+I made a little research about button distributions for arcade cabinets and I found this [complete article](#) about the most common distributions.
 
-prueba disposicion con carton aspiradora
+The author of the article has also made his own distribution based on an average of the measures of every controller. I used that to test location and separation on a cardboard box.
 
-![Cardboard holes for controllers](./.jpg)
-![Controllers mounted in cardboard](./.jpg)
+![Controllers mounted in cardboard](./30-controllers-in-cardboard.JPG)
 
-make some tries in the actual cabinet:
+I drew the controllers for both players on the MDF board to drill.
 
-![Paper buttons](./.jpg)
-![Actual buttons](./.jpg)
+![Controllers draw in wood](./31-controllers-draw.JPG)
 
-then i drew in the wood
+![Controllers holes in wood - close](./32-controllers-holes-detail.JPG)
 
-![Buttons draw in wood](./.jpg)
+![Controllers holes in wood](./33-controllers-holes.JPG)
 
-mecha fue un quilombo conseguir, porque los botones tenian que entrar.. necesitaba una de 28mm consegui de 30mm
-
-aguheros maderas
-
+![Controllers installed in the cabinet](./34-controllers-installed.jpg)
 
 
 ## acrilico
