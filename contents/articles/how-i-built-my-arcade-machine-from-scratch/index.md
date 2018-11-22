@@ -1,6 +1,6 @@
 ---
 title: How I built my arcade machine from scratch
-description: I gave a new life to some components and bought the less materials as possible to make a retro cabinet that fits in a small space.
+description: I gave new life to some old hardware to make a retro cabinet that fits in a small apartment.
 date: 2017-10-03
 template: article.pug
 topics: diy
@@ -10,21 +10,21 @@ draft: true
 
 Some time ago, I won a starter kit from [Make Magazine](https://makezine.com/) with a Raspberry Pi Model 1.
 
-![Raspberry Pi kit](#)
+![Raspberry Pi kit](./01-raspberry-pi-kit.jpg)
 
 Since then, I started looking for something interesting to build and I found the [RetroPie Project](https://retropie.org.uk/).
 
 
 ## RetroPie
 
-RetroPie allows you to turn your Raspberry Pi into a retro-gaming machine. So I made a quick test with some ROMs to check how it worked. It was really easy to have a working retro console with nearly zero configuration.
+This project allows you to turn your Raspberry Pi into a retro-gaming machine. So I made a quick test with some ROMs to check how it worked. It was really easy to have a working retro console with nearly zero configuration.
 
-![Super Mario Bros. 3 running on RetroPie](#)
+![Super Mario Bros. 3 running on RetroPie](./02-super-mario-bros-raspi.jpg)
 
-It took me many [attempts to setup](https://lean8086.com/articles/a-complete-guide-to-setting-up-retropie/) and make the most of it, but everything was worth it in the end.
+It took me many [attempts to setup to make the most of it](https://lean8086.com/articles/a-complete-guide-to-setting-up-retropie/), but everything was worth it in the end.
 
 
-## The must haves
+## Must-haves
 
 I started looking everywhere for an old arcade cabinet to make a restoration and adaptation, but I only found extremely expensive wooden cabinets in very bad conditions.
 
@@ -34,10 +34,6 @@ Most of them were:
 - Not worthwhile for restore.
 - Hard to move.
 - Too big for an apartment.
-
-![Ugly arcade cabinet, number 1](#)
-![Ugly arcade cabinet, number 2](#)
-![Ugly arcade cabinet, number 3](#)
 
 By making that research I realized that the only way to get the results I wanted would be by building my own arcade cabinet from scratch.
 
@@ -52,70 +48,72 @@ In that terms, I was looking for something that was:
 
 ## The plans
 
-Right after found some caracteristics of what would be my ideal arcade machine, I also found the [Project MAME](http://koenigs.dk/mame/eng/index.htm).
+Right after set my goals of what would be my ideal arcade machine, I found the [Project MAME](http://koenigs.dk/mame/eng/index.htm).
 
-It's a project that provides open source plans to build an arcade cabinet from scratch, detailed [step-by-step](http://koenigs.dk/mame/eng/stepprojectmame.htm).
+It provides open source plans to build an arcade cabinet from scratch, detailed [step-by-step](http://koenigs.dk/mame/eng/stepprojectmame.htm).
 
-![Original cabinet from Project MAME](#)
+![Original cabinet from Project MAME](./03-project-mame.jpg)
 
 Although It was made to handle an X-arcade controller, it also was a good adaptation from old-school cabinets that was made to perfectly fit a flat screen inside.
 
 One of the builds that emerged from Project MAME and caught my attention was this [Paper Mario themed arcade](http://zonaarcade.forumcommunity.net/?t=48865036).
 
-![Paper Mario arcade cabinet](#)
+![Paper Mario arcade cabinet](./04-paper-mario-cabinet.jpg)
 
-This spanish maker not only [improved the original plans](http://img543.imageshack.us/img543/5624/repordiviciacosplanos.gif), but also he made available the [side art](https://zonaarcade.forumcommunity.net/?t=45015457) and a 3D model in [SketchUp](https://www.sketchup.com/).
+This spanish maker not only [improved the original plans](http://img543.imageshack.us/img543/5624/repordiviciacosplanos.gif), but he also made available the [side art](https://zonaarcade.forumcommunity.net/?t=45015457) and a [SketchUp model](https://www.sketchup.com/).
 
-![3D model of arcade cabinet](#)
+![3D model of arcade cabinet](./05-3D-model.jpg)
 
-I *only* had to modify the width of the plans by 2cm so the cabinet could fit a Samsung 26" LCD screen that I've already had. The rest was followed as specified.
+I only had to extend the width of the original plans by 2cm so the cabinet could fit a Samsung 26" LCD screen that I've already had. The rest was followed as specified.
 
 
-## Model in cardboard
+## A model in cardboard
 
 The first approach to test the dimensions and distribution of the elements was making a 1:10 model in cardboard as Project MAME suggests in the [step-by-step guide](http://koenigs.dk/mame/eng/stepprojectmame.htm).
 
 That way I was sure that all made sense and I was able to check if something needed to be adjusted or redefined. Especially after the width modification that I had to do to fit my monitor.
 
-![Model in cardboard](#)
+![Model in cardboard](./06-cardboard.JPG)
 
-The model is 17cm height and it helped me to define the size and distribution of the speakers too.
+The model is 17cm height and it was very helpful on defining the size and distribution of the speakers too.
 
 
-## The materials
+## Materials
 
-Before to spend some money on materials, there was a very important decision to make about what kind of wood I would use: *MDF/HDF, plywood or particleboard*.
+Before to spend some money on materials, there was a very important decision to make about what kind of wood I would use: **MDF/HDF, plywood or particleboard**.
 
-I *wrongly* chose MDF/HDF. If I would know at that time how hard is to clean up the extremely thin powder after sand, I wouldn't chose that one. But in the other hand it was a very versatile wood: easy to cut, drill and give shape by sanding.
+I wrongly chose MDF/HDF. If I would know at that time how hard is to clean up the extremely thin powder after sanding, I would chose other one. But in the other hand it was a very versatile wood: easy to cut, drill and give shape.
 
-![MDF pieces](#)
+![MDF boards](./07-MDF-boards.jpg)
 
-MDF/HDF boards [todo]:
+I made a list with all the materials I used trough the entire project.
 
-- *(2) 176cm x 60cm*: Both sides
-- *cm x 62cm*: Front panel
-- *cm x 62cm*: Back panel
-- *cm x 62cm x 5mm thin*: Back door
-- *22cm x 62cm*: Controllers top panel
-- *15cm x 62cm*: Controllers front panel
-- *cm x 62cm*: Speakers panel
-- *cm x 62cm*: Marquee top panel
-- *cm x 62cm*: Marquee bottom panel
-- *cm x 62cm*: Monitor support
+### Wood (15mm MDF boards):
 
-Acrylic boards [todo]:
+- (2) 176cm x 60cm: Both sides
+- cm x 62cm: Front panel
+- cm x 62cm: Back panel
+- cm x 62cm x 5mm thin: Back door
+- 22cm x 62cm: Controllers top panel
+- 15cm x 62cm: Controllers front panel
+- cm x 62cm: Speakers panel
+- cm x 62cm: Marquee top panel
+- cm x 62cm: Marquee bottom panel
+- cm x 62cm: Monitor support
+- And [4cm x 2cm pine battens](#battens)
+
+### Acrylic (crystal clear):
 
 - *cm x 62cm*: Monitor cover
 - *25cm x 62cm*: Controllers art cover
 - *(2) 13cm x 62cm*: Marquee back and front
 
-Other items that I bought [todo]:
+### Others:
 
-- [4cm x 2cm pine battens](#battens)
 - [Caladora de mano Black+Decker](#cuts)
-- [3cm mechas](#)
+- [3cm mechas](./.jpg)
 - [10 lijas de X (gruesa) y de Y (fina)](#lijing)
-- [tornillos para madera, tornillos para battengs](#)
+- [tornillos para madera, tornillos para battengs](./.jpg)
 - [Sanwa? controllers 12 buttons + 2 white buttons](#controllers)
 - [Crystal-clear acrylic boards](#acrylics)
 - [Speaker grills](#acrylics)
@@ -123,86 +121,102 @@ Other items that I bought [todo]:
 - [4xmatte black + 2x white spray paint + base paint](#painting)
 
 
-## Cutting [todo]
+## First cuts
 
-After getting all the materials, I started drawing on the lateral boards all the shapes using the measurements from the plans. I also used a compass to draw the curves.
+After get all the MDF boards, I started drawing on the big boards the lateral shape based on the plans. I also used a compass to draw the curves.
 
-![Drawings on the board](#)
+![Drawings on the board](./08-MDF-drawings.jpg)
 
-I sticked both boards togheter with tape to make only one cut. Using a caladora started from bottom to top. I always recommend to move forward very slowly to stick to the line as much as possible.
+I sticked both boards together with tape to make only one cut. Using a jig saw, I started from bottom to top. I always recommend to move forward very slowly to stick to the line as much as possible.
 
-![Cutted boards](#)
+![Boards after cut](./09-first-cut.jpg)
 
 By making my first cut, I learnt some things:
 
-- **MDF/HDF detaches an extremely thin powder:** It doesn't matter how much protection you can wear (gloves, barbijo, gafas), I had powder in my mouth, hair and clothes for days. It was nearly impossible to clean up after cut or sand. Even I broke a hand aspirator.
-- **The hot sierra burns the wood:** Don't try to make a cut in a single run. It's better to let the sierra rest from time to time.
-- **While making the cut, the saw is probably going to curve:** It would have been better to cut both boards separatelly, because the thicker is what we are cutting the more the sierra curves. That way both boards were uneven and I had to correct by sanding.
+- **MDF/HDF detaches an extremely thin powder:** It doesn't matter how much protection you can wear (gloves, mask, safety glasses), I had to deal with powder in my mouth, hair and clothes for days. It was nearly impossible to clean up after cut or sand. Even I broke a vacuum cleaner.
+- **A hot blade will burn the wood:** Don't try to make a cut in a single run. It's better to let the jig saw rest from time to time.
 
-## Sanding [todo]
+![Burned wood](./10-burned-wood.JPG)
+
+- **While making the cut, the blade tends to curve:** In my case it would have been better to cut both lateral boards separately, because the wider is what you're cutting the more the blade curves. That way both boards were uneven and I had to correct by sanding.
+
+
+## Sandpaper
 
 I used XXXXX white (why white):
 
-![White sandpaper](#)
+![White sandpaper](./11-sandpapers.JPG)
 
 After sanding all the bordes I got a good shape. Tambien aproveche para emparejar errores del corte.
 
-![Both boards sanded](#)
+![Both boards sanded](./12-sanded-boards.jpg)
 
-![One of the boards sanded](#)
+![One of the boards sanded](./13-sanded-board-detail.jpg)
 
 
 ## Battens
 
-I decided to join the pieces with battens, glued and fixed with screws. **That way I had millimetric precision and I didn't needed assistance.**
+I decided to join all the pieces with battens, glued and fixed with screws. **That way I had millimetric precision and I didn't needed help from anyone.**
 
-I bought a lot of 4cm x 2cm (1.6in x 0.8in) pine battens and cutted in pieces smaller than the pieces they join.
+I bought a lot of 40mm x 20mm pine battens and I cut them in pieces the size of boards they join.
 
-![Four by two battens](#)
+![40mm x 20mm battens](./14-battens.JPG)
 
-It's not necessary to use glue when you're already using screws, but I decided to use it anyway to hold tight the entire structure.
+It's not necessary to use glue when you're already using screws, but I decided to use it anyway to hold tight the entire structure. I've also stretched the holes to give a better finish.
 
-![Glued and screwed battens](#)
+![Holes in battens](./15-battens-detail.jpg)
 
-I've also ensanché los agujeros para darle un mejor acabado a los tornillos y que no sobresalgan.
+I attached all the battens to both lateral boards.
 
-![Holes in battens](#)
+![Attached battens - both laterals](./19-attached-battens-laterals.JPG)
 
-I attached *all* the battens to the lateral boards.
+![Attached battens - top](./16-attached-battens-top.JPG)
 
-![Attached battens](#)
+![Attached battens - middle](./17-attached-battens-middle.JPG)
 
-
-## First armado [todo]
-
-...to see the final form and size. My first impression was to see a huge fridge inside my apartment. But with the time and adding some color is not that bad.
-
-![First armado](#)
-
-I also attached wheels and make some diagonal cuts...
-
-![Both wheels installed](#)
+![Attached battens - bottom](./18-attached-battens-bottom.JPG)
 
 
-### Monitor
+## First assembly
+
+I put all the pieces together to see the final shape and size. My first impression was to see a huge fridge inside my apartment, but it gets better when finished.
+
+![First assembly](./20-first-assembly.jpg)
+
+![First assembly top details](./21-first-assembly-top-detail.JPG)
+
+![First assembly middle details](./22-first-assembly-middle-detail.JPG)
+
+I also installed the bottom cover and attached two wheels to handle the entire structure. I made a diagonal cut in both laterals to let the wheels stand out when the cabinet is inclined.
+
+![A wheel installed](./23-wheel.JPG)
+
+![Both wheels installed](./24-both-wheels.JPG)
+
+
+## Monitor
 
 I decided to use some old hardware that I already had at home.
 
-I had a good old LCD monitor (Samsung T260n, 26") that was perfect for this cabinet. I think an ideal size would be about 23", but I wouldn't spend money in a new monitor when I had that one.
+I had a good old LCD monitor (Samsung T260n, 26") that was perfect for this cabinet. I think an ideal size would be about 23", but I wouldn't spend money in a new monitor when I had that one at home.
 
 There was one constraint: this monitor was originally made to be beautiful from behind, so it has no holes in the back to fix to a support with screws.
 
-![The back part of the monitor](#)
+I found an unofficial wall mount for this monitor. It works as a replacement of the original support.
 
-Busque y por suerte encontre un soporte (no oficial ni estandar) para ese monitor. es un reemplazo del pie, que genera el agarre de un soporte comun y corriente que monte sobre una T.
+![Mount](./25-mount.JPG)
 
-![The mounted support](#)
+I installed the mount over a "T" board.
 
-I made the calculations...
+![T support](./26-T-support.JPG)
 
-![Paper monitor](#)
-![Real monitor](#)
-![Mounted support fixed inside structure](#)
+To make all the calculations to place the monitor aligned, I made a fake paper monitor and installed in place.
+
+![Paper monitor](./27-paper-monitor.jpg)
+
+![Real monitor](./28-real-monitor.jpg)
+
+![Installed mount, fixed inside structure](./29-installed-mount.JPG)
 
 
 ## Controllers
@@ -211,21 +225,21 @@ busque sobre controles y encontre info re completa de las disposiciones mas usad
 
 I bought XXXXX
 
-![Red ball joystick](#)
+![Red ball joystick](./.jpg)
 
 prueba disposicion con carton aspiradora
 
-![Cardboard holes for controllers](#)
-![Controllers mounted in cardboard](#)
+![Cardboard holes for controllers](./.jpg)
+![Controllers mounted in cardboard](./.jpg)
 
 make some tries in the actual cabinet:
 
-![Paper buttons](#)
-![Actual buttons](#)
+![Paper buttons](./.jpg)
+![Actual buttons](./.jpg)
 
 then i drew in the wood
 
-![Buttons draw in wood](#)
+![Buttons draw in wood](./.jpg)
 
 mecha fue un quilombo conseguir, porque los botones tenian que entrar.. necesitaba una de 28mm consegui de 30mm
 
@@ -233,7 +247,7 @@ aguheros maderas
 
 
 
-### acrilico
+## acrilico
 
 primero se rompio todo, se derretia, traccionaba la mecha
 
