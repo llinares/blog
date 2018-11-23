@@ -234,7 +234,7 @@ Using some battens leftovers, I cutted two supports for the monitor and two tria
 It's plenty of controllers available for DIY projects out there. I bought a MAME kit which includes:
 
 - 2 High quality Sanwa-like joysticks.
-- 14 HAPP push buttons: 6 in red, 6 in blue and 2 in white to [play pinball](#).
+- 16 HAPP push buttons: 7 in red, 7 in blue and [2 in white to play pinball](#).
 - 1P/2P buttons.
 - USB board with cables for each button and joystick.
 
@@ -252,23 +252,33 @@ I drew the controllers for both players on the MDF board to drill.
 
 ![Controllers holes in wood](./36-controllers-holes.JPG)
 
-![Controllers installed in the cabinet](./37-controllers-installed.jpg)
+Then I installed the MAME kit including both joysticks, 14 push buttons, 1P/2P buttons and the USB board.
+
+![Installing controllers](./37-installing-controllers.jpg)
+
+![Controllers installed in the cabinet](./38-controllers-installed.jpg)
 
 
-## Parlantes
+## Speakers
 
-parlantes agujersos
+The cardboard model was very useful to make a first check on speakers size and distribution. Then I used some paper stencils to make adjustments in the actual cabinet to find the perfect spot for speakers grills.
 
-tapa parlantes detalle y por que
+Speaker grills are bigger than the speakers itself, and stencils represents the grills instead of the holes.
 
-mencionar que probe todo en la maqueta
+![Speaker stencils](./39-speaker-stencils.JPG)
 
-foto publicacion aliexpress
+![Speaker holes](./40-speaker-holes.JPG)
 
-explicacion de agujero para volumen
+Besides I had only one subwoofer, I decided to use two bottom grills to hold a 140mm cooler fan too.
+
+![Bottom stencils](./41-bottom-stencils.JPG)
+
+![Attached cooler](./42-attached-cooler.JPG)
+
+![Final holes](./43-final-holes.jpg)
 
 
-## acrilico
+## Acrylics
 
 primero se rompio todo, se derretia, traccionaba la mecha
 
