@@ -119,6 +119,7 @@ I made a list with all the materials I used trough the entire project.
 - [Speaker grills](#acrylics)
 - [Wheels](#acrylics)
 - [4xmatte black + 2x white spray paint + base paint](#painting)
+- led light
 
 
 ## First cuts
@@ -275,14 +276,40 @@ Besides I had only one subwoofer, I decided to use two bottom grills to hold a 1
 
 ![Attached cooler](./42-attached-cooler.JPG)
 
-![Final holes](./43-final-holes.jpg)
+![Speakers installed](./43-speakers-installed.jpg)
 
 
 ## Acrylics
 
-primero se rompio todo, se derretia, traccionaba la mecha
+I bought some crystal-clear acrylic boards to cover the monitor, controllers and marquee.
 
-el secreto es cortar con agua.. lleva unos 10 minutos por agujero, pero queda como corte de bistri:
+### Monitor cover
+
+After sanding some edges of the bigger acrylic board (620 x 700mm), I attached it to the [triangle battens](#) in front, and put some screws in the back of speakers board.
+
+![Attachment to triangle battens](./44-triangle-battens-attach.JPG)
+
+![Attachment to speakers board](./45-speakers-board-attach.JPG)
+
+### Marquee
+
+For the marquee I used 2 acrylic boards (130 x 620mm) to hold a transparent print in between. I attached both acrylics with 4 screwed stainless steel clamps.
+
+![Marquee](./46-marquee.jpg)
+
+### Controllers cover
+
+Due to I had to drill 18 holes in the acrylic I decided to got 2 acrylic boards to make some fails.
+
+It was the perfect choice because the first experience drilling acrylic was awful. It melted down over the heat of the drill bit and gave an uneven result.
+
+![Melted holes](./47-melted-holes.jpg)
+
+Then I realized you can use water to keep cold the drill bit and the acrilic board. It took nearly 10 minutes to make every hole, but the results were outstanding.
+
+![Drilling with water](./48-drilling-with-water.JPG)
+
+![Final acrylic holes](./49-final-acrylic-holes.JPG)
 
 
 ## Detalles
