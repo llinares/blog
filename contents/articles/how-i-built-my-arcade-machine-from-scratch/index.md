@@ -179,7 +179,7 @@ I attached all the battens to both lateral boards.
 
 ## First assembly
 
-I put all the pieces together to see the final shape and size. My first impression was to see a huge fridge inside my apartment, but it gets better when finished.
+I put all the pieces together to see the final shape and size. My first impression was to see a huge fridge inside my apartment, but it got better when finished.
 
 ![First assembly](./20-first-assembly.jpg)
 
@@ -218,6 +218,16 @@ To make all the calculations to place the monitor aligned, I made a fake paper m
 
 ![Installed mount, fixed inside structure](./29-installed-mount.JPG)
 
+Using some battens leftovers, I cutted two supports for the monitor and two triangles to hold the [acrylic cover](#).
+
+![Monitor batten supports](./30-monitor-supports.JPG)
+
+![Acrylic batten supports](./31-acrylic-supports.JPG)
+
+![All the batten supports for the monitor area](./32-monitor-area-supports.JPG)
+
+
+
 
 ## Controllers
 
@@ -232,27 +242,18 @@ I made a little research about button distributions for arcade cabinets and I fo
 
 The author of the article has also made his own distribution based on an average of the measures of every controller. I used that to test location and separation on a cardboard box.
 
-![Controllers mounted in cardboard](./30-controllers-in-cardboard.JPG)
+![Controllers mounted in cardboard](./33-controllers-in-cardboard.JPG)
 
 I drew the controllers for both players on the MDF board to drill.
 
-![Controllers draw in wood](./31-controllers-draw.JPG)
+![Controllers draw in wood](./34-controllers-draw.JPG)
 
-![Controllers holes in wood - close](./32-controllers-holes-detail.JPG)
+![Controllers holes in wood - close](./35-controllers-holes-detail.JPG)
 
-![Controllers holes in wood](./33-controllers-holes.JPG)
+![Controllers holes in wood](./36-controllers-holes.JPG)
 
-![Controllers installed in the cabinet](./34-controllers-installed.jpg)
+![Controllers installed in the cabinet](./37-controllers-installed.jpg)
 
-
-## acrilico
-
-primero se rompio todo, se derretia, traccionaba la mecha
-
-el secreto es cortar con agua.. lleva unos 10 minutos por agujero, pero queda como corte de bistri:
-
-
----
 
 ## Parlantes
 
@@ -267,7 +268,12 @@ foto publicacion aliexpress
 explicacion de agujero para volumen
 
 
----
+## acrilico
+
+primero se rompio todo, se derretia, traccionaba la mecha
+
+el secreto es cortar con agua.. lleva unos 10 minutos por agujero, pero queda como corte de bistri:
+
 
 ## Detalles
 
