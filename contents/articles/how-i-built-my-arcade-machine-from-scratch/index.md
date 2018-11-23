@@ -312,6 +312,49 @@ Then I realized you can use water to keep cold the drill bit and the acrilic boa
 ![Final acrylic holes](./49-final-acrylic-holes.JPG)
 
 
+## Paint job
+
+My kit for painting included 1 litre of white base paint, some matte black and white spray cans, a couple of rollers and a mask.
+
+![Paint kit](./50-paint-kit.JPG)
+
+### Putty
+
+I covered all the screws with putty and sanded till I got a smooth surface.
+
+![Putty](./51-putty.JPG)
+
+### Base paint
+
+I applied white base paint for wood to the entire cabinet, to seals the pores of the wood and set a base color to apply another painting later.
+
+![First coat of base paint](./52-first-paint.jpg)
+
+![Base paint - bottom](./53-base-paint-bottom.jpg)
+
+![Base paint - top](./54-base-paint-top.jpg)
+
+![Base paint](./55-base-paint.jpg)
+
+### Black and white
+
+I masked all except both laterals and one face of the controllers board. Then applied white paint in spray where all the vinyl prints are gonna be in to highlight the printed colors.
+
+![Mask in black](./56-mask-in-black.jpg)
+
+![White spray paint](./57-white-spray-paint.jpg)
+
+![White controllers](./58-white-controllers.jpg)
+
+![Black on top](./59-black-on-top.jpg)
+
+![Black on middle](./60-black-on-middle.JPG)
+
+![Black and white](./61-black-and-white.JPG)
+
+
+
+
 ## Detalles
 
 ruedas
