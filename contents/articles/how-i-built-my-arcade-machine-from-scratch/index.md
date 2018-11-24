@@ -349,7 +349,27 @@ I masked all except both laterals and one face of the controllers board. Then ap
 ![Black and white](./59-black-and-white.JPG)
 
 
-## Details
-
-
 ## Vinyls
+
+The maker of Paper Mario arcade cabinet made available the [side art](https://zonaarcade.forumcommunity.net/?t=45015457), and after printing it, I installed in all the sides painted in white.
+
+![Vinyl in controllers](./60-vinyl-controllers.jpg)
+
+![Vinyl in marquee](./61-vinyl-marquee.jpg)
+
+![Vinyl in left side](./62-vinyl-left.jpg)
+
+![Vinyl in right side](./63-vinyl-right.jpg)
+
+![Vinyl installed in right side](./64-vinyl-right-installed.jpg)
+
+![Vinyl installed in left side](./65-vinyl-left-installed.jpg)
+
+![Vinyl installed - front view](./66-vinyl-front.jpg)
+
+
+## Final form
+
+The last piece in this 2-years long puzzle, were the black buttons to play pinball games. Those HAPP buttons are connected as an extension of the left arrow of the 1P joystick and one of the buttons of the same player. That is because every retro pinball game I installed uses that controllers as a standard.
+
+![Vinyl and pinball buttons installed in its final form](./00-final.jpg)
