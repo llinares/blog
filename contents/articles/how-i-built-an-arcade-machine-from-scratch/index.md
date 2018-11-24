@@ -1,9 +1,8 @@
 ---
-title: How I built my arcade machine from scratch
-description: I gave new life to some old hardware to make a retro cabinet that fits in a small apartment.
-date: 2017-10-03
+title: How I built an arcade machine from scratch
+description: Used some old hardware and new materials to make a retro cabinet that fits in a small apartment.
+date: 2018-11-26
 template: article.pug
-topics: diy
 lang: en
 draft: true
 ---
