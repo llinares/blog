@@ -330,32 +330,26 @@ I applied white base paint for wood to the entire cabinet, to seals the pores of
 
 ![First coat of base paint](./52-first-paint.jpg)
 
-![Base paint - bottom](./53-base-paint-bottom.jpg)
-
-![Base paint - top](./54-base-paint-top.jpg)
-
-![Base paint](./55-base-paint.jpg)
+![Base paint](./53-base-paint.jpg)
 
 ### Black and white
 
 I masked all except both laterals and one face of the controllers board. Then applied white paint in spray where all the vinyl prints are gonna be in to highlight the printed colors.
 
-![Mask in black](./56-mask-in-black.jpg)
+![Mask in black](./54-mask-in-black.jpg)
 
-![White spray paint](./57-white-spray-paint.jpg)
+![White spray paint](./55-white-spray-paint.jpg)
 
-![White controllers](./58-white-controllers.jpg)
+![White controllers](./56-white-controllers.jpg)
 
-![Black on top](./59-black-on-top.jpg)
+![Black on top](./57-black-on-top.jpg)
 
-![Black on middle](./60-black-on-middle.JPG)
+![Black on middle](./58-black-on-middle.JPG)
 
-![Black and white](./61-black-and-white.JPG)
-
-
+![Black and white](./59-black-and-white.JPG)
 
 
-## Detalles
+## Details
 
-ruedas
-acrilico pantalla
+
+## Vinyls
