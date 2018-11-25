@@ -298,6 +298,10 @@ hr::before {
   align-items: center;
 }
 
+.blog__title {
+  margin-bottom: -12px;
+}
+
 /**
  * Card
  */
@@ -326,7 +330,7 @@ hr::before {
   line-height: 1.75;
   font-weight: 300;
   letter-spacing: .017em;
-  bottom: 25px;
+  bottom: -12px;
   left: 10px;
   margin-right: 10px;
 }

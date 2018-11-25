@@ -41,7 +41,7 @@ block content
     h2.home-section__heading Articles
     each article in articles
       article(itemscope, itemtype='http://schema.org/Article')
-        h3(itemprop='headline')
+        h3.blog__title(itemprop='headline')
           a(href=article.url, itemprop='url')= article.title
         p(itemprop='description')= article.metadata.description
   
