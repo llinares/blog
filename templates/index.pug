@@ -36,9 +36,9 @@ block content
       each draw in draws
         +card(draw)
   
-  section#articles.home-section.content-wrap
+  section#blog.home-section.content-wrap
     - const articles = env.helpers.getArticles(contents).filter(article => !article.metadata.draft);
-    h2.home-section__heading Articles
+    h2.home-section__heading Blog
     each article in articles
       article(itemscope, itemtype='http://schema.org/Article')
         h3.blog__title(itemprop='headline')
