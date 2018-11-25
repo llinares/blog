@@ -87,38 +87,31 @@ I wrongly chose MDF/HDF. If I would know at that time how hard is to clean up th
 
 I made a list with all the materials I used trough the entire project.
 
-### Wood (15mm MDF boards):
+### MDF boards (15mm thin):
 
-- (2) 176cm x 60cm: Both sides
-- cm x 62cm: Front panel
-- cm x 62cm: Back panel
-- cm x 62cm x 5mm thin: Back door
-- 22cm x 62cm: Controllers top panel
-- 15cm x 62cm: Controllers front panel
-- cm x 62cm: Speakers panel
-- cm x 62cm: Marquee top panel
-- cm x 62cm: Marquee bottom panel
-- cm x 62cm: Monitor support
-- And [4cm x 2cm pine battens](#battens)
+- **(2) 176cm x 60cm:** Both laterals
+- **cm x 62cm:** Marquee top panel
+- **cm x 62cm:** Marquee bottom panel
+- **cm x 62cm:** Speakers panel
+- **cm x 62cm:** Monitor support
+- **22cm x 62cm:** Controllers top panel
+- **15cm x 62cm:** Controllers front panel
+- **72cm x 62cm:** Front panel
+- **cm x 62cm:** Back panel
 
-### Acrylic (crystal clear):
+### Crystal clear acrylic (3mm thin):
 
-- *cm x 62cm*: Monitor cover
-- *25cm x 62cm*: Controllers art cover
-- *(2) 13cm x 62cm*: Marquee back and front
+- **cm x 62cm:** Monitor cover
+- **22cm x 62cm:** Controllers art cover
+- **(2) 13cm x 62cm:** Marquee back and front
 
-### Others:
+### Tools and others:
 
-- [Caladora de mano Black+Decker](#cuts)
-- [3cm mechas](./.jpg)
-- [10 lijas de X (gruesa) y de Y (fina)](#lijing)
-- [tornillos para madera, tornillos para battengs](./.jpg)
-- [Sanwa? controllers 12 buttons + 2 white buttons](#controllers)
-- [Crystal-clear acrylic boards](#acrylics)
-- [Speaker grills](#acrylics)
-- [Wheels](#acrylics)
-- [4xmatte black + 2x white spray paint + base paint](#painting)
-- led light
+- [Black+Decker jigsaw](#first-cuts)
+- [360 and 180 sandpaper](#sandpaper)
+- 4cm x 2cm [pine battens](#battens)
+- 6 x 1¼ golden screws for the battens
+- 6 x 1½ black screws for the MDF boards
 
 
 ## First cuts
@@ -127,16 +120,17 @@ After get all the MDF boards, I started drawing on the big boards the lateral sh
 
 ![Drawings on the board](./08-MDF-drawings.jpg)
 
-I sticked both boards together with tape to make only one cut. Using a jig saw, I started from bottom to top. I always recommend to move forward very slowly to stick to the line as much as possible.
+I sticked both boards together with tape to make only one cut. Using a jigsaw, I started from bottom to top. I always recommend to move forward very slowly to stick to the line as much as possible.
+
+![Jigsaw](./67-jigsaw.JPG)
 
 ![Boards after cut](./09-first-cut.jpg)
 
 By making my first cut, I learnt some things:
 
 - **MDF/HDF detaches an extremely thin powder:** It doesn't matter how much protection you can wear (gloves, mask, safety glasses), I had to deal with powder in my mouth, hair and clothes for days. It was nearly impossible to clean up after cut or sand. Even I broke a vacuum cleaner.
-- **A hot blade will burn the wood:** Don't try to make a cut in a single run. It's better to let the jig saw rest from time to time.
-
-![Burned wood](./10-burned-wood.JPG)
+- **A hot blade will burn the wood:** Don't try to make a cut in a single run. It's better to let the jigsaw rest from time to time.
+  ![Burned wood](./10-burned-wood.JPG)
 
 - **While making the cut, the blade tends to curve:** In my case it would have been better to cut both lateral boards separately, because the wider is what you're cutting the more the blade curves. That way both boards were uneven and I had to correct by sanding.
 
@@ -227,8 +221,6 @@ Using some battens leftovers, I cutted two supports for the monitor and two tria
 ![All the batten supports for the monitor area](./32-monitor-area-supports.JPG)
 
 
-
-
 ## Controllers
 
 It's plenty of controllers available for DIY projects out there. I bought a MAME kit which includes:
@@ -260,6 +252,8 @@ Then I installed the MAME kit including both joysticks, 14 push buttons, 1P/2P b
 
 
 ## Speakers
+
+**** genius subwoofer
 
 The cardboard model was very useful to make a first check on speakers size and distribution. Then I used some paper stencils to make adjustments in the actual cabinet to find the perfect spot for speakers grills.
 
