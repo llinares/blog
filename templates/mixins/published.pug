@@ -4,4 +4,4 @@ mixin published(dateCreated, excludeDay)
     if excludeDay
       = createdUtc.format('MMM YYYY')
     else
-      = createdUtc.format('MMM DD.YYYY')
+      = createdUtc.format('MMM DD, YYYY')

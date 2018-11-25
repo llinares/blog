@@ -20,7 +20,7 @@ block content
       include mixins/published
       include mixins/estimatedReadingTime
       +published(page.metadata.date)
-      |#{' · '}
+      |#{' — '}
       +estimatedReadingTime(page.markdown)
       |#{' min read'}
   section.article__body.content-wrap(itemprop='articleBody')!= htmlMinifier.minify(typogr(page.html).smartypants(), { collapseBooleanAttributes: true, collapseWhitespace: true, decodeEntities: true, removeComments: true, removeEmptyAttributes: true, removeEmptyElements: true, removeRedundantAttributes: true, removeScriptTypeAttributes: true, removeStyleLinkTypeAttributes: true, sortAttributes: true, sortClassName: true })
