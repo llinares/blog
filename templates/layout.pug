@@ -36,5 +36,4 @@ html(lang=lang, itemscope, itemtype=schematype)
         block header
       main(role='main')
         block content
-      footer.footer(role='contentinfo')
-        = `©${new Date().getFullYear()} ${locals.owner}`
+      footer.footer(role='contentinfo')= locals.owner
