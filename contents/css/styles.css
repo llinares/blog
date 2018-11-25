@@ -307,9 +307,9 @@ hr::before {
  */
 .card {
   margin-right: 40px;
-  max-width: 320px;
-  min-width: 320px;
-  max-height: 320px;
+  max-width: 240px;
+  min-width: 240px;
+  max-height: 240px;
 }
 
 .card__link {
@@ -320,19 +320,23 @@ hr::before {
 
 .card__image {
   max-width: 100%;
+  border-radius: 4px;
 }
 
 .card__title {
   position: absolute;
-  padding: 0 12px;
+  padding: 6px 12px;
   background-color: #e74c3c;
   color: #fff;
-  line-height: 1.75;
+  line-height: 1.2;
   font-weight: 300;
   letter-spacing: .017em;
-  bottom: -12px;
+  bottom: -10px;
   left: 10px;
   margin-right: 10px;
+  font-size: 22px;
+  max-height: 63px;
+  overflow: hidden;
 }
 
 /**
