@@ -2,8 +2,6 @@ mixin meta(page)
   - var url = locals.url + page.url;
   - var image = url + page.metadata.image;
 
-  if page.url.includes('articles')
-    link(rel='canonical', href=url.replace('articles', 'blog'))
   meta(itemprop='author', content=locals.owner)
   if page.metadata.topics
     meta(itemprop='articleSection', content=page.metadata.topics)
