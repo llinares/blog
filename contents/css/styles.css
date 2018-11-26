@@ -395,11 +395,9 @@ pre {
 }
 
 code {
-  border: 1px solid #aaa;
-  border-radius: 3px;
   font-family: 'Menlo', monospace;
-  color: #aaa;
-  padding: .1em .3em .2em;
+  background-color: #212121;
+  padding: .3em;
   overflow-wrap: break-word;
   word-wrap: break-word;
 }
