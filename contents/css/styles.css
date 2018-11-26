@@ -283,6 +283,7 @@ hr::before {
 .home-section__cards {
   display: flex;
   overflow-x: scroll;
+  overflow-y: hidden;
   align-items: center;
 }
 
