@@ -26,22 +26,12 @@ module.exports = (env, callback) ->
     return articles
 
   getLabs = (contents) ->
-    # helper that returns a list of articles found in *contents*
-    # note that each article is assumed to have its own directory in the articles directory
     labs = contents.labs._.directories.map (item) -> item.index
-    # skip articles that does not have a template associated
-    labs = labs.filter (item) -> item.template isnt 'none'
-    # sort article by date
     labs.sort (a, b) -> b.date - a.date
     return labs
 
   getDraws = (contents) ->
-    # helper that returns a list of articles found in *contents*
-    # note that each article is assumed to have its own directory in the articles directory
     art = contents.pixelart._.directories.map (item) -> item.index
-    # skip articles that does not have a template associated
-    art = art.filter (item) -> item.template isnt 'none'
-    # sort article by date
     art.sort (a, b) -> b.date - a.date
     return art
 

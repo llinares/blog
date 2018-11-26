@@ -3,7 +3,5 @@
   "description": "Playing with acceleration and inertia on Canvas.",
   "notes": "Use W for Gas, S for Brake, A for turning left and D for turning right.",
   "date": "2012-05-12",
-  "template": "redirect.pug",
-  "codepen": "dRzwqV",
   "href": "https://codepen.io/lean8086/pen/dRzwqV"
 }
