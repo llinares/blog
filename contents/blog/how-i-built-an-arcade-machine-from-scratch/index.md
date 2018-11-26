@@ -99,7 +99,7 @@ I made a list with all the materials I used trough the entire project.
 - **72cm x 62cm:** Front panel
 - **cm x 62cm:** Back panel
 
-### Crystal clear acrylic (3mm thin):
+### Crystal-clear acrylic (3mm thin):
 
 - **cm x 62cm:** Monitor cover
 - **22cm x 62cm:** Controllers art cover
@@ -150,7 +150,7 @@ After sanding all the bordes I got a good shape. Tambien aproveche para empareja
 
 ## Battens
 
-I decided to join all the pieces with battens, glued and fixed with screws. **That way I had millimetric precision and I didn't needed help from anyone.**
+I decided to join all the pieces with battens, glued and fixed with screws. **That way I had millimetric precision and it allowed me to build all by myself.**
 
 I bought a lot of 40mm x 20mm pine battens and I cut them in pieces the size of boards they join.
 
@@ -263,7 +263,7 @@ Speaker grills are bigger than the speakers itself, and stencils represents the 
 
 ![Speaker holes](./40-speaker-holes.JPG)
 
-Besides I had only one subwoofer, I decided to use two bottom grills to hold a 140mm cooler fan too.
+Besides I had only one subwoofer, I decided to use two bottom grills to hold a 140mm cooler fan in one of the holes.
 
 ![Bottom stencils](./41-bottom-stencils.JPG)
 
@@ -298,7 +298,7 @@ It was the perfect choice because the first experience drilling acrylic was awfu
 
 ![Melted holes](./47-melted-holes.jpg)
 
-Then I realized you can use water to keep cold the drill bit and the acrilic board. It took nearly 10 minutes to make every hole, but the results were outstanding.
+Then I realized you can use water to keep cold the drill bit and the acrylic board. It took nearly 10 minutes to make each hole, but the results were outstanding.
 
 ![Drilling with water](./48-drilling-with-water.JPG)
 
@@ -307,7 +307,7 @@ Then I realized you can use water to keep cold the drill bit and the acrilic boa
 
 ## Paint job
 
-My kit for painting included 1 litre of white base paint, some matte black and white spray cans, a couple of rollers and a mask.
+My kit for painting included 1 liter of white base for wood, some matte black and white spray cans, a couple of rollers and a mask.
 
 ![Paint kit](./50-paint-kit.JPG)
 
@@ -358,11 +358,11 @@ The maker of Paper Mario arcade cabinet made available the [side art](https://zo
 
 ![Vinyl installed in left side](./65-vinyl-left-installed.jpg)
 
-![Vinyl installed - front view](./66-vinyl-front.jpg)
-
 
 ## Final form
 
-The last piece in this 2-years long puzzle, were the black buttons to play pinball games. Those HAPP buttons are connected as an extension of the left arrow of the 1P joystick and one of the buttons of the same player. That is because every retro pinball game I installed uses that controllers as a standard.
+The last piece in this 2 years long puzzle, were the white buttons in both sides to play pinball games. Those HAPP buttons are connected as an extension of the left arrow of the 1P joystick and one of the buttons of the same player. That's because every retro pinball game I installed uses that controllers as a standard.
 
 ![Vinyl and pinball buttons installed in its final form](./00-final.jpg)
+
+![Vinyl installed - front view](./66-vinyl-front.jpg)
