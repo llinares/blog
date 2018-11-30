@@ -291,6 +291,16 @@ hr::before {
   margin-bottom: -18px;
 }
 
+.blog__title a {
+  text-decoration: none;
+}
+
+.blog__title a:hover,
+.blog__title a:active,
+.blog__title a:focus {
+  text-decoration: underline;
+}
+
 /**
  * Card
  */
