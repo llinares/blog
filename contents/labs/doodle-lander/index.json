@@ -3,7 +3,5 @@
   "description": "Playing with gravity on Canvas.",
   "notes": "Use W for propulsion, A for going left and D for going right.",
   "date": "2012-10-08",
-  "template": "redirect.pug",
-  "codepen": "vZeOaP",
   "href": "https://codepen.io/lean8086/pen/vZeOaP"
 }

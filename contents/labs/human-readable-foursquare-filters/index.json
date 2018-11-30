@@ -1,8 +1,5 @@
 {
   "title": "Human-readable Foursquare filters",
-  "description": "",
   "date": "2018-06-29",
-  "template": "redirect.pug",
-  "href": "https://lean8086.github.io/human-readable-foursquare-filters/",
-  "external": true
+  "href": "https://lean8086.github.io/human-readable-foursquare-filters/"
 }
