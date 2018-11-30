@@ -5,7 +5,6 @@ date: 2018-11-26
 template: article.pug
 image: 00-final.jpg
 lang: en
-draft: true
 ---
 
 When I was a child I was in constant interaction with tools since my parents built our life-long house and a huge amount of things inside it.
@@ -99,26 +98,25 @@ I made a list with all the materials I used trough the entire project.
 
 ### MDF boards (15mm thin):
 
-- **(2) 176cm x 60cm:** Both laterals
-- **cm x 62cm:** Marquee top panel
-- **cm x 62cm:** Marquee bottom panel
-- **cm x 62cm:** Speakers panel
-- **cm x 62cm:** Monitor support
-- **22cm x 62cm:** Controllers top panel
-- **15cm x 62cm:** Controllers front panel
-- **72cm x 62cm:** Front panel
-- **cm x 62cm:** Back panel
+- **(2) 169cm x 60cm:** Both laterals
+- **28cm x 62cm:** Marquee top panel
+- **(2) 16cm x 62cm:** Marquee bottom panel and speakers panel
+- **(2) 25cm x 62cm:** Monitor support and controllers top panel
+- **12cm x 62cm:** Controllers front panel
+- **75cm x 62cm:** Front panel
+- **60cm x 62cm:** Back panel
+- **94cm x 62cm x 5mm thin** Back door
 
 ### Crystal-clear acrylic boards (3mm thin):
 
-- **cm x 62cm:** Monitor cover
-- **22cm x 62cm:** Controllers art cover
+- **55cm x 62cm:** Monitor cover
+- **25cm x 62cm:** Controllers art cover
 - **(2) 13cm x 62cm:** Marquee back and front
 
 ### Tools and others:
 
 - [Black & Decker jigsaw](#first-cuts)
-- [180- and 360-grit sandpaper](#sandpaper)
+- [80- and 360-grit sandpaper](#sandpaper)
 - 4cm x 2cm [pine strips](#strips)
 - 6 x 1¼ golden screws for the strips
 - 6 x 1½ black screws for the MDF boards
@@ -146,7 +144,7 @@ By making the first cut, I learnt many things:
 
 ## Sandpaper
 
-I used 180- and 360-grit sandpaper. The first one is a coarse grit for smoothing surfaces and removing imperfections. The second one is a fine grit for finishing surfaces smoothly.
+I used 80- and 360-grit sandpaper. The first one is a coarse grit for smoothing surfaces and removing imperfections. The second one is a fine grit for finishing surfaces smoothly.
 
 ![White sandpaper](./11-sandpapers.JPG)
 
