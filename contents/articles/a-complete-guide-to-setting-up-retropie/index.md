@@ -8,7 +8,7 @@ image_caption: The Raspberry Pi Model 1 which I used to build my arcade cabinet.
 topic: diy
 ---
 
-I spent the last year building a real-size arcade cabinet. I found myself installing and reinstalling RetroPie on Raspberry Pi several times. So, everytime I screwed up and reinstalled, I had to reconfigure the entire system by following the exact same steps to get where I was. The erasing and reinstalling processes were caused for a notable lack of information about many setup choices you have to do. I didn't found many recommendations.
+I spent the last year [building a real-size arcade cabinet](/articles/how-i-built-an-arcade-machine-from-scratch/). I found myself installing and reinstalling RetroPie on Raspberry Pi several times. So, everytime I screwed up and reinstalled, I had to reconfigure the entire system by following the exact same steps to get where I was. The erasing and reinstalling processes were caused for a notable lack of information about many setup choices you have to do. I didn't found many recommendations.
 
 ## What is RetroPie
 

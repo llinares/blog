@@ -21,7 +21,7 @@ This [project](https://retropie.org.uk/) allows you to turn your Raspberry Pi in
 
 ![Super Mario Bros. 3 running on RetroPie](./02-super-mario-bros-raspi.jpg)
 
-It took me [many attempts to setup RetroPie to make the most of it](https://lean8086.com/articles/a-complete-guide-to-setting-up-retropie/), but everything was worth in the end.
+It took me [many attempts to setup RetroPie to make the most of it](/articles/a-complete-guide-to-setting-up-retropie/), but everything was worth in the end.
 
 
 ## Goals
