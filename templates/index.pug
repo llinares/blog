@@ -5,18 +5,13 @@ block append vars
   - schematype = 'http://schema.org/Person'
 
 block header
-  div.hero.heading.content-wrap
-    h1.heading__headline.hero__hi
-      span.hero__emoji 👋
-      |#{' Hello there.'}
-    p.heading__description.hero__description(itemtype='description')
-      |#{'I am '}
-      span(itemtype='name')= locals.owner
-      |#{', '}
-      = locals.description
-      |#{'.'}
-    include mixins/social
-    +social()
+  section.hero.heading.content-wrap
+    img.hero__avatar(src=contents.assets['avatar@2x.png'].url, alt='Me', itemtype='image')
+    div.hero__container
+      h1.hero__hi(itemtype='name')= locals.owner
+      p.hero__description(itemtype='description')= locals.description
+      include mixins/social
+      +social()
 
 block content
   include mixins/card
@@ -44,29 +39,3 @@ block content
         h3.blog__title(itemprop='headline')
           a(href=article.url, itemprop='url')= article.title
         p(itemprop='description')= article.metadata.description
-  
-  section#about.home-section.content-wrap
-    h2.home-section__heading About me
-    p
-      |#{'I am '}
-      strong= locals.owner
-      |#{', '}
-      = locals.description
-      |#{'.'}
-    p
-      |#{' I have worked for the last 10 years in the internet industry. I am currently working at '}
-      a(href='https://www.mercadolibre.com.ar/', target='_blank', rel='noopener') MercadoLibre.com
-      |#{' (nasdaq:MELI): the largest e-commerce and fintech in Latin America.'}
-    p I started designing user-centered interfaces, focused in UX research and experimentation. I gradually turned to front-end programming and involved myself more with the ins and outs of the Web.
-    p
-      |#{'Read more about me on '}
-      a(href='https://www.linkedin.com/in/lean8086/', target='_blank', rel='noopener') LinkedIn
-      |#{', follow me on '}
-      a(href='https://www.twitter.com/lean8086/', target='_blank', rel='noopener') Twitter
-      |#{' and fork me on '}
-      a(href='https://www.github.com/lean8086/', target='_blank', rel='noopener') GitHub
-      |#{'.'}
-
-block append body
-  script.
-    window.addEventListener('load',function(){document.head.insertAdjacentHTML('beforeend','<style>.home .header{background-image:url(/assets/hero-hd.jpg)}</style>');});
