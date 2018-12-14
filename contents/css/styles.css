@@ -193,11 +193,6 @@ hr::before {
 /**
  * Home
  */
-.home .header__nav a,
-.home .header__nav a:hover {
-  text-shadow: 0 0 .5em #111;
-}
-
 .home .content-wrap {
   max-width: 960px;
 }
