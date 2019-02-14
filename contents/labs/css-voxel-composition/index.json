@@ -1,0 +1,6 @@
+{
+  "title": "CSS Voxel Composition",
+  "description": "95 DOM elements in one layer. It's still far from Lighthouse's recommendation to keep an optimal DOM tree with less than 1500 nodes. I'll try to escalate on axis Z right now ⬆️",
+  "date": "2019-02-14",
+  "href": "https://codepen.io/lean8086/details/exPmYm"
+}
