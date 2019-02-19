@@ -35,7 +35,10 @@ block content
     - const articles = env.helpers.getArticles(contents).filter(article => !article.metadata.draft);
     h2.home-section__heading Blog
     each article in articles
-      article(itemscope, itemtype='http://schema.org/Article')
-        h3.blog__title(itemprop='headline')
-          a(href=article.url, itemprop='url')= article.title
-        p(itemprop='description')= article.metadata.description
+      article.blog(itemscope, itemtype='http://schema.org/Article')
+        if article.metadata.image
+          img.blog__image(src=article.url + article.metadata.image)
+        div.blog__header
+          h3.blog__title(itemprop='headline')
+            a(href=article.url, itemprop='url')= article.title
+          p(itemprop='description')= article.metadata.description

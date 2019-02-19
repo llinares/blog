@@ -3,7 +3,7 @@ title: How I built an arcade machine from scratch
 description: I mixed old hardware with new materials to make a full-sized retro cabinet that fits in a small apartment.
 date: 2018-12-12
 template: article.pug
-image: 00-final.jpg
+image: image.jpg
 lang: en
 ---
 

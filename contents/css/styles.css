@@ -255,21 +255,29 @@ hr::before {
   display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
-  align-items: center;
+}
+
+.home-section__cards::-webkit-scrollbar {
+  display: none;
+}
+
+.blog {
+  margin-bottom: 32px;
+}
+
+.blog__image {
+  width: 128px;
+  border-radius: 4px;
+  margin-right: 24px;
 }
 
 .blog__title {
+  margin-top: 0;
   margin-bottom: -18px;
 }
 
 .blog__title a {
   text-decoration: none;
-}
-
-.blog__title a:hover,
-.blog__title a:active,
-.blog__title a:focus {
-  text-decoration: underline;
 }
 
 /**
@@ -288,12 +296,6 @@ hr::before {
   font-size: 0;
 }
 
-.card__link:hover .card__title,
-.card__link:active .card__title,
-.card__link:focus .card__title {
-  background-color: #f45949;
-}
-
 .card__image {
   max-width: 100%;
   border-radius: 4px;
@@ -301,7 +303,7 @@ hr::before {
 
 .card__title {
   position: absolute;
-  padding: 6px 12px;
+  padding: 8px 12px;
   background-color: #e74c3c;
   color: #fff;
   line-height: 1.2;
@@ -311,8 +313,11 @@ hr::before {
   left: 10px;
   margin-right: 10px;
   font-size: 22px;
-  max-height: 63px;
-  overflow: hidden;
+}
+
+.card__title small {
+  display: block;
+  font-size: 11px;
 }
 
 /**
@@ -428,5 +433,21 @@ pre code {
   .home .header,
   .home .header::before {
     background-position: center top;
+  }
+
+  .card__title {
+    display: none;
+  }
+
+  .card__link:hover .card__title {
+    display: block;
+  }
+
+  .blog__image {
+    float: left;
+  }
+
+  .blog__image + .blog__header {
+    overflow: hidden;
   }
 }
