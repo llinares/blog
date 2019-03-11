@@ -24,9 +24,3 @@ block content
       +estimatedReadingTime(page.markdown)
       |#{' min read'}
   section.article__body.content-wrap(itemprop='articleBody')!= htmlMinifier.minify(typogr(page.html).smartypants(), { collapseBooleanAttributes: true, collapseWhitespace: true, decodeEntities: true, removeComments: true, removeEmptyAttributes: true, removeEmptyElements: true, removeRedundantAttributes: true, removeScriptTypeAttributes: true, removeStyleLinkTypeAttributes: true, sortAttributes: true, sortClassName: true })
-  hr
-  section.content-wrap#disqus_thread
-
-block append body
-  script.
-    var disqus_config=function(){this.page.url=location.href};(function(){var d=document,s=d.createElement('script');s.src='https://lean8086.disqus.com/embed.js';s.setAttribute('data-timestamp',+new Date());(d.head||d.body).appendChild(s);})();
