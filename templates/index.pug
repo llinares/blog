@@ -42,4 +42,12 @@ block content
         div.blog__header
           h3.blog__title(itemprop='headline')
             a(href=article.url, itemprop='url')= article.title
-          p(itemprop='description')= article.metadata.description
+          p
+            small
+              include mixins/published
+              include mixins/estimatedReadingTime
+              +published(article.metadata.date)
+              |#{' | '}
+              +estimatedReadingTime(article.markdown)
+              |#{' min read. '}
+            span(itemprop='description')= article.metadata.description
