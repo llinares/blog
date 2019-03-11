@@ -37,7 +37,8 @@ block content
     each article in articles
       article.blog(itemscope, itemtype='http://schema.org/Article')
         if article.metadata.image
-          img.blog__image(src=article.url + article.metadata.image)
+          a(href=article.url)
+            img.blog__image(src=article.url + article.metadata.image)
         div.blog__header
           h3.blog__title(itemprop='headline')
             a(href=article.url, itemprop='url')= article.title
