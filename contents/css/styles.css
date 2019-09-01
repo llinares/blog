@@ -331,6 +331,7 @@ hr::before {
   left: 10px;
   margin-right: 10px;
   font-size: 22px;
+  opacity: .9;
 }
 
 .card__title small {
@@ -465,6 +466,7 @@ pre code {
 
   .card__title {
     display: none;
+    opacity: 1;
   }
 
   .card__link:hover .card__title {
