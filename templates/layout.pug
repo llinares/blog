@@ -23,7 +23,7 @@ html(lang=lang, itemscope, itemtype=schematype)
   body(class=bodyclass)
     block body
       header.header(role='banner')
-        a.header__logo(href=locals.url, itemprop='url') 8086
+        a.header__logo(href=(process.env.NODE_ENV === 'production' ? locals.url : '/'), itemprop='url') 8086
         nav.header__nav(itemscope, itemtype='http://schema.org/SiteNavigationElement')
           a(href='/#labs', itemprop='url')
             span(itemprop='name') Labs
