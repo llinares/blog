@@ -1,5 +1,4 @@
 mixin analytics()
-  if process.env.NODE_ENV === 'production'
-    script.
-      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create','UA-100475674-1','auto');ga('send','pageview');
-    script(defer, src='https://www.google-analytics.com/analytics.js')
+  script.
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create','UA-100475674-1','auto');ga('send','pageview');
+  script(defer, src='https://www.google-analytics.com/analytics.js')
