@@ -9,7 +9,7 @@
 
 body {
   font-family: 'Lato', Arial;
-  background-color: #303030;
+  background-color: #fff;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -18,7 +18,7 @@ body {
   line-height: 1.75;
   font-weight: 300;
   letter-spacing: .017em;
-  color: #eee;
+  color: #333;
 }
 
 .content-wrap {
@@ -28,11 +28,11 @@ body {
 }
 
 a {
-  color: #fff;
+  color: #0070c9;
 }
 
 a:hover {
-  color: #eee;
+  color: #e74c3c;
 }
 
 h1 + *,
@@ -57,7 +57,6 @@ h3 {
 }
 
 img {
-  /* background-color: #212121; */
   max-width: 100%;
 }
 
@@ -173,9 +172,13 @@ hr::before {
   font-variant: small-caps;
   text-transform: lowercase;
   font-size: 24px;
-  color: #fff;
+  color: #111;
   margin-left: 2em;
   text-decoration: none;
+}
+
+.home .header__nav a {
+  color: #fff;
 }
 
 .header__nav a:hover,
@@ -198,6 +201,10 @@ hr::before {
 }
 
 /* Hero */
+.hero {
+  color: #fff;
+}
+
 .hero__hi {
   margin: 0;
   font-size: 24px;
@@ -395,7 +402,7 @@ pre {
 
 code {
   font-family: 'Menlo', monospace;
-  background-color: #212121;
+  background-color: #eee;
   padding: .3em;
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -471,4 +478,33 @@ pre code {
   .blog__image + .blog__header {
     overflow: hidden;
   }
+}
+
+/**
+ * Dark mode
+ */
+body.dark-mode {
+  background-color: #303030;
+  color: #eee;
+}
+
+.dark-mode a {
+  color: #fff;
+}
+
+.dark-mode a:hover {
+  color: #eee;
+}
+
+.dark-mode .heading__details {
+  border-color: #aaa;
+}
+
+.dark-mode .header__nav a {
+  color: #fff;
+}
+
+.dark-mode code {
+  background-color: #212121;
+  color: #fff
 }

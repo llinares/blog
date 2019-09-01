@@ -20,7 +20,7 @@ html(lang=lang, itemscope, itemtype=schematype)
       link(rel='stylesheet', href=contents.css['styles.css'].url)
       include mixins/analytics
       +analytics()
-  body(class=bodyclass)
+  body(class=`${bodyclass} dark-mode`)
     block body
       header.header(role='banner')
         a.header__logo(href=(process.env.NODE_ENV === 'production' ? locals.url : '/'), itemprop='url') 8086
