@@ -2,5 +2,6 @@
   "title": "Vespa Helmet",
   "description": "Another week another challenge on #spriteweekly. Tried some lights and shadows on an italian vespa-like helmet in 32x32. Kinda tricky to work with a spherical shape ¯\\_(ツ)_/¯",
   "date": "2018-02-16",
-  "template": "pixelart.pug"
+  "bgcolor": "#c2dde6",
+  "scale": 3
 }

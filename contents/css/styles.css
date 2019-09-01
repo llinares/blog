@@ -57,7 +57,7 @@ h3 {
 }
 
 img {
-  background-color: #212121;
+  /* background-color: #212121; */
   max-width: 100%;
 }
 
@@ -285,20 +285,31 @@ hr::before {
  */
 .card {
   margin-right: 40px;
-  max-width: 240px;
-  min-width: 240px;
-  max-height: 240px;
 }
 
 .card__link {
   position: relative;
   display: block;
   font-size: 0;
+  width: 240px;
+  height: 240px;
+  border-radius: 4px;
+  overflow: hidden;
 }
 
 .card__image {
   max-width: 100%;
-  border-radius: 4px;
+}
+
+.card__image--pixelart,
+.pixelart__image {
+  -ms-interpolation-mode: nearest-neighbor;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: pixelated;
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }
 
 .card__title {
@@ -397,6 +408,16 @@ pre code {
   padding: 1em;
 }
 
+/**
+ * Pixel art
+ */
+.pixelart__container {
+  position: relative;
+  max-width: 720px;
+  max-height: 720px;
+  padding-bottom: 100%;
+  border-radius: 8px;
+}
 
 @media (min-width:640px) {
   .home-section__heading {

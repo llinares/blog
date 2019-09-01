@@ -21,7 +21,7 @@ block content
     p Collection of quick experiments.
     div.home-section__cards
       each lab in labs
-        +card(lab)
+        +card('labs', lab)
   
   section#pixelart.home-section.content-wrap
     - const draws = env.helpers.getDraws(contents);
@@ -29,7 +29,7 @@ block content
     p From time to time I like to put some pixels together.
     div.home-section__cards
       each draw in draws
-        +card(draw)
+        +card('pixelart', draw)
   
   section#blog.home-section.content-wrap
     - const articles = env.helpers.getArticles(contents).filter(article => !article.metadata.draft);
