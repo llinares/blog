@@ -32,6 +32,7 @@ block content
         +card('pixelart', draw)
   
   section#blog.home-section.content-wrap
+    include mixins/published
     - const articles = env.helpers.getArticles(contents).filter(article => !article.metadata.draft);
     h2.home-section__heading Blog
     each article in articles
@@ -43,11 +44,7 @@ block content
           h3.blog__title(itemprop='headline')
             a(href=article.url, itemprop='url')= article.title
           p
-            small
-              include mixins/published
-              include mixins/estimatedReadingTime
+            span
               +published(article.metadata.date)
-              |#{' | '}
-              +estimatedReadingTime(article.markdown)
-              |#{' min read. '}
+              |#{'. '}
             span(itemprop='description')= article.metadata.description
