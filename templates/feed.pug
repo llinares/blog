@@ -12,10 +12,6 @@ rss(version='2.0',
     description= locals.description
     pubDate= articles[0].rfc822date
     language en
-    image
-      url= locals.url + contents.assets['avatar@3x.png'].url
-      title= locals.owner
-      link= locals.url
     each article in articles
       - var permalink = locals.url + article.url;
       item

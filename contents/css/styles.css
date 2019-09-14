@@ -230,9 +230,13 @@ hr::before {
 }
 
 .hero__avatar {
-  border-radius: 100%;
-  width: 170px;
-  margin: 32px;
+  -ms-interpolation-mode: nearest-neighbor;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: pixelated;
+  margin-top: 75px;
+  width: 42px;
+  height: 204px;
 }
 
 /* Section */
@@ -436,6 +440,7 @@ pre code {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row-reverse;
   }
 
   .hero__container {
@@ -449,6 +454,11 @@ pre code {
 
   .heading__headline {
     font-size: 80px;
+  }
+
+  .hero__avatar {
+    margin-top: 0;
+    margin-left: 75px;
   }
 
   .heading {
