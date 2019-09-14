@@ -1,5 +1,5 @@
 {
-  "title": "Single Element Voxel",
+  "title": "CSS 3D cube in one single element",
   "description": "This experiment simulates a full 6-sides cube by only rendering the visible sides. I achieved that results using only one HTML element and its pseudo-elements.",
   "date": "2019-02-10",
   "href": "https://codepen.io/lean8086/details/wNmmBb"
