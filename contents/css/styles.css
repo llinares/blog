@@ -87,6 +87,12 @@ hr::before {
   text-align: center;
 }
 
+.heading__image {
+  border-radius: 4px;
+  width: 128px;
+  margin-bottom: 32px;
+}
+
 .heading__headline {
   font-size: 65px;
   margin: 0;
