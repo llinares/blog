@@ -3,7 +3,7 @@
     "url": "https://www.lean8086.com",
     "name": "lean8086",
     "owner": "Leandro Linares",
-    "description": "JavaScript and Front-End Developer in Berlin, Germany"
+    "description": "JavaScript and Front-End Developer living in Berlin, Germany 🇩🇪"
   },
   "plugins": [
     "./plugins/paginator.coffee"
