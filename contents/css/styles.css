@@ -1,6 +1,16 @@
-/**
- * Base
- */
+:root {
+  --color-light-primary: #fff;
+  --color-light-secondary: #eee;
+
+  --color-dark-primary: #212121;
+  --color-dark-secondary: #333;
+
+  --color-complementary: #aaa;
+
+  --color-highlight: #e74c3c;
+  --color-hightlight-secondary: #f45949;
+}
+
 *,
 *::after,
 *::before {
@@ -9,7 +19,7 @@
 
 body {
   font-family: 'Lato', Arial;
-  background-color: #fff;
+  background-color: var(--color-light-primary);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -18,7 +28,7 @@ body {
   line-height: 1.75;
   font-weight: 300;
   letter-spacing: .017em;
-  color: #333;
+  color: var(--color-dark-secondary);
 }
 
 .content-wrap {
@@ -32,7 +42,7 @@ a {
 }
 
 a:hover {
-  color: #e74c3c;
+  color: var(--color-highlight);
 }
 
 h1 + *,
@@ -116,7 +126,7 @@ hr::before {
   line-height: 1.53;
   font-weight: 300;
   letter-spacing: -.02em;
-  border: 1px solid #aaa;
+  border: 1px solid var(--color-complementary);
   border-radius: 4px;
   display: inline-block;
   padding: 3px 15px;
@@ -147,20 +157,20 @@ hr::before {
   font-size: 38px;
   display: inline-block;
   padding: 0 12px;
-  background-color: #e74c3c;
+  background-color: var(--color-highlight);
   text-decoration: none;
 }
 
 .header__logo,
 .header__logo:visited,
 .header__logo:link {
-  color: #fff;
+  color: var(--color-light-primary);
 }
 
 .header__logo:hover,
 .header__logo:active,
 .header__logo:focus {
-  background-color: #f45949;
+  background-color: var(--color-hightlight-secondary);
   text-decoration: none;
 }
 
@@ -184,7 +194,7 @@ hr::before {
 }
 
 .home .header__nav a {
-  color: #fff;
+  color: var(--color-light-primary);
 }
 
 .header__nav a:hover,
@@ -194,7 +204,7 @@ hr::before {
 .hero__social a:active,
 .hero__social a:focus {
   text-decoration: none;
-  border-bottom: 2px solid #e74c3c;
+  border-bottom: 2px solid var(--color-highlight);
   margin-bottom: -2px;
 }
 
@@ -208,7 +218,7 @@ hr::before {
 
 /* Hero */
 .hero {
-  color: #fff;
+  color: var(--color-light-primary);
 }
 
 .hero__hi {
@@ -231,7 +241,7 @@ hr::before {
 }
 
 .hero__social-icon {
-  fill: #fff;
+  fill: var(--color-light-primary);
   height: 24px;
 }
 
@@ -264,7 +274,7 @@ hr::before {
 .home .header {
   overflow: hidden;
   position: relative;
-  background-color: #212121;
+  background-color: var(--color-dark-primary);
 }
 
 /* Cards */
@@ -332,8 +342,8 @@ hr::before {
 .card__title {
   position: absolute;
   padding: 8px 12px;
-  background-color: #e74c3c;
-  color: #fff;
+  background-color: var(--color-highlight);
+  color: var(--color-light-primary);
   line-height: 1.2;
   font-weight: 300;
   letter-spacing: .017em;
@@ -356,8 +366,8 @@ hr::before {
 /* Capital letter */
 .article__body > p:first-of-type::first-letter {
   font-weight: 400;
-  color: #fff;
-  background-color: #e74c3c;
+  color: var(--color-light-primary);
+  background-color: var(--color-highlight);
   padding: 3px 15px 0;
   border-radius: 4px;
   margin-right: 8px;
@@ -396,7 +406,7 @@ hr::before {
 }
 
 .article__body blockquote {
-  border-left: 3px solid #e74c3c;
+  border-left: 3px solid var(--color-highlight);
   padding-left: 20px;
   margin: 0 0 20px 3px;
   font-style: italic;
@@ -413,7 +423,7 @@ pre {
 
 code {
   font-family: 'Menlo', monospace;
-  background-color: #eee;
+  background-color: var(--color-light-secondary);
   padding: .3em;
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -504,27 +514,27 @@ pre code {
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #303030;
-    color: #eee;
+    color: var(--color-light-secondary);
   }
 
   a {
-    color: #fff;
+    color: var(--color-light-primary);
   }
 
   a:hover {
-    color: #eee;
+    color: var(--color-light-secondary);
   }
 
   .heading__details {
-    border-color: #aaa;
+    border-color: var(--color-complementary);
   }
 
   .header__nav a {
-    color: #fff;
+    color: var(--color-light-primary);
   }
 
   code {
-    background-color: #212121;
-    color: #fff
+    background-color: var(--color-dark-primary);
+    color: var(--color-light-primary)
   }
 }
