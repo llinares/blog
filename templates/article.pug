@@ -21,4 +21,4 @@ block content
     p.heading__description(itemprop='description')= page.metadata.description
     p.heading__details
       +published(page.metadata.date)
-  section.article__body.content-wrap(itemprop='articleBody')!= htmlMinifier.minify(typogr(page.html).smartypants(), { collapseBooleanAttributes: true, collapseWhitespace: true, decodeEntities: true, removeComments: true, removeEmptyAttributes: true, removeEmptyElements: true, removeRedundantAttributes: true, removeScriptTypeAttributes: true, removeStyleLinkTypeAttributes: true, sortAttributes: true, sortClassName: true })
+  section.article__body.content-wrap(itemprop='articleBody')!= htmlMinifier.minify(typogr(page.html.replace('<img', '<img loading="lazy"')).smartypants(), { collapseBooleanAttributes: true, collapseWhitespace: true, decodeEntities: true, removeComments: true, removeEmptyAttributes: true, removeEmptyElements: true, removeRedundantAttributes: true, removeScriptTypeAttributes: true, removeStyleLinkTypeAttributes: true, sortAttributes: true, sortClassName: true })

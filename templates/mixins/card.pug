@@ -1,8 +1,9 @@
 mixin content(type, data)
   img.card__image(class=`card__image--${type}`, src=`${data.url}image.png`, itemprop='image', alt=data.title, style=(type === 'pixelart' ? `transform:translate(-50%, -50%) scale(${data.metadata.scale})` : null))
-  h3.card__title(itemprop='title')
-    small= moment.utc(data.date).format('MMM DD, YYYY')
-    = data.title
+  if type === 'labs'
+    h3.card__title(itemprop='title')
+      small= moment.utc(data.date).format('MMM DD, YYYY')
+      = data.title
 
 mixin card(type, data)
   article.card(itemscope, itemtype='http://schema.org/Article')
