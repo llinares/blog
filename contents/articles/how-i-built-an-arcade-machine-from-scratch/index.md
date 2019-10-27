@@ -7,6 +7,8 @@ image: image.png
 lang: en
 ---
 
+![Finished arcade machine](./hero.jpg)
+
 Everything started back in 2013 when I luckily won a starter kit from [Make: Magazine](https://makezine.com/) with a Raspberry Pi Model 1.
 
 ![Raspberry Pi kit](./01-raspberry-pi-kit.jpg)
