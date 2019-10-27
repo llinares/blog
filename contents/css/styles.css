@@ -501,28 +501,30 @@ pre code {
 /**
  * Dark mode
  */
-body.dark-mode {
-  background-color: #303030;
-  color: #eee;
-}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #303030;
+    color: #eee;
+  }
 
-.dark-mode a {
-  color: #fff;
-}
+  a {
+    color: #fff;
+  }
 
-.dark-mode a:hover {
-  color: #eee;
-}
+  a:hover {
+    color: #eee;
+  }
 
-.dark-mode .heading__details {
-  border-color: #aaa;
-}
+  .heading__details {
+    border-color: #aaa;
+  }
 
-.dark-mode .header__nav a {
-  color: #fff;
-}
+  .header__nav a {
+    color: #fff;
+  }
 
-.dark-mode code {
-  background-color: #212121;
-  color: #fff
+  code {
+    background-color: #212121;
+    color: #fff
+  }
 }
