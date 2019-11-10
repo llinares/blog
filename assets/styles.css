@@ -42,7 +42,7 @@ body {
 }
 
 h1, h2, h3 {
-  font-family: serif;
+  font-family: 'Arbutus Slab', serif;
 }
 
 a {
@@ -104,6 +104,7 @@ a:hover {
   justify-content: space-around;
   align-items: center;
   text-align: center;
+  padding: var(--gutter-m);
 }
 
 .hero::after {
@@ -271,7 +272,7 @@ a.hero__contact {
 
 .entry-head__headline {
   font-size: calc(var(--font-size-xl) * 1.3);
-  line-height: .9em;
+  line-height: 1em;
   margin-bottom: var(--gutter-s);
 }
 
@@ -305,7 +306,7 @@ a.hero__contact {
 .entry-body h2,
 .entry-body h3 {
   margin-top: var(--gutter-l);
-  line-height: .9em;
+  line-height: 1em;
 }
 
 .entry-body h2 {
@@ -328,7 +329,7 @@ a.hero__contact {
 .entry-body > p:first-of-type::first-letter {
   color: var(--color-background);
   background-color: var(--color-text);
-  font-family: serif;
+  font-family: 'Arbutus Slab', serif;
   padding: var(--gutter-m) var(--gutter-s);
   font-size: var(--font-size-xl);
   border-radius: var(--image-radius);
