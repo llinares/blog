@@ -1,4 +1,0 @@
-mixin published(dateCreated)
-  - var createdUtc = moment.utc(dateCreated);
-  time(itemprop='datePublished', datetime=createdUtc.format('YYYY-MM-DD'))
-    = createdUtc.format('MMM DD, YYYY')

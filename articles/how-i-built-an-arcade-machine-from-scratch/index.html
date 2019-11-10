@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en" itemscope itemtype="https://schema.org/Article">
+<head>
+  <meta charset="utf-8">
+  <title>How I built an arcade machine from scratch - Leandro Linares</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="I mixed old hardware with new materials to make a full-sized retro cabinet that fits in a small apartment.">
+  <link rel="shortcut icon" href="/assets/favicon.png">
+  <link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Leandro Linares">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+  <link rel="stylesheet" href="/assets/styles.css">
+
+  <!-- <script>window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date; ga('create', 'UA-100475674-1', 'auto'); ga('send', 'pageview');</script>
+  <script defer src="https://www.google-analytics.com/analytics.js"></script> -->
+  <meta itemprop="author" content="Leandro Linares">
+  <meta itemprop="mainEntityOfPage"
+    content="https://www.lean8086.com/articles/how-i-built-an-arcade-machine-from-scratch/">
+  <meta itemprop="inLanguage" content="en">
+  <meta itemprop="image"
+    content="https://www.lean8086.com/articles/how-i-built-an-arcade-machine-from-scratch/image.png">
+  <meta name="twitter:site" content="@lean8086">
+  <meta name="twitter:url" content="https://www.lean8086.com/articles/how-i-built-an-arcade-machine-from-scratch/">
+  <meta name="twitter:title" content="How I built an arcade machine from scratch">
+  <meta name="twitter:description"
+    content="I mixed old hardware with new materials to make a full-sized retro cabinet that fits in a small apartment.">
+  <meta name="twitter:creator" content="@lean8086">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image"
+    content="https://www.lean8086.com/articles/how-i-built-an-arcade-machine-from-scratch/image.png">
+  <meta property="og:title" content="How I built an arcade machine from scratch">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.lean8086.com/articles/how-i-built-an-arcade-machine-from-scratch/">
+  <meta property="og:description"
+    content="I mixed old hardware with new materials to make a full-sized retro cabinet that fits in a small apartment.">
+  <meta property="og:site_name" content="Leandro Linares">
+  <meta property="og:image"
+    content="https://www.lean8086.com/articles/how-i-built-an-arcade-machine-from-scratch/image.png">
+</head>
+
+<body>
+  <header class="header" role="banner">
+    <a class="header__logo pixelated" href="/">lean8086</a>
+    <nav class="header__nav" itemscope itemtype="https://schema.org/SiteNavigationElement">
+      <ul>
+        <li><a href="/#labs">Labs</a></li>
+        <li><a href="/#pixelart">Pixel art</a></li>
+        <li><a href="/#blog">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <header class="entry-head">
+    <img class="entry__image pixelated" src="/assets/arcade-icon.png" itemprop="image" alt="Arcade icon">
+    <h1 class="entry-head__headline" itemprop="headline">How I built an arcade machine from scratch</h1>
+    <p class="entry-head__details"> by Leandro Linares. <time itemprop="dateCreated" datetime="2018-12-12">December 12, 2018</time>.</p>
+    <p class="entry-head__description" itemprop="description">I mixed old hardware with new materials to make a full-sized retro cabinet that fits in a small apartment.</p>
+  </header>
+
+  <!-- <img class="entry-hero" alt="Finished arcade machine" src="/articles/how-i-built-an-arcade-machine-from-scratch/hero.jpg"> -->
+  
+  <section class="entry-body" itemprop="articleBody">
+    <p>Everything started back in 2013 when I luckily won a starter kit from <a href="https://makezine.com/">Make:
+        Magazine</a> with a Raspberry Pi Model 1.</p>
+    <img loading="lazy" alt="Raspberry Pi kit" src="/articles/how-i-built-an-arcade-machine-from-scratch/01-raspberry-pi-kit.jpg">
+    <p>Since then, I was looking for something interesting to build, but it was more difficult that I thought.</p>
+    <p>I’ve almost gave up when I found <a href="https://retropie.org.uk/">RetroPie</a>.</p>
+    <h2 id="retropie">RetroPie</h2>
+    <p>This <a href="https://retropie.org.uk/">project</a> allows you to turn your Raspberry Pi into a retro-gaming
+      machine. So I made a quick test with some ROMs to check how it worked. It was effortless to have a working retro
+      console with almost zero configuration.</p>
+    <img loading="lazy" alt="Super Mario Bros. 3 running on RetroPie"
+        src="/articles/how-i-built-an-arcade-machine-from-scratch/02-super-mario-bros-raspi.jpg">
+    <p>It took me <a href="/articles/a-complete-guide-to-setting-up-retropie/">many attempts to setup RetroPie to make
+        the most of it</a>, but everything was worth in the end.</p>
+    <h2 id="goals">Goals</h2>
+    <p>When I had RetroPie running, I realized that I could fit everything inside an arcade cabinet.</p>
+    <p>I started looking everywhere for cabinets to restore. I only found costly wooden boxes in very bad conditions.
+    </p>
+    <p>Most of them were:</p>
+    <ul>
+      <li>Not worthwhile for restore.</li>
+      <li>Heavy/Hard to move.</li>
+      <li>Too big for an apartment.</li>
+      <li>Expensive.</li>
+    </ul>
+    <p>So I realized that the only way to get the results I wanted would be by building my own arcade cabinet from
+      scratch.</p>
+    <p>In that terms, I was looking for something that was:</p>
+    <ul>
+      <li>Easy to build and move.</li>
+      <li>Affordable.</li>
+      <li>Sized for an apartment.</li>
+      <li>Old-school/Nostalgic shape.</li>
+    </ul>
+    <h2 id="the-plans">The plans</h2>
+    <p>Right after I defined what would be an ideal arcade machine I looked for some information on how to build one.
+    </p>
+    <p>I found <a href="http://koenigs.dk/mame/eng/index.htm">Project MAME</a> that provides open source plans to
+      build an arcade cabinet from scratch.</p>
+    <img loading="lazy" alt="Original cabinet from Project MAME"
+        src="/articles/how-i-built-an-arcade-machine-from-scratch/03-project-mame.jpg">
+    <p>It was planned to hold a PC with keyboard and everything. But it was also a good adaptation from old-school
+      cabinets. The most important feature is that it was made to fit a flat screen inside.</p>
+    <p>One of the cabinets that came up from Project MAME was this beautiful <a
+        href="http://zonaarcade.forumcommunity.net/?t=48865036">Paper Mario themed arcade</a>.</p>
+    <img loading="lazy" alt="Paper Mario arcade cabinet"
+        src="/articles/how-i-built-an-arcade-machine-from-scratch/04-paper-mario-cabinet.jpg">
+    <p>This maker <a href="http://img543.imageshack.us/img543/5624/repordiviciacosplanos.gif">improved the original
+        plans</a> to use only MAME controllers and to have a larger marquee. He also made available the <a
+        href="https://zonaarcade.forumcommunity.net/?t=45015457">side art</a> and a SketchUp model.</p>
+    <img loading="lazy" alt="3D model of arcade cabinet"
+        src="/articles/how-i-built-an-arcade-machine-from-scratch/05-3D-model.jpg">
+    <p>I only had to modify the width of the original plans by 2cm so the cabinet could fit an old 26” monitor that
+      I’ve already had. The rest was followed as specified.</p>
+    <h2 id="a-model-in-cardboard">A model in cardboard</h2>
+    <p>The first approach to test the size and position of the elements was making a 1:10 model in cardboard.</p>
+    <p>That way I was sure that all made sense and I was able to check if something needed to be adjusted or
+      redefined. Especially after the width modification that I had to do.</p>
+    <img loading="lazy" alt="Model in cardboard" src="/articles/how-i-built-an-arcade-machine-from-scratch/06-cardboard.jpg">
+    <p>The model is 17cm height and it was very helpful on defining the size and distribution of the speakers.</p>
+    <h2 id="materials">Materials</h2>
+    <p>Before I spent money on materials, there was a very important decision to make about what kind of wood I should
+      use: <strong>MDF, plywood or particleboard</strong>.</p>
+    <p>I chose MDF, but if I would know at that time how hard is to clean up the thin powder result of sanding, I
+      would chose another material. But in the other hand, it was a very versatile wood: easy to cut, drill and shape.
+    </p>
+    <img loading="lazy" alt="MDF boards" src="/articles/how-i-built-an-arcade-machine-from-scratch/07-MDF-boards.jpg">
+    <p>The materials I used trough the entire project were:</p>
+    <h3 id="mdf-boards-15mm-">MDF boards (15mm):</h3>
+    <ul>
+      <li><strong>(2) 169cm x 60cm:</strong> Both laterals</li>
+      <li><strong>28cm x 62cm:</strong> Marquee top panel</li>
+      <li><strong>(2) 16cm x 62cm:</strong> Marquee bottom panel and speakers panel</li>
+      <li><strong>(2) 25cm x 62cm:</strong> Monitor support and controllers top panel</li>
+      <li><strong>12cm x 62cm:</strong> Controllers front panel</li>
+      <li><strong>75cm x 62cm:</strong> Front panel</li>
+      <li><strong>60cm x 62cm:</strong> Back panel</li>
+      <li><strong>45cm x 62cm</strong> Bottom cover</li>
+      <li><strong>94cm x 62cm x 5mm thickness</strong> Back door</li>
+    </ul>
+    <h3 id="crystal-clear-acrylic-sheets-">Crystal clear acrylic sheets:</h3>
+    <ul>
+      <li><strong>55cm x 62cm x 2.4mm thickness:</strong> Monitor cover</li>
+      <li><strong>25cm x 62cm x 2.4mm thickness:</strong> Controllers art cover</li>
+      <li><strong>(2) 13cm x 62cm x 4mm thickness:</strong> Marquee back and front</li>
+    </ul>
+    <h3 id="others-">Others:</h3>
+    <ul>
+      <li><a href="#strips">4cm x 2cm pine strips</a></li>
+      <li><a href="#sandpaper">80- and 360-grit sandpaper</a></li>
+      <li>#6 x 1¼” golden screws for the strips</li>
+      <li>#6 x 1½” black screws for the MDF boards</li>
+    </ul>
+    <h2 id="first-cuts">First cuts</h2>
+    <p>After bringing home all the MDF boards, I started drawing the shape in both laterals based on the plans. I’ve
+      also used a pair of compasses to draw the curves.</p>
+    <img loading="lazy" alt="Drawings on the board"
+        src="/articles/how-i-built-an-arcade-machine-from-scratch/08-MDF-drawings.jpg">
+    <p>I joined both laterals with paper tape to make only one cut. Then, using a jigsaw, I went from bottom to top. I
+      always recommend to move with caution to stick to the line as much as possible.</p>
+    <img loading="lazy" alt="Jigsaw" src="/articles/how-i-built-an-arcade-machine-from-scratch/67-jigsaw.jpg">
+    <img loading="lazy" alt="Boards after cut" src="/articles/how-i-built-an-arcade-machine-from-scratch/09-first-cut.jpg">
+    <p>When I finished cutting, I learnt some things:</p>
+    <ul>
+      <li><strong>MDF detaches a thin powder:</strong> It doesn’t matter how much protection I wore (gloves, mask,
+        safety glasses). I’ve had to deal with powder in my hair and clothes for days. It was a nightmare to clean up
+        after cut or sand. I even broke a vacuum cleaner trying to clean it up.</li>
+      <li><strong>The hot blade will burn the wood:</strong> Unless you let the jigsaw cool down from time to time.
+        Don’t try to make a cut in one single run. <img loading="lazy" alt="Burned wood"
+          src="/articles/how-i-built-an-arcade-machine-from-scratch/10-burned-wood.jpg"></li>
+      <li><strong>While making a cut on a thick wood, the blade curves:</strong> In my case it would have been better
+        not to cut both boards together. That’s because the wider is what you’re cutting, the more the blade tends to
+        curve. I’ve had to fix the uneven edges by sanding.</li>
+    </ul>
+    <h2 id="sandpaper">Sandpaper</h2>
+    <p>I used 80- and 360-grit sandpaper. The first one is a coarse grit for smoothing surfaces and removing
+      imperfections. The second one is a fine grit for finishing surfaces smoothly.</p>
+    <img loading="lazy" alt="White sandpaper" src="/articles/how-i-built-an-arcade-machine-from-scratch/11-sandpapers.jpg">
+    <p>After sanding all the edges I achieved great results giving a rounded shape to the corners and fixing some
+      mistakes I made during the cut.</p>
+    <img loading="lazy" alt="Both boards sanded" src="/articles/how-i-built-an-arcade-machine-from-scratch/12-sanded-boards.jpg">
+    </p>
+    <img loading="lazy" alt="One of the boards sanded"
+        src="/articles/how-i-built-an-arcade-machine-from-scratch/13-sanded-board-detail.jpg">
+    <p>I later used the 360-grit sandpaper to smooth the surfaces between each paint coat.</p>
+    <h2 id="strips">Strips</h2>
+    <p>I decided to join all the pieces with strips, glued and fixed with screws. That way I had millimetric precision
+      to position the MDF boards.</p>
+    <p>I cutted a bunch of 4cm x 2cm pine strips to the size of boards they had to join.</p>
+    <img loading="lazy" alt="4cm x 2cm strips" src="/articles/how-i-built-an-arcade-machine-from-scratch/14-battens.jpg">
+    <p>It’s not necessary to use glue when you’re already using screws, but I decided to use it anyway to hold tight
+      the entire structure. I’ve also made a bigger hole for the head of the screws to give the strips a better
+      finish.</p>
+    <img loading="lazy" alt="Holes in strips" src="/articles/how-i-built-an-arcade-machine-from-scratch/15-battens-detail.jpg">
+    </p>
+    <p>I attached all the strips to both lateral boards using #6 x 1¼” golden screws and carpenter’s wood glue.</p>
+    <img loading="lazy" alt="Attached strips - both laterals"
+        src="/articles/how-i-built-an-arcade-machine-from-scratch/19-attached-battens-laterals.jpg">
+    <img loading="lazy" alt="Attached strips - top"
+        src="/articles/how-i-built-an-arcade-machine-from-scratch/16-attached-battens-top.jpg">
+    <img loading="lazy" alt="Attached strips - middle"
+        src="/articles/how-i-built-an-arcade-machine-from-scratch/17-attached-battens-middle.jpg">
+    <img loading="lazy" alt="Attached strips - bottom"
+        src="/articles/how-i-built-an-arcade-machine-from-scratch/18-attached-battens-bottom.jpg">
+    <h2 id="first-assembly">First assembly</h2>
+    <p>I put all the pieces together to see the final shape and size. My first impression was to see a huge fridge
+      inside my apartment, but it was improving as the project progressed.</p>
+    <img loading="lazy" alt="First assembly" src="/articles/how-i-built-an-arcade-machine-from-scratch/20-first-assembly.jpg">
+    <img loading="lazy" alt="First assembly top details"
+        src="/articles/how-i-built-an-arcade-machine-from-scratch/21-first-assembly-top-detail.jpg">
+    <p>I started by joining the front and back panels with #6 x 1½” black screws but using no glue until I made the
+      final touches.</p>
+    <img loading="lazy" alt="First assembly middle details"
+        src="/articles/how-i-built-an-arcade-machine-from-scratch/22-first-assembly-middle-detail.jpg">
+    <p>I’ve also installed the bottom cover and attached two wheels to handle the cabinet around. I made a diagonal
+      cut in both laterals to let the wheels lean on the floor when the cabinet is inclined.</p>
+    <img loading="lazy" alt="A wheel installed" src="/articles/how-i-built-an-arcade-machine-from-scratch/23-wheel.jpg">
+    <img loading="lazy" alt="Both wheels installed" src="/articles/how-i-built-an-arcade-machine-from-scratch/24-both-wheels.jpg">
+    </p>
+    <h2 id="monitor">Monitor</h2>
+    <p>I had a good old Samsung T260n 26” LCD monitor that was perfect for this cabinet. In my opinion an ideal size
+      would be about 23”, but I wouldn’t spend money in a new monitor when I had this one at home.</p>
+    <p>There was one constraint: this monitor has no holes in the back to attach to a wall mount. But I luckily found
+      an unofficial mount that replaces the original base.</p>
+    <img loading="lazy" alt="Mount" src="/articles/how-i-built-an-arcade-machine-from-scratch/25-mount.jpg">
+    <p>I installed the mount over a “T” board of 25cm x 62cm that I improvised to support all the weight it could
+      handle.</p>
+    <img loading="lazy" alt="T support" src="/articles/how-i-built-an-arcade-machine-from-scratch/26-T-support.jpg">
+    <p>To make the maths to align the monitor, I made a paper doodle with the size of the screen and installed inside
+      the cabinet.</p>
+    <img loading="lazy" alt="Paper monitor" src="/articles/how-i-built-an-arcade-machine-from-scratch/27-paper-monitor.jpg">
+    <img loading="lazy" alt="Real monitor" src="/articles/how-i-built-an-arcade-machine-from-scratch/28-real-monitor.jpg">
+    <img loading="lazy" alt="Installed mount, fixed inside structure"
+        src="/articles/how-i-built-an-arcade-machine-from-scratch/29-installed-mount.jpg">
+    <p>Using some strips leftovers, I cut two back supports for the monitor and two triangles to hold the <a
+        href="#acrylics">acrylic cover</a>.</p>
+    <img loading="lazy" alt="Monitor batten supports"
+        src="/articles/how-i-built-an-arcade-machine-from-scratch/30-monitor-supports.jpg">
+    <img loading="lazy" alt="Acrylic batten supports"
+        src="/articles/how-i-built-an-arcade-machine-from-scratch/31-acrylic-supports.jpg">
+    <img loading="lazy" alt="All the batten supports for the monitor area"
+        src="/articles/how-i-built-an-arcade-machine-from-scratch/32-monitor-area-supports.jpg">
+    <h2 id="controllers">Controllers</h2>
+    <p>It’s plenty of controllers available for DIY projects out there. I bought a MAME kit which includes:</p>
+    <ul>
+      <li>2 Sanwa-like joysticks.</li>
+      <li>16 HAPP push buttons: 7 in red, 7 in blue and <a href="#final-form">2 in white to play pinball</a>.</li>
+      <li>1P/2P buttons.</li>
+      <li>USB board with cables for each button and both joysticks.</li>
+    </ul>
+    <p>I made a little research about button positions in arcade cabinets. I found this <a
+        href="https://www.slagcoin.com/joystick/layout.html">complete article</a> about the most common panel layouts.
+    </p>
+    <p>The author of the article has also made his own distributions based on an average of all the controllers.</p>
+    <img loading="lazy" alt="Joystick layout" src="/articles/how-i-built-an-arcade-machine-from-scratch/68-joystick-layout.png">
+    </p>
+    <p>I used a mix between some Sega layouts and tested on a cardboard box.</p>
+    <img loading="lazy" alt="Controllers mounted in cardboard"
+        src="/articles/how-i-built-an-arcade-machine-from-scratch/33-controllers-in-cardboard.jpg">
+    <p>I drew the layout for both players on the MDF board and drilled.</p>
+    <img loading="lazy" alt="Controllers draw in wood"
+        src="/articles/how-i-built-an-arcade-machine-from-scratch/34-controllers-draw.jpg">
+    <img loading="lazy" alt="Controllers holes in wood - close"
+        src="/articles/how-i-built-an-arcade-machine-from-scratch/35-controllers-holes-detail.jpg">
+    <img loading="lazy" alt="Controllers holes in wood"
+        src="/articles/how-i-built-an-arcade-machine-from-scratch/36-controllers-holes.jpg">
+    <p>Then I installed the MAME kit including both joysticks, 14 push buttons, 1P/2P buttons and the USB board.</p>
+    <img loading="lazy" alt="Installing controllers"
+        src="/articles/how-i-built-an-arcade-machine-from-scratch/37-installing-controllers.jpg">
+    <img loading="lazy" alt="Controllers installed in the cabinet"
+        src="/articles/how-i-built-an-arcade-machine-from-scratch/38-controllers-installed.jpg">
+    <h2 id="speakers">Speakers</h2>
+    <p>I had a Genius 2.1 channel speaker system with wooden cabinet that I bought back in 2007 with my first job. It
+      has an exceptional deep bass.</p>
+    <p>The cardboard model was very useful to make a first check on speakers size and distribution. Then I used some
+      paper stencils to make adjustments in the actual cabinet to find the perfect spot for speakers holes and grills.
+    </p>
+    <img loading="lazy" alt="Speaker holes" src="/articles/how-i-built-an-arcade-machine-from-scratch/40-speaker-holes.jpg">
+    <p>Besides the speaker system has only one subwoofer, I decided to make two holes to hold a 140mm computer case
+      fan.</p>
+    <img loading="lazy" alt="Bottom stencils" src="/articles/how-i-built-an-arcade-machine-from-scratch/41-bottom-stencils.jpg">
+    </p>
+    <img loading="lazy" alt="Attached cooler" src="/articles/how-i-built-an-arcade-machine-from-scratch/42-attached-cooler.jpg">
+    </p>
+    <img loading="lazy" alt="Speakers installed"
+        src="/articles/how-i-built-an-arcade-machine-from-scratch/43-speakers-installed.jpg">
+    <p>I found generic speakers grilles at <a href="https://www.aliexpress.com">AliExpress.com</a>:</p>
+    <ul>
+      <li>(2) 9cm black mesh (12cm including frame)</li>
+      <li>(2) 15cm black mesh (18cm including frame)</li>
+    </ul>
+    <h2 id="acrylics">Acrylics</h2>
+    <p>I bought some crystal clear acrylic boards to cover the monitor, controllers and marquee.</p>
+    <h3 id="monitor-cover">Monitor cover</h3>
+    <p>After sanding some edges of the acrylic board of 55cm x 62cm x 2.4mm, I attached it to the triangle strips and
+      put some screws in the back of the speakers board.</p>
+    <img loading="lazy" alt="Attachment to triangle strips"
+        src="/articles/how-i-built-an-arcade-machine-from-scratch/44-triangle-battens-attach.jpg">
+    <img loading="lazy" alt="Attachment to speakers board"
+        src="/articles/how-i-built-an-arcade-machine-from-scratch/45-speakers-board-attach.jpg">
+    <h3 id="marquee">Marquee</h3>
+    <p>I used 2 acrylic sheets of 13cm x 62cm x 4mm to hold a transparent print in between. I attached both sheets
+      with 4 stainless steel clamps.</p>
+    <img loading="lazy" alt="Marquee" src="/articles/how-i-built-an-arcade-machine-from-scratch/46-marquee.jpg">
+    <h3 id="controllers-cover">Controllers cover</h3>
+    <p>I had to drill 18 holes in the acrylic sheet of 25cm x 62cm x 2.4mm for the controllers. So I decided to got
+      one extra sheet to make some tests.</p>
+    <p>It was the perfect choice because the first experience drilling acrylic was awful. The sheet melted down over
+      the heat of the drill bit and gave uneven results.</p>
+    <img loading="lazy" alt="Melted holes" src="/articles/how-i-built-an-arcade-machine-from-scratch/47-melted-holes.jpg">
+    <p>Then I realized that using water keeps the drill bit and the acrylic sheet cold.</p>
+    <img loading="lazy" alt="Drilling with water"
+        src="/articles/how-i-built-an-arcade-machine-from-scratch/48-drilling-with-water.jpg">
+    <p>It took nearly 10 minutes to make each hole, but with a lot of patience I finished the job.</p>
+    <img loading="lazy" alt="Final acrylic holes"
+        src="/articles/how-i-built-an-arcade-machine-from-scratch/49-final-acrylic-holes.jpg">
+    <h2 id="painting">Painting</h2>
+    <img loading="lazy" alt="Paint kit" src="/articles/how-i-built-an-arcade-machine-from-scratch/50-paint-kit.jpg">
+    <h3 id="wood-putty">Wood putty</h3>
+    <p>I covered all the screws with wood putty and sanded until I got a smooth surface.</p>
+    <img loading="lazy" alt="Putty" src="/articles/how-i-built-an-arcade-machine-from-scratch/51-putty.jpg">
+    <h3 id="primer">Primer</h3>
+    <p>I applied white primer paint for MDF to the entire cabinet. That seals the pores of the wood and set a base
+      color to apply another painting coats.</p>
+    <img loading="lazy" alt="First coat of base paint"
+        src="/articles/how-i-built-an-arcade-machine-from-scratch/52-first-paint.jpg">
+    <img loading="lazy" alt="Base paint" src="/articles/how-i-built-an-arcade-machine-from-scratch/53-base-paint.jpg">
+    <h3 id="black-and-white">Black and white</h3>
+    <p>I masked all except both laterals and one of the faces of the controllers board.</p>
+    <img loading="lazy" alt="Mask in black" src="/articles/how-i-built-an-arcade-machine-from-scratch/54-mask-in-black.jpg">
+    <p>Then applied Krylon Colormaster Gloss White where all the printed art was supposed to be placed, to highlight
+      the colors.</p>
+    <img loading="lazy" alt="White spray paint"
+        src="/articles/how-i-built-an-arcade-machine-from-scratch/55-white-spray-paint.jpg">
+    <img loading="lazy" alt="White controllers"
+        src="/articles/how-i-built-an-arcade-machine-from-scratch/56-white-controllers.jpg">
+    <p>I used Krylon Colormaster Flat Black for the rest of the cabinet:</p>
+    <img loading="lazy" alt="Black on top" src="/articles/how-i-built-an-arcade-machine-from-scratch/57-black-on-top.jpg">
+    <img loading="lazy" alt="Black on middle" src="/articles/how-i-built-an-arcade-machine-from-scratch/58-black-on-middle.jpg">
+    </p>
+    <img loading="lazy" alt="Black and white" src="/articles/how-i-built-an-arcade-machine-from-scratch/59-black-and-white.jpg">
+    </p>
+    <h2 id="self-adhesive-vinyls">Self adhesive vinyls</h2>
+    <p>The author of the Paper Mario arcade cabinet made available the <a
+        href="https://zonaarcade.forumcommunity.net/?t=45015457">side art</a>. I printed it in vinyl and installed in
+      all the white sides.</p>
+    <img loading="lazy" alt="Vinyl in controllers"
+        src="/articles/how-i-built-an-arcade-machine-from-scratch/60-vinyl-controllers.jpg">
+    <img loading="lazy" alt="Vinyl in marquee" src="/articles/how-i-built-an-arcade-machine-from-scratch/61-vinyl-marquee.jpg">
+    </p>
+    <img loading="lazy" alt="Vinyl in left side" src="/articles/how-i-built-an-arcade-machine-from-scratch/62-vinyl-left.jpg">
+    <img loading="lazy" alt="Vinyl in right side" src="/articles/how-i-built-an-arcade-machine-from-scratch/63-vinyl-right.jpg">
+    </p>
+    <img loading="lazy" alt="Vinyl installed in right side"
+        src="/articles/how-i-built-an-arcade-machine-from-scratch/64-vinyl-right-installed.jpg">
+    <img loading="lazy" alt="Vinyl installed in left side"
+        src="/articles/how-i-built-an-arcade-machine-from-scratch/65-vinyl-left-installed.jpg">
+    <h2 id="finale">Finale</h2>
+    <p>The last piece in this 2 years long puzzle were the white buttons in both sides to play pinball games. Those
+      HAPP buttons are connected as an extension of the left arrow of the 1P joystick and one of the buttons of the
+      same player. That’s because every retro pinball game I installed uses that controllers as a standard.</p>
+    <img loading="lazy" alt="Vinyl and pinball buttons installed in its final form"
+        src="/articles/how-i-built-an-arcade-machine-from-scratch/00-final.jpg">
+    <img loading="lazy" alt="Vinyl installed - front view"
+        src="/articles/how-i-built-an-arcade-machine-from-scratch/66-vinyl-front.jpg">
+  </section>
+  
+  <footer class="footer" role="contentinfo">Leandro Linares</footer>
+</body>
+</html>
