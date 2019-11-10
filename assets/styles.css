@@ -24,6 +24,8 @@
 
 * {
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 ::selection {
@@ -43,6 +45,7 @@ body {
 
 h1, h2, h3 {
   font-family: 'Arbutus Slab', serif;
+  letter-spacing: -0.01em;
 }
 
 a {
