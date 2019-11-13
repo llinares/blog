@@ -272,6 +272,7 @@ a.hero__contact {
 
 .entry-head {
   padding: var(--gutter-m);
+  word-break: break-word;
 }
 
 .entry-head__headline {
