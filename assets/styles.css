@@ -317,6 +317,11 @@ a.hero__contact {
   border-radius: var(--image-radius);
 }
 
+.entry-body__video {
+  width: 100%;
+  height: 24rem;
+}
+
 .entry-body h2,
 .entry-body h3 {
   margin-top: var(--gutter-l);
