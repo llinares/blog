@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en" itemscope itemtype="https://schema.org/Article">
+<head>
+  <meta charset="utf-8">
+  <title>Making a 6-faces cube with one HTML element - Leandro Linares</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="No javascript was harmed in the making of this article.">
+  <link rel="shortcut icon" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/icon-192.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Leandro Linares">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arbutus+Slab|Roboto&display=swap">
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+
+<body>
+  <header class="header" role="banner">
+    <a class="header__logo pixelated" href="/">lean8086</a>
+    <nav class="header__nav" itemscope itemtype="https://schema.org/SiteNavigationElement">
+      <ul>
+        <li><a href="/#labs">Labs</a></li>
+        <li><a href="/#pixelart">Pixel art</a></li>
+        <li><a href="/#blog">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <header class="entry-head">
+    <h1 class="entry-head__headline" itemprop="headline">Making a 6-faces cube with one HTML element</h1>
+    <p class="entry-head__details">by <span itemprop="author">Leandro Linares</span> — <time itemprop="dateCreated" datetime="2019-XX-XX">Xxxxxx XX, 20XX</time></p>
+    <p class="entry-head__description" itemprop="description">No javascript was harmed in the making of this article.</p>
+  </header>
+    
+  <section class="entry-body" itemprop="articleBody">
+    <p>To help myself learning how CSS works in depth, I've always tried different ways to use it for other purposes than it was created for.</p>
+
+    <p>People make amazing things pushing CSS beyond its limits, like single-element drawings in <a href="https://a.singlediv.com/" target="_blank" rel="noopener">A Single Div</a> or oil paintings like <a href="https://diana-adrianne.com/purecss-francine/" target="_blank" rel="noopener">Pure CSS Francine</a>.</p>
+
+    <img src="/articles/making-a-6-faces-cube-with-one-html-element/" alt="Pure CSS Francine: an old paint of a lady made entirely in CSS"/>
+
+    <p>I made some experiments in which I have multiple objects generated from one single HTML element but this time I wanted to try if I could render a 3D cube out of one DOM element.</p>
+
+    <h2 id="">Definition of a box</h2>
+
+    <p>If I look at any real-life box, I cannot see more than 3 faces at the same time.</p>
+
+    <img src="/articles/making-a-6-faces-cube-with-one-html-element/openai.gif" alt="Robot hand swapping a cube"/>
+
+    <p>Not only that. <strong>There are some situations depending on the perspective of the observer in which only 2 faces can be seen.</strong> There are even cases in which the viewer can only see one face if they're positioned directly at the front of the box.</p>
+
+    <img src="/articles/making-a-6-faces-cube-with-one-html-element/" alt="3 cubes. The first one showing 3 faces, second one with 2, and a last one with 1"/>
+
+    <p><strong>Another important note is that opposite sides of a box will never coexist.</strong></p>
+
+    <h2 id="">Building a box</h2>
+    
+    <p>By having up to 3 objects to render I can take advantage of the CSS pseudo-elements plus the original element to make one face per axis and mirror them when the perspective from the observer changes.</p>
+
+    <p>For this example I use an element that will serve as the container of the cube faces as well as the Y-axis face.</p>
+
+    <pre><code>&lt;b&gt;&lt;/b&gt;</code></pre>
+
+    <p>I use an element with a short name like <code>b</code> and keep it clean without class names or attributes because <strong>I want it to have the smallest footprint as possible</strong>. That way if I make a composition with thousands of elements I can concatenate and print them as a whole string as fast and small as possible.</p>
+
+    <h2 id="">Scene</h2>
+
+    <p>In order to manipulate the composition like changes in the <strong>rotation and scaling</strong> I define a base element where to inject the cube. This element will be useful to swap all the cubes faces when the perspective changes in a composition.</p>
+
+    <pre><code>&lt;section class="scene"&gt;
+  &lt;b&gt;&lt;/b&gt;
+&lt;/section&gt;</code></pre>
+
+    <p>To make it easier to work with, I setup the entire scene from the beginning. I chose an isometric projection to work with the 3 sides at the same time.</p>
+
+    <p>In an <a href="https://en.wikipedia.org/wiki/Isometric_projection" target="_blank" rel="noopener">isometric projection</a> the 3 coordinate axes appear equally foreshortened.</p>
+
+    <img src="/articles/making-a-6-faces-cube-with-one-html-element/" alt="Example of an isometric cube versus a non-isometric cube"/>
+
+    <pre><code>transform-style: preserve-3d;
+transform: rotateX(70deg) rotateZ(45deg);</code></pre>
+
+    <h2 id="">Creating the faces</h2>
+
+    <p>Now I can position the first face in the Y-axis to start giving form to the cube container.</p>
+
+    <p>As I want to have an isometric view I need to show the top face of the cube. I position the top face as if the box is resting in the top of the scene element.</p>
+
+    <pre><code>(Css)</code></pre>
+
+    <p>(Pen)</p>
+
+    <p>Now by having the scene container and the first face defined, I can position the other faces relative to it.</p>
+
+    <p><strong>Face in the X-axis:</strong></p>
+    <pre><code>(Css)</code></pre>
+
+    <p><strong>Face in the Z-axis:</strong></p>
+    <pre><code>(Css)</code></pre>
+
+    <p>(Pen)</p>
+
+    <h2>Swapping sides</h2>
+
+    <p>The isometric example look great so far, but if I rotate or change the point of view, I still can see that the back part of the cube is still missing.</p>
+
+    <img src="/articles/making-a-6-faces-cube-with-one-html-element/" alt="Examples of a cube that swaps its faces on every axis"/>
+
+    <p>I add a simple input range to modify the angle of the axes.</p>
+
+    <p>(Pen rotable starting with the back part)</p>
+
+    <p><strong>By definition two opposite faces can never coexist.</strong> So I need to place the faces in the opposite side whenever it's needed.</p>
+
+    <p>For that I will use the angle from the input range and determine where the observer is placed respect to the scene. To make it simple I limit the search to always 90 degrees and then move one step ahead to check if other conditions apply until I got the viewer position.</p>
+
+    <pre><code>(Code)</code></pre>
+
+    <p>(Pen)</p>
+
+    In order to swap the faces of any amount of boxes that I have inside the container, I use (and update) the attributes <code>data-face-x</code>, <code>data-face-y</code> and <code>data-face-z</code>. Then I can write all the possible combinations regarding the point of view.
+
+    <pre><code>(Variante css alguna)</code></pre>
+
+    <h2>Optimizations</h2>
+
+    Imagine having thousands of these CSS cubes at the same time to make a composition. It's gonna set the GPU on fire. But I can make some improvements to make it easier for the browser.
+
+    <h2>Hidden elements</h2>
+
+    As I explained in the beginning of this article there are cases in which some faces can be hidden. In order to make this performant I can temporary destroy the pseudo-elements using `content: none;`.
+
+    (Js,css)
+
+    <h2>Backface visibility</h2>
+
+    As I'm rendering a solid cube (because I can only show the nearest faces to the viewer), I can get rid of the back faces of the elements and pseudo-elements. In order to tell the browser not to render the backfaces I use `backface-visibility: hidden;`
+
+    (Pen rotation deuna sola cara pero cuando se da cuelta no renderea)
+
+    <h2>Composition</h2>
+
+    The next step to keep stressing this experiment is to put many of these voxels together. The easiest way to do it is by adding more elements on the Y-axis first.
+
+    To create a map of every cube position I use the same approach as the `imageData` property of the HTML canvas. It's an array containing the data of the canvas element in the RGB order, with integer values between 0 and 255.
+
+    In this case I cannot implement the alpha channel (as in the canvas imageData) because the transparency cannot live together with swapping faces.
+
+    To make a composition and in order to fill every empty space between boxes I introduce an "empty" element. In case of not needing a box I can avoid to have the whole definition of a 6-faces elements and pseudo-elements and define the basics to only fill the void.
+
+    ```
+    <b></b>
+    <em></em>
+    <em></em>
+    <b></b>
+    ```
+
+
+
+    To print every voxel or empty element into the container I write a simple iteration based on the size of the map.
+
+    (Code code)
+
+    By defining the container as `display: flex;` and giving it a size, I can arrange the elements inside with the property `flex-wrap`.
+
+    (Codepen)
+
+    <h2>Climbing the Y-axis</h2>
+
+    By repeating all the previous steps but modifying the property `translateZ` I can make entire figures.
+
+    (Gallo)
+
+    I've put all this together with browser modules and using [HTM]() to make this brief and lightweight app to edit CSS voxel compositions.
+
+    (Screenshot con link)
+    Visit voxeland.
+
+    Its code is open and every feedback is always welcome.
+
+    Cheers.
+  </section>
+
+  <footer class="footer" role="contentinfo">Leandro Linares</footer>
+</body>
+</html>

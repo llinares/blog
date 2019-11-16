@@ -9,6 +9,7 @@
   --font-type-sans: 'Roboto', sans-serif;
   --font-type-serif: 'Arbutus Slab', serif;
 
+  --font-size-xxl: 6rem;
   --font-size-xl: 3rem;
   --font-size-l: 2rem;
   --font-size-m: 1.5rem;
@@ -98,7 +99,6 @@ a:hover {
 
 .header__nav a {
   color: var(--color-text);
-  font-size: var(--font-size-s);
 }
 
 /* HOMEPAGE */
@@ -180,6 +180,10 @@ a.hero__contact {
   border-radius: var(--image-radius);
 }
 
+.card__image--border {
+  border: 1px solid #eee;
+}
+
 .card__title {
   color: var(--color-text);
   font-size: var(--font-size-m);
@@ -249,6 +253,11 @@ a.hero__contact {
 
 .blog-entry__title a {
   color: var(--color-text);
+}
+
+.blog-entry__image {
+  transform: scale(1.5);
+  transform-origin: left;
 }
 
 /* FOOTER */
@@ -332,12 +341,8 @@ a.hero__contact {
 }
 
 .entry-body > p:first-of-type::first-letter {
-  color: var(--color-background);
-  background-color: var(--color-text);
   font-family: var(--font-type-serif);
-  padding: var(--gutter-m) var(--gutter-s);
-  font-size: var(--font-size-xl);
-  border-radius: var(--image-radius);
+  font-size: var(--font-size-xxl);
   margin: 0 var(--font-size-xs) var(--font-size-xs) 0;
   display: block;
   float: left;
@@ -386,7 +391,7 @@ a.hero__contact {
   }
   
   .home-section__title {
-    font-size: 6rem;
+    font-size: var(--font-size-xxl);
   }
 
   .home-section__description {
@@ -398,11 +403,12 @@ a.hero__contact {
   }
 
   .entry-head {
-    padding: var(--gutter-l);
+    padding: var(--gutter-m);
+    padding-top: var(--gutter-l);
   }
 
   .entry-head__headline {
-    font-size: calc(var(--font-size-xl) * 2);
+    font-size: var(--font-size-xxl);
   }
 
   .entry-body {
