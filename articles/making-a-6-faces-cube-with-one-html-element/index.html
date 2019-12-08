@@ -26,6 +26,7 @@
   </header>
 
   <header class="entry-head">
+    <img class="entry-head__image pixelated" src="/assets/cube-icon.png" itemprop="image" alt="Cube icon">
     <h1 class="entry-head__headline" itemprop="headline">Making a 6-faces cube with one HTML element</h1>
     <p class="entry-head__details">by <span itemprop="author">Leandro Linares</span> — <time itemprop="dateCreated" datetime="2019-XX-XX">Xxxxxx XX, 20XX</time></p>
     <p class="entry-head__description" itemprop="description">No javascript was harmed in the making of this article.</p>
@@ -36,7 +37,7 @@
 
     <p>People make amazing things pushing CSS beyond its limits, like single-element drawings in <a href="https://a.singlediv.com/" target="_blank" rel="noopener">A Single Div</a> or oil paintings like <a href="https://diana-adrianne.com/purecss-francine/" target="_blank" rel="noopener">Pure CSS Francine</a>.</p>
 
-    <img src="/articles/making-a-6-faces-cube-with-one-html-element/" alt="Pure CSS Francine: an old paint of a lady made entirely in CSS"/>
+    <img src="/articles/making-a-6-faces-cube-with-one-html-element/pure-css-francine.jpg" alt="Pure CSS Francine: an old paint of a lady made entirely in CSS">
 
     <p>I made some experiments in which I have multiple objects generated from one single HTML element but this time I wanted to try if I could render a 3D cube out of one DOM element.</p>
 
@@ -44,11 +45,11 @@
 
     <p>If I look at any real-life box, I cannot see more than 3 faces at the same time.</p>
 
-    <img src="/articles/making-a-6-faces-cube-with-one-html-element/openai.gif" alt="Robot hand swapping a cube"/>
+    <img src="/articles/making-a-6-faces-cube-with-one-html-element/openai.gif" alt="Robot hand swapping a cube">
 
     <p>Not only that. <strong>There are some situations depending on the perspective of the observer in which only 2 faces can be seen.</strong> There are even cases in which the viewer can only see one face if they're positioned directly at the front of the box.</p>
 
-    <img src="/articles/making-a-6-faces-cube-with-one-html-element/" alt="3 cubes. The first one showing 3 faces, second one with 2, and a last one with 1"/>
+    <img src="/articles/making-a-6-faces-cube-with-one-html-element/3-points-of-view.png" alt="3 cubes. The first one showing 3 faces, second one with 2, and a last one with 1" class="pixelated scale--triple">
 
     <p><strong>Another important note is that opposite sides of a box will never coexist.</strong></p>
 
@@ -74,7 +75,7 @@
 
     <p>In an <a href="https://en.wikipedia.org/wiki/Isometric_projection" target="_blank" rel="noopener">isometric projection</a> the 3 coordinate axes appear equally foreshortened.</p>
 
-    <img src="/articles/making-a-6-faces-cube-with-one-html-element/" alt="Example of an isometric cube versus a non-isometric cube"/>
+    <img src="/articles/making-a-6-faces-cube-with-one-html-element/" alt="Example of an isometric cube versus a non-isometric cube" class="pixelated">
 
     <pre><code>transform-style: preserve-3d;
 transform: rotateX(70deg) rotateZ(45deg);</code></pre>
@@ -103,7 +104,7 @@ transform: rotateX(70deg) rotateZ(45deg);</code></pre>
 
     <p>The isometric example look great so far, but if I rotate or change the point of view, I still can see that the back part of the cube is still missing.</p>
 
-    <img src="/articles/making-a-6-faces-cube-with-one-html-element/" alt="Examples of a cube that swaps its faces on every axis"/>
+    <img src="/articles/making-a-6-faces-cube-with-one-html-element/face-swapping.png" alt="Examples of a cube that swaps its faces on every axis" class="pixelated">
 
     <p>I add a simple input range to modify the angle of the axes.</p>
 
@@ -125,13 +126,13 @@ transform: rotateX(70deg) rotateZ(45deg);</code></pre>
 
     Imagine having thousands of these CSS cubes at the same time to make a composition. It's gonna set the GPU on fire. But I can make some improvements to make it easier for the browser.
 
-    <h2>Hidden elements</h2>
+    <h3>Hidden elements</h3>
 
     As I explained in the beginning of this article there are cases in which some faces can be hidden. In order to make this performant I can temporary destroy the pseudo-elements using `content: none;`.
 
     (Js,css)
 
-    <h2>Backface visibility</h2>
+    <h3>Backface visibility</h3>
 
     As I'm rendering a solid cube (because I can only show the nearest faces to the viewer), I can get rid of the back faces of the elements and pseudo-elements. In order to tell the browser not to render the backfaces I use `backface-visibility: hidden;`
 
@@ -154,7 +155,7 @@ transform: rotateX(70deg) rotateZ(45deg);</code></pre>
     <b></b>
     ```
 
-
+    <img src="/articles/making-a-6-faces-cube-with-one-html-element/empty-elements.png" alt="" class="pixelated">
 
     To print every voxel or empty element into the container I write a simple iteration based on the size of the map.
 

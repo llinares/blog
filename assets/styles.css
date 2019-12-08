@@ -69,6 +69,11 @@ a:hover {
   image-rendering: pixelated;
 }
 
+.entry-body img.scale--triple {
+  transform: scale(3);
+  margin: 8rem auto;
+}
+
 /* HEADER */
 
 .header {
