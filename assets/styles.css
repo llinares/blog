@@ -179,6 +179,10 @@ a.hero__contact {
   overflow-y: hidden;
 }
 
+.home-section__cards::-webkit-scrollbar {
+  display: none;
+}
+
 .card:not(:last-child) {
   margin-right: var(--gutter-m);
 }
