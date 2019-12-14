@@ -310,12 +310,27 @@ a.hero__contact {
   max-width: 100%;
 }
 
+.entry-line {
+  border: none;
+  border-top: 1px solid var(--color-text);
+  background-image: linear-gradient(
+    to right,
+    transparent 33%,
+    var(--color-text) 33%,
+    var(--color-text) 66%,
+    transparent 66%
+  );
+  max-width: 50rem;
+  height: 7px;
+  margin: 0 var(--gutter-s);
+}
+
 .entry-body {
   line-height: 1.5em;
   font-size: 1.2rem;
   max-width: 50rem;
   margin: 0 auto;
-  padding: 0 var(--gutter-s);
+  padding: var(--gutter-l) var(--gutter-s);
 }
 
 .entry-body img {
@@ -422,9 +437,13 @@ a.hero__contact {
   }
 
   .entry-head {
-    padding: var(--gutter-m);
     padding-top: var(--gutter-l);
+    padding-bottom: var(--gutter-l);
     text-align: center;
+  }
+
+  .entry-line {
+    margin: 0 auto;
   }
 
   .entry-head__headline {
@@ -433,10 +452,6 @@ a.hero__contact {
   }
 
   .entry-body {
-    padding: var(--gutter-l);
-  }
-
-  .entry-body img {
-    max-width: 50vw;
+    padding: calc(var(--gutter-l) * 1.5) var(--gutter-l);
   }
 }
