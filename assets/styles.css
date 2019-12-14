@@ -83,7 +83,7 @@ a:hover {
 }
 
 .header__logo {
-  background-image: url('/assets/logo.png');
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAHCAYAAADXhRcnAAAAQUlEQVQYlaWPWwoAIAgEZ6P7X9kgkEosP9q/8cUowFg52Mwk6dpvW5EwVLEaH+luWJyI/ck37Zj0jS9tX061ngwM3psOEDmut7oAAAAASUVORK5CYII=');
   background-repeat: no-repeat;
   font-size: 0;
   width: 15px;
