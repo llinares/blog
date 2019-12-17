@@ -90,7 +90,8 @@ a:hover {
   transform-origin: left;
 }
 
-.homepage .header__logo {
+.homepage .header__logo,
+.header__logo:hover {
   background-image: url('/assets/logo.gif');
   height: 15px;
 }
@@ -166,7 +167,6 @@ a.hero__contact {
 }
 
 .home-section__description {
-  line-height: var(--font-size-l);
   margin: 0 0 var(--gutter-m);
 }
 
@@ -213,6 +213,7 @@ a.hero__contact {
   color: var(--color-text);
   margin-left: var(--gutter-s);
   font-size: var(--font-size-s);
+  font-style: italic;
 }
 
 /* PIXELART */
