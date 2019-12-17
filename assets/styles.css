@@ -77,16 +77,22 @@ a:hover {
   display: flex;
   justify-content: space-between;
   padding: var(--gutter-m);
+  align-items: center;
 }
 
 .header__logo {
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAHCAYAAADXhRcnAAAAQUlEQVQYlaWPWwoAIAgEZ6P7X9kgkEosP9q/8cUowFg52Mwk6dpvW5EwVLEaH+luWJyI/ck37Zj0jS9tX061ngwM3psOEDmut7oAAAAASUVORK5CYII=');
+  background-image: url('/assets/logo.png');
   background-repeat: no-repeat;
   font-size: 0;
   width: 15px;
   height: 7px;
   transform: scale(3);
-  transform-origin: 0 0;
+  transform-origin: left;
+}
+
+.homepage .header__logo {
+  background-image: url('/assets/logo.gif');
+  height: 15px;
 }
 
 .header__nav ul {
