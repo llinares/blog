@@ -161,7 +161,7 @@ a.hero__contact {
 }
 
 .home-section__title {
-  font-size: var(--font-size-xl);
+  font-size: calc(var(--font-size-xl) * 1.25);
   margin: 0;
 }
 
