@@ -226,6 +226,7 @@ a.hero__contact {
   border-radius: var(--radius);
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .pixelart__image {
