@@ -294,8 +294,9 @@ a.hero__contact {
 }
 
 .entry-head__image {
-  transform: scale(2);
+  transform: scale(2.5);
   transform-origin: left;
+  margin-bottom: var(--gutter-s);
 }
 
 .entry-head__headline {
@@ -443,7 +444,7 @@ a.hero__contact {
   }
 
   .entry-head__image {
-    transform: scale(2.5);
+    transform: scale(3);
     transform-origin: center;
   }
 
