@@ -1,1 +1,152 @@
-<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Leandro Linares</title><atom:link href="https://www.lean8086.com/feed.xml" rel="self" type="application/rss+xml"></atom:link><link>https://www.lean8086.com</link><description>JavaScript and Front-End Developer living in Berlin, Germany 🇩🇪</description><pubDate>Wed, 12 Dec 2018 01:00:00 +0100</pubDate><language>en</language><item><title>How I built an arcade machine from scratch</title><link>https://www.lean8086.com/articles/how-i-built-an-arcade-machine-from-scratch/</link><pubDate>Wed, 12 Dec 2018 01:00:00 +0100</pubDate><guid isPermaLink="true">https://www.lean8086.com/articles/how-i-built-an-arcade-machine-from-scratch/</guid><author>Leandro Linares</author><description>I mixed old hardware with new materials to make a full-sized retro cabinet that fits in a small apartment.</description></item><item><title>A complete guide to setting up RetroPie</title><link>https://www.lean8086.com/articles/a-complete-guide-to-setting-up-retropie/</link><pubDate>Wed, 28 Jun 2017 02:00:00 +0200</pubDate><guid isPermaLink="true">https://www.lean8086.com/articles/a-complete-guide-to-setting-up-retropie/</guid><author>Leandro Linares</author><description>Step-by-step tutorial on how to setup your Raspberry Pi to make the most of it as retro games console.</description></item><item><title>Node 101 - dependencies vs. devDependencies</title><link>https://www.lean8086.com/articles/node-101-dependencies-vs-devdependencies/</link><pubDate>Fri, 12  Aug 2016 02:00:00 +0200</pubDate><guid isPermaLink="true">https://www.lean8086.com/articles/node-101-dependencies-vs-devdependencies/</guid><author>Leandro Linares</author><description>Definición totalmente básica sobre las dependencias de Node JS.</description></item><item><title>Dudas comunes de microdata</title><link>https://www.lean8086.com/articles/dudas-comunes-de-microdata/</link><pubDate>Tue, 19 Apr 2016 02:00:00 +0200</pubDate><guid isPermaLink="true">https://www.lean8086.com/articles/dudas-comunes-de-microdata/</guid><author>Leandro Linares</author><description>Las consultas sobre microdata que recibo más a menudo.</description></item><item><title>Incremental DOM</title><link>https://www.lean8086.com/articles/incremental-dom/</link><pubDate>Mon, 27 Jul 2015 02:00:00 +0200</pubDate><guid isPermaLink="true">https://www.lean8086.com/articles/incremental-dom/</guid><author>Leandro Linares</author><description>Diferencias entre Virtual DOM de Facebook e Incremental DOM de Google.</description></item><item><title>Imágenes retina en tablets con HiDPI</title><link>https://www.lean8086.com/articles/imagenes-retina-en-tablets-con-hidpi/</link><pubDate>Thu, 11 Jun 2015 02:00:00 +0200</pubDate><guid isPermaLink="true">https://www.lean8086.com/articles/imagenes-retina-en-tablets-con-hidpi/</guid><author>Leandro Linares</author><description>Qué tamaños de imágenes tener en cuenta para distintas resoluciones y cómo implementarlas.</description></item><item><title>Card pattern</title><link>https://www.lean8086.com/articles/card-pattern/</link><pubDate>Tue, 19 May 2015 02:00:00 +0200</pubDate><guid isPermaLink="true">https://www.lean8086.com/articles/card-pattern/</guid><author>Leandro Linares</author><description>Características de este patrón de diseño, más alla de su aspecto visual.</description></item><item><title>Microinteractions</title><link>https://www.lean8086.com/articles/microinteractions/</link><pubDate>Tue, 19 May 2015 02:00:00 +0200</pubDate><guid isPermaLink="true">https://www.lean8086.com/articles/microinteractions/</guid><author>Leandro Linares</author><description>Introducción y punto de partida para saber más sobre este patrón de diseño.</description></item><item><title>Velocidad percibida por el usuario</title><link>https://www.lean8086.com/articles/velocidad-percibida-por-el-usuario/</link><pubDate>Mon, 11 May 2015 02:00:00 +0200</pubDate><guid isPermaLink="true">https://www.lean8086.com/articles/velocidad-percibida-por-el-usuario/</guid><author>Leandro Linares</author><description>Cómo mejorar la experiencia de espera de los usuarios de una interfaz.</description></item><item><title>Single Page Apps y cómo mejorar la UX (parte 2)</title><link>https://www.lean8086.com/articles/single-page-apps-y-como-mejorar-la-ux-parte-2/</link><pubDate>Mon, 20 Apr 2015 02:00:00 +0200</pubDate><guid isPermaLink="true">https://www.lean8086.com/articles/single-page-apps-y-como-mejorar-la-ux-parte-2/</guid><author>Leandro Linares</author><description>Cómo podemos aprovechar los beneficios que nos dan las SPA.</description></item><item><title>Protocolo HTTP/2</title><link>https://www.lean8086.com/articles/protocolo-http2/</link><pubDate>Tue, 03 Mar 2015 01:00:00 +0100</pubDate><guid isPermaLink="true">https://www.lean8086.com/articles/protocolo-http2/</guid><author>Leandro Linares</author><description>De qué se trata el nuevo protocolo de intercambio de datos.</description></item><item><title>Single Page Apps y cómo mejorar la UX (parte 1)</title><link>https://www.lean8086.com/articles/single-page-apps-y-como-mejorar-la-ux-parte-1/</link><pubDate>Tue, 03 Feb 2015 01:00:00 +0100</pubDate><guid isPermaLink="true">https://www.lean8086.com/articles/single-page-apps-y-como-mejorar-la-ux-parte-1/</guid><author>Leandro Linares</author><description>Cambios que proponen las SPA y cómo podemos aprovechar los beneficios.</description></item><item><title>Calidad vs. velocidad en el desarrollo</title><link>https://www.lean8086.com/articles/calidad-vs-velocidad-en-el-desarrollo/</link><pubDate>Fri, 21 Nov 2014 01:00:00 +0100</pubDate><guid isPermaLink="true">https://www.lean8086.com/articles/calidad-vs-velocidad-en-el-desarrollo/</guid><author>Leandro Linares</author><description>Notas acerca del video de Facebook donde introducen el concepto de Flux.</description></item><item><title>Multi-Device Layout Patterns</title><link>https://www.lean8086.com/articles/multi-device-layout-patterns/</link><pubDate>Mon, 12 May 2014 02:00:00 +0200</pubDate><guid isPermaLink="true">https://www.lean8086.com/articles/multi-device-layout-patterns/</guid><author>Leandro Linares</author><description>Introducción a los tipos de layouts más conocidos.</description></item><item><title>Evitar redundancia de roles ARIA</title><link>https://www.lean8086.com/articles/evitar-redundancia-de-roles-aria/</link><pubDate>Mon, 24 Feb 2014 01:00:00 +0100</pubDate><guid isPermaLink="true">https://www.lean8086.com/articles/evitar-redundancia-de-roles-aria/</guid><author>Leandro Linares</author><description>Análisis sobre dos casos similares de roles.</description></item><item><title>Background offset en CSS</title><link>https://www.lean8086.com/articles/background-offset-en-css/</link><pubDate>Mon, 13 Jan 2014 01:00:00 +0100</pubDate><guid isPermaLink="true">https://www.lean8086.com/articles/background-offset-en-css/</guid><author>Leandro Linares</author><description>Cómo mejorar el posicionamiento de un background, usando el feature de offset.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" ?>
+<rss version="2.0"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+>
+  <channel>
+    <title>Leandro Linares</title>
+    <atom:link href="https://lean8086.com/feed.xml" rel="self" type="application/rss+xml"></atom:link>
+    <link>https://lean8086.com</link>
+    <description>Yet another Front-End Developer living in Berlin, Germany.</description>
+    <pubDate>Tue, 17 Dec 2019 01:00:00 +0100</pubDate>
+    <language>en</language>
+    <item>
+      <title>Using an emoji as favicon with SVG</title>
+      <link>https://lean8086.com/articles/using-an-emoji-as-favicon-with-svg/</link>
+      <pubDate>Tue, 17 Dec 2019 01:00:00 +0100</pubDate>
+      <guid isPermaLink="true">https://lean8086.com/articles/using-an-emoji-as-favicon-with-svg/</guid>
+      <author>Leandro Linares</author>
+      <description>SVG favicons are being supported by browsers, SVG can render text and emojis are text as they are part of the unicode standard.</description>
+    </item>
+    <item>
+      <title>How I built an arcade machine from scratch</title>
+      <link>https://lean8086.com/articles/how-i-built-an-arcade-machine-from-scratch/</link>
+      <pubDate>Wed, 12 Dec 2018 01:00:00 +0100</pubDate>
+      <guid isPermaLink="true">https://lean8086.com/articles/how-i-built-an-arcade-machine-from-scratch/</guid>
+      <author>Leandro Linares</author>
+      <description>I mixed old hardware with new materials to make a full-sized retro cabinet that fits in a small apartment.</description>
+    </item>
+    <item>
+      <title>A complete guide to setting up RetroPie</title>
+      <link>https://lean8086.com/articles/a-complete-guide-to-setting-up-retropie/</link>
+      <pubDate>Wed, 28 Jun 2017 02:00:00 +0200</pubDate>
+      <guid isPermaLink="true">https://lean8086.com/articles/a-complete-guide-to-setting-up-retropie/</guid>
+      <author>Leandro Linares</author>
+      <description>Step-by-step tutorial on how to setup your Raspberry Pi to make the most of it as retro games console.</description>
+    </item>
+    <item>
+      <title>Node 101 - dependencies vs. devDependencies</title>
+      <link>https://lean8086.com/articles/node-101-dependencies-vs-devdependencies/</link>
+      <pubDate>Fri, 12  Aug 2016 02:00:00 +0200</pubDate>
+      <guid isPermaLink="true">https://lean8086.com/articles/node-101-dependencies-vs-devdependencies/</guid>
+      <author>Leandro Linares</author>
+      <description>Definición totalmente básica sobre las dependencias de Node JS.</description>
+    </item>
+    <item>
+      <title>Dudas comunes de microdata</title>
+      <link>https://lean8086.com/articles/dudas-comunes-de-microdata/</link>
+      <pubDate>Tue, 19 Apr 2016 02:00:00 +0200</pubDate>
+      <guid isPermaLink="true">https://lean8086.com/articles/dudas-comunes-de-microdata/</guid>
+      <author>Leandro Linares</author>
+      <description>Las consultas sobre microdata que recibo más a menudo.</description>
+    </item>
+    <item>
+      <title>Incremental DOM</title>
+      <link>https://lean8086.com/articles/incremental-dom/</link>
+      <pubDate>Mon, 27 Jul 2015 02:00:00 +0200</pubDate>
+      <guid isPermaLink="true">https://lean8086.com/articles/incremental-dom/</guid>
+      <author>Leandro Linares</author>
+      <description>Diferencias entre Virtual DOM de Facebook e Incremental DOM de Google.</description>
+    </item>
+    <item>
+      <title>Imágenes retina en tablets con HiDPI</title>
+      <link>https://lean8086.com/articles/imagenes-retina-en-tablets-con-hidpi/</link>
+      <pubDate>Thu, 11 Jun 2015 02:00:00 +0200</pubDate>
+      <guid isPermaLink="true">https://lean8086.com/articles/imagenes-retina-en-tablets-con-hidpi/</guid>
+      <author>Leandro Linares</author>
+      <description>Qué tamaños de imágenes tener en cuenta para distintas resoluciones y cómo implementarlas.</description>
+    </item>
+    <item>
+      <title>Card pattern</title>
+      <link>https://lean8086.com/articles/card-pattern/</link>
+      <pubDate>Tue, 19 May 2015 02:00:00 +0200</pubDate>
+      <guid isPermaLink="true">https://lean8086.com/articles/card-pattern/</guid>
+      <author>Leandro Linares</author>
+      <description>Características de este patrón de diseño, más alla de su aspecto visual.</description>
+    </item>
+    <item>
+      <title>Microinteractions</title>
+      <link>https://lean8086.com/articles/microinteractions/</link>
+      <pubDate>Tue, 19 May 2015 02:00:00 +0200</pubDate>
+      <guid isPermaLink="true">https://lean8086.com/articles/microinteractions/</guid>
+      <author>Leandro Linares</author>
+      <description>Introducción y punto de partida para saber más sobre este patrón de diseño.</description>
+    </item>
+    <item>
+      <title>Velocidad percibida por el usuario</title>
+      <link>https://lean8086.com/articles/velocidad-percibida-por-el-usuario/</link>
+      <pubDate>Mon, 11 May 2015 02:00:00 +0200</pubDate>
+      <guid isPermaLink="true">https://lean8086.com/articles/velocidad-percibida-por-el-usuario/</guid>
+      <author>Leandro Linares</author>
+      <description>Cómo mejorar la experiencia de espera de los usuarios de una interfaz.</description>
+    </item>
+    <item>
+      <title>Single Page Apps y cómo mejorar la UX (parte 2)</title>
+      <link>https://lean8086.com/articles/single-page-apps-y-como-mejorar-la-ux-parte-2/</link>
+      <pubDate>Mon, 20 Apr 2015 02:00:00 +0200</pubDate>
+      <guid isPermaLink="true">https://lean8086.com/articles/single-page-apps-y-como-mejorar-la-ux-parte-2/</guid>
+      <author>Leandro Linares</author>
+      <description>Cómo podemos aprovechar los beneficios que nos dan las SPA.</description>
+    </item>
+    <item>
+      <title>Protocolo HTTP/2</title>
+      <link>https://lean8086.com/articles/protocolo-http2/</link>
+      <pubDate>Tue, 03 Mar 2015 01:00:00 +0100</pubDate>
+      <guid isPermaLink="true">https://lean8086.com/articles/protocolo-http2/</guid>
+      <author>Leandro Linares</author>
+      <description>De qué se trata el nuevo protocolo de intercambio de datos.</description>
+    </item>
+    <item>
+      <title>Single Page Apps y cómo mejorar la UX (parte 1)</title>
+      <link>https://lean8086.com/articles/single-page-apps-y-como-mejorar-la-ux-parte-1/</link>
+      <pubDate>Tue, 03 Feb 2015 01:00:00 +0100</pubDate>
+      <guid isPermaLink="true">https://lean8086.com/articles/single-page-apps-y-como-mejorar-la-ux-parte-1/</guid>
+      <author>Leandro Linares</author>
+      <description>Cambios que proponen las SPA y cómo podemos aprovechar los beneficios.</description>
+    </item>
+    <item>
+      <title>Calidad vs. velocidad en el desarrollo</title>
+      <link>https://lean8086.com/articles/calidad-vs-velocidad-en-el-desarrollo/</link>
+      <pubDate>Fri, 21 Nov 2014 01:00:00 +0100</pubDate>
+      <guid isPermaLink="true">https://lean8086.com/articles/calidad-vs-velocidad-en-el-desarrollo/</guid>
+      <author>Leandro Linares</author>
+      <description>Notas acerca del video de Facebook donde introducen el concepto de Flux.</description>
+    </item>
+    <item>
+      <title>Multi-Device Layout Patterns</title>
+      <link>https://lean8086.com/articles/multi-device-layout-patterns/</link>
+      <pubDate>Mon, 12 May 2014 02:00:00 +0200</pubDate>
+      <guid isPermaLink="true">https://lean8086.com/articles/multi-device-layout-patterns/</guid>
+      <author>Leandro Linares</author>
+      <description>Introducción a los tipos de layouts más conocidos.</description>
+    </item>
+    <item>
+      <title>Evitar redundancia de roles ARIA</title>
+      <link>https://lean8086.com/articles/evitar-redundancia-de-roles-aria/</link>
+      <pubDate>Mon, 24 Feb 2014 01:00:00 +0100</pubDate>
+      <guid isPermaLink="true">https://lean8086.com/articles/evitar-redundancia-de-roles-aria/</guid>
+      <author>Leandro Linares</author>
+      <description>Análisis sobre dos casos similares de roles.</description>
+    </item>
+    <item>
+      <title>Background offset en CSS</title>
+      <link>https://lean8086.com/articles/background-offset-en-css/</link>
+      <pubDate>Mon, 13 Jan 2014 01:00:00 +0100</pubDate>
+      <guid isPermaLink="true">https://lean8086.com/articles/background-offset-en-css/</guid>
+      <author>Leandro Linares</author>
+      <description>Cómo mejorar el posicionamiento de un background, usando el feature de offset.</description>
+    </item>
+  </channel>
+</rss>
