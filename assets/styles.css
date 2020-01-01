@@ -235,6 +235,25 @@ a.hero__contact {
   transform: scale(var(--art-scale));
 }
 
+.pixelart__palette {
+  display: flex;
+}
+
+.pixelart__palette dt {
+  display: none;
+}
+
+.pixelart__palette dd {
+  --palette-size: .75rem;
+  background: var(--palette-color);
+  text-indent: var(--palette-size);
+  overflow: hidden;
+  width: var(--palette-size);
+  height: var(--palette-size);
+  margin-left: 0;
+  margin-right: calc(var(--palette-size) / 2);
+}
+
 /* BLOG */
 
 .blog-entries {
