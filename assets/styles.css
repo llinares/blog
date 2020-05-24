@@ -191,8 +191,10 @@ a.hero__contact {
 }
 
 .card__image {
-  max-width: 16rem;
+  max-width: 10rem;
   border-radius: var(--radius);
+  height: 16rem;
+  object-fit: cover;
 }
 
 .card__image--border {
@@ -465,5 +467,9 @@ a.hero__contact {
 
   .entry-body {
     padding: calc(var(--gutter-l) * 1.5) var(--gutter-l);
+  }
+
+  .card__image {
+    max-width: 16rem;
   }
 }
