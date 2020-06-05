@@ -349,6 +349,11 @@ a.hero__contact {
   margin: 0 var(--gutter-s);
 }
 
+/* Replaces .entry-line whenever it's used */
+.entry-main-image {
+  max-width: 100%;
+}
+
 .entry-body {
   line-height: 1.5em;
   font-size: var(--font-size-s);
@@ -370,6 +375,10 @@ a.hero__contact {
   margin: var(--gutter-m) auto;
   display: block;
   border-radius: var(--radius);
+}
+
+.entry-body img.retina {
+  transform: scale(.5);
 }
 
 .entry-body__video {

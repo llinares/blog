@@ -58,10 +58,60 @@
     <p class="entry-head__description" itemprop="description">I'm a beginner in all things Arduino and I was looking for an easy, fast, and cheap project to learn.</p>
   </header>
 
-  <hr class="entry-line">
+  <img class="entry-main-image" src="/articles/building-an-arduino-midi-controller/finished.jpg" alt="A MIDI controller with 16 buttons with an Arduino board"/>
 
   <section class="entry-body" itemprop="articleBody">
-    Content
+    <p>Intro here! questions i made during the building. bla bla checkout the entire process in this video</p>
+
+    <iframe class="entry-body__video" src="https://www.youtube-nocookie.com/embed/ZSqGpUW3cJ8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <h2 id="the-arduino-board">The Arduino Board</h2>
+
+    <h3>Which model of Arduino do I need?</h3>
+    what's the difference between arduino models
+    - Arduino boards with native USB support: Arduino Due, Arduino Zero, Arduino Leonardo, Arduino Micro, Arduino LilyPad USB ...
+    - Some of the newer boards have native USB support (i.e. the USB connection goes directly to the main MCU) this means that they can pretend to be a USB MIDI device. This is based on PluggableUSB, using the MIDIUSB library. All you have to do to get it working, is installing the library, and upload a sketch. The computer will then automatically detect the Arduino as a MIDI
+    - why leonardo (amount of pins)
+
+    <h2 id="the-software">The Software</h2>
+
+    - final version esta aca
+
+    <h3>Blink the built in led</h3>
+    <h3>Switch vs schitch opuesto (?)</h3>
+    
+    <h3>installing usb midi</h3>
+
+    <h3>about midi</h3>
+    - noteon noteoff
+
+    <h3>what is pin 13</h3>
+    - no le des bola, lo vas a ver por ahi
+
+    <h3>necesito codear un switch?</h3>
+    - Just a quick thing to try if you manage to get yourself stuck in a position where the Leonardo can no longer be programmed. Hold down the reset button, plug the board in, hit upload and release the reset button! Your new code should get uploaded. This might save you some serious time! :)
+
+    <h3>necesito cubrir todos los boards como teensee?</h3>
+    - no, aca esta el codigo
+
+    <h2 id="the-case">The Case</h2>
+    
+    <h3>How thick should the walls be?</h3>
+    - https://www.overclock.net/forum/18082-builds-logs-case-mods/1566316-super-small-3d-printed-mini-itx-case.html
+    - 3.5 despues de tirar unas pruebas
+
+    <h3>why would I need screws, can i achieve same whout them</h3>
+    - Look mum no screws
+    - unibody
+
+    <h3>how do i interface an usb connector to the exterior of my case</h3>
+
+    <h2 id="the-sound">The Sound</h2>
+
+    <h3>Garage Band, Ableton live, Mobile</h3>
+    
+    <h3>WebMIDI JavaScript API</h3>
+    <h3>WebAudio JavaScript API</h3>
   </section>
 
   <footer class="footer" role="contentinfo">Leandro Linares</footer>
