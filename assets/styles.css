@@ -356,7 +356,6 @@ a.hero__contact {
 
 .entry-body {
   line-height: 1.5em;
-  font-size: var(--font-size-s);
   padding: var(--gutter-l) var(--gutter-s);
 }
 
@@ -375,10 +374,6 @@ a.hero__contact {
   margin: var(--gutter-m) auto;
   display: block;
   border-radius: var(--radius);
-}
-
-.entry-body img.retina {
-  transform: scale(.5);
 }
 
 .entry-body__video {
@@ -479,7 +474,12 @@ a.hero__contact {
     margin: var(--gutter-m) 0;
   }
 
-  /* .entry-body {
-    padding: calc(var(--gutter-l) * 1.5) var(--gutter-l);
-  } */
+  .entry-body {
+    font-size: var(--font-size-s);
+  }
+
+  .entry-body img.retina {
+    /* FIXME: Use aspect radio and stuff */
+    transform: scale(.5);
+  }
 }
