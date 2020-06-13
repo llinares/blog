@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en" itemscope itemtype="https://schema.org/Article">
+<head>
+  <meta charset="utf-8">
+  <title>Building an Arduino MIDI Controller - Leandro Linares</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="I'm a beginner in all things Arduino and I was looking for an easy, fast, and cheap project to learn.">
+  <link rel="shortcut icon" href="/assets/punchy-favicon.png">
+  <link rel="apple-touch-icon" href="/icon-192.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Leandro Linares">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Roboto:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/assets/styles.css">
+
+  <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create','UA-100475674-1','auto');ga('send','pageview')</script>
+  <script defer src="https://www.google-analytics.com/analytics.js"></script>
+  
+  <meta itemprop="mainEntityOfPage"
+    content="https://lean8086.com/articles/building-an-arduino-midi-controller/">
+  <meta itemprop="inLanguage" content="en">
+  <meta itemprop="image" content="https://lean8086.com/articles/building-an-arduino-midi-controller/finished.jpg">
+  <meta name="twitter:site" content="@lean8086">
+  <meta name="twitter:url" content="https://lean8086.com/articles/building-an-arduino-midi-controller/">
+  <meta name="twitter:title" content="Building an Arduino MIDI Controller">
+  <meta name="twitter:description"
+    content="I'm a beginner in all things Arduino and I was looking for an easy, fast, and cheap project to learn.">
+  <meta name="twitter:creator" content="@lean8086">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image"
+    content="https://lean8086.com/articles/building-an-arduino-midi-controller/finished.jpg">
+  <meta property="og:title" content="Building an Arduino MIDI Controller">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://lean8086.com/articles/building-an-arduino-midi-controller/">
+  <meta property="og:description"
+    content="I'm a beginner in all things Arduino and I was looking for an easy, fast, and cheap project to learn.">
+  <meta property="og:site_name" content="Leandro Linares">
+  <meta property="og:image"
+    content="https://lean8086.com/articles/building-an-arduino-midi-controller/finished.jpg">
+</head>
+
+<body>
+  <header class="header" role="banner">
+    <a class="header__logo pixelated" href="/">lean8086</a>
+    <nav class="header__nav" itemscope itemtype="https://schema.org/SiteNavigationElement">
+      <ul>
+        <li><a href="/#labs">Labs</a></li>
+        <li><a href="/#things">Things</a></li>
+        <li><a href="/#pixelart">Pixel Art</a></li>
+        <li><a href="/#blog">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <header class="entry-head">
+    <img class="entry-head__image pixelated" src="/assets/punchy-icon.png" itemprop="image" alt="Arcade icon">
+    <h1 class="entry-head__headline" itemprop="headline">Building an Arduino MIDI Controller</h1>
+    <p class="entry-head__details">by <span itemprop="author">Leandro Linares</span> — <time itemprop="dateCreated" datetime="2020-06-XX">June XX, 2020</time></p>
+    <p class="entry-head__description" itemprop="description">I'm a beginner in all things Arduino and I was looking for an easy, fast, and cheap project to learn.</p>
+  </header>
+
+  <img class="entry-main-image" src="/articles/building-an-arduino-midi-controller/finished.jpg" alt="A MIDI controller with 16 buttons with an Arduino board"/>
+
+  <section class="entry-body" itemprop="articleBody">
+    <p>Intro here! questions i made during the building. bla bla checkout the entire process in this video</p>
+
+    <iframe class="entry-body__video" src="https://www.youtube-nocookie.com/embed/ZSqGpUW3cJ8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <h2 id="the-arduino-board">The Arduino Board</h2>
+
+    <p>blah 50 modelos, tuve que hacer un research bla</p>
+
+    <h3>Which model suits you better</h3>
+    <p>what's the difference between arduino models</p>
+    <p>- Arduino boards with native USB support: Arduino Due, Arduino Zero, Arduino Leonardo, Arduino Micro, Arduino LilyPad USB ...</p>
+    <p>- Some of the newer boards have native USB support (i.e. the USB connection goes directly to the main MCU) this means that they can pretend to be a USB MIDI device. This is based on PluggableUSB, using the MIDIUSB library. All you have to do to get it working, is installing the library, and upload a sketch. The computer will then automatically detect the Arduino as a MIDI</p>
+    <p>- why leonardo (amount of pins)</p>
+
+    <h2 id="the-software">The Software</h2>
+
+    <p>- final version esta aca</p>
+
+    <h3>Blinking the built-in LED</h3>
+
+    <script src="https://gist.github.com/lean8086/716c3028a684a6b122d913920933f5cc.js"></script>
+
+    <h3>Normal input vs. pullup</h3>
+
+    <p>INPUT vs INPUT_PULLUP</p>
+    <p>configure pin 2 as an input and enable the internal pull-up resistor</p>
+
+    <p>Keep in mind the pull-up means the pushbutton's logic is inverted. It goes</p>
+    <p>HIGH when it's open, and LOW when it's pressed. Turn on pin 13 when the</p>
+    <p>button's pressed, and off when it's not:</p>
+    <script src="https://gist.github.com/lean8086/a61e24e691c4ef18839859e4c36dabf3.js"></script>
+    
+    <h3>Installing MIDIUSB Library</h3>
+
+    <li>https://github.com/arduino-libraries/MIDIUSB</li>
+    <li>https://www.arduino.cc/en/Reference/MIDIUSB</li>
+    <li>https://github.com/arduino/tutorials/blob/master/ArduinoZeroMidi/PitchToNote.h</li>
+
+    <h3>About MIDI</h3>
+    <p>- noteon noteoff</p>
+    <p>// sendMIDI parameters:</p>
+    <p>// 1. event type (0x09 = note on, 0x08 = note off)</p>
+    <p>// 2. note-on/note-off, combined with the channel. Channel can be anything between 0-15. Typically reported to the user as 1-16. Defaults to 1.</p>
+    <p>// 3. note number (48 = middle C)</p>
+    <p>// 4. velocity (64 = normal, 127 = fastest)</p>
+
+    <p>pitch to note - https://github.com/arduino/tutorials/blob/master/ArduinoZeroMidi/PitchToNote.h</p>
+
+    <h3>Why is Pin 13 so important?</h3>
+    <p>- no le des bola, lo vas a ver por ahi</p>
+
+    <h3>necesito codear un switch?</h3>
+    <p>- Just a quick thing to try if you manage to get yourself stuck in a position where the Leonardo can no longer be programmed. Hold down the reset button, plug the board in, hit upload and release the reset button! Your new code should get uploaded. This might save you some serious time! :)</p>
+
+    <h3>necesito cubrir todos los boards como teensee?</h3>
+    <p>- no, aca esta el codigo</p>
+
+    <script src="https://gist.github.com/lean8086/7de896c3b8f29d15e092e17ad177d055.js"></script>
+
+    <h2 id="the-case">The Case</h2>
+    
+    <p>blabla prusa mini, se puede mandar a imprimir tambien</p>
+    
+    <h3>How thick should the walls be?</h3>
+    <p>- https://www.overclock.net/forum/18082-builds-logs-case-mods/1566316-super-small-3d-printed-mini-itx-case.html</p>
+    <p>- 3.5 despues de tirar unas pruebas</p>
+
+    <h3>Unibody design</h3>
+    <p>- why would I need screws, can i achieve same whout them</p>
+    <p>- Look mum no screws</p>
+
+    <h3>Holding an Arduino without screws</h3>
+    <p>https://pinshape.com/items/25540-3d-printed-arduino-uno-compatible-holder</p>
+
+    <h3>Building the case around the micro USB connector</h3>
+
+    <h2 id="the-sound">The Sound</h2>
+
+    <p>Garage Band, Ableton live, Mobile? no lo probe</p>
+    <p>WebMIDI API und WebAudio API</p>
+
+    <h2 id="references">References</h2>
+    <ul>
+      <li>https://www.arduino.cc/en/Tutorial/MidiDevice</li>
+      <li>https://www.thingiverse.com/thing:1849483</li>
+      <li>https://cults3d.com/en/3d-model/various/orange-pi-pc-plus-50mm-cooling-fan-case</li>
+      <li>https://cults3d.com/en/3d-model/various/mlt6-6-liter-mini-itx-sff-pc-case</li>
+    </ul>
+  </section>
+
+  <footer class="footer" role="contentinfo">Leandro Linares</footer>
+</body>
+</html>
