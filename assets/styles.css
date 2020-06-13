@@ -12,7 +12,7 @@
   --font-type-serif: 'Playfair Display', serif;
   --font-type-mono: 'Menlo', monospace;
 
-  --font-size-xxl: 5rem;
+  --font-size-xxl: 4rem;
   --font-size-xl: 3rem;
   --font-size-l: 2rem;
   --font-size-m: 1.5rem;
@@ -141,10 +141,16 @@ a:hover {
   text-align: center;
 }
 
+@keyframes bounce {
+  from { transform: rotate(90deg) translateX(0) }
+  to { transform: rotate(90deg) translateX(-1rem) }
+}
+
 .hero::after {
   content: '➼';
   font-size: var(--font-size-m);
   transform: rotate(90deg);
+  animation: bounce ease-in-out 1s infinite alternate;
 }
 
 .hero__image {
@@ -444,7 +450,7 @@ a.hero__contact {
   }
 
   .hero__title {
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-xxl);
   }
 
   .home-section {
@@ -479,7 +485,7 @@ a.hero__contact {
   }
 
   .entry-body img.retina {
-    /* FIXME: Use aspect radio and stuff */
+    /* FIXME: Use pixel density and stuff */
     transform: scale(.5);
   }
 }
