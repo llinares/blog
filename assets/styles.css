@@ -253,7 +253,7 @@ a.hero__contact {
   width: 16rem;
   height: 16rem;
   display: flex;
-  margin: 0;
+  margin: 0 0 var(--gutter-s);
   border-radius: var(--radius);
   justify-content: center;
   align-items: center;
