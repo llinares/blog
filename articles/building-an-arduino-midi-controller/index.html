@@ -94,8 +94,6 @@
       
     <p>I decided to go with a clone of the <a href="https://www.arduino.cc/en/Main/Arduino_BoardLeonardo" target="_blank" rel="noopener">Arduino Leonardo</a>, because of the amount of inputs and the included headers.</p>
 
-    <img src="#" alt="An Arduino Leonardo board"/>
-
     <h2 id="the-first-steps">The First Steps</h2>
 
     <p>Although I'll explain step-by-step how I implemented the code for this project, <strong>anyone can see and download the final code from <a href="#" target="_blank" rel="noopener">this Gist</a></strong>.</p>
@@ -116,8 +114,6 @@
       <li><strong>Pin number <code>2</code>:</strong> One of the digital inputs (positive). It could be any digital pin.</li>
       <li><strong><code>GND</code> pin:</strong> Any ground pin (negative).</li>
     </ul>
-
-    <img src="#" alt="Two cables connected to an Arduino board"/>
 
     <p><strong>Now, every time I join the wires I'm closing the circuit and therefore I can execute some code in consecuense.</strong></p>
 
@@ -182,7 +178,7 @@
       
     <p>I used digital pins from <code>2</code> to <code>12</code> and analog pins (using them as digitals) from <code>A0</code> to <code>A4</code>.</p>
 
-    <img src="#" alt="3 diagrams of the MIDI controller with notes, pitches and pins, assigned to the 16 buttons from bottom to top and from left to right"/>
+    <img src="/articles/building-an-arduino-midi-controller/diagram.png" alt="3 diagrams of the MIDI controller with notes, pitches and pins, assigned to the 16 buttons from bottom to top and from left to right"/>
 
     <p>And this is how the entire code looks like:</p>
 
@@ -211,11 +207,9 @@
     
     <p>In order to avoid using screws or glue, I needed to desing an enclosure that provides the minimum access to the electronics. <strong>My biggest inspiration for the enclosure was the bottom part of the Mac Mini, which has a circle shaped hole.</strong></p>
 
-    <img src="/articles/building-an-arduino-midi-controller/mac-mini.jpg" alt="The top and bottom side of a Mac Mini"/>
-
     <p>I also wanted to design a screwable lid but I decided to let it open to expose the electronics:</p>
 
-    <img src="#" alt="The bottom side of my MIDI controller"/>
+    <img src="/articles/building-an-arduino-midi-controller/shell.jpg" alt="The bottom side of my MIDI controller"/>
 
     <h3>Holding an Arduino with no screws</h3>
 
@@ -223,27 +217,27 @@
 
     <p>Finding a <a href="https://www.thingiverse.com/thing:4087125" target="_blank" rel="noopener">clip holder for Arduino</a> on Thingiverse was a piece of cake. But <strong>it took me 5 iterations to integrate it to the unibody desing</strong>. The most difficult part was <strong>making its legs to avoid the holes for the buttons, and to make the micro USB to be centered aligned on the case</strong>.</p>
     
-    <img src="#" alt="3 legs inside the MIDI controller case, to hold the Arduino board"/>
+    <img src="/articles/building-an-arduino-midi-controller/holder.jpg" alt="3 legs inside the MIDI controller case, to hold the Arduino board"/>
 
     <h2 id="the-assembly">The Assembly</h2>
 
     <p>After inserting all the buttons in place, I soldered short <strong>black wires to join all the negative legs of the buttons between them</strong>.</p>
 
-    <img src="#" alt="Black wires soldered to the buttons negative leg"/>
+    <img src="/articles/building-an-arduino-midi-controller/black-wires.jpg" alt="Black wires soldered to the buttons negative leg"/>
 
     <p>Then I soldered 16 long <strong>red wires from each positive leg to connect directly to the board</strong>.</p>
 
-    <img src="#" alt="Red and black wires soldered to the buttons"/>
+    <img src="/articles/building-an-arduino-midi-controller/red-wires.jpg" alt="Red and black wires soldered to the buttons"/>
     
     <p>To connect the wires to the Arduino, I cut and solder some dupont ends and covered them with heat-shrink tubing.</p>
 
-    <img src="#" alt="A red wire with a dupont end and a heat-shrink tubing"/>
+    <img src="/articles/building-an-arduino-midi-controller/heat-shrink-tube.jpg" alt="A red wire with a dupont end and a heat-shrink tubing"/>
 
     <p>Following the same diagram as in Step 5, <strong>I connected the wires to the board following the same order as in the MIDI Fighter: from bottom to top and from left to right</strong>.</p>
 
-    <img src="#" alt="A diagram of the MIDI controller showing which buttons matches which pins"/>
+    <img src="/articles/building-an-arduino-midi-controller/pins-diagram.png" alt="A diagram of the MIDI controller showing which buttons matches which pins"/>
 
-    <img src="#" alt="The MIDI Controller from the bottom, all wired to the Arduino board"/>
+    <img src="/articles/building-an-arduino-midi-controller/wired.jpg" alt="The MIDI Controller from the bottom, all wired to the Arduino board"/>
 
     <h2 id="the-sound">The Sound</h2>
 
