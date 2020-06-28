@@ -10,8 +10,16 @@
     <atom:link href="https://lean8086.com/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>https://lean8086.com</link>
     <description>Yet another Front-End Developer based in Berlin, Germany.</description>
-    <pubDate>Tue, 17 Dec 2019 01:00:00 +0100</pubDate>
+    <pubDate>Sun, 28 Jun 2020 01:00:00 +0100</pubDate>
     <language>en</language>
+    <item>
+      <title>Building an Arduino MIDI Controller</title>
+      <link>https://lean8086.com/articles/building-an-arduino-midi-controller/</link>
+      <pubDate>Sun, 28 Jun 2020 01:00:00 +0100</pubDate>
+      <guid isPermaLink="true">https://lean8086.com/articles/building-an-arduino-midi-controller/</guid>
+      <author>Leandro Linares</author>
+      <description>I'm a beginner in all things Arduino and I've been working on an easy, fast, and cheap project to learn more about it.</description>
+    </item>
     <item>
       <title>Using an emoji as favicon with SVG</title>
       <link>https://lean8086.com/articles/using-an-emoji-as-favicon-with-svg/</link>
