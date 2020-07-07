@@ -328,6 +328,10 @@ a.hero__contact {
   content: '— '
 }
 
+.footer a {
+  color: var(--color-text);
+}
+
 /* POST LAYOUT */
 
 .entry-head,
