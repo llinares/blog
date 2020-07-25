@@ -2,7 +2,7 @@
 <html lang="es" itemscope itemtype="https://schema.org/Article">
 <head>
   <meta charset="utf-8">
-  <title>Making a cube with 6-faces using one HTML element - Leandro Linares</title>
+  <title>A cube with 6 faces made out of one HTML element - Leandro Linares</title>
   <meta name="viewport" content="width=device-width">
   <meta name="description" content="No javascript was harmed in the making of this article.">
   <link rel="shortcut icon" href="/assets/cube-favicon.png">
@@ -28,9 +28,9 @@
 
   <header class="entry-head">
     <img class="entry-head__image pixelated" src="/assets/cube-icon.png" itemprop="image" alt="Cube icon">
-    <h1 class="entry-head__headline" itemprop="headline">Making a cube with 6-faces using one HTML element</h1>
-    <p class="entry-head__details">by <span itemprop="author">Leandro Linares</span> — <time itemprop="dateCreated" datetime="2019-XX-XX">Xxxxxx XX, 20XX</time></p>
-    <p class="entry-head__description" itemprop="description">No javascript was harmed in the making of this article.</p>
+    <h1 class="entry-head__headline" itemprop="headline">A cube with 6 faces made out of one HTML element</h1>
+    <p class="entry-head__details">by <span itemprop="author">Leandro Linares</span> — <time itemprop="dateCreated" datetime="202X-XX-XX">Xxxxxx XX, 202X</time></p>
+    <p class="entry-head__description" itemprop="description">No JavaScript was harmed in the making of this article.</p>
   </header>
 
   <hr class="entry-line">
@@ -40,7 +40,7 @@
 
     <p>People make amazing things pushing CSS beyond its limits, like single-element drawings in <a href="https://a.singlediv.com/" target="_blank" rel="noopener">A Single Div</a> or oil paintings like <a href="https://diana-adrianne.com/purecss-francine/" target="_blank" rel="noopener">Pure CSS Francine</a>.</p>
 
-    <img src="/articles/making-a-6-faces-cube-with-one-html-element/pure-css-francine.jpg" alt="Pure CSS Francine: an old paint of a lady made entirely in CSS">
+    <img src="/articles/a-cube-with-6-faces-made-out-of-one-html-element/pure-css-francine.jpg" alt="Pure CSS Francine: an old paint of a lady made entirely in CSS">
 
     <p>I made some experiments in which I have multiple objects generated from one single HTML element but this time I wanted to try if I could render a 3D cube out of one DOM element.</p>
 
@@ -48,11 +48,11 @@
 
     <p>If I look at any real-life box, <strong>I cannot see more than 3 faces at the same time</strong>.</p>
 
-    <img src="/articles/making-a-6-faces-cube-with-one-html-element/openai.gif" alt="Robot hand swapping a cube">
+    <img src="/articles/a-cube-with-6-faces-made-out-of-one-html-element/openai.gif" alt="Robot hand swapping a cube">
 
     <p>Not only that. <strong>There are some situations depending on the perspective of the observer in which only 2 faces can be seen.</strong> There are even cases in which the viewer can only see one face if they're positioned directly at the front of the box.</p>
 
-    <img src="/articles/making-a-6-faces-cube-with-one-html-element/3-points-of-view.png" alt="3 cubes. The first one showing 3 faces, second one with 2, and a last one with 1" class="pixelated scale--triple">
+    <img src="/articles/a-cube-with-6-faces-made-out-of-one-html-element/3-points-of-view.png" alt="3 cubes. The first one showing 3 faces, second one with 2, and a last one with 1" class="pixelated scale--triple">
 
     <p>This means that <strong>opposite sides of a cube will never coexist.</strong></p>
 
@@ -78,7 +78,7 @@
 
     <p>In an <a href="https://en.wikipedia.org/wiki/Isometric_projection" target="_blank" rel="noopener">isometric projection</a> the 3 coordinate axes appear equally foreshortened.</p>
 
-    <img src="/articles/making-a-6-faces-cube-with-one-html-element/" alt="Example of an isometric cube" class="pixelated">
+    <img src="/articles/a-cube-with-6-faces-made-out-of-one-html-element/" alt="Example of an isometric cube" class="pixelated">
 
     <pre><code>.scene {
   transform-style: preserve-3d;
@@ -114,7 +114,7 @@ b::after {
 
     <p>As I want to have an isometric view I need to show the top face of the cube. I position the top face as if the cube is resting in the top of the scene element.</p>
 
-    <img src="/articles/making-a-6-faces-cube-with-one-html-element/" alt="Example of a cube and its Z-axis face" class="pixelated">
+    <img src="/articles/a-cube-with-6-faces-made-out-of-one-html-element/" alt="Example of a cube and its Z-axis face" class="pixelated">
 
     <pre><code>b {
   background: red;
@@ -123,7 +123,7 @@ b::after {
 
     <p>Now by having the scene container and the first face defined, I can position the other faces relative to it.</p>
 
-    <img src="/articles/making-a-6-faces-cube-with-one-html-element/" alt="element and its pseudo-elements making as a result a cube" class="pixelated">
+    <img src="/articles/a-cube-with-6-faces-made-out-of-one-html-element/" alt="element and its pseudo-elements making as a result a cube" class="pixelated">
 
     <p><strong>Face in the X-axis:</strong></p>
     <pre><code>b::before {
@@ -149,7 +149,7 @@ b::after {
 
     <p><strong>By definition two opposite faces can never coexist.</strong> So I need to place the faces in the opposite side whenever it's needed.</p>
 
-    <img src="/articles/making-a-6-faces-cube-with-one-html-element/face-swapping.png" alt="Examples of a cube that swaps its faces on every axis" class="pixelated">
+    <img src="/articles/a-cube-with-6-faces-made-out-of-one-html-element/face-swapping.png" alt="Examples of a cube that swaps its faces on every axis" class="pixelated">
 
     <p><strong>I use the angle from the input range and determine where the observer is placed respect to the scene and therefore which faces to show.</strong> To make it simple I limit the search to 90 degrees and then I move one step ahead to check if other conditions apply until I get viewer's position.</p>
 
@@ -215,7 +215,7 @@ rangeZ.addEventListener('input', function () {
       
     <p>Then I can write all the possible combinations regarding the point of view splitting responsabilities from the code that I had before.</p>
 
-    <img src="/articles/making-a-6-faces-cube-with-one-html-element/" alt="Example of a cube that swaps it faces on axis Y" class="pixelated">
+    <img src="/articles/a-cube-with-6-faces-made-out-of-one-html-element/" alt="Example of a cube that swaps it faces on axis Y" class="pixelated">
 
     <pre><code>b::before {
   background: green;
@@ -231,7 +231,7 @@ rangeZ.addEventListener('input', function () {
   transform-origin: top;
 }</code></pre>
 
-    <img src="/articles/making-a-6-faces-cube-with-one-html-element/" alt="Example of a cube that swaps it faces on axis X" class="pixelated">
+    <img src="/articles/a-cube-with-6-faces-made-out-of-one-html-element/" alt="Example of a cube that swaps it faces on axis X" class="pixelated">
 
     <pre><code>b::after {
   background: blue;
@@ -312,7 +312,7 @@ rangeZ.addEventListener('input', function () {
 &lt;em&gt;&lt;/em&gt;
 &lt;b&gt;&lt;/b&gt;</code></pre>
 
-    <img src="/articles/making-a-6-faces-cube-with-one-html-element/empty-elements.png" alt="Example of two empty elements between two boxes" class="pixelated">
+    <img src="/articles/a-cube-with-6-faces-made-out-of-one-html-element/empty-elements.png" alt="Example of two empty elements between two boxes" class="pixelated">
 
     <h2>Climbing the Z-axis</h2>
 
