@@ -187,6 +187,10 @@ a:hover {
   margin: 0;
 }
 
+.hero__description strong {
+  font-weight: 500;
+}
+
 a.hero__contact {
   color: var(--color-text);
   font-size: var(--font-size-xs);
@@ -473,6 +477,12 @@ a.hero__contact {
 
   .hero__title {
     font-size: var(--font-size-xxl);
+  }
+
+  .hero__description {
+    width: 30rem;
+    margin-left: .2rem;
+    line-height: 1.5em;
   }
 
   .home-section {
