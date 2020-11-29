@@ -13,6 +13,14 @@
     <pubDate>Sun, 28 Jun 2020 01:00:00 +0100</pubDate>
     <language>en</language>
     <item>
+      <title>Post-processing 3D prints</title>
+      <link>https://lean8086.com/articles/post-processing-3d-prints/</link>
+      <pubDate>Sun, 29 Nov 2020 01:00:00 +0100</pubDate>
+      <guid isPermaLink="true">https://lean8086.com/articles/post-processing-3d-prints/</guid>
+      <author>Leandro Linares</author>
+      <description>I glued, smoothed, and painted this 3D printed scale model and learned a lot about post-processing 3D prints.</description>
+    </item>
+    <item>
       <title>Building an Arduino MIDI Controller</title>
       <link>https://lean8086.com/articles/building-an-arduino-midi-controller/</link>
       <pubDate>Sun, 28 Jun 2020 01:00:00 +0100</pubDate>
