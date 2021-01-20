@@ -62,17 +62,17 @@
   <img class="entry-main-image" src="/articles/building-an-arduino-midi-controller/finished.jpg" alt="A MIDI controller with 16 buttons with an Arduino board"/>
 
   <section class="entry-body" itemprop="articleBody">
-    <p>I enjoy <a href="/#things">building stuff</a> that include electronics, and I always wanted to build something using Arduino.</p>
+    <p>I enjoy <a href="/#things">building stuff</a> that includes electronics, and I always wanted to build something using Arduino.</p>
 
-    <p>One of the most common builds for beginners I found was a MIDI controller. <strong>A MIDI controller is any hardware that send MIDI data (Musical Instrument Digital Interface) to a device to trigger sounds and make music.</strong></p>
+    <p>One of the most common builds for beginners I found was a MIDI controller. <strong>A MIDI controller is any hardware that sends MIDI data (Musical Instrument Digital Interface) to a device to trigger sounds and make music.</strong></p>
 
     <p><strong>I found that many implementations are complicated, even those that are for beginners.</strong> It was very frustrating to find I need to use hundreds of lines of unreadable code. Or that I need to solder a resistor in some cases, among other examples.</p>
 
     <h2 id="the-project">The Project</h2>
 
-    <p>By building my own Arduino MIDI Controller, my intention was to <strong>make an enjoyable project</strong>, keeping the noise at the lowest. <strong>Something any beginner could follow.</strong> To acomplish that, I used the <a href="https://www.midifighter.com/#3D">MIDI Fighter 3D</a> as a base inspiration and <strong>removed every non-essential feature</strong>.</p>
+    <p>By building my own Arduino MIDI Controller, I intended to <strong>do an enjoyable project</strong>, keeping the noise at the lowest. <strong>Something any beginner could follow.</strong> To accomplish that, I used the <a href="https://www.midifighter.com/#3D">MIDI Fighter 3D</a> as a base inspiration and <strong>removed every non-essential feature</strong>.</p>
 
-    <p><strong>The total cost of my project was under $30</strong>, and the list of materials was really short (affiliate links):</p>
+    <p><strong>The total cost of my project was under $30</strong>, and the list of materials was concise (affiliate links):</p>
     <ul>
       <li> <a href="https://amzn.to/3g3thVT" target="_blank" rel="noopener">Arduino Leonardo (or clone)</a>: between $10 and $20.</li>
       <li><a href="https://amzn.to/2A7V08z" target="_blank" rel="noopener">16 x Sanwa buttons 24mm (or clone)</a>: between $1 and $2.50 per button.</li>
@@ -86,40 +86,40 @@
 
     <h2 id="the-arduino-board">The Arduino Board</h2>
 
-    <p>When I started this project I found there are a bunch of new Arduino models (not including the hundreds of <a href="https://en.wikipedia.org/wiki/List_of_Arduino_boards_and_compatible_systems" target="_blank" rel="noopener">compatible boards</a>). And all them offer slightly different capabilities.</p>
+    <p>When I started this project I found many new Arduino models (not including the hundreds of <a href="https://en.wikipedia.org/wiki/List_of_Arduino_boards_and_compatible_systems" target="_blank" rel="noopener">compatible boards</a>). And all of them offer slightly different capabilities.</p>
 
-    <p><strong>I needed to send MIDI signals to a computer and the simplest way to do that is through USB</strong>. Any Arduino board based on the <em>ATmega32u4</em> microcontroller has built-in USB communication.</p>
+    <p><strong>I needed to send MIDI signals to a computer, and the simplest way to do that is through USB</strong>. Any Arduino board based on the <em>ATmega32u4</em> microcontroller has built-in USB communication.</p>
 
-    <p>The official Arduino boards with native USB support are <strong>Arduino Due, Arduino Zero, Arduino Leonardo, Arduino Micro</strong>. These boards have integrated USB support which means they can act as a USB MIDI device.</p>
+    <p>The official Arduino boards with native USB support are <strong>Arduino Due, Arduino Zero, Arduino Leonardo, Arduino Micro</strong>. These boards have integrated USB support, which means they can act as a USB MIDI device.</p>
 
-    <p>I decided to go with a clone of the <a href="https://www.arduino.cc/en/Main/Arduino_BoardLeonardo" target="_blank" rel="noopener">Arduino Leonardo</a>. It has enough inputs for this project and it also includes headers, which makes easier to plug/unplug wires.</p>
+    <p>I decided to go with a clone of the <a href="https://www.arduino.cc/en/Main/Arduino_BoardLeonardo" target="_blank" rel="noopener">Arduino Leonardo</a>. It has enough inputs for this project, and it also includes headers, which makes it easier to plug/unplug wires.</p>
 
     <h2 id="first-steps">First Steps</h2>
 
     <p>Although I'll explain step-by-step how I implemented the code for this project, <strong>you can download the <a href="https://gist.github.com/lean8086/7de896c3b8f29d15e092e17ad177d055" target="_blank" rel="noopener">final version</a></strong>.</p>
 
-    <p>To upload code to the board you need to use the <a href="https://www.arduino.cc/en/Main/Software" target="_blank" rel="noopener">Arduino IDE</a>. They also have a Web editor that is very useful but they have a limited quota on times per day that you can compile code.</p>
+    <p>To upload code to the board, you need to use the <a href="https://www.arduino.cc/en/Main/Software" target="_blank" rel="noopener">Arduino IDE</a>. They also have a handy Web editor, but they have a limited quota on times per day to compile code.</p>
 
     <h3 id="step-1">Step 1. Blinking the built-in LED</h3>
 
     <p>It's funny how the "Hello World" in the world of hardware is blinking an LED.</p>
 
-    <p>It was a nice surprise for me to discover that <strong>Arduino Leonardo has a built-in LED that <a href="https://www.arduino.cc/en/Tutorial/Blink" target="_blank" rel="noopener">you can blink</a> to test your code</strong>. That way you don't need to build an external circuit on a breadboard with an LED and a resistor.</p>
+    <p>It was a pleasant surprise for me to discover that <strong>Arduino Leonardo has a built-in LED that <a href="https://www.arduino.cc/en/Tutorial/Blink" target="_blank" rel="noopener">you can blink</a> to test your code</strong>. That way, you don't need to build an external circuit on a breadboard with an LED and a resistor.</p>
 
     <script src="https://gist.github.com/lean8086/4a4d95c33e937a29585d8c9d601156ac.js"></script>
 
     <h3 id="step-2">Step 2. Blinking the LED on a manual input</h3>
 
-    <p>The next logical step was to blink the same LED whenever I send some signal. <strong>I removed the plastic cover of one end of 2 dupont wires, and connected the other end to the board:</strong></p>
+    <p>The next logical step was to blink the same LED whenever I send some signal. <strong>I removed the plastic cover of one end of 2 Dupont wires, and connected the other end to the board:</strong></p>
 
     <ul>
-      <li><strong>Pin number <code>2</code>:</strong> One of the digital inputs (positive). It could be any digital pin.</li>
-      <li><strong>Pin <code>GND</code>:</strong> Any ground pin (negative).</li>
+      <li><strong>PIN <code>2</code>:</strong> One of the digital inputs (positive). It could be any digital pin.</li>
+      <li><strong>PIN <code>GND</code>:</strong> Any ground pin (negative).</li>
     </ul>
 
-    <p><strong>Now, every time I join the exposed ends of the wires I'm closing the circuit and thus I can execute code in consecuense.</strong></p>
+    <p><strong>Every time I join the wires' exposed ends, I'm closing the circuit, and thus I can execute code in consequence.</strong></p>
 
-    <p>Each of the 20 digital pins on the Leonardo have an <a href="https://www.arduino.cc/en/Tutorial/DigitalPins" target="_blank" rel="noopener">internal resistor</a> (disconnected by default) that can be enabled using <code>INPUT_PULLUP</code>. Keep in mind that <strong>a pull-up input means the button state is inverted</strong>:</p>
+    <p>Each of the 20 digital pins on the Leonardo has an <a href="https://www.arduino.cc/en/Tutorial/DigitalPins" target="_blank" rel="noopener">internal resistor</a> (disconnected by default) that can be enabled using <code>INPUT_PULLUP</code>. Keep in mind that <strong>a pull-up input means the button state is inverted</strong>:</p>
 
     <ul>
       <li><code>HIGH</code> when the circuit is open (button is NOT pressed).</li>
@@ -130,7 +130,7 @@
 
     <h3 id="step-3">Step 3: Installing the MIDIUSB library</h3>
 
-    <p><strong>This library allows an Arduino board with USB capabilites to act as a MIDI instrument over USB.</strong> Check the <a href="https://github.com/arduino-libraries/MIDIUSB" target="_blank" rel="noopener">official documentation</a> for more info.</p>
+    <p><strong>This library allows an Arduino board with USB capabilities to act as a MIDI instrument over USB.</strong> Check the <a href="https://github.com/arduino-libraries/MIDIUSB" target="_blank" rel="noopener">official documentation</a> for more info.</p>
 
     <p>Using the <a href="https://www.arduino.cc/en/Main/Software" target="_blank" rel="noopener">Arduino IDE</a>, you can install extra <a href="https://www.arduino.cc/en/Guide/Libraries" target="_blank" rel="noopener">Arduino Libraries</a> using the Library Manager:</p>
 
@@ -141,27 +141,27 @@
       <li>Close the Library Manager.</li>
     </ol>
 
-    <p><strong>Now the Leonardo can send MIDI messages via USB!</strong> But first, some insight about how MIDI works is needed.</p>
+    <p><strong>Now the Leonardo can send MIDI messages via USB!</strong> But first, some insight into how MIDI works is needed.</p>
 
     <h2 id="how-midi-works">How MIDI Works</h2>
 
     <blockquote>
-      <p>"MIDI (Musical Instrument Digital Interface) is a standard communication protocol that connects electronic musical instruments, computers, and related audio devices for playing music." — Wikipedia</p>
+      <p>"MIDI (Musical Instrument Digital Interface) is a standard communication protocol that connects electronic musical instruments, computers, and related audio devices for playing music." — Wikipedia.</p>
     </blockquote>
 
     <p><strong>It handles event messages with data of the pitch and velocity of the note played, among other instructions.</strong></p>
 
-    <p>In this specific project <strong>the input from the 16 buttons send different messages via USB. These messages can be converted into sound</strong> on a computer using any suitable software like GarageBand or Ableton Live.</p>
+    <p>In this specific project, <strong>the input from the 16 buttons sends different messages via USB. These messages can be converted into sound</strong> on a computer using any suitable software like GarageBand or Ableton Live.</p>
 
     <h3>Anatomy of a MIDI message</h3>
 
     <p>To send a MIDI message, I used the <code>sendMIDI()</code> method from the MIDIUSB Library I installed on step 3.</p>
 
-    <p>This method can receive 4 parameters:</p>
+    <p>This method can receive four parameters:</p>
 
     <ul>
       <li><strong>Event type:</strong> It can be <code>0x09</code> for note On (play note) or <code>0x08</code> for note Off (stop playing note).</li>
-      <li><strong>Note On/Off:</strong> The event type combined with the MIDI channel (1-16). I only use channel 1 so it's either <code>0x90</code> for note On or <code>0x80</code> for note Off.</li>
+      <li><strong>Note On/Off:</strong> The event type combined with the MIDI channel (1-16). I only use channel 1, so it's either <code>0x90</code> for note On or <code>0x80</code> for note Off.</li>
 
       <li><strong>Note number:</strong> Each note <a href="https://github.com/arduino/tutorials/blob/master/ArduinoZeroMidi/PitchToNote.h" target="_blank" rel="noopener">has an associated numeric pitch</a> (frequency scale).</li>
 
@@ -170,26 +170,26 @@
 
     <h3 id="step-4">Step 4: Sending a MIDI message</h3>
 
-    <p>I included the MIDIUSB Library and instead of blinking the built-in LED, I sent a note.</p>
+    <p>I included the MIDIUSB Library, and instead of blinking the built-in LED, I sent a note.</p>
 
     <script src="https://gist.github.com/lean8086/36df2295fffb39fe301f9e91d7fa870d.js"></script>
 
     <h4>⚠ Important:</h4>
 
-    <p><strong>From this step onwards the Arduino turns into a MIDI USB Controller, and it stops receiving code via USB.</strong></p>
+    <p><strong>The Arduino turns into a MIDI USB Controller from this step onwards, and it stops receiving code via USB.</strong></p>
 
-    <p><strong>When you get stuck in a position where the Arduino can no longer be programmed, follow these steps:</strong></p>
+    <p><strong>When you get stuck in a position where you can no longer program the Arduino, follow these steps:</strong></p>
 
     <ol>
       <li>Hold down the rounded reset button on the Arduino board.</li>
       <li>Click Upload on the Arduino IDE.</li>
       <li>Release the reset button.</li>
-      <li>The updated code will be uploaded to the board.</li>
+      <li>The IDE will upload the updated code to the board.</li>
     </ol>
 
     <h3 id="step-5">Step 5: Sending a MIDI message from each button</h3>
 
-    <p>The final step was to map every pitch to a button. For the 16 buttons I defined a scale from C<sub>2</sub> to E<sub>3</sub>b, which are the pitches from 36 to 51 in a sequence from bottom to top and from left to right. Check out <a href="https://github.com/arduino/tutorials/blob/master/ArduinoZeroMidi/PitchToNote.h" target="_blank" rel="noopener">this file from Arduino Tutorials</a> to see what pitch corresponds to each note.
+    <p>The final step was to map every pitch to a button. For the 16 buttons, I defined a scale from C<sub>2</sub> to E<sub>3</sub>b, which are the pitches from 36 to 51 in a sequence from bottom to top and left to right. Check out <a href="https://github.com/arduino/tutorials/blob/master/ArduinoZeroMidi/PitchToNote.h" target="_blank" rel="noopener">this file from Arduino Tutorials</a> to see what pitch corresponds to each note.
 
     <p>I used digital pins from <code>2</code> to <code>12</code> and analog pins (using them as digitals) from <code>A0</code> to <code>A4</code>.</p>
 
@@ -205,7 +205,7 @@
 
     <img src="/articles/building-an-arduino-midi-controller/midi-fighter-banks.png" alt="A MIDI Fighter with the banks buttons highlighted"/>
 
-    <p>You can use those extra buttons to update a variable in the code, and send its value as a parameter to the <strong>MidiUSB.sendMIDI</strong> method:</p>
+    <p>You can use those extra buttons to update a variable in the code and send its value as a parameter to the <strong>MidiUSB.sendMIDI</strong> method:</p>
 
     <script src="https://gist.github.com/lean8086/ec8da7486ec3621f9f0b90542a06fcea.js"></script>
 
@@ -213,11 +213,11 @@
 
     <h2 id="the-case">The Case</h2>
 
-    <p>To keep this project simple, I was extremelly picky choosing which features include.</p>
+    <p>To keep this project simple, I was too picky choosing which features to include.</p>
 
     <ul>
-      <li><strong>Buttons only:</strong> 16 sanwa-like arcade buttons, in a 4x4 grid. No knobs, no sliders, no faders, or any other analogue input.</li>
-      <li><strong>Unibody case:</strong> Use no screws, nuts, bolts or glue for the enclosure or to hold the Arduino board.</li>
+      <li><strong>Buttons only:</strong> 16 Sanwa-like arcade buttons, in a 4x4 grid. No knobs, no sliders, no faders, or any other analog input.</li>
+      <li><strong>Unibody case:</strong> Use no screws, nuts, bolts, or glue for the enclosure or hold the Arduino board.</li>
       <li><strong>Everyday tools:</strong> For example, I soldered the wires instead of buying a specific wire clipper for the arcade buttons.</li>
     </ul>
 
@@ -225,20 +225,20 @@
 
     <p>One of the challenges I faced was designing a case <strong>simple enough that it doesn't need assembly and can be 3d printed in one single run</strong>.</p>
 
-    <p>To avoid using screws or glue, I needed to desing an enclosure that provides the smallest access to the electronics. <strong>My biggest inspiration for the enclosure was the Mac Mini, which has a circle shaped hole at the bottom.</strong> I also wanted to design a screwable lid for that, but I decided to let it open to expose the electronics.</p>
+    <p>To avoid using screws or glue, I needed to design an enclosure that provides the smallest access to the electronics. <strong>My biggest inspiration for the enclosure was the Mac Mini, which has a circle-shaped hole at the bottom.</strong> I also wanted to design a screwable lid for that, but I decided to let it open to expose the electronics.</p>
 
     <img src="/articles/building-an-arduino-midi-controller/shell.jpg" alt="The bottom side of my MIDI controller"/>
 
-    <p><a href="/articles/building-an-arduino-midi-controller/midi-controller-case-lean8086.com.stl" download>Download the 3d printable case (322 KB).</a> Recommended settings: PLA, 0.15mm layers, 20% infill, support enforcers at least for the rounded bottom hole, the arduino holders and the micro USB.</p>
+    <p><a href="/articles/building-an-arduino-midi-controller/midi-controller-case-lean8086.com.stl" download>Download the 3d printable case (322 KB).</a> Recommended settings: PLA, 0.15mm layers, 20% infill, support enforcers for the rounded bottom hole, the Arduino holders, and the micro USB.</p>
 
     <p id="dimensions">These are the dimensions (in millimeters) used for the 3d printed case:</p>
     <img src="/articles/building-an-arduino-midi-controller/dimensions.png" alt="A diagram with the dimensions of the case"/>
 
     <h3>Holding an Arduino with no screws</h3>
 
-    <p>The Leonardo has 4 holes to screw the board into any suitable case, but my idea was to <strong>make it easy to add and remove the board from the case</strong>.</p>
+    <p>The Leonardo has four holes to screw the board into any suitable case, but my idea was to <strong>make it easy to add and remove the board from the case</strong>.</p>
 
-    <p>Finding a <a href="https://www.thingiverse.com/thing:4087125" target="_blank" rel="noopener">clip holder for Arduino</a> on Thingiverse was easy, and <strong>it took me 5 iterations to integrate that holder to the unibody desing</strong>. The most difficult part was <strong>making its legs to avoid the holes for the buttons, and to make the micro USB to be center aligned to the case</strong>.</p>
+    <p>Finding a <a href="https://www.thingiverse.com/thing:4087125" target="_blank" rel="noopener">clip holder for Arduino</a> on Thingiverse was easy, and <strong>it took me five iterations to integrate that holder into the unibody design</strong>. The most challenging part was <strong>making its legs avoid the holes for the buttons and make the micro USB center aligned to the case</strong>.</p>
 
     <img src="/articles/building-an-arduino-midi-controller/holder.jpg" alt="3 legs inside the MIDI controller case, to hold the Arduino board"/>
 
@@ -248,7 +248,7 @@
 
     <img src="/articles/building-an-arduino-midi-controller/wiring.png" alt="A diagram of the wiring of the MIDI controller"/>
 
-    <p>After inserting all the buttons in place, I soldered short <strong>black wires joining all the negative legs of the buttons between them</strong>.</p>
+    <p>After inserting all the buttons in place, I soldered short <strong>black wires joining all the buttons' negative legs.</strong>.</p>
 
     <img src="/articles/building-an-arduino-midi-controller/black-wires.jpg" alt="Black wires soldered to the buttons negative leg"/>
 
@@ -256,9 +256,9 @@
 
     <img src="/articles/building-an-arduino-midi-controller/red-wires.jpg" alt="Red and black wires soldered to the buttons"/>
 
-    <p>To connect the wires to the Arduino, I cut and soldered some dupont ends and covered them with heat-shrink tubing.</p>
+    <p>I cut and soldered some Dupont ends and covered them with heat-shrink tubing to connect the wires to the Arduino.</p>
 
-    <img src="/articles/building-an-arduino-midi-controller/heat-shrink-tube.jpg" alt="A red wire with a dupont end and a heat-shrink tubing"/>
+    <img src="/articles/building-an-arduino-midi-controller/heat-shrink-tube.jpg" alt="A red wire with a Dupont end and a heat-shrink tubing"/>
 
     <p><strong>I connected the wires to the board following the same order as in the MIDI Fighter. From bottom to top and from left to right.</strong></p>
 
@@ -266,17 +266,17 @@
 
     <h2 id="the-output">Using the MIDI Controller</h2>
 
-    <p>Any music software (or suitable hardware) can be used to receive MIDI and make some music. The most recommended ones are <strong>Garage Band, Ableton live, and I know there are a bunch of apps to install on a phone</strong>.</p>
+    <p>You can use any music software (or suitable hardware) to receive MIDI and make some music. The most recommended ones are <strong>Garage Band, Ableton Live, and I know there are a bunch of apps to install on a phone</strong>.</p>
 
-    <p>All those tools are useful for loading predefined sounds for finger drumming, but they were made for bigger purposes. <strong>Those tools can be tough for beginners to setup.</strong></p>
+    <p>All those tools are useful for loading predefined sounds for finger drumming, but they were made for bigger purposes. <strong>Those tools can be tough for beginners to set up.</strong></p>
 
     <h3 id="webmidi">MIDI in the Web browser</h3>
 
-    <p>To make something more aligned with this project and its simplicity, <strong>I built a Web tool completelly focused on MIDI controllers</strong>.</p>
+    <p>To make something more aligned with this project and its simplicity, <strong>I built a Web tool completely focused on MIDI controllers</strong>.</p>
 
     <p><a href="https://lean8086.github.io/punchy/">Punchy: WebMIDI and WebAudio implementation for MIDI controllers.</a></p>
 
-    <p>It can read MIDI messages on any browser that supports the WebMIDI JavaScript API. Then it play sounds in a synthesizer (using the WebAudio API) or in a sampler, loading custom sounds from any sound pack.</p>
+    <p>It can read MIDI messages on any browser that supports the WebMIDI JavaScript API. Then it plays sounds in a synthesizer (using the WebAudio API) or in a sampler, loading custom sounds from any sound pack.</p>
 
     <h3 id="ableton">Set up Ableton Live</h3>
 
