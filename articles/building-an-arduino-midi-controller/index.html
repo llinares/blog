@@ -54,7 +54,8 @@
   <header class="entry-head">
     <img class="entry-head__image pixelated" src="/assets/punchy-icon.png" itemprop="image" alt="An icon representing a MIDI controller">
     <h1 class="entry-head__headline" itemprop="headline">Building an Arduino MIDI Controller</h1>
-    <p class="entry-head__details">by <span itemprop="author">Leandro Linares</span> — <time itemprop="dateCreated" datetime="2020-06-28">June 28, 2020</time></p>
+    <p class="entry-head__details">by <span itemprop="author">Leandro Linares</span> — Updated <time itemprop="dateModified" datetime="2021-01-20">January 20, 2021</time></p>
+    <meta itemprop="dateCreated" content="2020-06-28"/>
     <p class="entry-head__description" itemprop="description">I'm a beginner in all things Arduino and I've been working on an easy, fast, and cheap project to learn more about it.</p>
   </header>
 
@@ -197,6 +198,16 @@
     <p>And this is how the final code looks like:</p>
 
     <script src="https://gist.github.com/lean8086/7de896c3b8f29d15e092e17ad177d055.js"></script>
+
+    <h3 id="step-6">Step 6 (optional): Setting up channels or banks</h3>
+
+    <p>In case you want to add more buttons with <strong>the ability to switch channels or banks</strong>, like in the MIDI Fighter 3D (see image below), the Arduino Leonardo has four more pins you can use. <strong>The Arduino Leonardo has 20 digital input/output pins, of which only 16 are in use for playing notes.</strong></p>
+
+    <img src="/articles/building-an-arduino-midi-controller/midi-fighter-banks.png" alt="A MIDI Fighter with the banks buttons highlighted"/>
+
+    <p>You can use those extra buttons to update a variable in the code, and send its value as a parameter to the <strong>MidiUSB.sendMIDI</strong> method:</p>
+
+    <script src="https://gist.github.com/lean8086/ec8da7486ec3621f9f0b90542a06fcea.js"></script>
 
     <hr class="entry-line"/>
 
