@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en" itemscope itemtype="https://schema.org/Article">
+<head>
+  <meta charset="utf-8">
+  <title>A complete guide to setting up RetroPie - Leandro Linares</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="Step-by-step tutorial on how to setup your Raspberry Pi to make the most of it as retro games console.">
+  <link rel="shortcut icon" href="/assets/retropie-favicon.png">
+  <link rel="apple-touch-icon" href="/icon-192.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Leandro Linares">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Roboto:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/assets/styles.css">
+
+  <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create','UA-100475674-1','auto');ga('send','pageview')</script>
+  <script defer src="https://www.google-analytics.com/analytics.js"></script>
+
+  <meta itemprop="mainEntityOfPage" content="https://leandrolinares.com/blog/setting-up-retropie/">
+  <meta itemprop="inLanguage" content="en">
+  <meta itemprop="image" content="https://leandrolinares.com/blog/setting-up-retropie/xin-mo.jpg">
+  <meta name="twitter:site" content="@lean8086">
+  <meta name="twitter:url" content="https://leandrolinares.com/blog/setting-up-retropie/">
+  <meta name="twitter:title" content="A complete guide to setting up RetroPie">
+  <meta name="twitter:description" content="Step-by-step tutorial on how to setup your Raspberry Pi to make the most of it as retro games console.">
+  <meta name="twitter:creator" content="@lean8086">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://leandrolinares.com/blog/setting-up-retropie/xin-mo.jpg">
+  <meta property="og:title" content="A complete guide to setting up RetroPie">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://leandrolinares.com/blog/setting-up-retropie/">
+  <meta property="og:description" content="Step-by-step tutorial on how to setup your Raspberry Pi to make the most of it as retro games console.">
+  <meta property="og:site_name" content="Leandro Linares">
+  <meta property="og:image" content="https://leandrolinares.com/blog/setting-up-retropie/xin-mo.jpg">
+</head>
+
+<body>
+  <header class="header" role="banner">
+    <a class="header__logo pixelated" href="/">lean8086</a>
+    <nav class="header__nav" itemscope itemtype="https://schema.org/SiteNavigationElement">
+      <ul>
+        <li><a href="/#labs">Labs</a></li>
+        <li><a href="/#things">Things</a></li>
+        <li><a href="/#pixelart">Pixel Art</a></li>
+        <li><a href="/#blog">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <header class="entry-head">
+    <img class="entry-head__image pixelated" src="/assets/retropie-icon.png" itemprop="image" alt="Arcade icon">
+    <h1 class="entry-head__headline" itemprop="headline">A complete guide to setting up RetroPie</h1>
+    <p class="entry-head__details">by <span itemprop="author">Leandro Linares</span> — Updated <time itemprop="dateModified" datetime="2020-12-08">December 8, 2020</time></p>
+    <meta itemprop="dateCreated" content="2017-06-28"/>
+    <p class="entry-head__description" itemprop="description">Step-by-step tutorial on how to setup your Raspberry Pi to make the most of it as retro games console.</p>
+  </header>
+
+  <hr class="entry-line">
+
+  <section class="entry-body" itemprop="articleBody">
+    <p>I spent one year <a href="/blog/arcade-machine-build/">building an arcade machine</a>. I found myself installing and reinstalling <a href="https://retropie.org.uk/" target="_blank" rel="noopener">RetroPie</a> on my Raspberry Pi a million times to get it right for the type of work I wanted to do. <strong>Every time I needed to reinstall, I had to reconfigure the entire system by following the same steps repeatedly.</strong></p>
+
+    <p>The reinstalling was mostly because of the lack of information about many setup choices you have to make if you want to get the most out of your Raspberry Pi.</p>
+
+    <h2 id="installing-retropie">Installing RetroPie</h2>
+    <p>The first step is burning the RetroPie image into the SD card.</p>
+    <ul>
+      <li><strong>Step 1.</strong> Identify which model of the Raspberry Pi you have.</li>
+      <li><strong>Step 2.</strong> Connect a <a href="https://elinux.org/RPi_SD_cards" target="_blank" rel="noopener">compatible SD card</a> to your computer.</li>
+      <li><strong>Step 3.</strong> Download and install the official <a href="https://www.raspberrypi.org/software/" target="_blank" rel="noopener">Raspberry Pi Imager</a>.</li>
+      <li>
+        <strong>Step 4.</strong> On the Raspberry Pi Imager, go to <strong>Operating System → RetroPie</strong> and select the version that belongs to your Raspberry Pi model. Also, choose your SD card.
+        <img src="./raspberry-pi-imager.png" alt="A screenshot of the interface of the Raspberry Pi Imager with an Operative System and an SD Card selected."/>
+      </li>
+    </ol>
+
+    <h2 id="games-sd-card-or-external-drive">Games: SD card or external drive?</h2>
+    <p>From here, you have two options: <strong>installing games into the SD card</strong> (efficient when your SD card is big enough) or <strong>installing them on an external drive</strong> (most ideal for small SD cards).</p>
+
+    <p>If you prefer to keep games and RetroPie on the same SD card, you can avoid the section <strong>"Setting up the external USB Storage"</strong>.</p>
+
+    <p>To install games on an external USB drive, <strong>do not plug the SD card into the Raspberry Pi</strong>.</p>
+    <ul>
+      <li><strong>Step 5.</strong> Extract and reinsert the SD card into your computer.</li>
+    </ul>
+
+    <p><strong>You'll notice the SD card is now called <code>boot</code>.</strong></p>
+
+    <h3 id="setting-up-the-usb-storage">Setting up the external USB Storage</h3>
+    <p>Keeping the games (ROMs) and the saved games progresses in an external source makes it <strong>easier to experiment with RetroPie in the SD card, keeping the critical data safe in a plug-n-play source</strong>.</p>
+
+    <p>It's also a good option when you have <strong>a small SD card with enough space for no other thing than RetroPie</strong>.</p>
+
+    <ul>
+      <li><strong>Step 6.</strong> Format a USB drive as <code>FAT</code>. Use any disk utility available on your OS for it.</li>
+      <li><strong>Step 7.</strong> Create a folder named <code>retropie-mount</code> on the root of the USB drive. <strong>It will be used by RetroPie every time you boot the system.</strong></li>
+    </ul>
+
+    <p>Find more info about this in the <a href="https://retropie.org.uk/docs/Transferring-Roms/" target="_blank" rel="noopener">official RetroPie documentation</a>.</p>
+
+    <h3 id="overclocking-the-raspberry-pi">Overclocking the Raspberry Pi</h3>
+
+    <p>If you have an old model of Raspberry Pi or a Raspberry Pi Zero,<strong>it is recommendable to overclock your board</strong>. That way, you can run games that require more power. For example, a Raspberry Pi Model 1 and Zero can't run most of the Neo Geo or MS-DOS games, but an overclocked Pi can do it.</p>
+
+    <p><strong>There are two ways to overclock a Raspberry Pi: the wrong one and the right one.</strong>
+
+    <p>The wrong way lets you expand the core and memory as you wish, but it's dangerous to your board and <a href="https://www.raspberrypi.org/documentation/configuration/config-txt/overclocking.md" target="_blank" rel="noopener">voids the warranty</a>.</p>
+
+    <p>Raspberry Pi provides an official way to do it right: <a href="https://www.raspberrypi.org/blog/introducing-turbo-mode-up-to-50-more-performance-for-free/" target="_blank" rel="noopener">Introducing Turbo Mode: up to 50% more performance for free</a>.</p>
+
+    <p>I recommend you to do it in the right way:</p>
+    <ul>
+      <li><strong>Step 8.</strong> Edit the file <code>/config.txt</code> and add (or uncomment if it's already there): <pre><code>force_turbo=1</code></pre></li>
+    </ul>
+
+    <h3 id="setting-arcade-controller">Setting up an arcade controller</h3>
+
+    <p>It took me a while to understand how to set up an arcade controller. Even though <a href="https://retropie.org.uk/docs/Xin-Mo-Controller/" target="_blank" rel="noopener">the documentation is right there</a>, I didn't know <strong>the arcade controllers' name was Xin-Mo</strong>.</p>
+
+    <img src="/blog/arcade-machine-build/finished.jpg" alt="A Xin-Mo controller on my arcade machine" loading="lazy"/>
+
+    <ul>
+      <li><strong>Step 9.</strong> Edit the file <code>/cmdline.txt</code> and write at the end: <pre><code>usbhid.quirks=0x16c0:0x05e1:0x040</code></pre></li>
+    </ul>
+
+    <p>There are a few more steps to configure the controller but wait until <a href="#now-turn-it-on">turning on the system</a>.</p>
+
+    <h3 id="forcing-hdmi-sound">HDMI sound</h3>
+
+    <p>If you're using a computer monitor like me, <strong>it probably doesn't have built-in speakers</strong>. In some cases, this kind of monitor has a 3.5mm jack to output sound to external speakers. In that case, you may have to make that the HDMI takes control over the sound:</p>
+
+    <ul>
+      <li><strong>Step 10.</strong> Force the sound to go through HDMI by adding the following line to the file <code>/config.txt</code>: <pre><code>hdmi_drive=2</code></pre></li>
+      <li><strong>Step 11.</strong> Increase the sound quality by updating the <code>/retroarch.cfg</code> file with: <pre><code>audio_out_rate = 44100</code></pre></li>
+    </ul>
+
+    <p><strong>The headphone jack's sound is a lot clearer with a lot less static</strong> using that configuration.</p>
+
+    <h2 id="now-turn-it-on">Now turn on the Raspberry Pi</h2>
+
+    <p>Plug the SD card and the USB drive into the Raspberry Pi and turn it on. As it is the first time to run RetroPie, it will take some time to process.</p>
+
+    <p>The first screen to appear is to set up the controllers:</p>
+
+    <img src="./welcome-screen.png" alt="A screenshot of the screen with instructions to setup the controllers" loading="lazy"/>
+
+    <h3 id="setting-up-controller">Setting up the controllers</h3>
+
+    <ul>
+      <li><strong>Step 12.</strong> Set up each button of your controller. For an arcade machine (Xin-Mo controller), I recommend using the <strong>same distribution as the Sega Genesis controller</strong>. For any control that you don't need to set, keep pressing any key to choose <code>-NOT DEFINED-</code>.</li>
+    </ul>
+
+    <img src="./genesis-controller.png" alt="Sega Genesis controller" />
+
+    <p>You can change this later and also <a href="https://github.com/RetroPie/RetroPie-Setup/wiki/retroarch-configuration">set up different controller distributions for individual consoles and games</a>.</li>
+
+    <p><strong>The A button becomes the Enter key, and the B button becomes Escape.</strong></p>
+
+    <p>To set up the controller for the second player:</p>
+    <ul>
+      <li><strong>Step 13.</strong> Press <code>Start</code> to open the menu, then select <code>Configure input</code>, this time keeping any button of the second controller pressed.</li>
+    </ul>
+
+    <h2 id="games-games-games-">Installing games</h2>
+
+    <p>That was all related to the initial setup. Now it's all about games!</p>
+
+    <p><strong>If you followed the steps to install games on the SD, follow the <a href="https://retropie.org.uk/docs/Transferring-Roms/" target="_blank" rel="noopener">official documentation</a> about all the possible ways to transfer ROMs.</strong></p>
+
+    <p>To install games in the external USB drive and if you followed the steps detailed on <a href="#setting-up-the-usb-storage">Setting up the external USB Storage</a>, then:</p>
+
+    <ul>
+      <li><strong>Step 14.</strong> Unplug the USB drive from the Raspberry Pi and plug it into your computer.</li>
+    </ul>
+
+    <p>Now the folder <code>/retropie-mount</code> should have some folders inside:</p>
+
+    <img src="/blog/setting-up-retropie/retropie-mount.png" alt="Folders structure after the first run" loading="lazy"/>
+
+    <h3 id="roms">ROMs</h3>
+
+    <p>All the game ROMs must go inside the folder <code>/retropie-mount/roms</code>.</p>
+    <ul>
+      <li><strong>Step 15.</strong> Place the ROMs into its corresponding console folder. <strong>Avoid zip files because they are not supported.</strong></li>
+      <li><strong>Step 16.</strong> Plug the USB drive into the Raspberry Pi and wait until the drive's LED stops blinking.</li>
+      <li><strong>Step 17.</strong> Reset EmulationStation going to <strong>Start (menu) → Quit → Restart EmulationStation</strong></li>
+    </ul>
+
+    <p><strong>The ROMs are now on EmulationStation. You're going to see them in the main menu of RetroPie under the console name. Repeat steps 14-17 to add more ROMs.</strong></p>
+
+    <h2 id="specific-setups">Specific setups</h2>
+    <p>Following the steps above, you'll have access to the most common consoles and games. But by following a few more steps, you can go beyond that.</p>
+
+    <h3 id="sega-megadrive-genesis">Sega Megadrive/Genesis buttons</h3>
+    <p><strong>The Sega emulator recognizes only three buttons by default</strong> (Megadrive controller). In my case, I had installed six buttons in my arcade cabinet, so I activated all of the buttons (like a Genesis controller):</p>
+    <ol>
+      <li>Launch a Megadrive/Genesis game and go to the RetroArch menu ("Select" + "X").</li>
+      <li>Go to <strong>Quick Menu → Options</strong> and set the two input devices to six buttons pad.</li>
+      <li>Exit the RetroArch menu.</li>
+    </ol>
+
+    <h3 id="neo-geo">Neo Geo BIOS</h3>
+    <p>This emulator works a little differently from the other ones. Before copying ROMs, you need to:</p>
+    <ol>
+      <li>Get the Neo Geo BIOS: There is plenty of sites where you can find the <strong>neogeo.zip</strong> file you need.</li>
+      <li>Copy the zip file (compressed) to <strong>/retropie-mount/BIOS</strong> and <strong>/retropie-mount/roms/neogeo</strong></li>
+      <li>Move ROMs as zip files (compressed) to <strong>/retropie-mount/roms/neogeo</strong></li>
+      <li>Restart EmulationStation.</li>
+    </ol>
+    <p><strong>Note: Most of the games won't work the first time, but you can change the emulator for those specific games:</strong></p>
+    <ol>
+      <li>Open a game and press any key before it loads.</li>
+      <li>Go to <strong>Select emulator for ROM → lr-fba (or any other emulator) → Exit without launching</strong>.</li>
+      <li>Relaunch the game manually.</li>
+      <li>If the game still doesn't work, try the same steps with another version of the game.</li>
+    </ol>
+    <p>Visit this complete video tutorial for more info: <a href="https://www.youtube.com/watch?v=5Qn11F2ekFY" about="_blank" rel="noopener">How to Set Up And Use NEOGEO Emulator Retropie Raspberry pi 1 2 3 and Zero</a>.</p>
+
+    <h3 id="ms-dos">MS-DOS emulator</h3>
+    <p>Beyond this point, you'll need to use a keyboard.</p>
+    <ol>
+      <li>Connect the Raspberry Pi to the Internet.</li>
+      <li>Go to the RetroPie settings: <strong>"RetroPie" → "Retropie setup"</strong>. The first time getting there can take several minutes.</li>
+      <li>Install DosBox: <strong>"Manage packages" → "manage optional packages" → "dosbox" → "install from binary"</strong>. It will take some time because it needs to download packages from the Internet.</li>
+      <li>When it ends, go back to the main menu, then restart the system: <strong>"Perform reboot"</strong>.</li>
+    </ol>
+    <p>Now MS-DOS is a console in the list of consoles. A new folder <strong>/retropie-mount/roms/pc</strong> will also be created automatically in the USB drive.</p>
+    <p>Visit this complete video tutorial for more info: <a href="https://www.youtube.com/watch?v=-dcubuDfdxY" about="_blank" rel="noopener">Simple DOSBox Setup RetroPie MS-DOS Raspberry Pi</a>.</p>
+
+    <h3 id="mame">MAME emulators</h3>
+    <p>I had the worst experience trying to understand this platform. <strong>I recommend to play arcade games on Neo Geo or find a version of the games for a more common console.</strong> In case you choose to use MAME, this is what worked for me.</p>
+
+    <p>There are different versions of MAME that were launched in different years. So, for example, if you have the emulator for MAME <strong>0.37b5</strong>, you must get games with the specific version <strong>0.37b5</strong>. For some versions, the games are far more challenging to get than others. Another factor that determines which version you need is the Raspberry Pi model.</p>
+    <ul>
+      <li>For Raspberry Pi Zero and 1, ROMs have to be version <strong>0.37b5</strong> (mame2000).</li>
+      <li>For Raspberry Pi 2, 3, 4, and 400, ROMs have to be version <strong>0.78</strong> (mame2003).</li>
+    </ul>
+    <p>Then to copy ROMs:</p>
+    <ul>
+      <li>Copy zip ROMs to the folder <strong>/ROMs/arcade</strong>.</li>
+      <li>Do not use folders specific for emulators, like <code>/mame-xxxx</code>.</li>
+      <li>Upload compressed (.zip) ROMs. Folders won't work.</li>
+    </ul>
+    <p>The first time a game is running, it will ask for an emulator to run:</p>
+    <ul>
+      <li>For Raspberry Pi Zero and Pi 1, choose <code>mame4all</code> (mame2000).</li>
+      <li>For Raspberry Pi 2, 3, 4 and 400, choose <code>lr-mame2003</code> (mame2003).</li>
+    </ul>
+    <h2>And</h2>
+    <p>That's all far I could go. I'll update this guide as I find more and better solutions.</p>
+  </section>
+
+  <footer class="footer" role="contentinfo"><a href="/">Leandro Linares</a></footer>
+</body>
+</html>

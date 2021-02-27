@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es" itemscope itemtype="https://schema.org/Article">
+<head>
+  <meta charset="utf-8">
+  <title>Background offset en CSS - Leandro Linares</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="Cómo mejorar el posicionamiento de un background, usando el feature de offset.">
+  <link rel="shortcut icon" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/icon-192.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Leandro Linares">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Roboto:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/assets/styles.css">
+
+  <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create','UA-100475674-1','auto');ga('send','pageview')</script>
+  <script defer src="https://www.google-analytics.com/analytics.js"></script>
+  <meta itemprop="mainEntityOfPage" content="https://leandrolinares.com/blog/background-offset-css/">
+  <meta itemprop="inLanguage" content="es">
+  <meta name="twitter:site" content="@lean8086">
+  <meta name="twitter:url" content="https://leandrolinares.com/blog/background-offset-css/">
+  <meta name="twitter:title" content="Background offset en CSS">
+  <meta name="twitter:description"
+  content="Cómo mejorar el posicionamiento de un background, usando el feature de offset.">
+  <meta name="twitter:creator" content="@lean8086">
+  <meta name="twitter:card" content="summary">
+  <meta property="og:title" content="Background offset en CSS">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://leandrolinares.com/blog/background-offset-css/">
+  <meta property="og:description"
+  content="Cómo mejorar el posicionamiento de un background, usando el feature de offset.">
+  <meta property="og:site_name" content="Leandro Linares">
+</head>
+
+<body>
+  <header class="header" role="banner">
+    <a class="header__logo pixelated" href="/">lean8086</a>
+    <nav class="header__nav" itemscope itemtype="https://schema.org/SiteNavigationElement">
+      <ul>
+        <li><a href="/#labs">Labs</a></li>
+        <li><a href="/#things">Things</a></li>
+        <li><a href="/#pixelart">Pixel Art</a></li>
+        <li><a href="/#blog">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <header class="entry-head">
+    <h1 class="entry-head__headline" itemprop="headline">Background offset en CSS</h1>
+    <p class="entry-head__details">by <span itemprop="author">Leandro Linares</span> — <time itemprop="dateCreated" datetime="2014-01-13">January 13, 2014</time></p>
+    <p class="entry-head__description" itemprop="description">Cómo mejorar el posicionamiento de un background, usando el feature de offset.</p>
+  </header>
+
+  <hr class="entry-line">
+    
+  <section class="entry-body" itemprop="articleBody">
+    <p>Hoy en día, en el AutoComplete de <a href="http://chico.mercadolibre.com/">Chico UI</a> (v1.0.0) tenemos
+        un loading spinner agregado como background de CSS, alineado a la derecha como
+        <code>right center</code>.</p>
+    <p>Eso hace que el spinner quede literalmente <strong>pegado al borde derecho</strong>:</p>
+    <p><img alt="Before" src="/blog/background-offset-css/before.png" loading="lazy"></p>
+    <p>Buscando un poco, encontré que <code>background-position</code> <strong>puede recibir un
+            offset!</strong>:</p>
+    <pre><code>/* 10px es el offset */
+background-position: right 3em bottom 10px;</code></pre>
+    <p>Se incluyó en la especificación de CSS3 y lo soportan todos los browsers, excepto IE8 y anteriores. Más
+        específicamente es soportado en Opera 11+, IE9+, FF 13+, Chrome y Safari.</p>
+    <p>Aplicando <code>right 10px center</code> al AutoComplete, podemos separar el spinner del borde derecho
+        unos 10px:</p>
+    <p><img alt="After" src="/blog/background-offset-css/after.png"></p>
+
+    <p><strong>Antes:</strong></p>
+    <pre><code>.ch-autocomplete-loading {
+  background: url('../assets/loading-small.gif') no-repeat right center;
+}</code></pre>
+    <p><strong>Después:</strong></p>
+    <pre><code>.ch-autocomplete-loading {
+  background: url('../assets/loading-small.gif') no-repeat right 10px center;
+}</code></pre>
+  </section>
+
+  <footer class="footer" role="contentinfo"><a href="/">Leandro Linares</a></footer>
+</body>
+</html>

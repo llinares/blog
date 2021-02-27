@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es" itemscope itemtype="https://schema.org/Article">
+<head>
+  <meta charset="utf-8">
+  <title>Calidad vs. velocidad en el desarrollo - Leandro Linares</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="Notas acerca del video de Facebook donde introducen el concepto de Flux.">
+  <link rel="shortcut icon" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/icon-192.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Leandro Linares">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Roboto:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/assets/styles.css">
+
+  <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create','UA-100475674-1','auto');ga('send','pageview')</script>
+  <script defer src="https://www.google-analytics.com/analytics.js"></script>
+
+  <meta itemprop="articleSection" content="code">
+  <meta itemprop="about" content="code">
+  <meta itemprop="mainEntityOfPage" content="https://leandrolinares.com/blog/calidad-vs-velocidad-desarrollo/">
+  <meta itemprop="inLanguage" content="es">
+  <meta name="twitter:site" content="@lean8086">
+  <meta name="twitter:url" content="https://leandrolinares.com/blog/calidad-vs-velocidad-desarrollo/">
+  <meta name="twitter:title" content="Calidad vs. velocidad en el desarrollo">
+  <meta name="twitter:description" content="Notas acerca del video de Facebook donde introducen el concepto de Flux.">
+  <meta name="twitter:creator" content="@lean8086">
+  <meta name="twitter:card" content="summary">
+  <meta property="og:title" content="Calidad vs. velocidad en el desarrollo">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://leandrolinares.com/blog/calidad-vs-velocidad-desarrollo/">
+  <meta property="og:description" content="Notas acerca del video de Facebook donde introducen el concepto de Flux.">
+  <meta property="og:site_name" content="Leandro Linares">
+</head>
+
+<body>
+  <header class="header" role="banner">
+    <a class="header__logo pixelated" href="/">lean8086</a>
+    <nav class="header__nav" itemscope itemtype="https://schema.org/SiteNavigationElement">
+      <ul>
+        <li><a href="/#labs">Labs</a></li>
+        <li><a href="/#things">Things</a></li>
+        <li><a href="/#pixelart">Pixel Art</a></li>
+        <li><a href="/#blog">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <header class="entry-head">
+    <h1 class="entry-head__headline" itemprop="headline">Calidad vs. velocidad en el desarrollo</h1>
+    <p class="entry-head__details">by <span itemprop="author">Leandro Linares</span> — <time itemprop="dateCreated" datetime="2014-11-21">November 21, 2014</time></p>
+    <p class="entry-head__description" itemprop="description">Notas acerca del video de Facebook donde introducen el concepto de Flux.</p>
+  </header>
+
+  <hr class="entry-line">
+    
+  <section class="entry-body" itemprop="articleBody">
+    <p>Les dejo el video <a href="http://youtu.be/nYkdrAPrdcw">Rethinking Web App Development at Facebook</a>. Está
+      bueno para ver las preguntas que se hacen, y las respuestas que encuentran.</p>
+
+    <iframe class="entry-body__video" src="https://www.youtube-nocookie.com/embed/nYkdrAPrdcw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <h2 id="mis-notas">Mis notas</h2>
+    <p>Un objetivo que Facebook persigue es <strong>generar software de calidad</strong>.</p>
+    <p>Según ellos, se entiende por calidad a:</p>
+    <ul>
+      <li><strong>un código seguro.</strong></li>
+      <li><strong>un código performante.</strong></li>
+      <li><strong>una UI “disfrutable”.</strong></li>
+      <li><strong>una interfaz facil de usar (UX).</strong></li>
+    </ul>
+    <p>La calidad lleva tiempo. Cuanta más calidad se busca, más tiempo lleva desarrollarlo.</p>
+    <p>Lo que más se valora en Facebook es la habilidad de moverse rápido. Necesitan salir a producción cuanto antes
+      para recolectar métricas, feedback, etc. Así, pueden iterar lo mas rápido posible y tener el mejor producto.</p>
+    <p>En el video comentan que calidad y velocidad no conviven.</p>
+    <h2 id="c-mo-lograr-mejor-calidad-en-menos-tiempo">Cómo lograr mejor calidad en menos tiempo</h2>
+    <p>Intentaron varias cosas. A nivel equipo:</p>
+    <ul>
+      <li>Recortar features: <em>”pero si estás queriendo agregar valor a tu producto, eliminar funcionalidades para
+        tener lo mínimo indispensable no está bueno.”</em></li>
+      <li>Agregar gente: <em>”pero no podés agregar developers a un problema esperando que lo resuelvan mas rápido y con
+        buena calidad.”</em></li>
+      <li>Pedirle a la gente que trabaje mas duro: <em>”pero no es sustentable pedir que trabajen 15 horas por día.”</em>
+      </li>
+    </ul>
+    <p>A nivel stack tecnológico intentaron aplicar MVC, pero no escala porque se empieza a complicar muy rápido.
+      <strong>Cada vez que agregan nuevos features, el sistema entero cambia.</strong> Esto genera que el código sea
+      impredecible. Es decir que, entra gente nueva a ver el código y les toma tiempo para entender si lo que se va a
+      modificar impacta en el resto de la aplicación.</p>
+    <p>Para aumentar la calidad y reducir el tiempo, probaron hacer que el código sea predecible. Aplicaron Flux
+      Pattern: <strong>una arquitectura que genera un flujo de datos unidireccional (a diferencia del MVC)</strong>.
+    </p>
+    <h2 id="mvc-pattern">MVC pattern</h2>
+    <p>Buenísimo para aplicaciones chicas pero difícil de entender qué vista se relaciona con qué modelo:</p>
+    <p><img alt="MVC" src="/blog/calidad-vs-velocidad-desarrollo/mvc.png" loading="lazy"></p>
+    <h2 id="flux-pattern">Flux pattern</h2>
+    <p>Flujo de datos de una sola dirección. Las “flechas” van en un solo sentido:</p>
+    <p><img alt="Flux" src="/blog/calidad-vs-velocidad-desarrollo/flux.png"></p>
+    <p>Ponen como ejemplo el chat de Facebook, que necesita comunicarse con la barra de notificaciones.</p>
+    <p>A medida que fueron agregando features, el código se les hizo largo. Y en lugar de darle el control a un agente
+      externo (handler), se le da el control a cada integrante:</p>
+    <p><img alt="External control" src="/blog/calidad-vs-velocidad-desarrollo/external-control.png"> <img
+        alt="Internal control" src="/blog/calidad-vs-velocidad-desarrollo/internal-control.png"></p>
+    <p>A partir de acá, el video trata de React. Es un framework de Facebook que implementa Flux.</p>
+    <h2 id="react">React</h2>
+    <ul>
+      <li>Recarga todo el componente entero cuando cambia una parte.</li>
+      <li>Para que no sea pesado usa un DOM virtual. Hacen cambios individuales ahí y después pisan todo el componente
+        una sola vez en el DOM real.</li>
+      <li>Todo Instagram esta hecho con React.</li>
+    </ul>
+  </section>
+
+  <footer class="footer" role="contentinfo"><a href="/">Leandro Linares</a></footer>
+</body>
+</html>

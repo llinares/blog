@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="es" itemscope itemtype="https://schema.org/Article">
+<head>
+  <meta charset="utf-8">
+  <title>Single Page Apps y cómo mejorar la UX - Leandro Linares</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="Cambios que proponen las SPA y cómo podemos aprovechar los beneficios.">
+  <link rel="shortcut icon" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/icon-192.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Leandro Linares">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Roboto:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/assets/styles.css">
+
+  <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create','UA-100475674-1','auto');ga('send','pageview')</script>
+  <script defer src="https://www.google-analytics.com/analytics.js"></script>
+
+  <meta itemprop="articleSection" content="ux">
+  <meta itemprop="about" content="ux">
+  <meta itemprop="mainEntityOfPage"
+    content="https://leandrolinares.com/blog/single-page-apps-mejorar-ux/">
+  <meta itemprop="inLanguage" content="es">
+  <meta name="twitter:site" content="@lean8086">
+  <meta name="twitter:url" content="https://leandrolinares.com/blog/single-page-apps-mejorar-ux/">
+  <meta name="twitter:title" content="Single Page Apps y cómo mejorar la UX (parte 1)">
+  <meta name="twitter:description" content="Cambios que proponen las SPA y cómo podemos aprovechar los beneficios.">
+  <meta name="twitter:creator" content="@lean8086">
+  <meta name="twitter:card" content="summary">
+  <meta property="og:title" content="Single Page Apps y cómo mejorar la UX (parte 1)">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://leandrolinares.com/blog/single-page-apps-mejorar-ux/">
+  <meta property="og:description" content="Cambios que proponen las SPA y cómo podemos aprovechar los beneficios.">
+  <meta property="og:site_name" content="Leandro Linares">
+</head>
+
+<body>
+  <header class="header" role="banner">
+    <a class="header__logo pixelated" href="/">lean8086</a>
+    <nav class="header__nav" itemscope itemtype="https://schema.org/SiteNavigationElement">
+      <ul>
+        <li><a href="/#labs">Labs</a></li>
+        <li><a href="/#things">Things</a></li>
+        <li><a href="/#pixelart">Pixel Art</a></li>
+        <li><a href="/#blog">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <header class="entry-head">
+    <h1 class="entry-head__headline" itemprop="headline">Single Page Apps y cómo mejorar la UX</h1>
+    <p class="entry-head__details">by <span itemprop="author">Leandro Linares</span> — <time itemprop="dateCreated" datetime="2015-02-03">February 03, 2015</time></p>
+    <p class="entry-head__description" itemprop="description">Cambios que proponen las SPA y cómo podemos aprovechar los beneficios.</p>
+  </header>
+
+  <hr class="entry-line">
+    
+  <section class="entry-body" itemprop="articleBody">
+    <p>Desde hace unos meses estoy implementando en algunos proyectos lo que se conoce como Single Page App. Para
+      quienes no conocen el término, Wikipedia tiene una <a
+        href="http://en.wikipedia.org/wiki/Single-page_application">definición muy completa</a>.</p>
+    <p>Según la definición, el objetivo principal de una SPA es <strong>proveer una UX más fluida</strong>. Esto
+      significa que existen algunas ventajas extra a nivel UI, y que se necesitan hacer algunos cambios a nivel
+      interacción con el usuario.</p>
+    <p>Hay 2 características importantes que redefinen la UX y que considero las más importantes:</p>
+    <h2 id="1-cero-tiempo-de-carga">1. Cero tiempo de carga</h2>
+    <p>En una SPA el usuario <strong>no percibe un tiempo de espera entre una página y la otra</strong>. <strong>Todo
+        es instantáneo, literalmente.</strong></p>
+    <p>Lo que sí tiene tiempo de carga es la información, pero no la UI. Entonces empiezan a aparecer patrones de
+      diseño como <em>Skeleton layout</em> o *”non-blocking interfaces”*, que ya lo habrán visto usando Facebook:</p>
+    <p><img alt="Facebook skeleton layout" loading="lazy"
+        src="/blog/single-page-apps-mejorar-ux/facebook.png"></p>
+    <p>Primero se carga el esqueleto de la página, porque es lo que nunca cambia y puede volver a imprimirse
+      instantaneamente entre pantallas. Después se carga la data.</p>
+    <p>Les dejo un artículo de Luke en el que explica cómo usando Skeleton pudieron evitar usar la ruedita de loading.
+      <a href="http://www.lukew.com/ff/entry.asp?1797">Mobile Design Details: Avoid The Spinner</a>.</p>
+    <p>También les dejo un video muy útil de Guille Rauch sobre cómo mejorar la interacción del usuario mejorando la
+      percepción de velocidad. Muestra muchos ejemplos andando. Si tienen unos minutos, no se lo pierdan: <a
+        href="https://www.youtube.com/watch?v=Ar9R-CX217o">The need for speed</a>.</p>
+    <h2 id="2-flujos-que-dejan-de-ser-lineales">2. Flujos que dejan de ser lineales</h2>
+    <p>La página no se recarga nunca cuando el usuario navega. Esto nos permite hacer tareas en el fondo. Un ejemplo
+      claro podría ser en el flujo de venta de MercadoLibre. Cuando el usuario carga una foto, no es necesario dejarle
+      el foco sobre el progreso de las fotos subiendo. Se puede hacer que siga modificando otros datos mientras esa
+      tarea se hace de fondo.</p>
+    <p><strong>Los flujos dejan de ser lineales, y hay formas de darle feedback al usuario sobre esto.</strong></p>
+    <p>Prueben adjuntar archivos a un mail en Gmail y apretar Enviar antes de que se terminen de adjuntar.</p>
+    <h2 id="3-para-m-s-adelante-">3. Para más adelante…</h2>
+    <p>Hay muchas más características que pueden redefinir la interacción del usuario en las SPA.</p>
+    <p>Lo importante es poder ver que hoy en día ya tenemos la posibilidad de mejorarle notablemente la experiencia al
+      usuario.</p>
+    <p><a href="/blog/single-page-apps-mejorar-ux-2/">Ir a la parte 2.</a></p>
+  </section>
+
+  <footer class="footer" role="contentinfo"><a href="/">Leandro Linares</a></footer>
+</body>
+</html>

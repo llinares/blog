@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="es" itemscope itemtype="https://schema.org/Article">
+<head>
+  <meta charset="utf-8">
+  <title>Velocidad percibida por el usuario - Leandro Linares</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="Cómo mejorar la experiencia de espera de los usuarios de una interfaz.">
+  <link rel="shortcut icon" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/icon-192.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Leandro Linares">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Roboto:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/assets/styles.css">
+
+  <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create','UA-100475674-1','auto');ga('send','pageview')</script>
+  <script defer src="https://www.google-analytics.com/analytics.js"></script>
+  
+  <meta itemprop="articleSection" content="ux">
+  <meta itemprop="about" content="ux">
+  <meta itemprop="mainEntityOfPage" content="https://leandrolinares.com/blog/velocidad-percibida-por-el-usuario/">
+  <meta itemprop="inLanguage" content="es">
+  <meta name="twitter:site" content="@lean8086">
+  <meta name="twitter:url" content="https://leandrolinares.com/blog/velocidad-percibida-por-el-usuario/">
+  <meta name="twitter:title" content="Velocidad percibida por el usuario">
+  <meta name="twitter:description" content="Cómo mejorar la experiencia de espera de los usuarios de una interfaz.">
+  <meta name="twitter:creator" content="@lean8086">
+  <meta name="twitter:card" content="summary">
+  <meta property="og:title" content="Velocidad percibida por el usuario">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://leandrolinares.com/blog/velocidad-percibida-por-el-usuario/">
+  <meta property="og:description" content="Cómo mejorar la experiencia de espera de los usuarios de una interfaz.">
+  <meta property="og:site_name" content="Leandro Linares">
+</head>
+
+<body>
+  <header class="header" role="banner">
+    <a class="header__logo pixelated" href="/">lean8086</a>
+    <nav class="header__nav" itemscope itemtype="https://schema.org/SiteNavigationElement">
+      <ul>
+        <li><a href="/#labs">Labs</a></li>
+        <li><a href="/#things">Things</a></li>
+        <li><a href="/#pixelart">Pixel Art</a></li>
+        <li><a href="/#blog">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <header class="entry-head">
+    <h1 class="entry-head__headline" itemprop="headline">Velocidad percibida por el usuario</h1>
+    <p class="entry-head__details">by <span itemprop="author">Leandro Linares</span> — <time itemprop="dateCreated" datetime="2015-05-11">May 11, 2015</time></p>
+    <p class="entry-head__description" itemprop="description">Cómo mejorar la experiencia de espera de los usuarios de una interfaz.</p>
+  </header>
+
+  <hr class="entry-line">
+    
+  <section class="entry-body" itemprop="articleBody">
+    <p>Hace un tiempo leí un artículo sobre el aeropuerto de Houston. Ellos recibían muchísimas quejas sobre el
+        tiempo de espera para retirar el equipaje.</p>
+    <p>Aumentaron la cantidad de personal que transportaba el equipaje y mejoraron bastante la <strong>velocidad
+            de entrega</strong>. Igualmente seguía siendo muy lento (unos 8 minutos) y seguían recibiendo
+        quejas.</p>
+    <p>Se dieron cuenta que a los pasajeros les tomaba solamente 1 minuto en ir desde el avión hasta donde se
+        retira el equipaje, y 7 minutos en recibir las valijas. <strong>Pasaban el 88% de su tiempo
+            esperando.</strong></p>
+    <p>Entonces, alejando la zona de equipaje de las puertas de abordaje, <strong>eliminaron (virtualmente) la
+            molestia y stress del tiempo de espera</strong>. <strong>La gente pasó mucho menos tiempo esperando,
+            y así redujeron las quejas casi a cero.</strong></p>
+    <p>El artículo: <a
+            href="http://www.nytimes.com/2012/08/19/opinion/sunday/why-waiting-in-line-is-torture.html">Why
+            Waiting Is Torture</a>.</p>
+    <h2 id="percepci-n-de-velocidad-en-pantallas-cr-ticas">Percepción de velocidad en pantallas críticas</h2>
+    <p>Un usuario común de MercadoLibre suele moverse, por ejemplo, desde la homepage o resultados de busqueda
+        hacia la página de un producto.</p>
+    <p>Si tenemos en cuenta algunas buenas técnicas, podemos aprovechar al máximo esa relación.</p>
+    <h2 id="prefetching">Prefetching</h2>
+    <p>Si generáramos un mapa de calor con Crazy Egg (<a href="http://crazyegg.com">http://crazyegg.com</a>)
+        podríamos predecir en la homepage y en el Search, cual es la ubicación de los artículos que son
+        altamente probables que sean visitados.</p>
+    <p>Sabiendo esto, <strong>en la carga inicial de esas páginas podemos pre-cargar (de fondo) las páginas de
+            producto que son altamente probables que el usuario visite</strong>.</p>
+    <p>Para eso, en la homepage y Search deberíamos especificar qué artículos podrían ser los próximos en ser
+        visitados:</p>
+    <pre><code>&lt;link rel="prefetch" href="http://articulo.ml.com.ar/MLA-123-foo-_JM" />
+&lt;link rel="prefetch" href="http://articulo.ml.com.ar/MLA-456-bar-_JM" />
+&lt;link rel="prefetch" href="http://articulo.ml.com.ar/MLA-789-baz-_JM" /></code></pre>
+    <p>De esta forma, cuando se hace clic en un artículo, la carga de la página de producto es instantánea.</p>
+    <p>Esto mismo pueden verlo al buscar en Google. Ellos pre-cargan siempre el primer resultado (denle unos
+        segundos, a veces tarda en pre-cargarse).</p>
+    <p>Este post de Mozilla contesta las dudas más comunes sobre el tema: <a
+            href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Link_prefetching_FAQ">Link prefetching
+            FAQ</a>.</p>
+    <h2 id="critical-path">Critical path</h2>
+    <p>Para mejorar significativamente la performance, se recomienda pegar el CSS del contenido visible
+        <strong>directamente en el HTML</strong>. Esto le permite al browser tener lista, mucho antes, la
+        experiencia “above-the-fold”. Para esto tenemos que determinar qué estilos representan al contenido que
+        se muestra en el primer pantallazo para la mayoría de los usuarios.</p>
+    <p>La idea es incluir esos estilos en un <code>&lt;style></code> dentro del <code>&lt;head></code>. El resto
+        de los estilos deberían cargarse antes del cierre del <code>&lt;/body></code> o asíncronamente con JS.
+    </p>
+    <p>Les dejo algunas recomendaciones de PageSpeed Insights (by Google): <a
+            href="https://developers.google.com/speed/docs/insights/PrioritizeVisibleContent">Reduce the size of
+            the above-the-fold content</a>.</p>
+    <h2 id="progressive-enhancement">Progressive Enhancement</h2>
+    <h3 id="la-m-nima-expresi-n-de-un-producto">La mínima expresión de un producto</h3>
+    <p>De la mano con Critical Path, una página de producto podría tratarse solo de un <strong>título, precio,
+            foto (una), y el botón Comprar</strong>. Todo eso con sus estilos impresos directamente en el
+        <code>&lt;head></code>.</p>
+    <p>El resto del contenido puede traerse con JS después del onload (carga de la página). Entonces, <strong>en
+            el primer request de la página, ya tendríamos impresa la mínima expresión de un producto</strong>.
+    </p>
+    <h3 id="no-perder-el-contenido-indexable">No perder el contenido indexable</h3>
+    <p>Para no perder la descripción y demás contenido indexable, podemos especificar lo que necesitemos a
+        través de microdata, e incluirla dentro del primer request.</p>
+    <p>También podríamos parsear las descripciones de producto que están compuestas enteramente de imágenes,
+        extraer el texto, y usarlo para indexar con ese contenido.</p>
+    <p>Les dejo un link con toda la información sobre microdata: <a
+            href="https://schema.org/">https://schema.org/</a></p>
+    <h3 id="no-perder-el-acceso-a-las-secciones-adicionales">No perder el acceso a las secciones adicionales
+    </h3>
+    <p>Para cubrir el caso mínimo de HTML, se pueden incluir links dentro de <code>&lt;noscript></code>, y
+        cargar la sección correspondiente si hay JS:</p>
+    <pre><code>&lt;noscript>
+&lt;a href="/description">Descripción del producto&lt;/a>
+&lt;/noscript></code></pre>
+  </section>
+
+  <footer class="footer" role="contentinfo"><a href="/">Leandro Linares</a></footer>
+</body>
+</html>
