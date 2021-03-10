@@ -11,6 +11,7 @@
   <link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Leandro Linares">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Roboto:wght@400;500&display=swap">
   <link rel="stylesheet" href="/assets/styles.css">
+  <link rel="stylesheet" href="/assets/lite-yt-embed.css">
 
   
 
@@ -81,7 +82,7 @@
 
     <p>Take a look at how was the experience building this controller:</p>
 
-    <iframe class="entry-body__video" src="https://www.youtube-nocookie.com/embed/ZSqGpUW3cJ8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <lite-youtube videoid="ZSqGpUW3cJ8"></lite-youtube>
 
     <h2 id="the-arduino-board">The Arduino Board</h2>
 
@@ -289,7 +290,8 @@
   </section>
 
   <footer class="footer" role="contentinfo"><a href="/">Leandro Linares</a></footer>
-  
+
+  <script defer src="/assets/lite-yt-embed.js"></script>
   <script>var disqus_config=function(){this.page.url='https://lean8086.com/articles/building-an-arduino-midi-controller'};(function(){var d=document,s=d.createElement('script');s.src='https://lean8086.disqus.com/embed.js';s.setAttribute('data-timestamp',+new Date());(d.head||d.body).appendChild(s);})();</script>
 </body>
 </html>
